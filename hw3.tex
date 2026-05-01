@@ -1,0 +1,409 @@
+% !TEX program = xelatex
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{ECE 128 - HW3}}
+\fancyhead[R]{Chaidhat Chaimongkol}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\providecommand{\ket}[1]{\left\lvert #1 \right\rangle}
+\providecommand{\bra}[1]{\left\langle #1 \right\rvert}
+\providecommand{\braket}[1]{\left\langle #1 \right\rangle}
+\providecommand{\Rarr}{\Rightarrow}
+\providecommand{\Larr}{\Leftarrow}
+\providecommand{\lrarr}{\Leftrightarrow}
+\providecommand{\rarr}{\rightarrow}
+\providecommand{\larr}{\leftarrow}
+\providecommand{\lrar}{\leftrightarrow}
+\providecommand{\Z}{\mathbb{Z}}
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\N}{\mathbb{N}}
+\providecommand{\C}{\mathbb{C}}
+\providecommand{\Q}{\mathbb{Q}}
+\providecommand{\infin}{\infty}
+
+\begin{document}
+
+\subsubsection*{ECE 128 - HW3}
+
+\section{Q1}
+
+\subsection{Q1a}
+
+We know
+\begin{gather*}
+	\hat{S}_{\vec{n}}=n_x\hat{S}_x+n_y\hat{S}_y+n_z\hat{S}_z=\frac{\hbar}{2}\begin{pmatrix}n_z & n_x-in_y\\ n_x+in_y & -n_z\end{pmatrix}\\
+	\Rarr\hat{S}_{\vec{n}}=\frac{\hbar}{2}\begin{pmatrix}\cos\theta & \sin\theta\,e^{-i\phi}\\ \sin\theta\,e^{i\phi} & -\cos\theta\end{pmatrix}
+\end{gather*}
+
+Let \(\ket{\vec{n}_+}=\binom{a}{b}\)
+\begin{gather*}
+	\begin{pmatrix}\cos\theta-1 & \sin\theta\,e^{-i\phi}\\ \sin\theta\,e^{i\phi} & -\cos\theta-1\end{pmatrix}\begin{pmatrix}a\\b\end{pmatrix}=0
+\end{gather*}
+
+top row
+\begin{gather*}
+	(\cos\theta-1)a+\sin\theta\,e^{-i\phi}b=0\\
+	\Rarr b=\frac{1-\cos\theta}{\sin\theta}e^{i\phi}a
+\end{gather*}
+
+half-angle eq.
+\begin{gather*}
+	1-\cos\theta=2\sin^2(\theta/2)\\
+	\sin\theta=2\sin(\theta/2)\cos(\theta/2)\\
+	\Rarr\frac{1-\cos\theta}{\sin\theta}=\tan(\theta/2)
+\end{gather*}
+
+so \(b=\tan(\theta/2)e^{i\phi}a\). Pick \(a=\cos(\theta/2)\Rarr b=\sin(\theta/2)e^{i\phi}\).
+Normalize check: \(\cos^2(\theta/2)+\sin^2(\theta/2)=1\) true!
+
+\begin{gather*}
+	\Rarr\ket{\vec{n}_+}=\cos(\theta/2)\ket{z_+}+e^{i\phi}\sin(\theta/2)\ket{z_-}
+\end{gather*}
+
+Euler-ify the coefficients
+\begin{gather*}
+	3-i\sqrt{3}=2\sqrt{3}\,e^{-i\pi/6}\\
+	\Rarr\sqrt{3}-i=2\,e^{-i\pi/6}\\
+	\Rarr\ket{\psi}=4e^{-i\pi/6}\left[\tfrac{\sqrt{3}}{2}\ket{z_+}+\tfrac{1}{2}\ket{z_-}\right]
+\end{gather*}
+
+We're remove the global phase because Dr. Zhou said it can be removed.
+\begin{gather*}
+	\cos(\theta/2)=\tfrac{\sqrt{3}}{2}\Rarr \theta=\pi/3\\
+	e^{i\phi}\sin(\theta/2)=\tfrac{1}{2}\Rarr \phi=0
+\end{gather*}
+
+So points at \(\vec{n}=\left(\tfrac{\sqrt{3}}{2},0,\tfrac{1}{2}\right)\).
+
+\subsection{Q1b}
+
+\(\phi=0\) so
+\begin{gather*}
+	\ket{\vec{n}_+}=\cos(\theta/2)\ket{z_+}+\sin(\theta/2)\ket{z_-}
+\end{gather*}
+
+Atoms start in \(\ket{z_+}\). It passes device 2 with probability
+\begin{gather*}
+	|\braket{\vec{n}_+|z_+}|^2=\cos^2(\theta/2)
+\end{gather*}
+
+then device 3 measures \(\hat{S}_z\) on \(\ket{\vec{n}_+}\)
+\begin{gather*}
+	P(\ket{z_+})=\cos^4(\theta/2)\\
+	P(\ket{z_-})=\cos^2(\theta/2)\sin^2(\theta/2)\\
+	P(\text{never made it})=\sin^2(\theta/2)
+\end{gather*}
+
+\(\theta=0\): \(1,0,0\) true
+
+\(\theta=\pi/2\): \(\tfrac{1}{4},\tfrac{1}{4},\tfrac{1}{2}\) true
+
+\(\theta=\pi\): \(0,0,1\) (all blocked) true
+
+we good
+
+\section{Q2}
+\begin{center}\fbox{This question is actually a pain to compute.}\end{center}
+
+From Q1a
+\begin{gather*}
+	\ket{X}=\cos(\alpha/2)\ket{z_+}+e^{i\phi}\sin(\alpha/2)\ket{z_-}\\
+	\Rarr \vec{n}=(\sin\alpha\cos\phi,\sin\alpha\sin\phi,\cos\alpha)
+\end{gather*}
+
+Let
+\begin{gather*}
+	\ket{\psi}=\cos(\alpha_1/2)\ket{z_+}+e^{i\phi_1}\sin(\alpha_1/2)\ket{z_-}\\
+	\ket{\phi}=\cos(\alpha_2/2)\ket{z_+}+e^{i\phi_2}\sin(\alpha_2/2)\ket{z_-}
+\end{gather*}
+
+Bloch vectors (both length 1)
+\begin{gather*}
+	\vec{n}_\psi=(\sin\alpha_1\cos\phi_1,\sin\alpha_1\sin\phi_1,\cos\alpha_1)\\
+	\vec{n}_\phi=(\sin\alpha_2\cos\phi_2,\sin\alpha_2\sin\phi_2,\cos\alpha_2)
+\end{gather*}
+
+Let \(\Theta\) be angle between them. Dot product
+\begin{gather*}
+	\cos\Theta=\vec{n}_\psi\cdot\vec{n}_\phi\\
+	\Rarr \cos\Theta=\sin\alpha_1\cos\phi_1\sin\alpha_2\cos\phi_2+\sin\alpha_1\sin\phi_1\sin\alpha_2\sin\phi_2+\cos\alpha_1\cos\alpha_2\\
+	\Rarr \cos\Theta=\sin\alpha_1\sin\alpha_2(\cos\phi_1\cos\phi_2+\sin\phi_1\sin\phi_2)+\cos\alpha_1\cos\alpha_2\\
+	\Rarr \cos\Theta=\sin\alpha_1\sin\alpha_2\cos(\phi_1-\phi_2)+\cos\alpha_1\cos\alpha_2
+\end{gather*}
+
+Compute inner product \(\braket{\psi|\phi}\). Bra is the conjugate transpose
+\begin{gather*}
+	\bra{\psi}=\cos(\alpha_1/2)\bra{z_+}+e^{-i\phi_1}\sin(\alpha_1/2)\bra{z_-}\\
+	\Rarr\braket{\psi|\phi}=\cos(\alpha_1/2)\cos(\alpha_2/2)\braket{z_+|z_+}\\
+	+\cos(\alpha_1/2)e^{i\phi_2}\sin(\alpha_2/2)\braket{z_+|z_-}\\
+	+e^{-i\phi_1}\sin(\alpha_1/2)\cos(\alpha_2/2)\braket{z_-|z_+}\\
+	+e^{-i\phi_1}\sin(\alpha_1/2)e^{i\phi_2}\sin(\alpha_2/2)\braket{z_-|z_-}
+\end{gather*}
+
+Use the properties of braket middle two terms die
+\begin{gather*}
+	\braket{\psi|\phi}=\cos(\alpha_1/2)\cos(\alpha_2/2)\cdot 1+0+0+e^{-i\phi_1}e^{i\phi_2}\sin(\alpha_1/2)\sin(\alpha_2/2)\cdot 1\\
+	\Rarr \braket{\psi|\phi}=\cos(\alpha_1/2)\cos(\alpha_2/2)+e^{i(\phi_2-\phi_1)}\sin(\alpha_1/2)\sin(\alpha_2/2)
+\end{gather*}
+
+Mod squared: for \(z=a+be^{i\gamma}\) with \(a,b\in\R\), \(|z|^2=a^2+b^2+2ab\cos\gamma\)
+\begin{gather*}
+	|\braket{\psi|\phi}|^2=\cos^2(\alpha_1/2)\cos^2(\alpha_2/2)+\sin^2(\alpha_1/2)\sin^2(\alpha_2/2)\\
+	+2\cos(\alpha_1/2)\cos(\alpha_2/2)\sin(\alpha_1/2)\sin(\alpha_2/2)\cos(\phi_2-\phi_1)
+\end{gather*}
+
+Half-angle: \(\cos^2(\alpha/2)=\tfrac{1+\cos\alpha}{2}\), \(\sin^2(\alpha/2)=\tfrac{1-\cos\alpha}{2}\), \(2\cos(\alpha/2)\sin(\alpha/2)=\sin\alpha\)
+\begin{gather*}
+	\cos^2(\alpha_1/2)\cos^2(\alpha_2/2)+\sin^2(\alpha_1/2)\sin^2(\alpha_2/2)\\
+	\Rarr \tfrac{(1+\cos\alpha_1)(1+\cos\alpha_2)+(1-\cos\alpha_1)(1-\cos\alpha_2)}{4}\\
+	\Rarr \tfrac{1+\cos\alpha_1\cos\alpha_2}{2}
+\end{gather*}
+
+Cross term
+\begin{gather*}
+	2\cos(\alpha_1/2)\sin(\alpha_1/2)\cos(\alpha_2/2)\sin(\alpha_2/2)\cos(\phi_2-\phi_1)\\
+	\Rarr \tfrac{1}{2}\sin\alpha_1\sin\alpha_2\cos(\phi_2-\phi_1)
+\end{gather*}
+
+Add em up
+\begin{gather*}
+	|\braket{\psi|\phi}|^2=\tfrac{1+\cos\alpha_1\cos\alpha_2+\sin\alpha_1\sin\alpha_2\cos(\phi_1-\phi_2)}{2}\\
+	\Rarr |\braket{\psi|\phi}|^2=\tfrac{1+\cos\Theta}{2}\\
+	\Rarr |\braket{\psi|\phi}|^2=\cos^2(\Theta/2)\\
+	\Rarr |\braket{\psi|\phi}|=\cos(\Theta/2)
+\end{gather*}
+
+Given \(|\braket{\psi|\phi}|=\cos\theta\)
+\begin{gather*}
+	\cos(\Theta/2)=\cos\theta\\
+	\Rarr \Theta=2\theta
+\end{gather*}
+
+\section{Q3}
+
+Expand out \(D(q)\)
+\begin{gather*}
+	D(q)=\mathbb{E}[(Z-q)^2]\\
+	\Rarr D(q)=\mathbb{E}[Z^2-2qZ+q^2]\\
+	\Rarr D(q)=\mathbb{E}[Z^2]-2qE[Z]+q^2
+\end{gather*}
+
+Minimize w.r.t.\ \(q\)
+\begin{gather*}
+	\tfrac{dD}{dq}=-2E[Z]+2q=0\\
+	\Rarr q=E[Z]\\
+	\tfrac{d^2D}{dq^2}=2>0
+\end{gather*}
+is the min.
+
+Plug \(q=E[Z]\) back in
+\begin{gather*}
+	D(E[Z])=E[Z^2]-2E[Z]E[Z]+E[Z]^2\\
+	\Rarr D(E[Z])=E[Z^2]-E[Z]^2\\
+	\Rarr D(E[Z])=E[\Delta Z^2]
+\end{gather*}
+
+Since \(q=E[Z]\) minimizes \(D\), for any \(q\)
+\begin{gather*}
+	D(q)\ge D(E[Z])=E[\Delta Z^2]\\
+	\Rarr E[\Delta Z^2]\le D(q)
+\end{gather*}
+
+with equality if \(q=E[Z]\)
+
+\section{Q4}
+
+Given
+\begin{gather*}
+	A\ket{\psi}=a\ket{\psi},\quad B\ket{\psi}=b\ket{\psi}
+\end{gather*}
+
+Commutator \([A,B]\triangleq AB-BA\). Apply to \(\ket{\psi}\)
+\begin{gather*}
+	[A,B]\ket{\psi}=(AB-BA)\ket{\psi}\\
+	\Rarr [A,B]\ket{\psi}=AB\ket{\psi}-BA\ket{\psi}\\
+	\Rarr [A,B]\ket{\psi}=A(b\ket{\psi})-B(a\ket{\psi})\\
+	\Rarr [A,B]\ket{\psi}=bA\ket{\psi}-aB\ket{\psi}\\
+	\Rarr [A,B]\ket{\psi}=ba\ket{\psi}-ab\ket{\psi}\\
+	\Rarr [A,B]\ket{\psi}=0\ket{\psi}
+\end{gather*}
+
+(scalars \(a,b\) commute). So \(\ket{\psi}\) is eigenstate of \([A,B]\) with eigenvalue 0.
+
+Uncertainty relation
+\begin{gather*}
+	\Delta A\,\Delta B\ge \tfrac{1}{2}|\braket{\psi|[A,B]|\psi}|
+\end{gather*}
+
+RHS
+\begin{gather*}
+	\braket{\psi|[A,B]|\psi}=\braket{\psi|0|\psi}=0\\
+	\Rarr \tfrac{1}{2}|\braket{\psi|[A,B]|\psi}|=0
+\end{gather*}
+
+LHS: since \(\ket{\psi}\) is eigenstate of \(A\)
+\begin{gather*}
+	E[A]=\braket{\psi|A|\psi}=a\\
+	E[A^2]=\braket{\psi|A^2|\psi}=a^2\\
+	\Rarr (\Delta A)^2=E[A^2]-E[A]^2=a^2-a^2=0\\
+	\Rarr \Delta A=0
+\end{gather*}
+
+This is true for \(B\) \(\Rarr \Delta B=0\). So
+\begin{gather*}
+	\Delta A\,\Delta B=0\ge 0 \quad\text{true, saturated}
+\end{gather*}
+
+\section{Q5}
+\subsection{Q5a}
+
+Expand LHS
+\begin{gather*}
+	[A,BC]=ABC-BCA
+\end{gather*}
+
+Expand RHS
+\begin{gather*}
+	[A,B]C+B[A,C]=(AB-BA)C+B(AC-CA)\\
+	\Rarr ABC-BAC+BAC-BCA\\
+	\Rarr ABC-BCA
+\end{gather*}
+
+LHS == RHS.
+
+\subsection{Q5b}
+
+Expand each term
+\begin{gather*}
+	[[A,B],C]=ABC-BAC-CAB+CBA\\
+	[[B,C],A]=BCA-CBA-ABC+ACB\\
+	[[C,A],B]=CAB-ACB-BCA+BAC
+\end{gather*}
+
+Sum: each of the 6 orderings \(ABC,ACB,BAC,BCA,CAB,CBA\) shows up with \(+1\) and \(-1\) \(\Rarr\) everything cancels \(\Rarr 0\).
+
+\subsection{Q5c}
+
+Induction on \(n\).
+
+Base \(n=1\): \([\hat{q},\hat{p}]=i\hbar=i\hbar\cdot 1\cdot \hat{q}^0\) true.
+
+Assume \([\hat{q}^n,\hat{p}]=i\hbar n\hat{q}^{n-1}\). Use (a) with \(A=\hat{p},B=\hat{q},C=\hat{q}^n\)
+\begin{gather*}
+	[\hat{p},\hat{q}\hat{q}^n]=[\hat{p},\hat{q}]\hat{q}^n+\hat{q}[\hat{p},\hat{q}^n]\\
+	\Rarr [\hat{p},\hat{q}^{n+1}]=-i\hbar\hat{q}^n+\hat{q}\cdot(-i\hbar n\hat{q}^{n-1})\\
+	\Rarr [\hat{p},\hat{q}^{n+1}]=-i\hbar\hat{q}^n-i\hbar n\hat{q}^n\\
+	\Rarr [\hat{p},\hat{q}^{n+1}]=-i\hbar(n+1)\hat{q}^n\\
+	\Rarr [\hat{q}^{n+1},\hat{p}]=i\hbar(n+1)\hat{q}^n
+\end{gather*}
+
+holds for \(n+1\). By induction holds for all \(n\).
+
+\subsection{Q5d}
+
+Power series \(f(\hat{q})=\sum_k f_k \hat{q}^k\). Commutator is linear
+\begin{gather*}
+	[f(\hat{q}),\hat{p}]=\left[\sum_k f_k\hat{q}^k,\hat{p}\right]\\
+	\Rarr [f(\hat{q}),\hat{p}]=\sum_k f_k [\hat{q}^k,\hat{p}]\\
+	\Rarr [f(\hat{q}),\hat{p}]=\sum_k f_k\cdot i\hbar k\hat{q}^{k-1} \quad\text{by (c)}\\
+	\Rarr [f(\hat{q}),\hat{p}]=i\hbar\sum_k k f_k\hat{q}^{k-1}\\
+	\Rarr [f(\hat{q}),\hat{p}]=i\hbar f'(\hat{q})
+\end{gather*}
+
+\subsection{Q5e}
+
+Act on arbitrary \(\Psi(x)\)
+\begin{gather*}
+	[f(x),\hat{p}]\Psi(x)=f(x)\hat{p}\Psi(x)-\hat{p}f(x)\Psi(x)\\
+	\Rarr [f(x),\hat{p}]\Psi(x)=f(x)\tfrac{\hbar}{i}\tfrac{d\Psi}{dx}-\tfrac{\hbar}{i}\tfrac{d}{dx}[f(x)\Psi(x)]
+\end{gather*}
+
+Product rule on the second bit
+\begin{gather*}
+	\tfrac{d}{dx}[f(x)\Psi(x)]=f'(x)\Psi(x)+f(x)\Psi'(x)
+\end{gather*}
+
+Plug back
+\begin{gather*}
+	[f(x),\hat{p}]\Psi(x)=\tfrac{\hbar}{i}f(x)\Psi'(x)-\tfrac{\hbar}{i}f'(x)\Psi(x)-\tfrac{\hbar}{i}f(x)\Psi'(x)\\
+	\Rarr [f(x),\hat{p}]\Psi(x)=-\tfrac{\hbar}{i}f'(x)\Psi(x)\\
+	\Rarr [f(x),\hat{p}]\Psi(x)=i\hbar f'(x)\Psi(x)
+\end{gather*}
+
+holds for any \(\Psi\) so
+\begin{gather*}
+	[f(x),\hat{p}]=i\hbar f'(x)
+\end{gather*}
+
+matches (d).
+are you
+
+\end{document}

@@ -6,7 +6,7 @@
 ]{article}
 \usepackage{xcolor}
 \usepackage{amsmath,amssymb}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\setcounter{secnumdepth}{3} % number sections, subsections, subsubsections
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -61,6 +61,8 @@
 \hypersetup{
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
+\let\oldhyperref\hyperref
+\renewcommand{\hyperref}[2][]{\oldhyperref[#1]{\underline{#2}}}
 
 \author{}
 \date{}
@@ -99,10 +101,6 @@
 
 Hi, my name is Chai and I'm taking a quantum mechanics course at UCLA.
 
-Some people call it the
-\href{https://www.reddit.com/r/ucla/comments/1lhbq9z/ece_128_hardest_class_at_ucla/?solution=3da9f63c92aa67393da9f63c92aa6739&js_challenge=1&token=bbbe4bf1c9a2b5160829c4be34da5861cc4e9d1393fcae709571ec8f7afb7cec}{hardest
-  class at UCLA.}
-
 I wanted to write a series on quantum mechanics starting from basic
 addition and going to bachelor-degree level quantum mechanics. So, at
 the start, you only need to know how to add and multiply numbers and in
@@ -115,33 +113,32 @@ License: CC0 No rights reserved
 
 
 
-\section{None of this is written by
-  AI}\label{none-of-this-is-written-by-ai}
+\section*{None of this is written by
+	AI}\label{none-of-this-is-written-by-ai}
 
 None of this is written by AI --- I am writing this by hand because I
 find explaining concepts makes me understand them better too.
 
-\section{Everything must be defined
-  previously}\label{everything-must-be-defined-previously}
+\section*{Everything must be defined
+	above}\label{everything-must-be-defined-above}
 
 Any mathematical term MUST be derived from first principles (or like
-elementary school math). I tried including a lot of hyperlinks but if
-anything doesn't reference, let me know.
+elementary school math) in a section before it.
 
 Example
 
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{T-invariant
-  subspaces} →
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{subspaces}
+\hyperref[invariant-subspaces]{invariant
+	subspaces} →
+\hyperref[subspaces]{subspaces}
 →
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{subsets}
+\hyperref[subsets]{subsets}
 →
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{set
-  theory}
+\hyperref[set-theory]{set
+	theory}
 
 
 
-\section{chaimongkol@ucla.edu}\label{chaimongkolucla.edu}
+\section*{chaimongkol@ucla.edu}
 
 Please let me know at
 \href{mailto:chaimongkol@ucla.edu}{\nolinkurl{chaimongkol@ucla.edu}} on
@@ -153,23 +150,21 @@ incomplete.
 \tableofcontents
 \newpage
 
-\section{Lecture 1: Building Blocks}\label{lecture-1-building-blocks}
-
-\subsection{Blorple}\label{blorple}
+\section{Let}\label{let}
 
 Ok when I say ``let'' i'm just defining something to be another thing.
 
 Example:
 
-\[
-  \text{Let blorple be blue}
-\]
+\begin{gather*}
+	\text{Let blorple be blue}
+\end{gather*}
 
 Now if i say ``the sky is blorple'' then i actually mean that it is
 blue.
 
 
-\subsection{Variables, addition}\label{variables-addition}
+\section{Variables, addition}\label{variables-addition}
 
 Let a variable be just a symbol that represents a literal thing.
 
@@ -179,9 +174,9 @@ Example:
 
 Let
 
-\[
-  x=1
-\]
+\begin{gather*}
+	x=1
+\end{gather*}
 
 Now if I add something to that variable, I'm going to write a double
 arrow ``\(\Rarr\)'' on the left of it to show that ``Therefore this is
@@ -189,37 +184,37 @@ true''
 
 Example:
 
-\[
-  x=1\\
-  \Rarr x+1=1+1\\
-  \Rarr x+1=2
-\]
+\begin{gather*}
+	x=1\\
+	\Rarr x+1=1+1\\
+	\Rarr x+1=2
+\end{gather*}
 
 
 
 \(\Rarr x+5=6\), as \(x=1\), we'd just put 1 in place of the \(x\)
 
-\subsection{Multiplication}\label{multiplication}
+\section{Multiplication}\label{multiplication}
 
 Math people are cool and they don't have time to write \(\times\).
 Sometimes when I multiply numbers or
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{variables}
+\hyperref[variables-addition]{variables}
 together, i'm going to write them touching each other or with a
 \(\cdot\) in the middle. Because I'm cool too.
 
-\[
-  5\times x\quad\text{is the same idea as}\quad 5x\quad\text{is the same idea as}\quad5\cdot x
-\]
+\begin{gather*}
+	5\times x\quad\text{is the same idea as}\quad 5x\quad\text{is the same idea as}\quad5\cdot x
+\end{gather*}
 
-\subsection{Matrices}\label{matrices}
+\section{Matrices}\label{matrices}
 
-Let a ``matrix'' ****be a set of numbers ordered in a neat grid. Now we
+Let a ``matrix'' be a set of numbers ordered in a neat grid. Now we
 can manipulate a lot of numbers simultaneously. Interestingly enough,
 they are the solution to a lot of real world including machine learning
 and quantum mechanics.
 
 Let's make a new
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{variable}
+\hyperref[variables-addition]{variable}
 called \(A\).
 
 Let \(A\) be a matrix of size \(m\times n\) where \(m\) is the height of
@@ -228,12 +223,12 @@ columns it has).
 
 Example:
 
-\[
-  A=\begin{pmatrix}
-    1 & 2 & 5 \\
-    3 & 4 & 9
-  \end{pmatrix}
-\]
+\begin{gather*}
+	A=\begin{pmatrix}
+		1 & 2 & 5 \\
+		3 & 4 & 9
+	\end{pmatrix}
+\end{gather*}
 
 
 
@@ -243,7 +238,7 @@ are 2 rows and 3 columns.
 We use matrices to represent sets of numbers because they have an
 equivalent in the real world. In this case, quantum states.
 
-\subsection{Ket (States)}\label{ket-states}
+\section{Ket (States)}\label{ket-states}
 
 Let \(\ket{x}\) (ket x) be a \(N \times 1\) matrix where \(N\) is any
 positive integer (number with no decimals and is greater than 0).
@@ -253,22 +248,22 @@ Just like how \(x\) was a variable used to represent ONE number,
 
 Example:
 
-\[
-  \ket{x}=\begin{pmatrix}
-    1 \\
-    2 \\
-    7
-  \end{pmatrix}\quad \ket{\psi}=\begin{pmatrix}
-    9 \\
-    9 \\
-    0 \\
-    0 \\
-    0
-  \end{pmatrix}\quad\ket{\phi}=\begin{pmatrix}
-    0 \\
-    1
-  \end{pmatrix}
-\]
+\begin{gather*}
+	\ket{x}=\begin{pmatrix}
+		1 \\
+		2 \\
+		7
+	\end{pmatrix}\quad \ket{\psi}=\begin{pmatrix}
+		9 \\
+		9 \\
+		0 \\
+		0 \\
+		0
+	\end{pmatrix}\quad\ket{\phi}=\begin{pmatrix}
+		0 \\
+		1
+	\end{pmatrix}
+\end{gather*}
 
 
 
@@ -276,7 +271,7 @@ Note that \(\psi\) (psi) is pronounced sye and \(\phi\) (phi) is
 pronounced fye. They are just like \(x\) but idk why quantum physicists
 love greek characters.
 
-\subsection{Photons, Wave-particle
+\section{Photons, Wave-particle
   Duality}\label{photons-wave-particle-duality}
 
 Let this be a photon. It's like a particle of light.
@@ -285,10 +280,11 @@ Let this be a photon. It's like a particle of light.
 People, like Newton, favored the idea that light was a particle. This
 was until Young, a person, performed an experiment called the double
 slit experiment which showed light interacting like a wave. Maxwell,
-another person, proved that it was a wave --- one that interfered with
-the electric and magnetic fields. Einstein, another person, said nuh-uh
-and disproved this by explaining the photoelectric effect, giving
-evidence light is a particle AND a wave.
+another person, showed that light is an electromagnetic wave --- an
+oscillation of the electric and magnetic fields themselves. Einstein,
+another person, then explained the photoelectric effect, showing light
+also behaves as a particle, so light has both wave AND particle
+character.
 
 Present day, the majority of people concur that light is a wave and
 particle simultaneously.
@@ -297,10 +293,12 @@ This means that photons can have a ``state.'' These can be represented
 as kets!
 
 Sometimes we observe photons having a ``spin'' --- it's not really
-spinning but physicists are weird and say particles also have colors.
-Obviously they are not colored because they are smaller than light.
+spinning, but physicists use the word for an intrinsic angular momentum
+that particles carry. Photons have spin 1; for photons this shows up
+as polarization (e.g. circular polarization corresponds to the two
+helicity states).
 
-\subsection{Superpositions, matrix
+\section{Superpositions, matrix
   addition}\label{superpositions-matrix-addition}
 
 A photon can have a probability of \(x\%\) of spinning up (+). This
@@ -325,42 +323,42 @@ Example:
 
 Let
 
-\[
-  \ket{x}=\begin{pmatrix}
-    1 \\
-    0
-  \end{pmatrix}\quad
-  \ket{y}=\begin{pmatrix}
-    0 \\
-    1
-  \end{pmatrix}
-\]
+\begin{gather*}
+	\ket{x}=\begin{pmatrix}
+		1 \\
+		0
+	\end{pmatrix}\quad
+	\ket{y}=\begin{pmatrix}
+		0 \\
+		1
+	\end{pmatrix}
+\end{gather*}
 
 
 If i multiply a matrix by a number (let this be called a ``scalar''), we
 apply the multiplication across all values.
 
-\[
-  \Rarr 3\ket{x}=3\begin{pmatrix}1\\0\end{pmatrix}=\begin{pmatrix}3\times1\\3\times0\end{pmatrix}=\begin{pmatrix}3\\ 0\end{pmatrix}
-\]
+\begin{gather*}
+	\Rarr 3\ket{x}=3\begin{pmatrix}1\\0\end{pmatrix}=\begin{pmatrix}3\times1\\3\times0\end{pmatrix}=\begin{pmatrix}3\\ 0\end{pmatrix}
+\end{gather*}
 
 
 If we add \(\ket{x}+3\ket{y}\) we get
 
-\[
-  \Rarr\ket{x}+3\ket{y}=\begin{pmatrix}
-    1 \\
-    0
-  \end{pmatrix}+3
-  \begin{pmatrix}
-    0 \\
-    1
-  \end{pmatrix}
-  =\begin{pmatrix}
-    1 \\
-    3
-  \end{pmatrix}
-\]
+\begin{gather*}
+	\Rarr\ket{x}+3\ket{y}=\begin{pmatrix}
+		1 \\
+		0
+	\end{pmatrix}+3
+	\begin{pmatrix}
+		0 \\
+		1
+	\end{pmatrix}
+	=\begin{pmatrix}
+		1 \\
+		3
+	\end{pmatrix}
+\end{gather*}
 
 
 Notice how we're adding the \(n\)-th elements of the states together for
@@ -369,9 +367,9 @@ each row?
 We can represent these two states coexisting (i.e., a superposition)
 using math now!
 
-\[
-  \ket{\psi}=\alpha\ket{+}+\beta\ket{-}
-\]
+\begin{gather*}
+	\ket{\psi}=\alpha\ket{+}+\beta\ket{-}
+\end{gather*}
 
 where \(\alpha,\beta\) are just numbers. See how they are a combination
 of up and down states?
@@ -385,26 +383,24 @@ upwards and \(|\beta|^2\) probability it spins downwards once observed.
 
 Example:
 
-\[
-  |(-3)|=3\\
-  |5|=5
-\]
+\begin{gather*}
+	|(-3)|=3\\
+	|5|=5
+\end{gather*}
 
 Note that
 
-\[
-  |\alpha|^2+|\beta|^2=1
-\]
+\begin{gather*}
+	|\alpha|^2+|\beta|^2=1
+\end{gather*}
 
 as you can't have more than 100\% or less than 0\% probability of
 something existing.
 
-\section{Lecture 2}\label{lecture-2}
-
 I'm going to write a ton of mathematical definitions which will build up
 how to do the physics in the next section!
 
-\subsection{Linear Independence}\label{linear-independence}
+\section{Linear Independence}\label{linear-independence}
 
 Let ``linearly independent states'' be states that you cannot create
 another linearly independent state from multiplying and adding another
@@ -413,9 +409,9 @@ linearly independent state.
 a cleaner definition is \(\ket{\psi_1},\ket{\psi_2},…\ket{\psi_n}\) are
 linearly independent if the only way to get
 
-\[
-  c_1\ket{\psi_1}+c_2\ket{\psi_2}+\cdots+c_n\ket{\psi_n}=0
-\]
+\begin{gather*}
+	c_1\ket{\psi_1}+c_2\ket{\psi_2}+\cdots+c_n\ket{\psi_n}=0
+\end{gather*}
 
 is having \(c_i=0\) for all (\(\forall\)) \(c_i\).
 
@@ -423,24 +419,24 @@ Example:
 
 Given \(c\) is just a regular number,
 
-\[
-  \ket{+}=c\ket{-}\quad\text{will never happen how much you try}
-\]
+\begin{gather*}
+	\ket{+}=c\ket{-}\quad\text{will never happen how much you try}
+\end{gather*}
 
 and vice versa.
 
-\subsection{Basis States}\label{basis-states}
+\section{Basis States}\label{basis-states}
 
 If a set of states are BOTH
 
 \begin{itemize}
-  \tightlist
-  \item
-        \href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{linearly
-          independent}
-  \item
-        span the whole space (i.e., every state in the space can be written as
-        a linear combination of these things)
+	\tightlist
+	\item
+	      \hyperref[linear-independence]{linearly
+		      independent}
+	\item
+	      span the whole space (i.e., every state in the space can be written as
+	      a linear combination of these things)
 \end{itemize}
 
 then they are called basis states.
@@ -448,55 +444,58 @@ then they are called basis states.
 Note that \(\ket{+},\ket{-}\) from the previous lecture are ``basis''
 states
 
-\subsection{Inner product}\label{inner-product}
+\section{Inner product}\label{inner-product}
 
-Inner product of states \(\ket{u}\) and \(v\) is defined as
+Inner product of states \(\ket{u}\) and \(\ket{v}\) is defined as
 
-\[
-  \ket{u}\cdot \ket{v}=u_1v_1+u_2v_2+...+u_nv_n
-\]
+\begin{gather*}
+	\ket{u}\cdot \ket{v}=u_1^*v_1+u_2^*v_2+...+u_n^*v_n
+\end{gather*}
 
-\subsection{Orthogonality}\label{orthogonality}
+(if the entries are real numbers, the conjugates do nothing and this
+reduces to the usual dot product.)
+
+\section{Orthogonality}\label{orthogonality}
 
 State \(\ket{u},\ket{v}\) are orthogonal to each other if the
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{inner
-  product} of state \(\ket{u}\) and \(\ket{v}\) are zero.
+\hyperref[inner-product]{inner
+	product} of state \(\ket{u}\) and \(\ket{v}\) are zero.
 
-\[
-  \ket{u}\cdot \ket{v}=0
-\]
+\begin{gather*}
+	\ket{u}\cdot \ket{v}=0
+\end{gather*}
 
 They're also known as being perpendicular!
 
 
-\subsection{Magnitude}\label{magnitude}
+\section{Magnitude}\label{magnitude}
 
 Where \(n\) is the dimensions, the magnitude of \(\ket{\psi}\) is
 defined as:
 
-\[
-  ||\ket{\psi}||=||\begin{pmatrix}\psi_1\\\psi_2\\\vdots\\\psi_n\end{pmatrix}||=\sqrt{\psi_1^2+\psi_2^2+...+\psi_n^2}
-\]
+\begin{gather*}
+	||\ket{\psi}||=||\begin{pmatrix}\psi_1\\\psi_2\\\vdots\\\psi_n\end{pmatrix}||=\sqrt{|\psi_1|^2+|\psi_2|^2+...+|\psi_n|^2}
+\end{gather*}
 
-\subsection{Normal}\label{normal}
+\section{Normal}\label{normal}
 
 \(\ket{\psi}\) is normal if it has
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{magnitude}
+\hyperref[magnitude]{magnitude}
 1
 
-\[
-  ||\ket{\psi}||=1
-\]
+\begin{gather*}
+	||\ket{\psi}||=1
+\end{gather*}
 
-\subsection{Orthonormality}\label{orthonormality}
+\section{Orthonormality}\label{orthonormality}
 
 Let `` \(\ket{+},\ket{-}\) are orthonormal'' mean both
 \(\ket{+},\ket{-}\) are both
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{orthogonal}
+\hyperref[orthogonality]{orthogonal}
 and
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{normal}.
+\hyperref[normal]{normal}.
 
-\subsection{Complex Numbers}\label{complex-numbers}
+\section{Complex Numbers}\label{complex-numbers}
 
 Math is complicated. Some can say it's complex.
 
@@ -504,89 +503,89 @@ Numbers can be complex.
 
 Let's say we have two funny looking 2x2 matrices. Just bear with me.
 
-\[
-  M_R=\begin{pmatrix}1 & 0 \\
-                 0 & 1
-  \end{pmatrix}\quad
-  M_I=\begin{pmatrix}0 & -1 \\
-                 1 & 0
-  \end{pmatrix}
-\]
+\begin{gather*}
+	M_R=\begin{pmatrix}1 & 0 \\
+	               0 & 1
+	\end{pmatrix}\quad
+	M_I=\begin{pmatrix}0 & -1 \\
+	               1 & 0
+	\end{pmatrix}
+\end{gather*}
 
 Now we can put two scalars \(a,b\) infront of these numbers and add it
 up like we did before:
 
-\[
-  z=a\begin{pmatrix}1 & 0 \\
-                 0 & 1
-  \end{pmatrix}+b\begin{pmatrix}0 & -1 \\
-                 1 & 0
-  \end{pmatrix}\\
-  \Rarr z=\begin{pmatrix}a & -b \\
-                 b & a
-  \end{pmatrix}
-\]
+\begin{gather*}
+	z=a\begin{pmatrix}1 & 0 \\
+	               0 & 1
+	\end{pmatrix}+b\begin{pmatrix}0 & -1 \\
+	               1 & 0
+	\end{pmatrix}\\
+	\Rarr z=\begin{pmatrix}a & -b \\
+	               b & a
+	\end{pmatrix}
+\end{gather*}
 
 We can write this weird looking matrix differently:
 
-\[
-  z=a+bi
-\]
+\begin{gather*}
+	z=a+bi
+\end{gather*}
 
 What is \(i\)? Well, we don't know. It's not a variable! But we know
 what \(i^2\) is:
 
-\[
-  i^2=-1
-\]
+\begin{gather*}
+	i^2=-1
+\end{gather*}
 
 Notice however much you can times \(a\), it won't affect \(b\), and vice
-versa, this means they are basis states like what we learned last
+versa, this means they are \hyperref[basis-states]{basis states} like what we learned last
 lecture!
 
-\subsubsection{Conjugate}\label{conjugate}
+\subsection{Conjugate}\label{conjugate}
 
 Let the conjugate of \(z\) be written as \(z^*\) and mean this (we just
 make b negative)
 
-\[
-  z^*=a-bi=\begin{pmatrix}a  & +b \\
-                 -b & a
-  \end{pmatrix}
-\]
+\begin{gather*}
+	z^*=a-bi=\begin{pmatrix}a  & +b \\
+	               -b & a
+	\end{pmatrix}
+\end{gather*}
 
-\subsubsection{Euler Form}\label{euler-form}
+\subsection{Euler Form}\label{euler-form}
 
 Taylor, a person, once said that
 
-\[
-  e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+...\\
-  \cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots\\
-  \sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots
-\]
+\begin{gather*}
+	e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+...\\
+	\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots\\
+	\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots
+\end{gather*}
 
 so Euler, another person, said
 
-\[
-  e^{i\theta}=1+i\theta+\frac{(i\theta)^2}{2!}+\frac{(i\theta)^3}{3!}+\cdots\\
-  =1+i\theta-\frac{\theta^2}{2!}-i\frac{\theta^3}{3!}+\frac{\theta^4}{4!}+i\frac{\theta^5}{5!}
-\]
+\begin{gather*}
+	e^{i\theta}=1+i\theta+\frac{(i\theta)^2}{2!}+\frac{(i\theta)^3}{3!}+\cdots\\
+	=1+i\theta-\frac{\theta^2}{2!}-i\frac{\theta^3}{3!}+\frac{\theta^4}{4!}+i\frac{\theta^5}{5!}
+\end{gather*}
 
 If we rearrange the terms we get
 
-\[
-  e^{i\theta}=\left(1-\frac{\theta^2}{2!}+\frac{\theta^4}{4!}-\cdots\right)+i\left(\theta -\frac{\theta^3}{3!}+\frac{\theta^5}{5!}+\cdots\right)\\
-  =\cos\theta+i\sin\theta
-\]
+\begin{gather*}
+	e^{i\theta}=\left(1-\frac{\theta^2}{2!}+\frac{\theta^4}{4!}-\cdots\right)+i\left(\theta -\frac{\theta^3}{3!}+\frac{\theta^5}{5!}+\cdots\right)\\
+	=\cos\theta+i\sin\theta
+\end{gather*}
 
 This means we can represent complex numbers in this weird form too:
 
-\[
-  z=re^{i\theta}
-\]
+\begin{gather*}
+	z=re^{i\theta}
+\end{gather*}
 
 
-\subsection{Bra/Transpose}\label{bratranspose}
+\section{Bra/Transpose}\label{bratranspose}
 
 We just learned what ket \(\ket{x}\) means --- a \(N\times 1\) vector.
 Let that ALSO be called a ket. If we flip it horizontally, we get a bra
@@ -594,41 +593,41 @@ Let that ALSO be called a ket. If we flip it horizontally, we get a bra
 
 If a ket is
 
-\[
-  \ket{x}=\begin{pmatrix}
-    1+3i \\
-    2+5i \\
-    7
-  \end{pmatrix}\quad \ket{\psi}=\begin{pmatrix}
-    9 \\
-    9 \\
-    0 \\
-    0 \\
-    0
-  \end{pmatrix}\quad\ket{\phi}=\begin{pmatrix}
-    0 \\
-    1
-  \end{pmatrix}
-\]
+\begin{gather*}
+	\ket{x}=\begin{pmatrix}
+		1+3i \\
+		2+5i \\
+		7
+	\end{pmatrix}\quad \ket{\psi}=\begin{pmatrix}
+		9 \\
+		9 \\
+		0 \\
+		0 \\
+		0
+	\end{pmatrix}\quad\ket{\phi}=\begin{pmatrix}
+		0 \\
+		1
+	\end{pmatrix}
+\end{gather*}
 
 Then it's counterpart is a bra
 
-\[
-  \bra{x}=\begin{pmatrix}
-    1-3i &
-    2-5i &
-    7
-  \end{pmatrix}\quad \bra{\psi}=\begin{pmatrix}
-    9 &
-    9 &
-    0 &
-    0 &
-    0
-  \end{pmatrix}\quad\bra{\phi}=\begin{pmatrix}
-    0 &
-    1
-  \end{pmatrix}
-\]
+\begin{gather*}
+	\bra{x}=\begin{pmatrix}
+		1-3i &
+		2-5i &
+		7
+	\end{pmatrix}\quad \bra{\psi}=\begin{pmatrix}
+		9 &
+		9 &
+		0 &
+		0 &
+		0
+	\end{pmatrix}\quad\bra{\phi}=\begin{pmatrix}
+		0 &
+		1
+	\end{pmatrix}
+\end{gather*}
 
 You swap the columns for the rows (transpose!) and make every element
 the conjugate of itself. It becomes a \(1\times N\) matrix instead.
@@ -636,37 +635,37 @@ the conjugate of itself. It becomes a \(1\times N\) matrix instead.
 Let this weird transformation be known as a conjugate transpose, denoted
 as
 
-\[
-  \bra{v}=(\ket{v})^+
-\]
+\begin{gather*}
+	\bra{v}=(\ket{v})^+
+\end{gather*}
 
-\subsubsection{Hermitian Matrix}\label{hermitian-matrix}
+\subsection{Hermitian Matrix}\label{hermitian-matrix}
 
 Let a ``Hermitian matrix'' be a matrix that equals its own conjugate
 transpose
 
 If and only if \(A\) is a matrix and is Hermitian, then this is true
 
-\[
-  A=A^+
-\]
+\begin{gather*}
+	A=A^+
+\end{gather*}
 
 This means a bra and ket are Hermitian matrices of each other!
 
 Another example:
 
-\[
-  \ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
-\]
+\begin{gather*}
+	\ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
+\end{gather*}
 
-\subsection{Bra-ket, matrix
+\section{Bra-ket, matrix
   multiplication}\label{bra-ket-matrix-multiplication}
 
 Now let this be a bra-ket (get it?)
 
-\[
-  \braket{\phi|\psi}=\bra{\phi}\ket{\psi}=\begin{bmatrix}c^* & d^*\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}\quad
-\]
+\begin{gather*}
+	\braket{\phi|\psi}=\bra{\phi}\ket{\psi}=\begin{bmatrix}c^* & d^*\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}\quad
+\end{gather*}
 
 This means we're multiplying these two matrices
 \(\begin{bmatrix}c^* & d^*\end{bmatrix},\begin{bmatrix}a\\b\end{bmatrix}\)
@@ -681,135 +680,136 @@ Let there be two matrices, \(A,B\) with size \(m\times n\) and
 for an element on row \(i\), column \(j\) in \(C\) we let this be called
 \(C_{ij}\)
 
-\[
-  C_{ij}=\sum_{k=1}^nA_{ik}B_{kj}
-\]
+\begin{gather*}
+	C_{ij}=\sum_{k=1}^nA_{ik}B_{kj}
+\end{gather*}
 
 so
 
-\[
-  \braket{\phi|\psi}\\=\bra{\phi}\ket{\psi}\\=\begin{pmatrix}c^* & d^*\end{pmatrix}\begin{pmatrix}a\\b\end{pmatrix}\\=\begin{pmatrix}
-    c^*a+d^*b\end{pmatrix}\\=c^*a+d^*b
-\]
+\begin{gather*}
+	\braket{\phi|\psi}\\=\bra{\phi}\ket{\psi}\\=\begin{pmatrix}c^* & d^*\end{pmatrix}\begin{pmatrix}a\\b\end{pmatrix}\\=\begin{pmatrix}
+		c^*a+d^*b\end{pmatrix}\\=c^*a+d^*b
+\end{gather*}
 
 It is a 1x1 matrix which can be simplified to a scalar value.
 
 Note that
 
-\[
-  \braket{x+|x+}=\braket{x-|x-}=1\\
-  \braket{x+|x-}=\braket{x-|x+}=0
-\]
+\begin{gather*}
+	\braket{x+|x+}=\braket{x-|x-}=1\\
+	\braket{x+|x-}=\braket{x-|x+}=0
+\end{gather*}
 
-Where \(x+,x-\) are orthonormal to each other. Another way we can say
-this is \(\{\ket{x+},\ket{x-}\}\) forms an orthonormal basis.
+Where \(x+,x-\) are \hyperref[orthonormality]{orthonormal} to each other. Another way we can say
+this is \(\{\ket{x+},\ket{x-}\}\) forms an \hyperref[orthonormality]{orthonormal} \hyperref[basis-states]{basis}.
 
 Let this be the notation of if/else
 
-\[
-  x=\begin{cases}1\quad\text{if true}\\0\quad\text{if false}\end{cases}
-\]
+\begin{gather*}
+	x=\begin{cases}1\quad\text{if true}\\0\quad\text{if false}\end{cases}
+\end{gather*}
 
-a set of vectors \(\{v_1,v_2,...,v_n\}\) form an orthonormal basis if
+a set of vectors \(\{v_1,v_2,...,v_n\}\) form an \hyperref[orthonormality]{orthonormal} \hyperref[basis-states]{basis} if
 and only if
 
-\[
-  \braket{v_i|v_j}=\delta_{ij}=\begin{cases}1\quad j=k\\0\quad j\neq k\end{cases}
-\]
+\begin{gather*}
+	\braket{v_i|v_j}=\delta_{ij}=\begin{cases}1\quad i=j\\0\quad i\neq j\end{cases}
+\end{gather*}
 
-\subsubsection{Square Matrix}\label{square-matrix}
+\subsection{Square Matrix}\label{square-matrix}
 
 a square matrix is a matrix with the same number of rows and columns
 (i.e., an \(N\times N\) matrix)
 
-\subsubsection{Symmetric Matrix}\label{symmetric-matrix}
+\subsection{Symmetric Matrix}\label{symmetric-matrix}
 
 A matrix \(X\) where
 
-\[
-  X=X^TX
-\]
+\begin{gather*}
+	X=X^T
+\end{gather*}
 
 (note that \(X^T\) means
 \href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{transpose})
 
-\subsubsection{Kronecker Delta}\label{kronecker-delta}
+\subsection{Kronecker Delta}\label{kronecker-delta}
 
 Where \(\delta_{ij}\) is just something we define as that. It is called
 the Kronecker delta.
 
-\subsection{Vector Spaces}\label{vector-spaces}
+\section{Vector Spaces}\label{vector-spaces}
 
 Let a vector space \(V\) be a set of vectors with
 
 \begin{itemize}
-  \tightlist
-  \item
-        addition such that
+	\tightlist
+	\item
+	      addition such that
 \end{itemize}
 
-\[
-  \ket{u}+\ket{v}\in V\quad ;\quad\ket{u},\ket{v}\in V
-\]
+\begin{gather*}
+	\ket{u}+\ket{v}\in V\quad ;\quad\ket{u},\ket{v}\in V
+\end{gather*}
 
 \begin{itemize}
-  \tightlist
-  \item
-        scalar multiplication such that
+	\tightlist
+	\item
+	      scalar multiplication such that
 \end{itemize}
 
-\[
-  a\ket{v}\in V\quad ;\quad a\in \mathbb{F},\ket{v}\in V
-\]
-
-\section{Lecture 3}\label{lecture-3}
+\begin{gather*}
+	a\ket{v}\in V\quad ;\quad a\in \mathbb{F},\ket{v}\in V
+\end{gather*}
 
 This lecture will apply the math learned in the previous lecture to do
 some cool physics!
 
-\subsection{Planck-Einstein Relation}\label{planck-einstein-relation}
+\section{Planck-Einstein Relation}\label{planck-einstein-relation}
 
-Einstein, a person, showed experimentally that
+Planck, a person, first proposed (and Einstein, another person, later
+applied to photons via the photoelectric effect) that
 
-\[
-  E=hf
-\]
+\begin{gather*}
+	E=hf
+\end{gather*}
 
-which means energy of a photon is a constant (Planck's! Another person)
+which means energy of a photon is Planck's constant
 \(h=6.626\times 10^{-34}Js\) times the frequency of the light \(f\).
 Because it was experimental, we can't really prove with math that this
-is true, but we proved it with experiments.
+is true, but we proved it with experiments. This is called the
+Planck--Einstein relation.
 
-\subsection{Angular Momentum, reduced Planck
-  constant}\label{angular-momentum-reduced-planck-constant}
+\section{Angular Frequency, reduced Planck
+  constant}\label{angular-frequency-reduced-planck-constant}
 
 Some dude in physics was like let's make a new, transformed version of
-frequency called angular momentum \(\omega\)!
+frequency called angular frequency \(\omega\)! (Not to be confused with
+angular momentum, which is a different physical quantity.)
 
 Let
 
-\[
-  \omega=2\pi f
-\]
+\begin{gather*}
+	\omega=2\pi f
+\end{gather*}
 
 Because of this, we can say that
 
-\[
-  E=hf\\
-  =h\frac{\omega}{2\pi}
-\]
+\begin{gather*}
+	E=hf\\
+	=h\frac{\omega}{2\pi}
+\end{gather*}
 
 Let the reduced Planck constant be
 
-\[
-  \hbar=\frac{h}{2\pi}
-\]
+\begin{gather*}
+	\hbar=\frac{h}{2\pi}
+\end{gather*}
 
 so we can also say
 
-\[
-  E=\hbar \omega
-\]
+\begin{gather*}
+	E=\hbar \omega
+\end{gather*}
 
 Bohr, a person, hypothesized that atoms absorb light at discrete
 frequencies.
@@ -817,7 +817,7 @@ frequencies.
 This means that atoms (photons too) have discrete (non-continuous)
 energy levels.
 
-\subsection{Functions}\label{functions}
+\section{Functions}\label{functions}
 
 Also let us notate a state as a function of time. What's a function?
 
@@ -826,32 +826,32 @@ Example:
 if i let \(f\) be a function that accepts \(x\) as an argument, like
 this
 
-\[
-  f(x)=4x
-\]
+\begin{gather*}
+	f(x)=4x
+\end{gather*}
 
 then
 
-\[
-  f(5)=4(5)=20
-\]
+\begin{gather*}
+	f(5)=4(5)=20
+\end{gather*}
 
 We can say that state is a function of time \(t\)
 
 Example:
 
-\[
-  \ket{\psi(t)}
-\]
+\begin{gather*}
+	\ket{\psi(t)}
+\end{gather*}
 
-\subsection{Particle Energies}\label{particle-energies}
+\section{Particle Energies}\label{particle-energies}
 
 We just said photons have discrete energy levels. Let's say they have
 \(k\) energy levels.
 
 We know experimentally, that any state \(\ket{\psi(t)}\) (e.g., spin) of
 a quantum particle can be expanded in the energy basis. Let the energy
-basis be just a set of basis states \(E_1,E_2, …, E_k\). This means a
+basis be just a set of \hyperref[basis-states]{basis states} \(E_1,E_2, …, E_k\). This means a
 photon can be at those energies.
 
 A state is a superposition of all those energies. Recall that a super
@@ -859,18 +859,18 @@ position is just a sum (\(\sum\)) of those energies. I put \(k\) under
 the sum showing we must add all the energies and their corresponding
 \(c_k\) values (aka. coefficients) together.
 
-\[
-  \ket{\psi(0)}=\sum_kc_k\ket{E_k}
-\]
+\begin{gather*}
+	\ket{\psi(0)}=\sum_kc_k\ket{E_k}
+\end{gather*}
 
-\subsection{Particle Phases}\label{particle-phases}
+\section{Particle Phases}\label{particle-phases}
 
 We also just proved that \(E=\hbar\omega\) so that particle with energy
 \(\ket{E_k}\) will oscillate at frequency
 
-\[
-  \omega_k=\frac{E_k}{\hbar}
-\]
+\begin{gather*}
+	\omega_k=\frac{E_k}{\hbar}
+\end{gather*}
 
 Oscillating means the phase of the particle changes so we can represent
 the phase as a complex number.
@@ -878,9 +878,9 @@ the phase as a complex number.
 Let's say there is a two-level quantum system in some superposition.
 This just means
 
-\[
-  \ket{\psi}=\alpha\ket{0}+\beta\ket{1}=\begin{pmatrix} \alpha\\\beta\end{pmatrix}
-\]
+\begin{gather*}
+	\ket{\psi}=\alpha\ket{0}+\beta\ket{1}=\begin{pmatrix} \alpha\\\beta\end{pmatrix}
+\end{gather*}
 
 Because \(\alpha,\beta\) can be complex, we proved experimentally that a
 glass polarizer, like a polarized sunglass, can change the phase of the
@@ -888,9 +888,9 @@ state \(\ket{1}\) for example.
 
 Let
 
-\[
-  \beta'=\beta e^{i\delta}
-\]
+\begin{gather*}
+	\beta'=\beta e^{i\delta}
+\end{gather*}
 
 Where \(\delta\) can be any phase angle from 0 to \(2\pi\).
 
@@ -898,336 +898,327 @@ This is the same phase as which destructively interfere in the double
 slit experiment. That's why phases exist. Because light is a wave with a
 frequency (and also a particle!)
 
-\subsection{Calculus}\label{calculus}
+\section{Calculus}\label{calculus}
 
 To differentiate something means to see how fast it changes with respect
 to something else changing, for example, time.
 
-\[
-  \frac{d}{dt}x=\text{change of $x$ w.r.t. $t$}
-\]
+\begin{gather*}
+	\frac{d}{dt}x=\text{change of $x$ w.r.t. $t$}
+\end{gather*}
 
 To do this, us humans developed some nifty tricks. To different
 something to the power of something, we multiply by the power and
 decrease the power by 1
 
-\[
-  \frac{d}{dt}x^5=5x^4
-\]
+\begin{gather*}
+	\frac{d}{dt}x^5=5x^4
+\end{gather*}
 
 The opposite of differentiation is integration.
 
-\[
-  \int_\alpha^\beta x\cdot dt=\text{the sum of x from t=$\alpha$ to t=$\beta$}
-\]
+\begin{gather*}
+	\int_\alpha^\beta x\cdot dt=\text{the sum of x from t=$\alpha$ to t=$\beta$}
+\end{gather*}
 
 Integration is much more hellish. You don't need to know integration for
 this.
 
-\subsection{Schrödinger's Equation,
+\section{Schrödinger's Equation,
   Hamiltonian}\label{schruxf6dingers-equation-hamiltonian}
 
 Recall
 
-\[
-  \ket{\psi(0)}=\sum_kc_k\ket{E_k}
-\]
+\begin{gather*}
+	\ket{\psi(0)}=\sum_kc_k\ket{E_k}
+\end{gather*}
 
 Because we learned this thing called phase, we can say that particle
 oscillate at different phases. This is shown using phases
 
-\[
-  \ket{\psi(t)}=\sum_kc_ke^{-i\omega_kt}\ket{E_k}\\
-  =\sum_kc_ke^{-iE_kt/\hbar}\ket{E_k}\\
-\]
+\begin{gather*}
+	\ket{\psi(t)}=\sum_kc_ke^{-i\omega_kt}\ket{E_k}\\
+	=\sum_kc_ke^{-iE_kt/\hbar}\ket{E_k}\\
+\end{gather*}
 
 If we take the derivative from both sides
 
-\[
-  \frac{d}{dt}\ket{\psi(t)}=\frac{d}{dt}\left[\sum_kc_ke^{-iE_kt/\hbar}\ket{E_k}\right]\\
-  =\sum_kc_k\cdot \left(-i\frac{E_k}{\hbar}\right)e^{-iE_kt/\hbar}\ket{E_k}\\
-  =-\frac{i}{\hbar}\sum_kc_k\cdot E_ke^{-iE_kt/\hbar}\ket{E_k}
-\]
+\begin{gather*}
+	\frac{d}{dt}\ket{\psi(t)}=\frac{d}{dt}\left[\sum_kc_ke^{-iE_kt/\hbar}\ket{E_k}\right]\\
+	=\sum_kc_k\cdot \left(-i\frac{E_k}{\hbar}\right)e^{-iE_kt/\hbar}\ket{E_k}\\
+	=-\frac{i}{\hbar}\sum_kc_k\cdot E_ke^{-iE_kt/\hbar}\ket{E_k}
+\end{gather*}
 
 Let the Hamiltonian \(H\) be the state multiplied by its energy
 
-\[
-  H\ket{E_k}=E_k\ket{E_k}
-\]
+\begin{gather*}
+	H\ket{E_k}=E_k\ket{E_k}
+\end{gather*}
 
 so
 
-\[
-  =-H\frac{i}{\hbar}\sum_kc_k\cdot e^{-iE_kt/\hbar}\ket{E_k}\\
-  =-\frac{i}{\hbar}H\ket{\psi(t)}
-\]
+\begin{gather*}
+	=-H\frac{i}{\hbar}\sum_kc_k\cdot e^{-iE_kt/\hbar}\ket{E_k}\\
+	=-\frac{i}{\hbar}H\ket{\psi(t)}
+\end{gather*}
 
 which gives us Schrödinger's equation (in state-vector form)
 
-\[
-  i\hbar\frac{d}{dt}\ket{\psi(t)}=H\ket{\psi(t)}
-\]
-
-\section{Lec 4}\label{lec-4}
+\begin{gather*}
+	i\hbar\frac{d}{dt}\ket{\psi(t)}=H\ket{\psi(t)}
+\end{gather*}
 
 This lecture introduces more intricate details to defining quantum
 mechanics
 
-\subsection{Hilbert Space}\label{hilbert-space}
+\section{Hilbert Spaces}\label{hilbert-spaces}
 
 A Hilbert space \(H\) describes quantum space.
 
-\[
-  H
-\]
+\begin{gather*}
+	H
+\end{gather*}
 
-A Hilbert space is a vector space, possibly infinite-dimensional.
+A Hilbert space is a \hyperref[vector-spaces]{vector space}, possibly infinite-dimensional.
 
-\(H\) has an inner product and is complete.
+\(H\) has an \hyperref[inner-product]{inner product} and is complete.
 
 The states we wrote before for example \(\ket{\psi}\) are vectors which
 exist in a Hilbert space.
 
-\subsubsection{Vectors}\label{vectors}
+\subsection{Vectors}\label{vectors}
 
 Let vector just be the same thing as
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{states}.
+\hyperref[ket-states]{states}.
 
-\subsubsection{Inner Product II}\label{inner-product-ii}
+\subsection{Inner Product II}\label{inner-product-ii}
 
 building on top of what we said about the inner product,
 
 an inner product is any
 
-\[
-  \langle u|v\rangle
-\]
+\begin{gather*}
+	\langle u|v\rangle
+\end{gather*}
 
 which is
 
 \begin{enumerate}
-  \def\labelenumi{\arabic{enumi}.}
-  \tightlist
-  \item
-        conjugate symmetric
+	\def\labelenumi{\arabic{enumi}.}
+	\tightlist
+	\item
+	      conjugate symmetric
 \end{enumerate}
 
-\[
-  \braket{u|v}^*=\braket{v|u}
-\]
+\begin{gather*}
+	\braket{u|v}^*=\braket{v|u}
+\end{gather*}
 
 Example
 
 let
 
-\[
-  \ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \Rarr \bra{\psi}=\begin{bmatrix}a^* & b^*\end{bmatrix}
-  \\
-  \ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
-\]
+\begin{gather*}
+	\ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \Rarr \bra{\psi}=\begin{bmatrix}a^* & b^*\end{bmatrix}
+	\\
+	\ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
+\end{gather*}
 
 so
 
-\[
-  (\braket{\psi|\phi})^*=\left(\begin{bmatrix}a^* & b^*\end{bmatrix}\begin{bmatrix}c\\d\end{bmatrix}\right)=(a^*c+bd^*)^*=ac^*+bd^*=c^*a+d^*b\\
-  =\braket{\phi|\psi}
-\]
+\begin{gather*}
+	(\braket{\psi|\phi})^*=\left(\begin{bmatrix}a^* & b^*\end{bmatrix}\begin{bmatrix}c\\d\end{bmatrix}\right)^*=(a^*c+b^*d)^*=ac^*+bd^*=c^*a+d^*b\\
+	=\braket{\phi|\psi}
+\end{gather*}
 
 so \(\phi,\psi\) are conjugate symmetric
 
 \begin{enumerate}
-  \def\labelenumi{\arabic{enumi}.}
-  \tightlist
-  \item
-        linear
+	\def\labelenumi{\arabic{enumi}.}
+	\tightlist
+	\item
+	      linear
 \end{enumerate}
 
-\[
-  \langle u|(a|v\rangle + b|w\rangle) = a\langle u|v\rangle + b\langle u|w\rangle
-\]
+\begin{gather*}
+	\langle u|(a|v\rangle + b|w\rangle) = a\langle u|v\rangle + b\langle u|w\rangle
+\end{gather*}
 
 \begin{enumerate}
-  \def\labelenumi{\arabic{enumi}.}
-  \tightlist
-  \item
-        positive definite
+	\def\labelenumi{\arabic{enumi}.}
+	\tightlist
+	\item
+	      positive definite
 \end{enumerate}
 
-\[
-  \forall |u\rangle \neq 0, \quad \langle u|u\rangle > 0
-\]
+\begin{gather*}
+	\forall |u\rangle \neq 0, \quad \langle u|u\rangle > 0
+\end{gather*}
 
-\subsubsection{Completeness}\label{completeness}
+\subsection{Completeness}\label{completeness}
 
 Don't worry about it. -prof. Zhou
 
-\subsection{Projections}\label{projections}
+\section{Projections}\label{projections}
 
 The projection of \(v\) onto a
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{vector}
+\hyperref[vectors]{vector}
 \(u\) is
 
-\[
-  \Pi_u(v)=\frac{\braket{v|u}}{\braket{u|u}}u
-\]
+\begin{gather*}
+	\Pi_u(v)=\frac{\braket{v|u}}{\braket{u|u}}u
+\end{gather*}
 
 Example
 
-\[
-  \ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \Rarr \bra{\psi}=\begin{bmatrix}a^* & b^*\end{bmatrix}
-  \\
-  \ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
-\]
+\begin{gather*}
+	\ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \Rarr \bra{\psi}=\begin{bmatrix}a^* & b^*\end{bmatrix}
+	\\
+	\ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
+\end{gather*}
 
-\[
-  \Pi_\psi(\phi)=\frac{\begin{bmatrix}c^* & d^*\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}}{\begin{bmatrix}a^* & b^*\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}}\begin{bmatrix}a\\b\end{bmatrix}\\
-  =\frac{c^*a+d^*b}{a^*a+b^*b}\begin{bmatrix}a\\b\end{bmatrix}
-\]
+\begin{gather*}
+	\Pi_\psi(\phi)=\frac{\begin{bmatrix}c^* & d^*\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}}{\begin{bmatrix}a^* & b^*\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}}\begin{bmatrix}a\\b\end{bmatrix}\\
+	=\frac{c^*a+d^*b}{a^*a+b^*b}\begin{bmatrix}a\\b\end{bmatrix}
+\end{gather*}
 
 This is similar to the dot product, but it gives a
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{vector}
+\hyperref[vectors]{vector}
 
-Projections are
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{operators}
-with a special property
 
-\[
-  \Pi^2=\Pi
-\]
-
-\subsection{Gram-Schmidt Procedure}\label{gram-schmidt-procedure}
+\section{Gram-Schmidt Procedure}\label{gram-schmidt-procedure}
 
 If you have
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{linearly
-  independent} vectors and want to convert them into an
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{orthonormal}
+\hyperref[linear-independence]{linearly
+	independent} vectors and want to convert them into an
+\hyperref[orthonormality]{orthonormal}
 set, you can follow the Gram-Schmidt procedure.
 
 Given \(v_1,v_2,…,v_n\) as
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{LI}
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{vectors},
+\hyperref[linear-independence]{LI}
+\hyperref[vectors]{vectors},
 then \(u_1, u_2, …, u_n\) can be built using
 
-\[
-  u_k=v_k-\sum_{i=1}^{k-1}\Pi_{u_i}(v_k)
-\]
+\begin{gather*}
+	u_k=v_k-\sum_{i=1}^{k-1}\Pi_{u_i}(v_k)
+\end{gather*}
 
 This makes \(u\) an
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{orthogonal}
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{vector}
+\hyperref[orthogonality]{orthogonal}
+\hyperref[vectors]{vector}
 
 Then you
 \href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{normalize}
 \(u\) to get a
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{orthonormal}
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{vector}.
+\hyperref[orthonormality]{orthonormal}
+\hyperref[vectors]{vector}.
 You do this by multiplying the
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{magnitude}
+\hyperref[magnitude]{magnitude}
 of the
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{vector}.
+\hyperref[vectors]{vector}.
 
-\subsection{Set Theory}\label{set-theory}
+\section{Set Theory}\label{set-theory}
 
 Ok this is just for notation sake but i want to make my life a bit
 easier.
 
-\subsubsection{Element}\label{element}
+\subsection{Element}\label{element}
 
 an element is either a variable or a number or a literal in our
 definition
 
-\[
-  1,5,a,\text{cat},...
-\]
+\begin{gather*}
+	1,5,a,\text{cat},...
+\end{gather*}
 
-\subsubsection{Set}\label{set}
+\subsection{Set}\label{set}
 
 Let a set be an unordered collection of
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{elements}
+\hyperref[element]{elements}
 
 Example:
 
 This is a set \(S\)
 
-\[
-  S=\{3,5,1982549\}\\
-  S_2=\{2n\quad|\quad n=1,2,5\}=\{2,4,10\}
-\]
+\begin{gather*}
+	S=\{3,5,1982549\}\\
+	S_2=\{2n\quad|\quad n=1,2,5\}=\{2,4,10\}
+\end{gather*}
 
 The \textbar{} means ``such that''
 
-\subsubsection{Subsets}\label{subsets}
+\subsection{Subsets}\label{subsets}
 
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{sets}
+\hyperref[set]{sets}
 can be subsets (or equal) of another set if all elements of a
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{set}
+\hyperref[set]{set}
 is in another
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{set}.
+\hyperref[set]{set}.
 
 Example:
 
-\[
-  S\subset\{3,5,1982549,67\}
-\]
+\begin{gather*}
+	S\subset\{3,5,1982549,67\}
+\end{gather*}
 
 We have a line underneath to show it could be a subset OR equal
 
-\[
-  S\subseteq\{3,5,1982549\}
-\]
+\begin{gather*}
+	S\subseteq\{3,5,1982549\}
+\end{gather*}
 
-\subsubsection{In}\label{in}
+\subsection{In}\label{in}
 
 We can say an
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{element}
+\hyperref[element]{element}
 is ``in'' a
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{set}
+\hyperref[set]{set}
 if it's in a set (duh)
 
 Example:
 
-\[
-  3\in S\\
-  4\notin S
-\]
+\begin{gather*}
+	3\in S\\
+	4\notin S
+\end{gather*}
 
-\subsubsection{Standard Number Systems}\label{standard-number-systems}
+\subsection{Standard Number Systems}\label{standard-number-systems}
 
 There are some standard number systems we gotta keep in mind
 
-\[
-  \{1,2,3,...\}\subseteq\mathbb{N}\\
-  \{...,-3,-2,-1,0,1,2,3,...\}\subseteq\mathbb{Z}\\
-  \{\frac{p}{q}\quad\forall p\in \mathbb{Z},q\neq 0 \}\subseteq\mathbb{Q}\\
-  \{\sqrt{2},\pi,...\}\in \mathbb{R}\\
-  \{3+1i, 5+5i, 2+0i\}\in\mathbb{C}=\mathbb{F}
-\]
+\begin{gather*}
+	\{1,2,3,...\}\subseteq\mathbb{N}\\
+	\{...,-3,-2,-1,0,1,2,3,...\}\subseteq\mathbb{Z}\\
+	\{\frac{p}{q}\quad\forall p\in \mathbb{Z},q\neq 0 \}\subseteq\mathbb{Q}\\
+	\{\sqrt{2},\pi,...\}\in \mathbb{R}\\
+	\{3+1i, 5+5i, 2+0i\}\in\mathbb{C}=\mathbb{F}
+\end{gather*}
 
 Where
 
 \begin{itemize}
-  \tightlist
-  \item
-        \(\mathbb{N}\) are natural numbers
-  \item
-        \(\mathbb{Z}\) are integers
-  \item
-        \(\mathbb{R}\) are real numbers
-  \item
-        \(\mathbb{C}\) are complex numbers, \(\mathbb{F}\) are fields
+	\tightlist
+	\item
+	      \(\mathbb{N}\) are natural numbers
+	\item
+	      \(\mathbb{Z}\) are integers
+	\item
+	      \(\mathbb{R}\) are real numbers
+	\item
+	      \(\mathbb{C}\) are complex numbers, \(\mathbb{F}\) are fields
 \end{itemize}
 
 where \(\forall p\in \mathbb{Z},q\neq 0\) means for all integers \(p\)
 AND \(q\neq 0\)
 
-\subsection{Functions}\label{functions-1}
+\section{Functions}\label{functions-1}
 
 A function \(f\) is maps numbers from a set \(A\) to set \(B\). It's
 written like this
 
-\[
-  f:A\rarr B
-\]
+\begin{gather*}
+	f:A\rarr B
+\end{gather*}
 
 A map just links a thing to another thing.
 
@@ -1235,154 +1226,154 @@ Example
 
 Let \(q\) be a function
 
-\[
-  q:\Z\rarr\Z\\
-  q(x)=3x
-\]
+\begin{gather*}
+	q:\Z\rarr\Z\\
+	q(x)=3x
+\end{gather*}
 
 q essentially maps all integers to another integer, which is three times
 itself.
 
-\[
-  q(67)=201
-\]
+\begin{gather*}
+	q(67)=201
+\end{gather*}
 
-\subsection{Operators}\label{operators}
+\section{Operators}\label{operators}
 
 Let \(\hat{T}\) be an operator.
 
 An operator is a
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{function}
+\hyperref[functions]{function}
 where
 
-\[
-  \hat{T}:V\rarr V
-\]
+\begin{gather*}
+	\hat{T}:V\rarr V
+\end{gather*}
 
-where V are the set of all possible vectors in a Hilbert space.
+where V are the set of all possible \hyperref[vectors]{vectors} in a \hyperref[hilbert-spaces]{Hilbert space}.
 
 Then
 
-\[
-  \hat{T}(a\ket{u}+b\ket{v})=a\hat{T}(\ket{u})+b\hat{T}(\ket{v})
-\]
+\begin{gather*}
+	\hat{T}(a\ket{u}+b\ket{v})=a\hat{T}(\ket{u})+b\hat{T}(\ket{v})
+\end{gather*}
 
 also they can be represented as matrices
 
-\[
-  \hat{T}\ket{\psi}=\sum_{m}\psi_m'\ket{m}
-\]
+\begin{gather*}
+	\hat{T}\ket{\psi}=\sum_{m}\psi_m'\ket{m}
+\end{gather*}
 
 where
 
-\[
-  \begin{bmatrix}
-    \psi_1' \\
-    \psi_2' \\
-    \vdots  \\
-    \psi_d'
-  \end{bmatrix}=
-  \begin{bmatrix}
-    T_{11} & T_{12} & \cdots & T_{1d} \\
-    T_{21} & T_{22} & \cdots & T_{2d} \\
-    \vdots                            \\
-    T_{d1} & T_{d2} & \cdots & T_{dd}
-  \end{bmatrix}\begin{bmatrix}\psi_1 \\ \psi_2 \\ \vdots \\\psi_d\end{bmatrix}
-\]
+\begin{gather*}
+	\begin{bmatrix}
+		\psi_1' \\
+		\psi_2' \\
+		\vdots  \\
+		\psi_d'
+	\end{bmatrix}=
+	\begin{bmatrix}
+		T_{11} & T_{12} & \cdots & T_{1d} \\
+		T_{21} & T_{22} & \cdots & T_{2d} \\
+		\vdots                            \\
+		T_{d1} & T_{d2} & \cdots & T_{dd}
+	\end{bmatrix}\begin{bmatrix}\psi_1 \\ \psi_2 \\ \vdots \\\psi_d\end{bmatrix}
+\end{gather*}
 
 where \(\ket{m}\) is the basis for \(\ket{\psi}\)
 
 Operators must be square.
 
-\subsection{Observables}\label{observables}
+\section{Observables}\label{observables}
 
-An observable is represented by a Hermitian operator acting on a Hilbert
-space.
+An observable is represented by a \hyperref[hermitian-matrix]{Hermitian operator} acting on a \hyperref[hilbert-spaces]{Hilbert
+	space}.
 
-\subsection{Symmetry/Unitary Operators}\label{symmetryunitary-operators}
+\section{Symmetry/Unitary Operators}\label{symmetryunitary-operators}
 
 Represented by unitary operators. An operator \(\hat{U}\) is unitary if
 
-\[
-  \hat{U}^+\hat{U}=I
-\]
+\begin{gather*}
+	\hat{U}^+\hat{U}=I
+\end{gather*}
 
 inner products are also preserved if unitary
 
-\[
-  \braket{\hat{U}\psi|\hat{U}\phi}=\braket{\psi|\phi}
-\]
+\begin{gather*}
+	\braket{\hat{U}\psi|\hat{U}\phi}=\braket{\psi|\phi}
+\end{gather*}
 
-\subsection{Traces}\label{traces}
+\section{Traces}\label{traces}
 
 Traces are just adding diagonals together
 
-\[
-  tr(\hat{T})=\sum_n\bra{n}\hat{T}\ket{n}=\sum_nT_{nn}
-\]
+\begin{gather*}
+	tr(\hat{T})=\sum_n\bra{n}\hat{T}\ket{n}=\sum_nT_{nn}
+\end{gather*}
 
 Properties:
 
-\[
-  Tr(\hat{A}\hat{B})=Tr(\hat{B}\hat{A})\\
-  Tr(\hat{A}\hat{B}\hat{C})=Tr(\hat{B}\hat{C}\hat{A})=Tr(\hat{C}\hat{A}\hat{B})
-\]
+\begin{gather*}
+	Tr(\hat{A}\hat{B})=Tr(\hat{B}\hat{A})\\
+	Tr(\hat{A}\hat{B}\hat{C})=Tr(\hat{B}\hat{C}\hat{A})=Tr(\hat{C}\hat{A}\hat{B})
+\end{gather*}
 
 Note that \(Tr(\hat{A}\hat{B}\hat{C})\neq Tr(\hat{A}\hat{C}\hat{B})\) →
 it must be cyclical permutation
 
-\[
-  Tr(\alpha\hat{A}+\beta\hat{B})=\alpha Tr(\hat{A})+\beta Tr(\hat{b})
-\]
+\begin{gather*}
+	Tr(\alpha\hat{A}+\beta\hat{B})=\alpha Tr(\hat{A})+\beta Tr(\hat{b})
+\end{gather*}
 
-\subsection{Determinants}\label{determinants}
+\section{Determinants}\label{determinants}
 
 Det is a function that we can apply to matrices to get a scalar. It's
 defined for \(n\times n\) only.
 
 For a \(2\times 2\) matrix it's just
 
-\[
-  det\begin{bmatrix}a & b \\ c & d\end{bmatrix}=ad-bc
-\]
+\begin{gather*}
+	det\begin{bmatrix}a & b \\ c & d\end{bmatrix}=ad-bc
+\end{gather*}
 
 For an \(n\times n\) matrix it can be done with cofactor expansion
 
-\[
-  det(A)=\sum_{j=1}^n(-1)^{i+j}a_{ij}M_{ij}
-\]
+\begin{gather*}
+	det(A)=\sum_{j=1}^n(-1)^{i+j}a_{ij}M_{ij}
+\end{gather*}
 
 Note it's recursive so it's really expensive
 
 also dont forget that
 
-\[
-  det(\hat{A}\hat{B})=det(\hat{A})det(\hat B)
-\]
+\begin{gather*}
+	det(\hat{A}\hat{B})=det(\hat{A})det(\hat B)
+\end{gather*}
 
 An easier way to do it is through row reduction. Make a triangular
 matrix and multiply the diags together
 
-\[
-  det\begin{pmatrix}a_{11} & *      & *      \\
-                        & a_{22} & *      \\
-                 0      & 0      & a_{33}
-  \end{pmatrix}=a_{11}a_{22}a_{33}
-\]
+\begin{gather*}
+	det\begin{pmatrix}a_{11} & *      & *      \\
+	                      & a_{22} & *      \\
+	               0      & 0      & a_{33}
+	\end{pmatrix}=a_{11}a_{22}a_{33}
+\end{gather*}
 
-\subsubsection{Invertibility of
-  Matrices}\label{invertibility-of-matrices}
+\subsection{Invertibility of
+	Matrices}\label{invertibility-of-matrices}
 
 Operator \(\hat{T}\) (i.e., a matrix) is invertible if and only if
 \(det(\hat{T})\neq0\)
 
-\subsection{Eigenvectors/Eigenvalues/Eigenspaces}\label{eigenvectorseigenvalueseigenspaces}
+\section{Eigenvectors/Eigenvalues}\label{eigenvectorseigenvalues}
 
 \url{https://www.youtube.com/watch?v=PFDu9oVAE-g}
 
-\[
-  A\vec{v}=\lambda\vec{v}
-\]
+\begin{gather*}
+	A\vec{v}=\lambda\vec{v}
+\end{gather*}
 
 Basically if I apply matrix transformation \(A\) to a vector \(\ket{v}\)
 and it still points in the same direction, it is an Eigenvector. It
@@ -1396,98 +1387,116 @@ The set of all vector \(\ket{v}\)'s are Eigenvectors of transformation
 An Eigenstate are states instead of vectors, operators instead of
 matrices but are the same thing.
 
+\subsection{Eigenstates}\label{eigenstates}
+Eigenstates are eigenvectors of operators.
+
+\begin{gather*}
+	\hat{A}\ket{\psi}=\lambda\ket{\psi}
+\end{gather*}
+
+\subsection{Eigenspaces}\label{eigenspaces}
+An eigenspace of operator \(\hat{A}\) is the set of all \hyperref[eigenvectorseigenvalues]{eigenvectors}/\hyperref[eigenstates]{eigenstates} with the same \hyperref[eigenvectorseigenvalues]{eigenvalue} plus the zero vector.
+
+Example
+
+If \hyperref[operators]{operator} \(\hat{A}\) has \hyperref[eigenvectorseigenvalues]{eigenvalue} \(\lambda\), then the \(\lambda\)-eigenspace of the operator \(\hat{A}\) is
+
 \[
-  \hat{A}\ket{\psi}=\lambda\ket{\psi}
+	\{\ket{\psi}:\hat{A}\ket{\psi}=\lambda\ket{\psi}\}
 \]
 
-\subsection{Subspaces}\label{subspaces}
+\subsection{Eigenbasis}\label{eigenbasis}
+An eigenbasis of operator \(\hat{A}\) is a set of \hyperref[eigenvectorseigenvalues]{eigenvectors}/\hyperref[eigenstates]{eigenstates} that form a \hyperref[basis-states]{basis} for the \hyperref[hilbert-spaces]{Hilbert space}.
+
+Every Hermitian operator has an \hyperref[eigenbasis]{eigenbasis}.
+
+
+\section{Subspaces}\label{subspaces}
 
 A
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{subset}
+\hyperref[subsets]{subset}
 \(U\subseteq V\) is a subspace if it satisfies:
 
 \begin{enumerate}
-  \def\labelenumi{\arabic{enumi}.}
-  \tightlist
-  \item
-        contains zero vector
-  \item
-        closed under addition \(\ket{u},\ket{v}\in U, \ket{u}+\ket{v}\in U\)
-  \item
-        closed under scalar multiplication
-        \(\ket{u}\in U, c\in \mathbb{F}\Rarr c\ket{u}\in U\)
+	\def\labelenumi{\arabic{enumi}.}
+	\tightlist
+	\item
+	      contains zero vector
+	\item
+	      closed under addition \(\ket{u},\ket{v}\in U, \ket{u}+\ket{v}\in U\)
+	\item
+	      closed under scalar multiplication
+	      \(\ket{u}\in U, c\in \mathbb{F}\Rarr c\ket{u}\in U\)
 \end{enumerate}
 
-\subsection{Span Function}\label{span-function}
+\section{Span Function}\label{span-function}
 
 A span of vectors is the set of all linear combinations you can build
 from them
 
-\subsection{Characteristic Polynomial}\label{characteristic-polynomial}
+\section{Characteristic Polynomial}\label{characteristic-polynomial}
 
 polynomial
 \(p(\lambda)=\alpha_0\lambda^n+\alpha_1\lambda^{n-1}+...+\alpha_{n-1}\lambda^{1}+\alpha_n\)
 
-\[
-  p(\lambda)=det(A-\lambda I)
-\]
+\begin{gather*}
+	p(\lambda)=det(A-\lambda I)
+\end{gather*}
 
 Solving
 
-\[
-  p(\lambda)=0
-\]
+\begin{gather*}
+	p(\lambda)=0
+\end{gather*}
 
-Gives \(\lambda\) values which are eigenvalues of A
+Gives \(\lambda\) values which are \hyperref[eigenvectorseigenvalues]{eigenvalues} of A
 
-\subsection{T-invariant subspaces}\label{t-invariant-subspaces}
+\section{Invariant subspaces}\label{invariant-subspaces}
 
 A
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{subspace}
-\(U\subseteq V\) is called \(\hat{T}\) invariant if operator \(\hat{T}\)
+\hyperref[subspaces]{subspace}
+\(U\subseteq V\) is called \(\hat{T}\)-invariant if operator \(\hat{T}\)
 keeps everything in U inside U. If it is T-invariant, then this must
 always be true:
 
-\[
-  \hat{T}(U)=\{\hat{T}\ket{\psi}|\ket{\psi}\in U\}\subseteq U
-\]
+\begin{gather*}
+	\hat{T}(U)=\{\hat{T}\ket{\psi}|\ket{\psi}\in U\}\subseteq U
+\end{gather*}
 
 Simplest T invariant subspace is (with dimensions \(d\))
 
-\[
-  U=span\{\ket{u}\}\\
-  \hat{T}\ket{y}=\lambda \ket{u}
-\]
+\begin{gather*}
+	U=span\{\ket{u}\}\\
+	\hat{T}\ket{y}=\lambda \ket{u}
+\end{gather*}
 
-When \(\lambda\) is Eigenvalue and \(\ket{u}\) is eigenvector and
+When \(\lambda\) is \hyperref[eigenvectorseigenvalues]{Eigenvalue} and \(\ket{u}\) is \hyperref[eigenvectorseigenvalues]{eigenvector} and
 \(\ket{u}\neq 0\) and you can define these vectors by checking
 
-\[
-  (\hat{T}-\lambda I)\ket{u}=0\\
-  0=det(\hat{T}-\lambda I)\\
-  =(\lambda_1-\lambda)(\lambda_2-\lambda)..(\lambda_d-\lambda)
-\]
+\begin{gather*}
+	(\hat{T}-\lambda I)\ket{u}=0\\
+	0=det(\hat{T}-\lambda I)\\
+	=(\lambda_1-\lambda)(\lambda_2-\lambda)..(\lambda_d-\lambda)
+\end{gather*}
 
 In general, this determinant has degree \(\lambda_i\) are zeroes of
 character polynomial \(\lambda_i\in C\) can be repeated
 
-\subsection{Commutators}\label{commutators}
+\section{Commutators}\label{commutators}
 
 The commutator of two operators \(\hat{A},\hat{B}\) is defined as
 
-\[
-  [\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}
-\]
+\begin{gather*}
+	[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}
+\end{gather*}
 
 If \([\hat{A},\hat{B}]=0\) then that means you can commute
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{matrix
-  multiplication}.
+\hyperref[bra-ket-matrix-multiplication]{matrix
+	multiplication}.
 
-\section{Lec 5}\label{lec-5}
+If "\(\hat{A}\) commutes with \(\hat{B}\)", then that means \(\hat{A}\hat{B}=\hat{B}\hat{A}\) which also means \([\hat{A},\hat{B}]=0\).
 
-More math
-
-\subsection{Adjoint}\label{adjoint}
+\section{Adjoint}\label{adjoint}
 
 An adjoint is basically a conjugate transpose but for an operator
 (whereas a conjugate transpose can only be applied to a matrix)
@@ -1495,10 +1504,10 @@ An adjoint is basically a conjugate transpose but for an operator
 Given operator \(\hat{A}\), it's adjoint is the operator \(\hat{A}^+\)
 such that \(\forall\ket{i},\ket{j}\)
 
-\[
-  \bra{i}\hat{A}^+\ket{j}=(\bra{j}\hat{A}\ket{i})^*\\
-  (\hat{A}^+)_{ij}=\hat{A}^*_{ji}
-\]
+\begin{gather*}
+	\bra{i}\hat{A}^+\ket{j}=(\bra{j}\hat{A}\ket{i})^*\\
+	(\hat{A}^+)_{ij}=\hat{A}^*_{ji}
+\end{gather*}
 
 Where, for any operator \(\hat{O}\), a matrix element
 \(\bra{i}\hat{O}\ket{j}\) is just the \((i,j)\)-th element of the matrix
@@ -1510,47 +1519,47 @@ where \(A^*\) is the complex conjugation of \(A\)
 
 properties:
 
-\[
-  (\hat{A}^+)^+=\hat{A}\\
-  (\hat{A}+\hat{B})^+=\hat{A}^++\hat{B}^+\\
-  (\hat{A}\hat{B})^+=\hat{B}^+\hat{A}^+
-\]
+\begin{gather*}
+	(\hat{A}^+)^+=\hat{A}\\
+	(\hat{A}+\hat{B})^+=\hat{A}^++\hat{B}^+\\
+	(\hat{A}\hat{B})^+=\hat{B}^+\hat{A}^+
+\end{gather*}
 
 Example:
 
 Consider operator
 
-\[
-  \hat{A}=\ket{1}\bra{2}+2i\ket{2}\bra{1}+3\ket{2}\bra{2}\\
-  \Rarr \text{adjoint of $\hat{A}$}=\ket{2}\bra{1}-2i\ket{1}\bra{2}+3\ket{2}\bra{2}
-\]
+\begin{gather*}
+	\hat{A}=\ket{1}\bra{2}+2i\ket{2}\bra{1}+3\ket{2}\bra{2}\\
+	\Rarr \text{adjoint of $\hat{A}$}=\ket{2}\bra{1}-2i\ket{1}\bra{2}+3\ket{2}\bra{2}
+\end{gather*}
 
 So w.r.t. to basis \(\{\ket{1},\ket{2}\}\), \(\hat{A}\) is
 
-\[
-  \hat{A}=\begin{pmatrix}
-    0  & 1 \\
-    2i & 3
-  \end{pmatrix}
-\]
+\begin{gather*}
+	\hat{A}=\begin{pmatrix}
+		0  & 1 \\
+		2i & 3
+	\end{pmatrix}
+\end{gather*}
 
 The conjugate transpose of \(\hat{A}=\hat{A}^+\) which is
 
-\[
-  \hat{A}^+=\begin{pmatrix}
-    0 & -2i \\
-    1 & 3
-  \end{pmatrix}
-\]
+\begin{gather*}
+	\hat{A}^+=\begin{pmatrix}
+		0 & -2i \\
+		1 & 3
+	\end{pmatrix}
+\end{gather*}
 
 Which, once we pick an orthonormal basis, the matrix of \(\hat{A}^+\)
 equals the conjugate transpose of the matrix of \(\hat{A}\)
 
-\[
-  \hat{A}^+=\text{adjoint of $\hat{A}$}
-\]
+\begin{gather*}
+	\hat{A}^+=\text{adjoint of $\hat{A}$}
+\end{gather*}
 
-\subsection{Hermitian Operators}\label{hermitian-operators}
+\section{Hermitian Operators}\label{hermitian-operators}
 
 An operator is Hermitian if and only if the adjoint of the operator is
 equal to itself.
@@ -1558,34 +1567,34 @@ equal to itself.
 Properties
 
 \begin{itemize}
-  \tightlist
-  \item
-        all eigenvalues of a Hermitian operator are real
-  \item
-        All eigenvectors of a Hermitian operator form an orthonormal basis
-  \item
-        observables are usually some kind of Hermitian operator
+	\tightlist
+	\item
+	      all \hyperref[eigenvectorseigenvalues]{eigenvalues} of a Hermitian operator are real
+	\item
+	      All \hyperref[eigenvectorseigenvalues]{eigenvectors} of a Hermitian operator form an \hyperref[orthonormality]{orthonormal} \hyperref[basis-states]{basis}
+	\item
+	      \hyperref[observables]{observables} are usually some kind of Hermitian operator
 \end{itemize}
 
-The eigenvalues represent possible measurement outcomes. Orthonormal
-eigenstates \(\ket{\alpha}\) mean that these are definite value states
+The \hyperref[eigenvectorseigenvalues]{eigenvalues} represent possible measurement outcomes. \hyperref[orthonormality]{Orthonormal}
+\hyperref[eigenstates]{eigenstates} \(\ket{\alpha}\) mean that these are definite value states
 
-\subsection{Positive Semi-Definite (PSD)
+\section{Positive Semi-Definite (PSD)
   Operators}\label{positive-semi-definite-psd-operators}
 
 An operator \(\hat{P}\) is PSD if and only if
 
 \begin{itemize}
-  \tightlist
-  \item
-        \(\hat{P}\) is Hermitian
-  \item
-        this holds true for all states \(\ket{\psi}\) :
+	\tightlist
+	\item
+	      \(\hat{P}\) is \hyperref[hermitian-operators]{Hermitian}
+	\item
+	      this holds true for all states \(\ket{\psi}\) :
 \end{itemize}
 
-\[
-  \bra{\psi}\hat{P}\ket{\psi}\geq 0
-\]
+\begin{gather*}
+	\bra{\psi}\hat{P}\ket{\psi}\geq 0
+\end{gather*}
 
 This means the angle between \(\ket{\psi}\) and \(\hat{P}\ket{\psi}\) is
 less than 90 degrees.
@@ -1593,118 +1602,125 @@ less than 90 degrees.
 Example
 
 \begin{itemize}
-  \tightlist
-  \item
-        Projectors are PSD
+	\tightlist
+	\item
+	      Projectors are PSD
 \end{itemize}
 
-\subsubsection{Projectors}\label{projectors}
+\subsection{Projectors}\label{projectors}
+Projections are
+\hyperref[operators]{operators}
+with a special property
+
+\begin{gather*}
+	\Pi^2=\Pi
+\end{gather*}
 
 A projector operator (aka. a projector) is a
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{projection}
+\hyperref[projections]{projection}
 that
 
-\[
-  \Pi_u=\frac{\ket{u}\bra{u}}{\braket{u|u}}
-\]
+\begin{gather*}
+	\Pi_u=\frac{\ket{u}\bra{u}}{\braket{u|u}}
+\end{gather*}
 
 once i apply it to a state \(v\), i get the projection of that state
 \(v\) on state \(u\)
 
-\subsubsection{Born's Rule}\label{borns-rule}
+\subsection{Born's Rule}\label{borns-rule}
 
 If a quantum system is in state \(\ket{\psi}\) and you measure
-observable \(\hat{A}\) --- the probability of getting eigenvalue
-\(\lambda_\alpha\) (which corresponds to eigenstate \(\ket{\alpha}\)) is
+\hyperref[observables]{observable} \(\hat{A}\) --- the probability of getting \hyperref[eigenvectorseigenvalues]{eigenvalue}
+\(\lambda_\alpha\) (which corresponds to \hyperref[eigenstates]{eigenstate} \(\ket{\alpha}\)) is
 
-\[
-  P_\alpha=|\braket{\alpha|\psi}|^2
-\]
+\begin{gather*}
+	P_\alpha=|\braket{\alpha|\psi}|^2
+\end{gather*}
 
-\subsection{Anti-Hermitian Operators}\label{anti-hermitian-operators}
+\section{Anti-Hermitian Operators}\label{anti-hermitian-operators}
 
 An operator is anti-hermitian if and only if
 
-\[
-  \hat{B}^+=-\hat{B}
-\]
+\begin{gather*}
+	\hat{B}^+=-\hat{B}
+\end{gather*}
 
 note that if you do
 
-\[
-  \hat{A}=i\hat{B}
-\]
+\begin{gather*}
+	\hat{A}=i\hat{B}
+\end{gather*}
 
-then \(\hat{A}\) is Hermitian
+then \(\hat{A}\) is \hyperref[hermitian-operators]{Hermitian}
 
 Any operator \(\hat{T}\) can be written as linear combination of
-Hermitian and anti-Hermitian operator.
+\hyperref[hermitian-operators]{Hermitian} and anti-Hermitian operator.
 
-\[
-  \hat{T}=\hat{A}+i\hat{B}\\
-  \hat{A}=\frac{\hat{T}+\hat{T}^+}{2}\\
-  \hat{B}=\frac{\hat{T}-\hat{T}^+}{2i}
-\]
+\begin{gather*}
+	\hat{T}=\hat{A}+i\hat{B}\\
+	\hat{A}=\frac{\hat{T}+\hat{T}^+}{2}\\
+	\hat{B}=\frac{\hat{T}-\hat{T}^+}{2i}
+\end{gather*}
 
-\subsection{Unitary Operator}\label{unitary-operator}
+\section{Unitary Operator}\label{unitary-operator}
 
 An operator is unitary if and only if
 
-\[
-  \hat{U}^+\hat{U}=\hat{U}\hat{U}^+=I
-\]
+\begin{gather*}
+	\hat{U}^+\hat{U}=\hat{U}\hat{U}^+=I
+\end{gather*}
 
 \begin{itemize}
-  \tightlist
-  \item
-        it preserves inner product
+	\tightlist
+	\item
+	      it preserves inner product
 \end{itemize}
 
-\[
-  \ket{\alpha '}=\hat{U}\ket{\alpha}\\
-  \ket{\beta'}=\hat{U}\ket{\beta}\\
-  \braket{\alpha'|\beta'}=\bra{\alpha}\hat{U}^+\hat{U}\ket{\beta}\\
-  =\bra{\alpha}I\ket{\beta}\\
-  =\braket{\alpha|\beta}
-\]
+\begin{gather*}
+	\ket{\alpha '}=\hat{U}\ket{\alpha}\\
+	\ket{\beta'}=\hat{U}\ket{\beta}\\
+	\braket{\alpha'|\beta'}=\bra{\alpha}\hat{U}^+\hat{U}\ket{\beta}\\
+	=\bra{\alpha}I\ket{\beta}\\
+	=\braket{\alpha|\beta}
+\end{gather*}
 
 \begin{itemize}
-  \tightlist
-  \item
-        U is basis chagne between orthonormal basis because you can write
-        \(\hat{U}\) as
+	\tightlist
+	\item
+	      U is basis chagne between orthonormal basis because you can write
+	      \(\hat{U}\) as
 
-        \begin{itemize}
-          \tightlist
-          \item
-                as chatgpt puts it: unitary matrices/operators represent a rotation
-                or change of coordinates in Hilbert space, without changing lengths
-                or angles.
-        \end{itemize}
+	      \begin{itemize}
+		      \tightlist
+		      \item
+		            as chatgpt puts it: unitary matrices/operators represent a rotation
+		            or change of coordinates in Hilbert space, without changing lengths
+		            or angles.
+	      \end{itemize}
 \end{itemize}
 
-\[
-  \hat{U}=\hat{U}I
-\]
+\begin{gather*}
+	\hat{U}=\hat{U}I
+\end{gather*}
 
 I can use completeness relation so that if
 
-\[
-  \hat{U}\ket{\alpha_n}=\ket{\beta_n}
-\]
+\begin{gather*}
+	\hat{U}\ket{\alpha_n}=\ket{\beta_n}
+\end{gather*}
 
 then we can change basis
 
-\[
-  \hat{U}\sum_n\ket{\alpha_n}\bra{\alpha_n}\\
-  =\sum_nU\ket{\alpha_n}\bra{\alpha_n}\\
-  =\sum_n\ket{\beta_n}\bra{\alpha_n}
-\]
+\begin{gather*}
+	\hat{U}\sum_n\ket{\alpha_n}\bra{\alpha_n}\\
+	=\sum_nU\ket{\alpha_n}\bra{\alpha_n}\\
+	=\sum_n\ket{\beta_n}\bra{\alpha_n}
+\end{gather*}
 
 Both \(\{\ket{\alpha_n}\}\) and \(\{\ket{\beta_n}\}\) are orthonormal
 basis
 
-\subsection{Probability Theory}\label{probability-theory}
+\section{Probability Theory}\label{probability-theory}
 
 probability space \(\Sigma\) has points and elements and associated
 probabilities with them
@@ -1713,261 +1729,261 @@ example:
 
 coin flip
 
-\[
-  \sum=\{e:H,T\}\rarr\frac{1}{2}
-\]
+\begin{gather*}
+	\sum=\{e:H,T\}\rarr\frac{1}{2}
+\end{gather*}
 
 Sum of all probability of your space should be 1
 
-\[
-  \sum P(\Sigma)=1
-\]
+\begin{gather*}
+	\sum P(\Sigma)=1
+\end{gather*}
 
 We have a random variable \(X\). You have an event in that random
 variable space called \(x\). The probability of finding that event in
 that random variable distribution
 
-\[
-  P(X)=\sum_{e\in V_x}P(e)
-\]
+\begin{gather*}
+	P(X)=\sum_{e\in V_x}P(e)
+\end{gather*}
 
 where
 
-\[
-  V_x=\{e:X(e)=x\}
-\]
+\begin{gather*}
+	V_x=\{e:X(e)=x\}
+\end{gather*}
 
 Note that the probabilities are always between 0 and 1
 
-\[
-  0\leq P(x)\leq 1
-\]
+\begin{gather*}
+	0\leq P(x)\leq 1
+\end{gather*}
 
-\subsubsection{Joint Random Variables}\label{joint-random-variables}
+\subsection{Joint Random Variables}\label{joint-random-variables}
 
 We have a joint random variable \((X,Y)\) and we want to find a pair of
 values
 
-\[
-  P(x,y)=\sum_{x,y\in V_{x,y}}P(e)\\
-  V_{x,y}=\{e:X(e)=x, Y(e)=y\}
-\]
+\begin{gather*}
+	P(x,y)=\sum_{x,y\in V_{x,y}}P(e)\\
+	V_{x,y}=\{e:X(e)=x, Y(e)=y\}
+\end{gather*}
 
 If i have one variable, then the other one can be inferred from the
 other.
 
-\[
-  P(X)=\sum_yP(x,y)\\
-  P(Y)=\sum_xP(x,y)
-\]
+\begin{gather*}
+	P(X)=\sum_yP(x,y)\\
+	P(Y)=\sum_xP(x,y)
+\end{gather*}
 
-\subsubsection{Conditional Probability}\label{conditional-probability}
+\subsection{Conditional Probability}\label{conditional-probability}
 
 from a joint distribution → if I select \(y\) for \(Y\) with
 \(P(Y)\neq 0\)
 
 What is the probability \(x\) given \(y\)
 
-\[
-  P(X|Y)=\frac{P(X,Y)}{P(Y)}
-\]
+\begin{gather*}
+	P(X|Y)=\frac{P(X,Y)}{P(Y)}
+\end{gather*}
 
 Special case
 
 If X, Y are independent (if X occurs, Y has no effect, and vice versa)
 
-\[
-  P(X,Y)=P(X)P(Y)
-\]
+\begin{gather*}
+	P(X,Y)=P(X)P(Y)
+\end{gather*}
 
-\subsubsection{Numerical Random Variables/Expected
-  Value}\label{numerical-random-variablesexpected-value}
+\subsection{Numerical Random Variables/Expected
+	Value}\label{numerical-random-variablesexpected-value}
 
 Uncertainty of a certain measurement
 
 \begin{itemize}
-  \tightlist
-  \item
-        a numerical RV X labels events by values that are real numbers X.
-  \item
-        the mean or expected value
+	\tightlist
+	\item
+	      a numerical RV X labels events by values that are real numbers X.
+	\item
+	      the mean or expected value
 \end{itemize}
 
-\[
-  \mathbb{E}[X]=\braket{X}=\sum_X X\cdot P(x)
-\]
+\begin{gather*}
+	\mathbb{E}[X]=\braket{X}=\sum_X X\cdot P(x)
+\end{gather*}
 
-\subsubsection{Spread}\label{spread}
+\subsection{Spread}\label{spread}
 
 How do we measure spread from \(\mathbb{E}[X]\)?
 
 Let \(\mu=\mathbb{E}[X]\)
 
-\[
-  Var(X)=\braket{(x-\mu)^2}=\braket{X^2}-2\mu\braket{X}+\mu^2\\
-  =\braket{X^2}-\braket{X}^2
-\]
+\begin{gather*}
+	Var(X)=\braket{(x-\mu)^2}=\braket{X^2}-2\mu\braket{X}+\mu^2\\
+	=\braket{X^2}-\braket{X}^2
+\end{gather*}
 
-\subsubsection{Standard Deviation}\label{standard-deviation}
+\subsection{Standard Deviation}\label{standard-deviation}
 
 it's the square root of the variance
 
-\[
-  \sigma=\sqrt{Var(X)}=\sqrt{\mathbb{E}[X^2]-\mathbb{E}[X]^2}
-\]
+\begin{gather*}
+	\sigma=\sqrt{Var(X)}=\sqrt{\mathbb{E}[X^2]-\mathbb{E}[X]^2}
+\end{gather*}
 
-\subsection{Expected Value of
+\section{Expected Value of
   Observables}\label{expected-value-of-observables}
 
-\[
-  \mathbb{E}(A)=\sum_nA_nP(n)\\
-  =\sum A_n|\braket{n|\psi}|^2\\
-  =\sum A_n\braket{\psi|n}\braket{n|\psi}\\
-  =\bra{\psi}\sum_n A_n\ket{n}\bra{n}\ket{\psi}\\
-  =\bra{\psi}\hat{A}\ket{\psi}\\
-  \triangleq\braket{\hat{A}}
-\]
+\begin{gather*}
+	\mathbb{E}(A)=\sum_nA_nP(n)\\
+	=\sum A_n|\braket{n|\psi}|^2\\
+	=\sum A_n\braket{\psi|n}\braket{n|\psi}\\
+	=\bra{\psi}\sum_n A_n\ket{n}\bra{n}\ket{\psi}\\
+	=\bra{\psi}\hat{A}\ket{\psi}\\
+	\triangleq\braket{\hat{A}}
+\end{gather*}
 
 Another convientn reprsentation is
 
-\[
-  \hat{\rho}\triangleq\ket{\psi}\bra{\psi}\\
-  \Rarr \braket{\hat{A}}=tr(\hat{\rho}\hat{A})\\
-  =tr(\ket{\psi}\bra{\psi}\hat{A})\\
-  tr(\bra{\psi}\hat{A}\ket{\psi})
-\]
+\begin{gather*}
+	\hat{\rho}\triangleq\ket{\psi}\bra{\psi}\\
+	\Rarr \braket{\hat{A}}=tr(\hat{\rho}\hat{A})\\
+	=tr(\ket{\psi}\bra{\psi}\hat{A})\\
+	tr(\bra{\psi}\hat{A}\ket{\psi})
+\end{gather*}
 
 where \(tr\) is trace
 
-\subsubsection{Trace}\label{trace}
+\subsection{Trace}\label{trace}
 
-Tr(A) is only defined for a square matrix.
+Tr(A) is only defined for a \hyperref[square-matrix]{square matrix}.
 
 Given a square matrix \(A\),
 
-\[
-  tr(A)=a_{11}+a_{22}+...+a_{nn}
-\]
+\begin{gather*}
+	tr(A)=a_{11}+a_{22}+...+a_{nn}
+\end{gather*}
 
 Note that
 
-\[
-  tr(AB)=tr(BA)
-\]
+\begin{gather*}
+	tr(AB)=tr(BA)
+\end{gather*}
 
-\subsubsection{Diagonalization}\label{diagonalization}
+\subsection{Diagonalization}\label{diagonalization}
 
-A matrix is diagonalizable if it has linearly independent eigenvectors
-which occurs if the geometric multiplicity (dimension of the eigenspace)
+A matrix is diagonalizable if it has \hyperref[linear-independence]{linearly independent} \hyperref[eigenvectorseigenvalues]{eigenvectors}
+which occurs if the geometric multiplicity (dimension of the \hyperref[eigenspaces]{eigenspace})
 equals the algebraic multiplicity (root multiplicity in the
-characterstic polynomial) for every eigenvalue.
+\hyperref[characteristic-polynomial]{characterstic polynomial}) for every \hyperref[eigenvectorseigenvalues]{eigenvalue}.
 
 If matrix \(A\) is diagonalizable then it can be written as
 
-\[
-  A=PDP^{-1}
-\]
+\begin{gather*}
+	A=PDP^{-1}
+\end{gather*}
 
 Where \(D=diag(\lambda_1, … , \lambda_n)\)
 
-\subsection{Matrix Exponential/Spectral
-  Theorem}\label{matrix-exponentialspectral-theorem}
+\section{Matrix Exponentials}\label{matrix-exponentials}
 
 The matrix exponential of
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{square
-  matrix} \(X\) is defined by a power series
+\hyperref[square-matrix]{square
+	matrix} \(X\) is defined by a power series
 
-\[
-  e^X=\sum_{n=0}^\infin\frac{X^n}{n!}
-\]
+\begin{gather*}
+	e^X=\sum_{n=0}^\infin\frac{X^n}{n!}
+\end{gather*}
 
 Properties of this
 
 \begin{itemize}
-  \tightlist
-  \item
-        differential equations
+	\tightlist
+	\item
+	      differential equations
 
-        \begin{itemize}
-          \tightlist
-          \item
-                the function \(U(t)=e^{tX}\) is the only unique soln. to
-        \end{itemize}
+	      \begin{itemize}
+		      \tightlist
+		      \item
+		            the function \(U(t)=e^{tX}\) is the only unique soln. to
+	      \end{itemize}
 \end{itemize}
 
-\[
-  \frac{dU}{dt}=XU(t)\quad U(0)=I
-\]
+\begin{gather*}
+	\frac{dU}{dt}=XU(t)\quad U(0)=I
+\end{gather*}
 
 \begin{itemize}
-  \tightlist
-  \item
-        diagonalizable matrices → assuming X is a real symmetric matrix then
-        we can diagonalize \(X=PDP^{-1}\) with
-        \(D=diag(\lambda_1, … \lambda_n)\) then
+	\tightlist
+	\item
+	      diagonalizable matrices → if \(X\) is diagonalizable (which is
+	      guaranteed for, e.g., real \hyperref[symmetric-matrix]{symmetric} or \hyperref[hermitian-matrix]{Hermitian matrices}) then
+	      we can write \(X=PDP^{-1}\) with
+	      \(D=diag(\lambda_1, … \lambda_n)\) then
 \end{itemize}
 
-\[
-  e^X=Pdiag(e^{\lambda_1},...,e^{\lambda_n})P^{-1}
-\]
+\begin{gather*}
+	e^X=Pdiag(e^{\lambda_1},...,e^{\lambda_n})P^{-1}
+\end{gather*}
 
 where \(P\) is the basis matrix --- a matrix whose columns are the
-eigenvectors \(X\) w.r.t \(\hat{A}\).
+\hyperref[eigenvectorseigenvalues]{eigenvectors} \(X\) w.r.t \(\hat{A}\).
 
-Specifically, if \(v_1,v_2,…,v_n\) are eigenvectors of \(X\)
-corresponding to eigenvalues \(\lambda_1,\lambda_2,…,\lambda_n\) then
+Specifically, if \(v_1,v_2,…,v_n\) are \hyperref[eigenvectorseigenvalues]{eigenvectors} of \(X\)
+corresponding to \hyperref[eigenvectorseigenvalues]{eigenvalues} \(\lambda_1,\lambda_2,…,\lambda_n\) then
 
-\[
-  P = \begin{bmatrix} | & | & & | \\ v_1 & v_2 & \cdots & v_n \\ | & | & & | \end{bmatrix}
-\]
+\begin{gather*}
+	P = \begin{bmatrix} | & | & & | \\ v_1 & v_2 & \cdots & v_n \\ | & | & & | \end{bmatrix}
+\end{gather*}
 
 \begin{itemize}
-  \tightlist
-  \item
-        Hermitian and skew-Hermitian matrices → if \(H=H^+\) then \(e^{iH}\)
-        is unitary this means
+	\tightlist
+	\item
+	      \hyperref[hermitian-matrix]{Hermitian} and skew-Hermitian matrices → if \(H=H^+\) then \(e^{iH}\)
+	      is \hyperref[unitary-operator]{unitary} this means
 \end{itemize}
 
-\[
-  (e^{iH})^+e^{iH}=I
-\]
+\begin{gather*}
+	(e^{iH})^+e^{iH}=I
+\end{gather*}
 
-\subsection{Pauli Matrices}\label{pauli-matrices}
+\section{Pauli Matrices}\label{pauli-matrices}
 
 Three matrices which are defined as
 
-\[
-  \sigma^0=\sigma_0=I_2=\begin{pmatrix}1 & 0\\ 0 & 1\end{pmatrix}\\
-  \hat{\sigma}_x=\sigma^1=\sigma_1=\begin{pmatrix}
-    0 & 1 \\
-    1 & 0
-  \end{pmatrix}\\
-  \hat{\sigma}_y=\sigma^2=\sigma_2=\begin{pmatrix}
-    0 & -i \\
-    i & 0
-  \end{pmatrix}\\
-  \hat{\sigma}_z=\sigma^3=\sigma_3=\begin{pmatrix}
-    1 & 0  \\
-    0 & -1
-  \end{pmatrix}
-\]
+\begin{gather*}
+	\sigma^0=\sigma_0=I_2=\begin{pmatrix}1 & 0\\ 0 & 1\end{pmatrix}\\
+	\hat{\sigma}_x=\sigma^1=\sigma_1=\begin{pmatrix}
+		0 & 1 \\
+		1 & 0
+	\end{pmatrix}\\
+	\hat{\sigma}_y=\sigma^2=\sigma_2=\begin{pmatrix}
+		0 & -i \\
+		i & 0
+	\end{pmatrix}\\
+	\hat{\sigma}_z=\sigma^3=\sigma_3=\begin{pmatrix}
+		1 & 0  \\
+		0 & -1
+	\end{pmatrix}
+\end{gather*}
 
 Properties
 
 \begin{itemize}
-  \tightlist
-  \item
-        spacing
+	\tightlist
+	\item
+	      spacing
 \end{itemize}
 
-\[
-  \hat{\sigma}^2_i=I_2\quad \forall \quad i\in\{x,y,z\}
-\]
+\begin{gather*}
+	\hat{\sigma}^2_i=I_2\quad \forall \quad i\in\{x,y,z\}
+\end{gather*}
 
 \begin{itemize}
-  \tightlist
-  \item
-        commutation
+	\tightlist
+	\item
+	      commutation
 \end{itemize}
 
 note that
@@ -1977,126 +1993,338 @@ antisymmetric tensor that encodes signs based on the order of its
 indices.
 
 \begin{itemize}
-  \tightlist
-  \item
-        in 3D
+	\tightlist
+	\item
+	      in 3D
 \end{itemize}
 
-\[
-  \varepsilon_{ijk}=\begin{cases}
-  +1\quad \text{if $(i,j,k)$ is an even permutation of (1,2,3)}\\
-  -1\quad \text{if $(i,j,k)$ is an odd permutation of (1,2,3)}\\
-  0\quad\text{if any index repeats}
-  \end{cases}
-\]
+\begin{gather*}
+	\varepsilon_{ijk}=\begin{cases}
+		+1\quad \text{if $(i,j,k)$ is an even permutation of (1,2,3)} \\
+		-1\quad \text{if $(i,j,k)$ is an odd permutation of (1,2,3)}  \\
+		0\quad\text{if any index repeats}
+	\end{cases}
+\end{gather*}
 
 \begin{itemize}
-  \tightlist
-  \item
-        in 2D
+	\tightlist
+	\item
+	      in 2D (only two indices, written \(\varepsilon_{ij}\))
 \end{itemize}
 
-\[
-  \varepsilon_{ijk}=\begin{pmatrix}0 & 1 \\ -1 & 0\end{pmatrix}
-\]
+\begin{gather*}
+	\varepsilon_{ij}=\begin{pmatrix}0 & 1 \\ -1 & 0\end{pmatrix}
+\end{gather*}
 
-\[
-  [\sigma_i,\sigma_j]=2i\varepsilon_{ijk}\sigma_k
-\]
+\begin{gather*}
+	[\sigma_i,\sigma_j]=2i\varepsilon_{ijk}\sigma_k
+\end{gather*}
 
 where an ``even'' permutation is (1,2,3), (2,3,1), (3,1,2) and an
 ``odd'' is (2,1,3), (1,3,2), (3,2,1)
 
 \begin{itemize}
-  \tightlist
-  \item
-        anti commutation
+	\tightlist
+	\item
+	      anti commutation
 \end{itemize}
 
 Note that the anticommutator is
 
-\[
-  \{A,B\}=AB+BA
-\]
+\begin{gather*}
+	\{A,B\}=AB+BA
+\end{gather*}
 
-\[
-  \{\sigma_i,\sigma_j\}=2\delta_{ij}I_2
-\]
+\begin{gather*}
+	\{\sigma_i,\sigma_j\}=2\delta_{ij}I_2
+\end{gather*}
 
 \begin{itemize}
-  \tightlist
-  \item
-        completeness
+	\tightlist
+	\item
+	      completeness
 \end{itemize}
 
-\[
-  \sigma_0=I_2=\begin{pmatrix}1 & 0\\ 0 & 1\end{pmatrix}
-\]
+\begin{gather*}
+	\sigma_0=I_2=\begin{pmatrix}1 & 0\\ 0 & 1\end{pmatrix}
+\end{gather*}
 
 the set \(\{\sigma_0,\sigma_x,\sigma_y,\sigma_z\}\) spans all 2x2
 complex matrices
 
-\[
-  \{I,X,Y,Z\}\quad\text{form a basiss for operator }L(\mathbb{C})^2
-\]
+\begin{gather*}
+	\{I,X,Y,Z\}\quad\text{form a basiss for operator }L(\mathbb{C})^2
+\end{gather*}
 
 where
 
 forms a basis for all 2x2 complex matrices. Any 2x2 matrix
 
-\[
-  M=\sum_{\mu=0}^3c_\mu\sigma_\mu
-\]
+\begin{gather*}
+	M=\sum_{\mu=0}^3c_\mu\sigma_\mu
+\end{gather*}
 
 \begin{itemize}
-  \tightlist
-  \item
-        whatever this is
+	\tightlist
+	\item
+	      whatever this is
 \end{itemize}
 
-\[
-  \vec{\sigma}=(X,Y,Z)\quad\text{are Hermitian}\
-  \sigma^1=\sigma^x=X\\
-  \sigma^2=\sigma^y=Y\\
-  \sigma^3=\sigma^z=Z\\
-  X^2+Y^2+Z^2=I\\
-  tr(X)=tr(Y)=tr(Z)=0\\
-  XY=iZ, YZ=iX, ZX=iY\\
-  {[}X,Y]=2iZ,[Y,Z]=2iX, ...\\
-  YX=(XY)^+=(iZ)^+=-iZ
-\]
+\begin{gather*}
+	\vec{\sigma}=(X,Y,Z)\quad\text{are Hermitian}\\
+	\sigma^1=\sigma^x=X\\
+	\sigma^2=\sigma^y=Y\\
+	\sigma^3=\sigma^z=Z\\
+	X^2+Y^2+Z^2=I\\
+	tr(X)=tr(Y)=tr(Z)=0\\
+	XY=iZ, YZ=iX, ZX=iY\\
+	{[}X,Y]=2iZ,\; [Y,Z]=2iX,\; \ldots\\
+	YX=(XY)^+=(iZ)^+=-iZ
+\end{gather*}
 
 and
 
-\[
-  \hat{A}=a_0\sigma_0+a_1\sigma_x+a_2\sigma_y+a_3\sigma_z\quad a_i\in \mathbb{C}
-\]
+\begin{gather*}
+	\hat{A}=a_0\sigma_0+a_1\sigma_x+a_2\sigma_y+a_3\sigma_z\quad a_i\in \mathbb{C}
+\end{gather*}
 
 \(\hat{A}\cdot\hat{B}\) can be expanded as
 
-\[
-  \hat{A}\hat{B}=\sum_{i=0}^3c_i\sigma^i
-\]
+\begin{gather*}
+	\hat{A}\hat{B}=\sum_{i=0}^3c_i\sigma^i
+\end{gather*}
 
-If \(c_i\in\mathbb{R}\), then \(\hat{A}\) is Hermitian
+If \(c_i\in\mathbb{R}\), then \(\hat{A}\) is \hyperref[hermitian-operators]{Hermitian}
 
-\subsection{Observable on a qubit}\label{observable-on-a-qubit}
+\section{Observable on a qubit}\label{observable-on-a-qubit}
 
 Any observable on a qubit can be written as
 
-\[
-  \hat{A}=a_0\sigma_0+\vec{a}\vec{\sigma_{1,2,3}}
-\]
+\begin{gather*}
+	\hat{A}=a_0\sigma_0+\vec{a}\vec{\sigma_{1,2,3}}
+\end{gather*}
 
 You can think of \(a_0\sigma_0\) as the scalar value and
 \(\vec{a}\vec{\sigma_{1,2,3}}\) as it helps with the Bloch Sphere.
 
 This can be written in spherical units too
 
+\begin{gather*}
+	\hat{n}=(n_x,n_y,n_z)=(\sin\theta\cos\psi,\sin\theta\sin\psi,\cos\theta)
+\end{gather*}
+
+spin along \(\hat{n}\) can be described as  \(\hat{S}=\frac{\hbar}{2}\vec{\sigma}\).
+This is known as the "spin along the unit vector \(\hat{n}\)".
+To do this we project \(\hat{S}\) onto \(\hat{n}\).
+
+\begin{gather*}
+	\hat{S}_n=\hat{S}\cdot\hat{n}=\frac{\hbar}{2}\vec{\sigma}\cdot\hat{n}\\
+	=\frac{\hbar}{2}\left(n_x\sigma_x+n_y\sigma_y+n_z\sigma_z\right)\\
+	=n_x\!\begin{pmatrix}0&1\\1&0\end{pmatrix} + n_y\!\begin{pmatrix}0&-i\\i&0\end{pmatrix} + n_z\!\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+\end{gather*}
 \[
-  \hat{n}=(n_x,n_y,n_z)=(\sin\theta\cos\psi,\sin\theta\sin\psi,\cos\theta)
+	= \begin{pmatrix} n_z & n_x - i n_y \\ n_x + i n_y & -n_z \end{pmatrix}
+\]
+\[
+	\Rarr \hat{S}_{\hat{n}} = \frac{\hbar}{2}\begin{pmatrix} n_z & n_x - i n_y \\ n_x + i n_y & -n_z \end{pmatrix}.
 \]
 
-spin along \(\hat{n}\)
+We work out the eigenvalues by doing
+\[
+	det(\hat{S}_{\hat{n}} - \lambda I) = 0
+\]
+\[
+	\Rarr \left(\tfrac{\hbar}{2}n_z-\lambda\right)\left(-\tfrac{\hbar}{2}n_z-\lambda\right) - \left(\tfrac{\hbar}{2}\right)^2(n_x - i n_y)(n_x + i n_y) = 0
+\]
+\[
+	\Rarr \lambda^2 - \left(\tfrac{\hbar}{2}\right)^2(n_x^2+n_y^2+n_z^2) = 0
+\]
+\[
+	\lambda^2=\left(\tfrac{\hbar}{2}\right)^2|\hat{n}|^2\Rarr\lambda=\pm\tfrac{\hbar}{2}|\hat{n}|
+\]
+Because \(\hat{n}\) is a unit vector,
+\[
+	\lambda=\pm\tfrac{\hbar}{2}
+\]
+\section{Bloch Sphere}\label{bloch-sphere}
+A general pure state of a qubit is
+\[
+	\ket{\psi}=\cos\frac{\theta}{2}\ket{0}+e^{i\phi}\sin\frac{\theta}{2}\ket{1}\quad \theta\in[0,\pi]\quad \phi\in[0,2\pi]
+\]
+Where the orthogonal states are antipodal (North pole is \(\ket{0}\) and South pole is \(\ket{1}\)).
+The equator contains equal superpositions like \(\ket{+}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\) and \(\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})\).
+
+A state can be on the inside of a Bloch sphere which means its a mixed state. If a state is on the surface of the Bloch sphere, it is a pure state.
+
+A rotation by angle \(\theta\) around the axis \(\hat{n}\) is given by
+\[
+	R_{\hat{n}}(\theta) = e^{-i\theta\,\hat{n}\cdot\vec{\sigma}/2} = \cos\left(\tfrac{\theta}{2}\right)I - i\sin\left(\tfrac{\theta}{2}\right)(n_x\sigma_x + n_y\sigma_y + n_z\sigma_z)
+\]
+Where
+\[
+	R_x(\theta) = \begin{pmatrix} \cos\tfrac{\theta}{2} & -i\sin\tfrac{\theta}{2} \\ -i\sin\tfrac{\theta}{2} & \cos\tfrac{\theta}{2} \end{pmatrix}
+\]
+\[
+	R_y(\theta) = \begin{pmatrix} \cos\tfrac{\theta}{2} & -\sin\tfrac{\theta}{2} \\ \sin\tfrac{\theta}{2} & \cos\tfrac{\theta}{2} \end{pmatrix}
+\]
+\[
+	R_z(\theta) = \begin{pmatrix} e^{-i\theta/2} & 0 \\ 0 & e^{i\theta/2} \end{pmatrix}
+\]
+
+\section{Density Matrix}\label{density-matrix}
+
+\(\rho\) is a density matrix if it is:
+
+\begin{itemize}
+	\tightlist
+	\item Hermitian
+	\item Positive semi-definite
+	\item \(Tr(\rho)=1\)
+\end{itemize}
+
+It contains all information needed to predict measurement outcomes. For the \hyperref[observables]{observable} \(A\) we see that
+\[
+	\braket{A}=Tr(\rho A)
+\]
+
+At some point we'll touch quantum mechanics. But that point is not yet.
+
+\section{Degeneracy}\label{degeneracy}
+Two or more \hyperref[linear-independence]{linear independent} quantum states (\hyperref[eigenstates]{eigenstates}) share the same \hyperref[eigenvectorseigenvalues]{eigenvalue}.
+An energy level \(E_n\) is degenerate if there exist multiple \hyperref[linear-independence]{linearly independent} \hyperref[eigenstates]{eigenstates} \(\ket{\psi_1}, \ket{\psi_2}, \ldots, \ket{\psi_n}\) which satisfy
+\[
+	\hat{H}\ket{\psi_i}=E_n\ket{\psi_i}\quad \forall i=1,2,\ldots,g
+\]
+Where if \(g=1\), the energy level is non-degenerate.
+If \(g>1\), the energy level is degenerate.
+If something is degenerate, that implies there is no unique \hyperref[basis-states]{basis}. What you want to write down should be a \hyperref[projections]{projection} onto the \hyperref[subspaces]{subspaces}.
+
+\[
+	\hat{H}\triangleq\begin{pmatrix}
+		E_0 &     & 0   \\
+		    & E_1 &     \\
+		0   &     & E_2
+	\end{pmatrix}
+	\quad \ket{0}\triangleq\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}
+	\quad \ket{1a}\triangleq\begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}
+	\quad \ket{1b}\triangleq\begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix}
+\]
+\[
+	\Rarr \hat{H}=E_0\ket{0}\bra{0}+E_1\ket{1a}\bra{1a}+E_2\ket{1b}\bra{1b}
+\]
+The states \(\ket{1a},\ket{1b}\) are degenerate if and only if \(E_1=E_2\). If \(E_0=E_1, E_1\neq E_2\) then \(\ket{0}\) is degenerate with \(\ket{1a}\).
+
+This just means that you can't detect the difference between states given only the energy/\hyperref[eigenvectorseigenvalues]{eigenvalue}.
+
+Remember the \hyperref[eigenvectorseigenvalues]{eigenvalue} is observed as energy if the  \hyperref[operators]{operator} is the \hyperref[schruxf6dingers-equation-hamiltonian]{Hamiltonian}.
+
+This means the Hamiltonian alone is not enough to determine the state.
+
+This is because if E is degenerate then
+
+\[
+	H\ket{\psi_1}= E\ket{\psi_1}
+\]
+\[
+	H\ket{\psi_2}= E\ket{\psi_2}
+\]
+
+Now just finding \(E\) doesn't mean we can distinguish the states.
+
+We need another operator \(\hat{A}\) which commutes with \(\hat{H}\) to distinguish the states. Note that just because \(\hat{A}\) commutes with \(\hat{H}\) doesn't mean we can distinguish the states.
+\[
+	A\ket{\psi_1}= a_1\ket{\psi_1}
+\]
+\[
+	A\ket{\psi_2}= a_2\ket{\psi_2}
+\]
+
+And if \(a_1\neq a_2\) then we can distinguish the states.
+
+BUT if \([\hat{A},\hat{H}]\neq0\) then this doesn't always hold true for the entire \hyperref[hilbert-spaces]{Hilbert Space}.
+
+This is because if
+\[
+	\hat{H}\ket{\psi}= E\ket{\psi}
+\]
+\[
+	\Rarr \hat{A}\hat{H}\ket{\psi}= \hat{A}E\ket{\psi}
+\]
+\[
+	\Rarr (\hat{H}\hat{A}-[\hat{H},\hat{A}])\ket{\psi} = E\hat{A}\ket{\psi}
+\]
+\[
+	\Rarr \hat{H}\hat{A}\ket{\psi} - [\hat{H},\hat{A}]\ket{\psi}= E\hat{A}\ket{\psi}
+\]
+If \([\hat{H},\hat{A}]=0\) (i.e., H and A commute) then
+
+\[
+	\Rarr \hat{H}\hat{A}\ket{\psi} = E\hat{A}\ket{\psi}
+\]
+This means that \(\hat{A}\ket{\psi}\) is in the \(E\)-\hyperref[eigenspaces]{eigenspace} of \(\hat{H}\). Another way to say this is that \(\hat{A}\ket{\psi}\) is in the set of \hyperref[eigenvectorseigenvalues]{eigenvectors} for H that share \hyperref[eigenvectorseigenvalues]{eigenvalue} E.
+
+This means that \(\hat{A}\) maps a vector in the \(E\)-eigenspace of \(\hat{H}\) to another vector in the \(E\)-eigenspace of \(\hat{H}\).
+
+
+\section{Spectral Decomposition}\label{spectral-decomposition}
+Let there be a Hermitian operator \(\hat{A}\) on a finite-dimensional \hyperref[hilbert-spaces]{Hilbert space}.
+
+There exists real eigenvalues \(\{a_n\}\) and orthogonal \hyperref[projectors]{projectors} \(\{\hat{\Pi}_a\}\) such that
+
+\[
+	\hat{A}=\sum_{n=1}^N a_n\hat{\Pi}_a
+\]
+
+where projectors satisfy
+
+\begin{enumerate}
+	\def\labelenumi{\arabic{enumi}.}
+	\tightlist
+	\item
+	      \(\hat{\Pi}_n\hat{\Pi}_m=0\) for \(n\neq m\) which means they are \hyperref[orthogonality]{orthogonal}
+	\item
+	      \(\sum_{n=1}^N \hat{\Pi}_n=\hat{I}\) which means they are a complete set of projectors
+	\item this projector projects onto the \(a_n\)-\hyperref[eigenspaces]{eigenspace} of \(\hat{A}\)
+\end{enumerate}
+
+So \(\{a_n\}\) is the spectrum of \(\hat{A}\).
+
+And that means you can think \(\hat{A}\) as scaling each eigenspace by its own eigenvalue.
+
+\section{Compatibility}\label{compatibility}
+Compatibility is a property of two operators.
+
+If \(\ket{\phi_n}\) is the \(n\)-th \hyperref[eigenstates]{eigenstate} of \(\hat{A}\) (i.e., the eigenbasis of \(\hat{A}\)),
+
+Let
+\[
+	\hat{A}=\sum_{n=1}^N a_n\ket{\phi_n}\bra{\phi_n}
+\]
+If \(\hat{B}\) is compatible with \(\hat{A}\) (i.e., \(\hat{B}\) is diagonalizable with \(\hat{A}\)) then,
+\[
+	\hat{B}=\sum_{n=1}^N b_n\ket{\phi_n}\bra{\phi_n}
+\]
+
+\subsection{Compatibility of Observables}\label{compatibility-of-observables}
+Two operators \(\hat{A}\) and \(\hat{B}\) are compatible if and only if they commute, i.e. \([\hat{A},\hat{B}]=0\).
+
+\[
+	\hat{A},\hat{B}\quad\text{are compatible}\quad\Leftrightarrow\quad[\hat{A},\hat{B}]=0
+\]
+
+Proof
+\[
+	\Rarr \hat{A}\hat{B}=\sum_{n,m}A_nB_m\ket{\phi_n}\braket{\phi_n|\phi_m}\bra{\phi_m}\\
+\]
+\[
+	=\sum_nA_nB_n\ket{\phi_n}\bra{\phi_n}=\hat{B}\hat{A}\\
+\]
+\[
+	\Larr \hat{A}\ket{\phi_n}=A_n\ket{\phi_n}\\
+\]
+\[
+	\hat{A}\hat{B}\ket{\phi_n}=\hat{B}\hat{A}\ket{\phi_n}=A_n\hat{B}\ket{\phi_n}
+\]
+
 
 \end{document}
