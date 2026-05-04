@@ -1109,13 +1109,15 @@ where
 
 where V are the set of all possible \hyperref[vectors]{vectors} in a \hyperref[hilbert-spaces]{Hilbert space}.
 
-Then
+In quantum mechanics, all observed operators are linear which means
 
 \begin{gather*}
 	\hat{T}(a\ket{u}+b\ket{v})=a\hat{T}(\ket{u})+b\hat{T}(\ket{v})
 \end{gather*}
 
-also they can be represented as \hyperref[matrix]{matrices}
+If we were to observe a non-linear operator, then that would cause wacky things.
+
+also they can be represented as \hyperref[matrices]{matrices}
 
 \begin{gather*}
 	\hat{T}\ket{\psi}=\sum_{m}\psi_m'\ket{m}
@@ -2707,7 +2709,73 @@ Note that \(Im z=\frac{1}{2i}(z-z^*)\)
 \]
 
 \section{Tensor}\label{tensor}
+A scalar is a rank-0 tensor (0D).
+
+A vector is a rank-1 tensor (1D).
+
+A matrix is a rank-2 tensor (2D).
+
+A rank-$n$ tensor is an $n$-dimensional array with $n$ indices.
 \subsection{Tensor Product}\label{tensor-product}
+
+Given \hyperref[vector-spaces]{vector spaces} $V$ and $W$, the tensor product $V\otimes W$ is a new vector space satisfying two features:
+\begin{enumerate}
+	\tightlist
+	\item Bilinear pairing where
+
+	      \[
+		      \otimes : V\times W\rarr V\otimes W
+	      \]
+	      satisfies
+	      \[
+		      (v_1+v_2)\otimes w=v_1\otimes w+v_2\otimes w
+	      \]
+	      \[
+		      v\otimes (w_1+w_2)=v\otimes w_1+v\otimes w_2
+	      \]
+	      \[
+		      (\lambda v)\otimes w=\lambda (v\otimes w)\quad \forall \lambda \in \mathbb{F}
+	      \]
+	\item For any vector space U and bilinear map $B:V\times W\rarr U$, there exists a unique bilinear map $\tilde{B}:V\otimes W \rarr U$ such that
+	      \[
+		      B(v,w)=\tilde{B}(v\otimes w)
+	      \]
+
+\end{enumerate}
+
+The dimensions are multiplied
+\[
+	dim(V\otimes W)=dim(V)\times dim(W)
+\]
+\section{No-Cloning Theorem}\label{no-cloning-theorem}
+
+There exists no unitary operator $U$ that can clone a qubit.
+\[
+	C(\ket{\psi})=\ket{\psi}\otimes\ket{\psi}
+\]
+
+Proof
+
+Let
+\[
+	C\ket{0}\rarr \ket{0}\ket{0}
+\]
+\[
+	C\ket{1}\rarr \ket{1}\ket{1}
+\]
+
+Then
+
+\[
+	C\ket{+}\rarr=C\frac{\ket{0}+\ket{1}}{2}\\
+\]
+\[
+	\neq\frac{1}{\sqrt{2}}(\ket{0}\ket{0}+\ket{1}\ket{1})\\
+\]
+\[
+	\neq \ket{+}\ket{+}
+\]
+This breaks the \hyperref[operators]{linearity of operators}.
 
 \section{Quantum Information Capacity}\label{quantum-information-capacity}
 
@@ -2999,15 +3067,8 @@ where error probability  $P_E\geq 1-\frac{d}{N}$ given in \hyperref[basic-decodi
 
 If Eve sends qubit along to Bob, they would be wrong half of the time. Alice and Bob can find out in the testing stage. During testing stage, some bits of the key are sent between Alice and Bob and discarded if they do not match. This reduces information that Eve has about the secret key. The probability of the bit disagreeing given Eve intercepted is $\frac{1}{2}\times\frac{1}{2}=\frac{1}{4}$ whereas if Eve doesn't intercept, the probability of the bit disagreeing is $0$.
 
-Due to the non-cloning theorem, Eve cannot copy the qubit and send it to Bob.
+Due to the \hyperref[no-cloning-theorem]{no-cloning theorem}, Eve cannot copy the qubit and send it to Bob.
 
-
-\subsection{No-Cloning Theorem}\label{no-cloning-theorem}
-
-There exists no unitary operator $U$ that can clone a qubit.
-\[
-	C(\ket{\psi})=\ket{\psi}\otimes\ket{\psi}
-\]
 
 
 
