@@ -105,10 +105,10 @@ Hi, my name is Chai and I'm taking a quantum mechanics course at UCLA.
 At the start, you only need to know how to add and multiply numbers.
 \bigskip
 
-After reading this article, you'll know how to do quantum mechanics problems.
+After reading this study guide, you'll know how to do quantum mechanics problems.
 \bigskip
 
-The article is loosely sorted by complexity. Everything is derived from concepts introduced in previous sections. As we introduce mathematical concepts, we will use them to better understand quantum mechanics.
+The study guide is loosely sorted by complexity. Everything is derived from concepts introduced in previous sections. As we introduce mathematical concepts, we will use them to better understand quantum mechanics.
 \bigskip
 
 This is based on the Electrical and Computer Engineering 128 course
@@ -394,7 +394,101 @@ I'm going to write a ton of mathematical definitions which will build up
 how to do the physics in the next section!
 
 
-\section{Function I}\label{functions}
+\section{Set Theory}\label{set-theory}
+
+Ok this is just for notation sake but i want to make my life a bit
+easier.
+
+\subsection{Element}\label{element}
+
+an element is either a variable or a number or a literal in our
+definition
+
+\begin{gather*}
+	1,5,a,\text{cat},...
+\end{gather*}
+
+\subsection{Set}\label{set}
+
+Let a set be an unordered collection of
+\hyperref[element]{elements}
+
+Example:
+
+This is a set \(S\)
+
+\begin{gather*}
+	S=\{3,5,1982549\}\\
+	S_2=\{2n\quad|\quad n=1,2,5\}=\{2,4,10\}
+\end{gather*}
+
+The \textbar{} means ``such that''
+
+\subsection{Subset}\label{subsets}
+
+\hyperref[set]{sets}
+can be subsets (or equal) of another set if all elements of a
+\hyperref[set]{set}
+is in another
+\hyperref[set]{set}.
+
+Example:
+
+\begin{gather*}
+	S\subset\{3,5,1982549,67\}
+\end{gather*}
+
+We have a line underneath to show it could be a subset OR equal
+
+\begin{gather*}
+	S\subseteq\{3,5,1982549\}
+\end{gather*}
+
+\subsection{In}\label{in}
+
+We can say an
+\hyperref[element]{element}
+is ``in'' a
+\hyperref[set]{set}
+if it's in a set (duh)
+
+Example:
+
+\begin{gather*}
+	3\in S\\
+	4\notin S
+\end{gather*}
+
+\subsection{Standard Number System}\label{standard-number-systems}
+
+There are some standard number systems we gotta keep in mind
+
+\begin{gather*}
+	\{1,2,3,...\}\subseteq\mathbb{N}\\
+	\{...,-3,-2,-1,0,1,2,3,...\}\subseteq\mathbb{Z}\\
+	\{\frac{p}{q}\quad\forall p\in \mathbb{Z},q\neq 0 \}\subseteq\mathbb{Q}\\
+	\{\sqrt{2},\pi,...\}\in \mathbb{R}\\
+	\{3+1i, 5+5i, 2+0i\}\in\mathbb{C}=\mathbb{F}
+\end{gather*}
+
+Where
+
+\begin{itemize}
+	\tightlist
+	\item
+	      \(\mathbb{N}\) are natural numbers
+	\item
+	      \(\mathbb{Z}\) are integers
+	\item
+	      \(\mathbb{R}\) are real numbers
+	\item
+	      \(\mathbb{C}\) are complex numbers, \(\mathbb{F}\) are fields
+\end{itemize}
+
+where \(\forall p\in \mathbb{Z},q\neq 0\) means for all integers \(p\)
+AND \(q\neq 0\)
+
+\section{Function}\label{functions}
 
 Also let us notate a state as a function of time. What's a function?
 
@@ -411,6 +505,31 @@ then
 
 \begin{gather*}
 	f(5)=4(5)=20
+\end{gather*}
+
+A function \(f\), can also be thought of mapping numbers from a set \(A\) to set \(B\). It's
+written like this
+
+\begin{gather*}
+	f:A\rarr B
+\end{gather*}
+
+A map just links a thing to another thing.
+
+Example
+
+Let \(q\) be a function
+
+\begin{gather*}
+	q:\Z\rarr\Z\\
+	q(x)=3x
+\end{gather*}
+
+q essentially maps all integers to another integer, which is three times
+itself.
+
+\begin{gather*}
+	q(67)=201
 \end{gather*}
 
 \section{Summation}\label{summation}
@@ -735,6 +854,37 @@ Let `` \(\ket{+},\ket{-}\) are orthonormal'' mean both
 \hyperref[orthogonality]{orthogonal}
 and
 \hyperref[normal]{normal}.
+
+\subsection{Gram-Schmidt Procedure}\label{gram-schmidt-procedure}
+
+If you have
+\hyperref[linear-independence]{linearly
+	independent} vectors and want to convert them into an
+\hyperref[orthonormality]{orthonormal}
+set, you can follow the Gram-Schmidt procedure.
+
+Given \(v_1,v_2,…,v_n\) as
+\hyperref[linear-independence]{LI}
+\hyperref[vectors]{vectors},
+then \(u_1, u_2, …, u_n\) can be built using
+
+\begin{gather*}
+	u_k=v_k-\sum_{i=1}^{k-1}\Pi_{u_i}(v_k)
+\end{gather*}
+
+This makes \(u\) an
+\hyperref[orthogonality]{orthogonal}
+\hyperref[vectors]{vector}
+
+Then you
+\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{normalize}
+\(u\) to get a
+\hyperref[orthonormality]{orthonormal}
+\hyperref[vectors]{vector}.
+You do this by multiplying the
+\hyperref[magnitude]{magnitude}
+of the
+\hyperref[vectors]{vector}.
 \subsection{Bra, Transpose}\label{bratranspose}
 
 We just learned what ket \(\ket{x}\) means --- a \(N\times 1\) vector.
@@ -789,24 +939,6 @@ as
 	\bra{v}=(\ket{v})^+
 \end{gather*}
 
-\subsection{Hermitian Matrix}\label{hermitian-matrix}
-
-Let a ``Hermitian matrix'' be a matrix that equals its own conjugate
-transpose
-
-If and only if \(A\) is a matrix and is Hermitian, then this is true
-
-\begin{gather*}
-	A=A^+
-\end{gather*}
-
-This means a bra and ket are Hermitian matrices of each other!
-
-Another example:
-
-\begin{gather*}
-	\ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
-\end{gather*}
 
 \subsection{Kronecker Delta}\label{kronecker-delta}
 
@@ -1159,159 +1291,10 @@ mechanics
 
 
 
-\section{Gram-Schmidt Procedure}\label{gram-schmidt-procedure}
 
-If you have
-\hyperref[linear-independence]{linearly
-	independent} vectors and want to convert them into an
-\hyperref[orthonormality]{orthonormal}
-set, you can follow the Gram-Schmidt procedure.
 
-Given \(v_1,v_2,…,v_n\) as
-\hyperref[linear-independence]{LI}
-\hyperref[vectors]{vectors},
-then \(u_1, u_2, …, u_n\) can be built using
-
-\begin{gather*}
-	u_k=v_k-\sum_{i=1}^{k-1}\Pi_{u_i}(v_k)
-\end{gather*}
-
-This makes \(u\) an
-\hyperref[orthogonality]{orthogonal}
-\hyperref[vectors]{vector}
-
-Then you
-\href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{normalize}
-\(u\) to get a
-\hyperref[orthonormality]{orthonormal}
-\hyperref[vectors]{vector}.
-You do this by multiplying the
-\hyperref[magnitude]{magnitude}
-of the
-\hyperref[vectors]{vector}.
-
-\section{Set Theory}\label{set-theory}
-
-Ok this is just for notation sake but i want to make my life a bit
-easier.
-
-\subsection{Element}\label{element}
-
-an element is either a variable or a number or a literal in our
-definition
-
-\begin{gather*}
-	1,5,a,\text{cat},...
-\end{gather*}
-
-\subsection{Set}\label{set}
-
-Let a set be an unordered collection of
-\hyperref[element]{elements}
-
-Example:
-
-This is a set \(S\)
-
-\begin{gather*}
-	S=\{3,5,1982549\}\\
-	S_2=\{2n\quad|\quad n=1,2,5\}=\{2,4,10\}
-\end{gather*}
-
-The \textbar{} means ``such that''
-
-\subsection{Subset}\label{subsets}
-
-\hyperref[set]{sets}
-can be subsets (or equal) of another set if all elements of a
-\hyperref[set]{set}
-is in another
-\hyperref[set]{set}.
-
-Example:
-
-\begin{gather*}
-	S\subset\{3,5,1982549,67\}
-\end{gather*}
-
-We have a line underneath to show it could be a subset OR equal
-
-\begin{gather*}
-	S\subseteq\{3,5,1982549\}
-\end{gather*}
-
-\subsection{In}\label{in}
-
-We can say an
-\hyperref[element]{element}
-is ``in'' a
-\hyperref[set]{set}
-if it's in a set (duh)
-
-Example:
-
-\begin{gather*}
-	3\in S\\
-	4\notin S
-\end{gather*}
-
-\subsection{Standard Number System}\label{standard-number-systems}
-
-There are some standard number systems we gotta keep in mind
-
-\begin{gather*}
-	\{1,2,3,...\}\subseteq\mathbb{N}\\
-	\{...,-3,-2,-1,0,1,2,3,...\}\subseteq\mathbb{Z}\\
-	\{\frac{p}{q}\quad\forall p\in \mathbb{Z},q\neq 0 \}\subseteq\mathbb{Q}\\
-	\{\sqrt{2},\pi,...\}\in \mathbb{R}\\
-	\{3+1i, 5+5i, 2+0i\}\in\mathbb{C}=\mathbb{F}
-\end{gather*}
-
-Where
-
-\begin{itemize}
-	\tightlist
-	\item
-	      \(\mathbb{N}\) are natural numbers
-	\item
-	      \(\mathbb{Z}\) are integers
-	\item
-	      \(\mathbb{R}\) are real numbers
-	\item
-	      \(\mathbb{C}\) are complex numbers, \(\mathbb{F}\) are fields
-\end{itemize}
-
-where \(\forall p\in \mathbb{Z},q\neq 0\) means for all integers \(p\)
-AND \(q\neq 0\)
-
-\subsection{Function II}\label{functions-1}
-
-A function, \hyperref[functions]{which we defined earlier}, \(f\), can also be thought of mapping numbers from a set \(A\) to set \(B\). It's
-written like this
-
-\begin{gather*}
-	f:A\rarr B
-\end{gather*}
-
-A map just links a thing to another thing.
-
-Example
-
-Let \(q\) be a function
-
-\begin{gather*}
-	q:\Z\rarr\Z\\
-	q(x)=3x
-\end{gather*}
-
-q essentially maps all integers to another integer, which is three times
-itself.
-
-\begin{gather*}
-	q(67)=201
-\end{gather*}
-
-\section{Operator}\label{operators}
+\section{Linear Algebra II}\label{linear-algebra-ii}
+\subsection{Operator}\label{operators}
 
 Let \(\hat{T}\) be an operator.
 
@@ -1358,70 +1341,8 @@ where \(\ket{m}\) is the basis for \(\ket{\psi}\)
 
 Operators must be square.
 
-\subsection{Observable}\label{observables}
 
-An observable is represented by a \hyperref[hermitian-matrix]{Hermitian operator} acting on a \hyperref[hilbert-spaces]{Hilbert
-	space}.
 
-\subsection{Unitary Operator}\label{unitary-operator}
-
-An operator is unitary if and only if
-
-\begin{gather*}
-	\hat{U}^+\hat{U}=\hat{U}\hat{U}^+=I
-\end{gather*}
-
-\begin{itemize}
-	\tightlist
-	\item
-	      it preserves inner product
-\end{itemize}
-
-\begin{gather*}
-	\ket{\alpha '}=\hat{U}\ket{\alpha}\\
-	\ket{\beta'}=\hat{U}\ket{\beta}\\
-	\braket{\alpha'|\beta'}=\bra{\alpha}\hat{U}^+\hat{U}\ket{\beta}\\
-	=\bra{\alpha}I\ket{\beta}\\
-	=\braket{\alpha|\beta}
-\end{gather*}
-
-\begin{itemize}
-	\tightlist
-	\item
-	      U is basis chagne between orthonormal basis because you can write
-	      \(\hat{U}\) as
-
-	      \begin{itemize}
-		      \tightlist
-		      \item
-		            as chatgpt puts it: unitary matrices/operators represent a rotation
-		            or change of coordinates in Hilbert space, without changing lengths
-		            or angles.
-	      \end{itemize}
-\end{itemize}
-
-\begin{gather*}
-	\hat{U}=\hat{U}I
-\end{gather*}
-
-I can use completeness relation so that if
-
-\begin{gather*}
-	\hat{U}\ket{\alpha_n}=\ket{\beta_n}
-\end{gather*}
-
-then we can change basis
-
-\begin{gather*}
-	\hat{U}\sum_n\ket{\alpha_n}\bra{\alpha_n}\\
-	=\sum_nU\ket{\alpha_n}\bra{\alpha_n}\\
-	=\sum_n\ket{\beta_n}\bra{\alpha_n}
-\end{gather*}
-
-Both \(\{\ket{\alpha_n}\}\) and \(\{\ket{\beta_n}\}\) are orthonormal
-basis
-
-\section{Linear Algebra II}\label{linear-algebra-ii}
 \subsection{Trace}\label{traces}
 
 Tr(A) is only defined for a \hyperref[square-matrix]{square matrix}.
@@ -1614,6 +1535,83 @@ When \(\lambda\) is \hyperref[eigenvectorseigenvalues]{Eigenvalue} and \(\ket{u}
 In general, this determinant has degree \(\lambda_i\) are zeroes of
 character polynomial \(\lambda_i\in C\) can be repeated
 
+\subsection{Diagonalization}\label{diagonalization}
+
+A matrix is diagonalizable if it has \hyperref[linear-independence]{linearly independent} \hyperref[eigenvectorseigenvalues]{eigenvectors}
+which occurs if the geometric multiplicity (dimension of the \hyperref[eigenspaces]{eigenspace})
+equals the algebraic multiplicity (root multiplicity in the
+\hyperref[characteristic-polynomial]{characterstic polynomial}) for every \hyperref[eigenvectorseigenvalues]{eigenvalue}.
+
+If matrix \(A\) is diagonalizable then it can be written as
+
+\begin{gather*}
+	A=PDP^{-1}
+\end{gather*}
+
+Where \(D=diag(\lambda_1, … , \lambda_n)\)
+
+\subsection{Matrix Exponential}\label{matrix-exponentials}
+
+The matrix exponential of
+\hyperref[square-matrix]{square
+	matrix} \(X\) is defined by a power series
+
+\begin{gather*}
+	e^X=\sum_{n=0}^\infin\frac{X^n}{n!}
+\end{gather*}
+
+Properties of this
+
+\begin{itemize}
+	\tightlist
+	\item
+	      differential equations
+
+	      \begin{itemize}
+		      \tightlist
+		      \item
+		            the function \(U(t)=e^{tX}\) is the only unique soln. to
+	      \end{itemize}
+\end{itemize}
+
+\begin{gather*}
+	\frac{dU}{dt}=XU(t)\quad U(0)=I
+\end{gather*}
+
+\begin{itemize}
+	\tightlist
+	\item
+	      diagonalizable matrices → if \(X\) is diagonalizable (which is
+	      guaranteed for, e.g., real \hyperref[symmetric-matrix]{symmetric} or \hyperref[hermitian-matrix]{Hermitian matrices}) then
+	      we can write \(X=PDP^{-1}\) with
+	      \(D=diag(\lambda_1, … \lambda_n)\) then
+\end{itemize}
+
+\begin{gather*}
+	e^X=Pdiag(e^{\lambda_1},...,e^{\lambda_n})P^{-1}
+\end{gather*}
+
+where \(P\) is the basis matrix --- a matrix whose columns are the
+\hyperref[eigenvectorseigenvalues]{eigenvectors} \(X\) w.r.t \(\hat{A}\).
+
+Specifically, if \(v_1,v_2,…,v_n\) are \hyperref[eigenvectorseigenvalues]{eigenvectors} of \(X\)
+corresponding to \hyperref[eigenvectorseigenvalues]{eigenvalues} \(\lambda_1,\lambda_2,…,\lambda_n\) then
+
+\begin{gather*}
+	P = \begin{bmatrix} | & | & & | \\ v_1 & v_2 & \cdots & v_n \\ | & | & & | \end{bmatrix}
+\end{gather*}
+
+\begin{itemize}
+	\tightlist
+	\item
+	      \hyperref[hermitian-matrix]{Hermitian} and skew-Hermitian matrices → if \(H=H^+\) then \(e^{iH}\)
+	      is \hyperref[unitary-operator]{unitary} this means
+\end{itemize}
+
+\begin{gather*}
+	(e^{iH})^+e^{iH}=I
+\end{gather*}
+
 \subsection{Commutator}\label{commutators}
 
 The commutator of two operators \(\hat{A},\hat{B}\) is defined as
@@ -1691,10 +1689,30 @@ equals the conjugate transpose of the matrix of \(\hat{A}\)
 	\hat{A}^+=\text{adjoint of $\hat{A}$}
 \end{gather*}
 
+\subsection{Hermitian Matrix}\label{hermitian-matrix}
+
+Let a ``Hermitian matrix'' be a matrix that equals its own conjugate
+transpose
+
+If and only if \(A\) is a matrix and is Hermitian, then this is true
+
+\begin{gather*}
+	A=A^+
+\end{gather*}
+
+This means a bra and ket are Hermitian matrices of each other!
+
+Another example:
+
+\begin{gather*}
+	\ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
+\end{gather*}
+
 \subsection{Hermitian Operator}\label{hermitian-operators}
 
-An operator is Hermitian if and only if the adjoint of the operator is
+An operator is \hyperref[hermitian-matrix]{Hermitian} if and only if the adjoint of the operator is
 equal to itself.
+
 
 Properties
 
@@ -1819,236 +1837,68 @@ So sometimes it can be written as
 once i apply it to a state \(v\), i get the projection of that state
 \(v\) on state \(u\)
 
-\section{Born's Rule}\label{borns-rule}
+\subsection{Unitary Operator}\label{unitary-operator}
 
-If a quantum system is in state \(\ket{\psi}\) and you measure
-\hyperref[observables]{observable} \(\hat{A}\) --- the probability of getting \hyperref[eigenvectorseigenvalues]{eigenvalue}
-\(\lambda_\alpha\) (which corresponds to \hyperref[eigenstates]{eigenstate} \(\ket{\alpha}\)) is
+An operator is unitary if and only if
 
 \begin{gather*}
-	P_\alpha=|\braket{\alpha|\psi}|^2
+	\hat{U}^+\hat{U}=\hat{U}\hat{U}^+=I
 \end{gather*}
-
-This only holds true if eigenstate \(\ket{\phi_n}\) is non-degenerate and normalized.
-Usually, the convention is that we pick the representative state \(\braket{\phi_n|\phi_n}=1\) (i.e., it is normalized).
-
-
-Born's rule is a postulate, meaning that it is based on experimental observations and cannot be derived from first principles.
-
-
-\section{Probability Theory}\label{probability-theory}
-
-probability space \(\Sigma\) has points and elements and associated
-probabilities with them
-
-example:
-
-coin flip
-
-\begin{gather*}
-	\sum=\{e:H,T\}\rarr\frac{1}{2}
-\end{gather*}
-
-Sum of all probability of your space should be 1
-
-\begin{gather*}
-	\sum P(\Sigma)=1
-\end{gather*}
-
-We have a random variable \(X\). You have an event in that random
-variable space called \(x\). The probability of finding that event in
-that random variable distribution
-
-\begin{gather*}
-	P(X)=\sum_{e\in V_x}P(e)
-\end{gather*}
-
-where
-
-\begin{gather*}
-	V_x=\{e:X(e)=x\}
-\end{gather*}
-
-Note that the probabilities are always between 0 and 1
-
-\begin{gather*}
-	0\leq P(x)\leq 1
-\end{gather*}
-
-\subsection{Joint Random Variable}\label{joint-random-variables}
-
-We have a joint random variable \((X,Y)\) and we want to find a pair of
-values
-
-\begin{gather*}
-	P(x,y)=\sum_{x,y\in V_{x,y}}P(e)\\
-	V_{x,y}=\{e:X(e)=x, Y(e)=y\}
-\end{gather*}
-
-If i have one variable, then the other one can be inferred from the
-other.
-
-\begin{gather*}
-	P(X)=\sum_yP(x,y)\\
-	P(Y)=\sum_xP(x,y)
-\end{gather*}
-
-\subsection{Conditional Probability}\label{conditional-probability}
-
-from a joint distribution → if I select \(y\) for \(Y\) with
-\(P(Y)\neq 0\)
-
-What is the probability \(x\) given \(y\)
-
-\begin{gather*}
-	P(X|Y)=\frac{P(X,Y)}{P(Y)}
-\end{gather*}
-
-Special case
-
-If X, Y are independent (if X occurs, Y has no effect, and vice versa)
-
-\begin{gather*}
-	P(X,Y)=P(X)P(Y)
-\end{gather*}
-
-\subsection{Numerical Random Variable/Expected
-	Value}\label{numerical-random-variablesexpected-value}
-
-Uncertainty of a certain measurement
 
 \begin{itemize}
 	\tightlist
 	\item
-	      a numerical RV X labels events by values that are real numbers X.
-	\item
-	      the mean or expected value
+	      it preserves inner product
 \end{itemize}
 
 \begin{gather*}
-	\mathbb{E}[X]=\braket{X}=\sum_X X\cdot P(x)
+	\ket{\alpha '}=\hat{U}\ket{\alpha}\\
+	\ket{\beta'}=\hat{U}\ket{\beta}\\
+	\braket{\alpha'|\beta'}=\bra{\alpha}\hat{U}^+\hat{U}\ket{\beta}\\
+	=\bra{\alpha}I\ket{\beta}\\
+	=\braket{\alpha|\beta}
 \end{gather*}
-
-\subsection{Spread}\label{spread}
-
-How do we measure spread from \(\mathbb{E}[X]\)?
-
-Let \(\mu=\mathbb{E}[X]\)
-
-\begin{gather*}
-	Var(X)=\braket{(x-\mu)^2}=\braket{X^2}-2\mu\braket{X}+\mu^2\\
-	=\braket{X^2}-\braket{X}^2
-\end{gather*}
-
-\subsection{Standard Deviation}\label{standard-deviation}
-
-it's the square root of the variance
-
-\begin{gather*}
-	\Delta X=\sqrt{Var(X)}=\sqrt{\mathbb{E}[X^2]-\mathbb{E}[X]^2}
-\end{gather*}
-
-\subsection{Expected Value of an
-	Observable}\label{expected-value-of-observables}
-
-To determine the mean (EV) of an operator \(\hat{A}\), we must know the state \(\ket{\psi}\) you're in.
-\begin{gather*}
-	\mathbb{E}(A)=\sum_nA_nP(n)\\
-	=\sum A_n|\braket{n|\psi}|^2\\
-	=\sum A_n\braket{\psi|n}\braket{n|\psi}\\
-	=\bra{\psi}\sum_n A_n\ket{n}\bra{n}\ket{\psi}\\
-	=\bra{\psi}\hat{A}\ket{\psi}\\
-	\triangleq\braket{\hat{A}}
-\end{gather*}
-
-Another convientn reprsentation is
-
-\begin{gather*}
-	\hat{\rho}\triangleq\ket{\psi}\bra{\psi}\\
-	\Rarr \braket{\hat{A}}=tr(\hat{\rho}\hat{A})\\
-	=tr(\ket{\psi}\bra{\psi}\hat{A})\\
-	tr(\bra{\psi}\hat{A}\ket{\psi})
-\end{gather*}
-
-where \(tr\) is trace
-
-
-\section{Diagonalization}\label{diagonalization}
-
-A matrix is diagonalizable if it has \hyperref[linear-independence]{linearly independent} \hyperref[eigenvectorseigenvalues]{eigenvectors}
-which occurs if the geometric multiplicity (dimension of the \hyperref[eigenspaces]{eigenspace})
-equals the algebraic multiplicity (root multiplicity in the
-\hyperref[characteristic-polynomial]{characterstic polynomial}) for every \hyperref[eigenvectorseigenvalues]{eigenvalue}.
-
-If matrix \(A\) is diagonalizable then it can be written as
-
-\begin{gather*}
-	A=PDP^{-1}
-\end{gather*}
-
-Where \(D=diag(\lambda_1, … , \lambda_n)\)
-
-\section{Matrix Exponential}\label{matrix-exponentials}
-
-The matrix exponential of
-\hyperref[square-matrix]{square
-	matrix} \(X\) is defined by a power series
-
-\begin{gather*}
-	e^X=\sum_{n=0}^\infin\frac{X^n}{n!}
-\end{gather*}
-
-Properties of this
 
 \begin{itemize}
 	\tightlist
 	\item
-	      differential equations
+	      U is basis chagne between orthonormal basis because you can write
+	      \(\hat{U}\) as
 
 	      \begin{itemize}
 		      \tightlist
 		      \item
-		            the function \(U(t)=e^{tX}\) is the only unique soln. to
+		            as chatgpt puts it: unitary matrices/operators represent a rotation
+		            or change of coordinates in Hilbert space, without changing lengths
+		            or angles.
 	      \end{itemize}
 \end{itemize}
 
 \begin{gather*}
-	\frac{dU}{dt}=XU(t)\quad U(0)=I
+	\hat{U}=\hat{U}I
 \end{gather*}
 
-\begin{itemize}
-	\tightlist
-	\item
-	      diagonalizable matrices → if \(X\) is diagonalizable (which is
-	      guaranteed for, e.g., real \hyperref[symmetric-matrix]{symmetric} or \hyperref[hermitian-matrix]{Hermitian matrices}) then
-	      we can write \(X=PDP^{-1}\) with
-	      \(D=diag(\lambda_1, … \lambda_n)\) then
-\end{itemize}
+I can use completeness relation so that if
 
 \begin{gather*}
-	e^X=Pdiag(e^{\lambda_1},...,e^{\lambda_n})P^{-1}
+	\hat{U}\ket{\alpha_n}=\ket{\beta_n}
 \end{gather*}
 
-where \(P\) is the basis matrix --- a matrix whose columns are the
-\hyperref[eigenvectorseigenvalues]{eigenvectors} \(X\) w.r.t \(\hat{A}\).
-
-Specifically, if \(v_1,v_2,…,v_n\) are \hyperref[eigenvectorseigenvalues]{eigenvectors} of \(X\)
-corresponding to \hyperref[eigenvectorseigenvalues]{eigenvalues} \(\lambda_1,\lambda_2,…,\lambda_n\) then
+then we can change basis
 
 \begin{gather*}
-	P = \begin{bmatrix} | & | & & | \\ v_1 & v_2 & \cdots & v_n \\ | & | & & | \end{bmatrix}
+	\hat{U}\sum_n\ket{\alpha_n}\bra{\alpha_n}\\
+	=\sum_nU\ket{\alpha_n}\bra{\alpha_n}\\
+	=\sum_n\ket{\beta_n}\bra{\alpha_n}
 \end{gather*}
 
-\begin{itemize}
-	\tightlist
-	\item
-	      \hyperref[hermitian-matrix]{Hermitian} and skew-Hermitian matrices → if \(H=H^+\) then \(e^{iH}\)
-	      is \hyperref[unitary-operator]{unitary} this means
-\end{itemize}
+Both \(\{\ket{\alpha_n}\}\) and \(\{\ket{\beta_n}\}\) are orthonormal
+basis
 
-\begin{gather*}
-	(e^{iH})^+e^{iH}=I
-\end{gather*}
+\section{Observable}\label{observables}
+
+An observable is represented by a \hyperref[hermitian-matrix]{Hermitian operator} acting on a \hyperref[hilbert-spaces]{Hilbert
+	space}.
 
 \section{Pauli Matrices}\label{pauli-matrices}
 
@@ -2273,25 +2123,6 @@ Where
 	R_z(\theta) = \begin{pmatrix} e^{-i\theta/2} & 0 \\ 0 & e^{i\theta/2} \end{pmatrix}
 \]
 
-\section{Density Matrix}\label{density-matrix}
-
-Let \(\rho\) be a matrix.
-
-\(\rho\) is a density matrix if it is:
-
-\begin{itemize}
-	\tightlist
-	\item Hermitian
-	\item \hyperref[positive-semi-definite-psd-operators]{Positive semi-definite}
-	\item \hyperref[traces]{Trace} \(Tr(\rho)=1\)
-\end{itemize}
-
-It contains all information needed to predict measurement outcomes. For the \hyperref[observables]{observable} \(A\) we see that
-\[
-	\braket{A}=Tr(\rho A)
-\]
-
-At some point we'll touch quantum mechanics. But that point is not yet.
 
 \section{Degeneracy}\label{degeneracy}
 Two or more \hyperref[linear-independence]{linear independent} quantum states (\hyperref[eigenstates]{eigenstates}) share the same \hyperref[eigenvectorseigenvalues]{eigenvalue}.
@@ -2490,6 +2321,159 @@ Note that
 	\ket{0}=\begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}\quad
 	\ket{-1}=\begin{pmatrix}0 \\ 0 \\ -1\end{pmatrix}\quad
 \]
+\section{Born's Rule}\label{borns-rule}
+
+If a quantum system is in state \(\ket{\psi}\) and you measure
+\hyperref[observables]{observable} \(\hat{A}\) --- the probability of getting \hyperref[eigenvectorseigenvalues]{eigenvalue}
+\(\lambda_\alpha\) (which corresponds to \hyperref[eigenstates]{eigenstate} \(\ket{\alpha}\)) is
+
+\begin{gather*}
+	P_\alpha=|\braket{\alpha|\psi}|^2
+\end{gather*}
+
+This only holds true if eigenstate \(\ket{\phi_n}\) is non-degenerate and normalized.
+Usually, the convention is that we pick the representative state \(\braket{\phi_n|\phi_n}=1\) (i.e., it is normalized).
+
+
+Born's rule is a postulate, meaning that it is based on experimental observations and cannot be derived from first principles.
+
+
+\section{Probability Theory}\label{probability-theory}
+
+probability space \(\Sigma\) has points and elements and associated
+probabilities with them
+
+example:
+
+coin flip
+
+\begin{gather*}
+	\sum=\{e:H,T\}\rarr\frac{1}{2}
+\end{gather*}
+
+Sum of all probability of your space should be 1
+
+\begin{gather*}
+	\sum P(\Sigma)=1
+\end{gather*}
+
+We have a random variable \(X\). You have an event in that random
+variable space called \(x\). The probability of finding that event in
+that random variable distribution
+
+\begin{gather*}
+	P(X)=\sum_{e\in V_x}P(e)
+\end{gather*}
+
+where
+
+\begin{gather*}
+	V_x=\{e:X(e)=x\}
+\end{gather*}
+
+Note that the probabilities are always between 0 and 1
+
+\begin{gather*}
+	0\leq P(x)\leq 1
+\end{gather*}
+
+\subsection{Joint Random Variable}\label{joint-random-variables}
+
+We have a joint random variable \((X,Y)\) and we want to find a pair of
+values
+
+\begin{gather*}
+	P(x,y)=\sum_{x,y\in V_{x,y}}P(e)\\
+	V_{x,y}=\{e:X(e)=x, Y(e)=y\}
+\end{gather*}
+
+If i have one variable, then the other one can be inferred from the
+other.
+
+\begin{gather*}
+	P(X)=\sum_yP(x,y)\\
+	P(Y)=\sum_xP(x,y)
+\end{gather*}
+
+\subsection{Conditional Probability}\label{conditional-probability}
+
+from a joint distribution → if I select \(y\) for \(Y\) with
+\(P(Y)\neq 0\)
+
+What is the probability \(x\) given \(y\)
+
+\begin{gather*}
+	P(X|Y)=\frac{P(X,Y)}{P(Y)}
+\end{gather*}
+
+Special case
+
+If X, Y are independent (if X occurs, Y has no effect, and vice versa)
+
+\begin{gather*}
+	P(X,Y)=P(X)P(Y)
+\end{gather*}
+
+\subsection{Numerical Random Variable/Expected
+	Value}\label{numerical-random-variablesexpected-value}
+
+Uncertainty of a certain measurement
+
+\begin{itemize}
+	\tightlist
+	\item
+	      a numerical RV X labels events by values that are real numbers X.
+	\item
+	      the mean or expected value
+\end{itemize}
+
+\begin{gather*}
+	\mathbb{E}[X]=\braket{X}=\sum_X X\cdot P(x)
+\end{gather*}
+
+\subsection{Spread}\label{spread}
+
+How do we measure spread from \(\mathbb{E}[X]\)?
+
+Let \(\mu=\mathbb{E}[X]\)
+
+\begin{gather*}
+	Var(X)=\braket{(x-\mu)^2}=\braket{X^2}-2\mu\braket{X}+\mu^2\\
+	=\braket{X^2}-\braket{X}^2
+\end{gather*}
+
+\subsection{Standard Deviation}\label{standard-deviation}
+
+it's the square root of the variance
+
+\begin{gather*}
+	\Delta X=\sqrt{Var(X)}=\sqrt{\mathbb{E}[X^2]-\mathbb{E}[X]^2}
+\end{gather*}
+
+\subsection{Expected Value of an
+	Observable}\label{expected-value-of-observables}
+
+To determine the mean (EV) of an operator \(\hat{A}\), we must know the state \(\ket{\psi}\) you're in.
+\begin{gather*}
+	\mathbb{E}(A)=\sum_nA_nP(n)\\
+	=\sum A_n|\braket{n|\psi}|^2\\
+	=\sum A_n\braket{\psi|n}\braket{n|\psi}\\
+	=\bra{\psi}\sum_n A_n\ket{n}\bra{n}\ket{\psi}\\
+	=\bra{\psi}\hat{A}\ket{\psi}\\
+	\triangleq\braket{\hat{A}}
+\end{gather*}
+
+Another convientn reprsentation is
+
+\begin{gather*}
+	\hat{\rho}\triangleq\ket{\psi}\bra{\psi}\\
+	\Rarr \braket{\hat{A}}=tr(\hat{\rho}\hat{A})\\
+	=tr(\ket{\psi}\bra{\psi}\hat{A})\\
+	tr(\bra{\psi}\hat{A}\ket{\psi})
+\end{gather*}
+
+where \(tr\) is trace
+
 \section{Measuring a Quantum State}\label{measuring-a-quantum-state}
 Before:
 The system is in a state \(\ket{\psi}\) and you measure the observable \(\hat{A}\).
@@ -2533,6 +2517,26 @@ After: State collapses to
 
 The collapse is true only if this is an idealized measurement that is non-destructive.
 This means that the measurement must not destroy the system (e.g., photon absorbed by detector). There's no noise as well.
+
+\section{Density Matrix}\label{density-matrix}
+
+Let \(\rho\) be a matrix.
+
+\(\rho\) is a density matrix if it is:
+
+\begin{itemize}
+	\tightlist
+	\item Hermitian
+	\item \hyperref[positive-semi-definite-psd-operators]{Positive semi-definite}
+	\item \hyperref[traces]{Trace} \(Tr(\rho)=1\)
+\end{itemize}
+
+It contains all information needed to predict measurement outcomes. For the \hyperref[observables]{observable} \(A\) we see that
+\[
+	\braket{A}=Tr(\rho A)
+\]
+
+At some point we'll touch quantum mechanics. But that point is not yet.
 
 \section{Cauchy-Schwarz Inequality}\label{cauchy-schwarz-inequality}
 Given two vectors \(\ket{u},\ket{v}\in \mathbb{C}^n\),
