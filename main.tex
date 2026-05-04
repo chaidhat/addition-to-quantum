@@ -100,11 +100,16 @@
 
 
 Hi, my name is Chai and I'm taking a quantum mechanics course at UCLA.
+\bigskip
 
-I wanted to write a series on quantum mechanics starting from basic
-addition and going to bachelor-degree level quantum mechanics. So, at
-the start, you only need to know how to add and multiply numbers and in
-the end, you'll know how to do quantum mechanics problems.
+At the start, you only need to know how to add and multiply numbers.
+\bigskip
+
+After reading this article, you'll know how to do quantum mechanics problems.
+\bigskip
+
+The article is loosely sorted by complexity. Everything is derived from concepts introduced in previous sections. As we introduce mathematical concepts, we will use them to better understand quantum mechanics.
+\bigskip
 
 This is based on the Electrical and Computer Engineering 128 course
 taught at the University of California, Los Angeles by Dr.~Leo Zhou.
@@ -128,14 +133,13 @@ elementary school math) in a section before it.
 Example
 
 \hyperref[invariant-subspaces]{invariant
-	subspaces} →
-\hyperref[subspaces]{subspaces}
+	subspace} →
+\hyperref[subspaces]{subspace}
 →
-\hyperref[subsets]{subsets}
+\hyperref[subsets]{subset}
 →
 \hyperref[set-theory]{set
 	theory}
-
 
 
 \section*{chaimongkol@ucla.edu}
@@ -152,7 +156,7 @@ incomplete.
 
 \section{Let}\label{let}
 
-Ok when I say ``let'' i'm just defining something to be another thing.
+Ok when I say ``let,'' i'm just defining something to be another thing.
 
 Example:
 
@@ -164,7 +168,7 @@ Now if i say ``the sky is blorple'' then i actually mean that it is
 blue.
 
 
-\section{Variables, addition}\label{variables-addition}
+\section{Variable, Addition}\label{variables-addition}
 
 Let a variable be just a symbol that represents a literal thing.
 
@@ -194,19 +198,8 @@ Example:
 
 \(\Rarr x+5=6\), as \(x=1\), we'd just put 1 in place of the \(x\)
 
-\section{Multiplication}\label{multiplication}
 
-Math people are cool and they don't have time to write \(\times\).
-Sometimes when I multiply numbers or
-\hyperref[variables-addition]{variables}
-together, i'm going to write them touching each other or with a
-\(\cdot\) in the middle. Because I'm cool too.
-
-\begin{gather*}
-	5\times x\quad\text{is the same idea as}\quad 5x\quad\text{is the same idea as}\quad5\cdot x
-\end{gather*}
-
-\section{Matrices}\label{matrices}
+\section{Matrix}\label{matrices}
 
 Let a ``matrix'' be a set of numbers ordered in a neat grid. Now we
 can manipulate a lot of numbers simultaneously. Interestingly enough,
@@ -238,7 +231,7 @@ are 2 rows and 3 columns.
 We use matrices to represent sets of numbers because they have an
 equivalent in the real world. In this case, quantum states.
 
-\section{Ket (States)}\label{ket-states}
+\section{Ket (State)}\label{ket-states}
 
 Let \(\ket{x}\) (ket x) be a \(N \times 1\) matrix where \(N\) is any
 positive integer (number with no decimals and is greater than 0).
@@ -271,7 +264,7 @@ Note that \(\psi\) (psi) is pronounced sye and \(\phi\) (phi) is
 pronounced fye. They are just like \(x\) but idk why quantum physicists
 love greek characters.
 
-\section{Photons, Wave-particle
+\section{Photon, Wave-particle
   Duality}\label{photons-wave-particle-duality}
 
 Let this be a photon. It's like a particle of light.
@@ -298,8 +291,8 @@ that particles carry. Photons have spin 1; for photons this shows up
 as polarization (e.g. circular polarization corresponds to the two
 helicity states).
 
-\section{Superpositions, matrix
-  addition}\label{superpositions-matrix-addition}
+\section{Superposition, Matrix
+  Addition}\label{superpositions-matrix-addition}
 
 A photon can have a probability of \(x\%\) of spinning up (+). This
 means it would have \((100-x)\%\) of spinning down (-), since the
@@ -400,102 +393,133 @@ something existing.
 I'm going to write a ton of mathematical definitions which will build up
 how to do the physics in the next section!
 
-\section{Linear Independence}\label{linear-independence}
 
-Let ``linearly independent states'' be states that you cannot create
-another linearly independent state from multiplying and adding another
-linearly independent state.
+\section{Function I}\label{functions}
 
-a cleaner definition is \(\ket{\psi_1},\ket{\psi_2},…\ket{\psi_n}\) are
-linearly independent if the only way to get
-
-\begin{gather*}
-	c_1\ket{\psi_1}+c_2\ket{\psi_2}+\cdots+c_n\ket{\psi_n}=0
-\end{gather*}
-
-is having \(c_i=0\) for all (\(\forall\)) \(c_i\).
+Also let us notate a state as a function of time. What's a function?
 
 Example:
 
-Given \(c\) is just a regular number,
+if i let \(f\) be a function that accepts \(x\) as an argument, like
+this
 
 \begin{gather*}
-	\ket{+}=c\ket{-}\quad\text{will never happen how much you try}
+	f(x)=4x
 \end{gather*}
 
-and vice versa.
-
-\section{Basis States}\label{basis-states}
-
-If a set of states are BOTH
-
-\begin{itemize}
-	\tightlist
-	\item
-	      \hyperref[linear-independence]{linearly
-		      independent}
-	\item
-	      span the whole space (i.e., every state in the space can be written as
-	      a linear combination of these things)
-\end{itemize}
-
-then they are called basis states.
-
-Note that \(\ket{+},\ket{-}\) from the previous lecture are ``basis''
-states
-
-\section{Inner product}\label{inner-product}
-
-Inner product of states \(\ket{u}\) and \(\ket{v}\) is defined as
+then
 
 \begin{gather*}
-	\ket{u}\cdot \ket{v}=u_1^*v_1+u_2^*v_2+...+u_n^*v_n
+	f(5)=4(5)=20
 \end{gather*}
 
-(if the entries are real numbers, the conjugates do nothing and this
-reduces to the usual dot product.)
+\section{Summation}\label{summation}
+This is a function that adds up a series of numbers.
+\[
+	\sum_{i=1}^n a_i \triangleq a_1 + a_2 + \cdots + a_n
+\]
 
-\section{Orthogonality}\label{orthogonality}
+\section{Trigonometry}\label{trigonometry}
 
-State \(\ket{u},\ket{v}\) are orthogonal to each other if the
-\hyperref[inner-product]{inner
-	product} of state \(\ket{u}\) and \(\ket{v}\) are zero.
+
+There's these functions that are useful to know about.
+\[
+	\sin(\theta), \cos(\theta), \tan(\theta)
+\]
+Where \(\theta\) is the angle in radians.
+
+1 radians is \(\frac{180}{\pi}\) degrees. The radian to degree conversion is linear.
+
+For the purpose of this course, we only need to think about trigonometry as functions. No need to mess around with triangles, but it sure will be helpful to know more about them.
+
+Also know these fun facts
+
+\[
+	\sin(\alpha\pm \beta) = \sin\alpha\cos\beta \pm \cos\alpha\sin\beta
+\]
+\[
+	\cos(\alpha\pm \beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta
+\]
+\[
+	\tan(\alpha\pm \beta) = \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}
+\]
+
+This is called the Pythagorean identity
+\[
+	\sin^2(\theta) + \cos^2(\theta) = 1
+\]
+
+\section{Calculus}\label{calculus}
+\subsection{Limit}\label{limits}
+Let a "limit" be a function that slowly moves something towards a value. For example, if \(h\) approaches \(\infin\), the equation below evaluates to a value. It's helpful when if we just simply set \(h=0\) or \(h=\infin\), then we divide by zero or for some reason can't compute \(h\).
+
+\[
+	\lim_{h\to \infin} 3+\frac{5}{h}=3
+\]
+
+\subsection{Differentiation}\label{differentiation}
+
+To differentiate something means to see how fast it changes with respect
+to (w.r.t) something else changing, for example, time \(t\). Imagine you step forward in time by a very small step \(h\).
+As \(h\rarr 0\), the change in \(x\) becomes the derivative of \(x\) with respect to time.
+
+\[
+	\frac{d}{dt}f(t)=\lim_{h\to 0} \frac{f(t+h)-f(t)}{h}
+\]
+
+To do this, us humans developed some nifty tricks. Here's all of them.
+
+\begin{align*}
+	\frac{d}{dx}[f(x) \pm g(x)]                & = f'(x) \pm g'(x)                                                    \\
+	\frac{d}{dx}[x^n]                          & = nx^{n-1}                                                           \\
+	\frac{d}{dx}[f(x)g(x)]                     & = f'(x)g(x) + f(x)g'(x)                                              \\
+	\frac{d}{dx}[f(g(x))]                      & = f'(g(x))\,g'(x)                                                    \\
+	\frac{d}{dx}[e^x]                          & = e^x                                                                \\
+	\frac{d}{dx}[a^x]                          & = a^x \ln(a)                                                         \\
+	\frac{d}{dx}[\ln(x)]                       & = \frac{1}{x}                                                        \\
+	\frac{d}{dx}[\log_a(x)]                    & = \frac{1}{x \ln(a)}                                                 \\
+	\frac{d}{dx}[\sin(x)]                      & = \cos(x)                                                            \\
+	\frac{d}{dx}[\cos(x)]                      & = -\sin(x)                                                           \\
+	\frac{d}{dx}[\tan(x)]                      & = \left(\frac{1}{\cos(x)}\right)^2                                   \\
+	\frac{d}{dx}\left(\frac{1}{\tan(x)}\right) & = \frac{1}{\sin^2 (x)}                                               \\
+	\frac{d}{dx}\left(\frac{1}{\cos(x)}\right) & = \frac{\sin x}{\cos^2 x}                                            \\
+	\frac{d}{dx}\left(\frac{1}{\sin(x)}\right) & = -\frac{\cos x}{\sin^2 x}                                           \\
+	\frac{d}{dx}[\arcsin(x)]                   & = \frac{1}{\sqrt{1 - x^2}}                                           \\
+	\frac{d}{dx}[\arccos(x)]                   & = -\frac{1}{\sqrt{1 - x^2}}                                          \\
+	\frac{d}{dx}[\arctan(x)]                   & = \frac{1}{1 + x^2}                                                  \\
+	\frac{d}{dx}[\operatorname{arccot}(x)]     & = -\frac{1}{1 + x^2}                                                 \\
+	\frac{d}{dx}[\operatorname{arcsec}(x)]     & = \frac{1}{|x|\sqrt{x^2 - 1}}                                        \\
+	\frac{d}{dx}[\operatorname{arccsc}(x)]     & = -\frac{1}{|x|\sqrt{x^2 - 1}}                                       \\
+	\frac{d}{dx}[f(x)^{g(x)}]                  & = f(x)^{g(x)} \left[g'(x)\ln(f(x)) + \frac{g(x)\,f'(x)}{f(x)}\right] \\
+	\frac{d}{dx}[f^{-1}(x)]                    & = \frac{1}{f'(f^{-1}(x))}                                            \\
+	\frac{d^n}{dx^n}[f(x)g(x)]                 & = \sum_{k=0}^{n} \binom{n}{k} f^{(k)}(x)\,g^{(n-k)}(x)
+\end{align*}
+
+\subsection{Integration}\label{integration}
+The opposite of differentiation is integration. This is the Riemann sum.
 
 \begin{gather*}
-	\ket{u}\cdot \ket{v}=0
+	\int_\alpha^\beta f(t)\cdot dt=\lim_{n\to\infin}\sum_{i=1}^n f(t_i)\cdot (t_i-t_{i-1})
 \end{gather*}
 
-They're also known as being perpendicular!
+Integration is much more hellish. You don't need to know integration for
+this.
 
+\subsection{Taylor Series}\label{taylor-series}
+Taylor, a person, once said that
 
-\section{Magnitude}\label{magnitude}
+\[
+	f(x) = \sum_{n=0}^{\infin}{\left(\frac{1}{n!}\right)\left(\frac{d^n f}{dx^n}\right)}|_a · (x - a)^n
+\]
 
-Where \(n\) is the dimensions, the magnitude of \(\ket{\psi}\) is
-defined as:
+So...
 
 \begin{gather*}
-	||\ket{\psi}||=||\begin{pmatrix}\psi_1\\\psi_2\\\vdots\\\psi_n\end{pmatrix}||=\sqrt{|\psi_1|^2+|\psi_2|^2+...+|\psi_n|^2}
+	e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+...\\
+	\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots\\
+	\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots
 \end{gather*}
-
-\section{Normal}\label{normal}
-
-\(\ket{\psi}\) is normal if it has
-\hyperref[magnitude]{magnitude}
-1
-
-\begin{gather*}
-	||\ket{\psi}||=1
-\end{gather*}
-
-\section{Orthonormality}\label{orthonormality}
-
-Let `` \(\ket{+},\ket{-}\) are orthonormal'' mean both
-\(\ket{+},\ket{-}\) are both
-\hyperref[orthogonality]{orthogonal}
-and
-\hyperref[normal]{normal}.
-
-\section{Complex Numbers}\label{complex-numbers}
+\section{Complex Number}\label{complex-numbers}
 
 Math is complicated. Some can say it's complex.
 
@@ -544,9 +568,13 @@ versa, this means they are \hyperref[basis-states]{basis states} like what we le
 lecture!
 
 \subsection{Conjugate}\label{conjugate}
+Say
+\[
+	z=a+bi
+\]
 
-Let the conjugate of \(z\) be written as \(z^*\) and mean this (we just
-make b negative)
+Let the conjugate \(z^*\) of \(z\) be defined as this (we just
+make the imaginary part negative)
 
 \begin{gather*}
 	z^*=a-bi=\begin{pmatrix}a  & +b \\
@@ -554,17 +582,15 @@ make b negative)
 	\end{pmatrix}
 \end{gather*}
 
+If you're writing in euler form, then flip the sign of the angle
+\[
+	(e^{i\theta})^*=e^{-i\theta}
+\]
+
+
+
 \subsection{Euler Form}\label{euler-form}
-
-Taylor, a person, once said that
-
-\begin{gather*}
-	e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+...\\
-	\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots\\
-	\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots
-\end{gather*}
-
-so Euler, another person, said
+Euler, another person, said that since \hyperref[taylor-series]{Taylor series} is a thing, we can say that
 
 \begin{gather*}
 	e^{i\theta}=1+i\theta+\frac{(i\theta)^2}{2!}+\frac{(i\theta)^3}{3!}+\cdots\\
@@ -584,8 +610,132 @@ This means we can represent complex numbers in this weird form too:
 	z=re^{i\theta}
 \end{gather*}
 
+also trigometry can use complex numbers too
+\[
+	\cos\theta=
+	\frac{1}{2}(e^{i\theta}+e^{-i\theta})
+\]
+\[
+	\sin\theta=
+	\frac{1}{2i}(e^{i\theta}-e^{-i\theta})
+\]
 
-\section{Bra/Transpose}\label{bratranspose}
+\subsection{Complex Number Decomposition}\label{complex-number-decomposition}
+This is all true
+\[
+	z = a+bi
+\]
+\[
+	Re(z)=\frac{1}{2}(z+z^*)
+\]
+\[
+	Im(z)=\frac{1}{2i}(z-z^*)
+\]
+
+
+\section{Linear Algebra I}\label{linear-algebra-i}
+More fun math with matrices
+\subsection{Linear Independence}\label{linear-independence}
+
+Let ``linearly independent states'' be states that you cannot create
+another linearly independent state from multiplying and adding another
+linearly independent state.
+
+a cleaner definition is \(\ket{\psi_1},\ket{\psi_2},…\ket{\psi_n}\) are
+linearly independent if the only way to get
+
+\begin{gather*}
+	c_1\ket{\psi_1}+c_2\ket{\psi_2}+\cdots+c_n\ket{\psi_n}=0
+\end{gather*}
+
+is having \(c_i=0\) for all (\(\forall\)) \(c_i\).
+
+Example:
+
+Given \(c\) is just a regular number,
+
+\begin{gather*}
+	\ket{+}=c\ket{-}\quad\text{will never happen how much you try}
+\end{gather*}
+
+and vice versa.
+
+\subsection{Basis State}\label{basis-states}
+
+If a set of states are BOTH
+
+\begin{itemize}
+	\tightlist
+	\item
+	      \hyperref[linear-independence]{linearly
+		      independent}
+	\item
+	      span the whole space (i.e., every state in the space can be written as
+	      a linear combination of these things)
+\end{itemize}
+
+then they are called basis states.
+
+Note that \(\ket{+},\ket{-}\) from the previous lecture are ``basis''
+states
+
+\subsection{Inner product I}\label{inner-product}
+
+Inner product of states \(\ket{u}\) and \(\ket{v}\) is defined as
+
+\begin{gather*}
+	\ket{u}\cdot \ket{v}=u_1^*v_1+u_2^*v_2+...+u_n^*v_n
+\end{gather*}
+
+(if the entries are real numbers, the \hyperref[conjugate]{conjugates} do nothing and this
+reduces to the usual dot product.)
+
+\subsection{Orthogonality}\label{orthogonality}
+
+State \(\ket{u},\ket{v}\) are orthogonal to each other if the
+\hyperref[inner-product]{inner
+	product} of state \(\ket{u}\) and \(\ket{v}\) are zero.
+
+\begin{gather*}
+	\ket{u}\cdot \ket{v}=0
+\end{gather*}
+
+They're also known as being perpendicular!
+
+
+\subsection{Magnitude}\label{magnitude}
+
+Where \(n\) is the dimensions, the magnitude of \(\ket{\psi}\) is
+defined as:
+
+\begin{gather*}
+	||\ket{\psi}||=||\begin{pmatrix}\psi_1\\\psi_2\\\vdots\\\psi_n\end{pmatrix}||=\sqrt{|\psi_1|^2+|\psi_2|^2+...+|\psi_n|^2}
+\end{gather*}
+
+Note that
+\[
+	||\ket{\psi}||^2=\braket{\psi|\psi}
+\]
+You'll know what a bra-ket is later.
+
+\subsection{Normal}\label{normal}
+
+\(\ket{\psi}\) is normal if it has
+\hyperref[magnitude]{magnitude}
+1
+
+\begin{gather*}
+	||\ket{\psi}||=1
+\end{gather*}
+
+\subsection{Orthonormality}\label{orthonormality}
+
+Let `` \(\ket{+},\ket{-}\) are orthonormal'' mean both
+\(\ket{+},\ket{-}\) are both
+\hyperref[orthogonality]{orthogonal}
+and
+\hyperref[normal]{normal}.
+\subsection{Bra, Transpose}\label{bratranspose}
 
 We just learned what ket \(\ket{x}\) means --- a \(N\times 1\) vector.
 Let that ALSO be called a ket. If we flip it horizontally, we get a bra
@@ -658,8 +808,13 @@ Another example:
 	\ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
 \end{gather*}
 
-\section{Bra-ket, matrix
-  multiplication}\label{bra-ket-matrix-multiplication}
+\subsection{Kronecker Delta}\label{kronecker-delta}
+
+Where \(\delta_{ij}\) is just something we define as
+\[\delta_{ij}=\begin{cases}1\quad i=j\\0\quad i\neq j\end{cases}\]
+
+\subsection{Bra-ket, matrix
+	multiplication}\label{bra-ket-matrix-multiplication}
 
 Now let this be a bra-ket (get it?)
 
@@ -732,14 +887,16 @@ A matrix \(X\) where
 (note that \(X^T\) means
 \href{https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21}{transpose})
 
-\subsection{Kronecker Delta}\label{kronecker-delta}
 
-Where \(\delta_{ij}\) is just something we define as that. It is called
-the Kronecker delta.
 
-\section{Vector Spaces}\label{vector-spaces}
+\subsection{Vector}\label{vectors}
 
-Let a vector space \(V\) be a set of vectors with
+Let vector just be the same thing as
+\hyperref[ket-states]{states}.
+
+\subsection{Vector Space}\label{vector-spaces}
+
+Let a vector space \(V\) be a set of \hyperref[vectors]{vectors} with
 
 \begin{itemize}
 	\tightlist
@@ -761,217 +918,7 @@ Let a vector space \(V\) be a set of vectors with
 	a\ket{v}\in V\quad ;\quad a\in \mathbb{F},\ket{v}\in V
 \end{gather*}
 
-This lecture will apply the math learned in the previous lecture to do
-some cool physics!
-
-\section{Planck-Einstein Relation}\label{planck-einstein-relation}
-
-Planck, a person, first proposed (and Einstein, another person, later
-applied to photons via the photoelectric effect) that
-
-\begin{gather*}
-	E=hf
-\end{gather*}
-
-which means energy of a photon is Planck's constant
-\(h=6.626\times 10^{-34}Js\) times the frequency of the light \(f\).
-Because it was experimental, we can't really prove with math that this
-is true, but we proved it with experiments. This is called the
-Planck--Einstein relation.
-
-\section{Angular Frequency, reduced Planck
-  constant}\label{angular-frequency-reduced-planck-constant}
-
-Some dude in physics was like let's make a new, transformed version of
-frequency called angular frequency \(\omega\)! (Not to be confused with
-angular momentum, which is a different physical quantity.)
-
-Let
-
-\begin{gather*}
-	\omega=2\pi f
-\end{gather*}
-
-Because of this, we can say that
-
-\begin{gather*}
-	E=hf\\
-	=h\frac{\omega}{2\pi}
-\end{gather*}
-
-Let the reduced Planck constant be
-
-\begin{gather*}
-	\hbar=\frac{h}{2\pi}
-\end{gather*}
-
-so we can also say
-
-\begin{gather*}
-	E=\hbar \omega
-\end{gather*}
-
-Bohr, a person, hypothesized that atoms absorb light at discrete
-frequencies.
-
-This means that atoms (photons too) have discrete (non-continuous)
-energy levels.
-
-\section{Functions}\label{functions}
-
-Also let us notate a state as a function of time. What's a function?
-
-Example:
-
-if i let \(f\) be a function that accepts \(x\) as an argument, like
-this
-
-\begin{gather*}
-	f(x)=4x
-\end{gather*}
-
-then
-
-\begin{gather*}
-	f(5)=4(5)=20
-\end{gather*}
-
-We can say that state is a function of time \(t\)
-
-Example:
-
-\begin{gather*}
-	\ket{\psi(t)}
-\end{gather*}
-
-\section{Particle Energies}\label{particle-energies}
-
-We just said photons have discrete energy levels. Let's say they have
-\(k\) energy levels.
-
-We know experimentally, that any state \(\ket{\psi(t)}\) (e.g., spin) of
-a quantum particle can be expanded in the energy basis. Let the energy
-basis be just a set of \hyperref[basis-states]{basis states} \(E_1,E_2, …, E_k\). This means a
-photon can be at those energies.
-
-A state is a superposition of all those energies. Recall that a super
-position is just a sum (\(\sum\)) of those energies. I put \(k\) under
-the sum showing we must add all the energies and their corresponding
-\(c_k\) values (aka. coefficients) together.
-
-\begin{gather*}
-	\ket{\psi(0)}=\sum_kc_k\ket{E_k}
-\end{gather*}
-
-\section{Particle Phases}\label{particle-phases}
-
-We also just proved that \(E=\hbar\omega\) so that particle with energy
-\(\ket{E_k}\) will oscillate at frequency
-
-\begin{gather*}
-	\omega_k=\frac{E_k}{\hbar}
-\end{gather*}
-
-Oscillating means the phase of the particle changes so we can represent
-the phase as a complex number.
-
-Let's say there is a two-level quantum system in some superposition.
-This just means
-
-\begin{gather*}
-	\ket{\psi}=\alpha\ket{0}+\beta\ket{1}=\begin{pmatrix} \alpha\\\beta\end{pmatrix}
-\end{gather*}
-
-Because \(\alpha,\beta\) can be complex, we proved experimentally that a
-glass polarizer, like a polarized sunglass, can change the phase of the
-state \(\ket{1}\) for example.
-
-Let
-
-\begin{gather*}
-	\beta'=\beta e^{i\delta}
-\end{gather*}
-
-Where \(\delta\) can be any phase angle from 0 to \(2\pi\).
-
-This is the same phase as which destructively interfere in the double
-slit experiment. That's why phases exist. Because light is a wave with a
-frequency (and also a particle!)
-
-\section{Calculus}\label{calculus}
-
-To differentiate something means to see how fast it changes with respect
-to something else changing, for example, time.
-
-\begin{gather*}
-	\frac{d}{dt}x=\text{change of $x$ w.r.t. $t$}
-\end{gather*}
-
-To do this, us humans developed some nifty tricks. To different
-something to the power of something, we multiply by the power and
-decrease the power by 1
-
-\begin{gather*}
-	\frac{d}{dt}x^5=5x^4
-\end{gather*}
-
-The opposite of differentiation is integration.
-
-\begin{gather*}
-	\int_\alpha^\beta x\cdot dt=\text{the sum of x from t=$\alpha$ to t=$\beta$}
-\end{gather*}
-
-Integration is much more hellish. You don't need to know integration for
-this.
-
-\section{Schrödinger's Equation,
-  Hamiltonian}\label{schruxf6dingers-equation-hamiltonian}
-
-Recall
-
-\begin{gather*}
-	\ket{\psi(0)}=\sum_kc_k\ket{E_k}
-\end{gather*}
-
-Because we learned this thing called phase, we can say that particle
-oscillate at different phases. This is shown using phases
-
-\begin{gather*}
-	\ket{\psi(t)}=\sum_kc_ke^{-i\omega_kt}\ket{E_k}\\
-	=\sum_kc_ke^{-iE_kt/\hbar}\ket{E_k}\\
-\end{gather*}
-
-If we take the derivative from both sides
-
-\begin{gather*}
-	\frac{d}{dt}\ket{\psi(t)}=\frac{d}{dt}\left[\sum_kc_ke^{-iE_kt/\hbar}\ket{E_k}\right]\\
-	=\sum_kc_k\cdot \left(-i\frac{E_k}{\hbar}\right)e^{-iE_kt/\hbar}\ket{E_k}\\
-	=-\frac{i}{\hbar}\sum_kc_k\cdot E_ke^{-iE_kt/\hbar}\ket{E_k}
-\end{gather*}
-
-Let the Hamiltonian \(H\) be the state multiplied by its energy
-
-\begin{gather*}
-	H\ket{E_k}=E_k\ket{E_k}
-\end{gather*}
-
-so
-
-\begin{gather*}
-	=-H\frac{i}{\hbar}\sum_kc_k\cdot e^{-iE_kt/\hbar}\ket{E_k}\\
-	=-\frac{i}{\hbar}H\ket{\psi(t)}
-\end{gather*}
-
-which gives us Schrödinger's equation (in state-vector form)
-
-\begin{gather*}
-	i\hbar\frac{d}{dt}\ket{\psi(t)}=H\ket{\psi(t)}
-\end{gather*}
-
-This lecture introduces more intricate details to defining quantum
-mechanics
-
-\section{Hilbert Spaces}\label{hilbert-spaces}
+\section{Hilbert Space}\label{hilbert-spaces}
 
 A Hilbert space \(H\) describes quantum space.
 
@@ -983,13 +930,8 @@ A Hilbert space is a \hyperref[vector-spaces]{vector space}, possibly infinite-d
 
 \(H\) has an \hyperref[inner-product]{inner product} and is complete.
 
-The states we wrote before for example \(\ket{\psi}\) are vectors which
+The states we wrote before for example \(\ket{\psi}\) are \hyperref[states]{states} which
 exist in a Hilbert space.
-
-\subsection{Vectors}\label{vectors}
-
-Let vector just be the same thing as
-\hyperref[ket-states]{states}.
 
 \subsection{Inner Product II}\label{inner-product-ii}
 
@@ -1058,32 +1000,163 @@ so \(\phi,\psi\) are conjugate symmetric
 \subsection{Completeness}\label{completeness}
 
 Don't worry about it. -prof. Zhou
+\section{Planck-Einstein Relation}\label{planck-einstein-relation}
 
-\section{Projections}\label{projections}
-
-The projection of \(v\) onto a
-\hyperref[vectors]{vector}
-\(u\) is
+Planck, a person, first proposed (and Einstein, another person, later
+applied to photons via the photoelectric effect) that
 
 \begin{gather*}
-	\Pi_u(v)=\frac{\braket{v|u}}{\braket{u|u}}u
+	E=hf
 \end{gather*}
 
-Example
+which means energy of a photon is Planck's constant
+\(h=6.626\times 10^{-34}Js\) times the frequency of the light \(f\).
+Because it was experimental, we can't really prove with math that this
+is true, but we proved it with experiments. This is called the
+Planck--Einstein relation.
+
+\section{Angular Frequency, reduced Planck
+  constant}\label{angular-frequency-reduced-planck-constant}
+
+Some dude in physics was like let's make a new, transformed version of
+frequency called angular frequency \(\omega\)! (Not to be confused with
+angular momentum, which is a different physical quantity.)
+
+Let
 
 \begin{gather*}
-	\ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \Rarr \bra{\psi}=\begin{bmatrix}a^* & b^*\end{bmatrix}
-	\\
-	\ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
+	\omega=2\pi f
 \end{gather*}
+
+Because of this, we can say that
 
 \begin{gather*}
-	\Pi_\psi(\phi)=\frac{\begin{bmatrix}c^* & d^*\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}}{\begin{bmatrix}a^* & b^*\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}}\begin{bmatrix}a\\b\end{bmatrix}\\
-	=\frac{c^*a+d^*b}{a^*a+b^*b}\begin{bmatrix}a\\b\end{bmatrix}
+	E=hf\\
+	=h\frac{\omega}{2\pi}
 \end{gather*}
 
-This is similar to the dot product, but it gives a
-\hyperref[vectors]{vector}
+Let the reduced Planck constant be
+
+\begin{gather*}
+	\hbar=\frac{h}{2\pi}
+\end{gather*}
+
+so we can also say
+
+\begin{gather*}
+	E=\hbar \omega
+\end{gather*}
+
+Bohr, a person, hypothesized that atoms absorb light at discrete
+frequencies.
+
+This means that atoms (photons too) have discrete (non-continuous)
+energy levels.
+
+\section{Particle Energy}\label{particle-energies}
+
+We just said photons have discrete energy levels. Let's say they have
+\(k\) energy levels.
+
+We know experimentally, that any state \(\ket{\psi(t)}\) (e.g., spin) of
+a quantum particle can be expanded in the energy basis. Let the energy
+basis be just a set of \hyperref[basis-states]{basis states} \(E_1,E_2, …, E_k\). This means a
+photon can be at those energies.
+
+A state is a superposition of all those energies. Recall that a super
+position is just a sum (\(\sum\)) of those energies. I put \(k\) under
+the sum showing we must add all the energies and their corresponding
+\(c_k\) values (aka. coefficients) together.
+
+\begin{gather*}
+	\ket{\psi(0)}=\sum_kc_k\ket{E_k}
+\end{gather*}
+
+\section{Particle Phase}\label{particle-phases}
+
+We also just proved that \(E=\hbar\omega\) so that particle with energy
+\(\ket{E_k}\) will oscillate at frequency
+
+\begin{gather*}
+	\omega_k=\frac{E_k}{\hbar}
+\end{gather*}
+
+Oscillating means the phase of the particle changes so we can represent
+the phase as a complex number.
+
+Let's say there is a two-level quantum system in some superposition.
+This just means
+
+\begin{gather*}
+	\ket{\psi}=\alpha\ket{0}+\beta\ket{1}=\begin{pmatrix} \alpha\\\beta\end{pmatrix}
+\end{gather*}
+
+Because \(\alpha,\beta\) can be complex, we proved experimentally that a
+glass polarizer, like a polarized sunglass, can change the phase of the
+state \(\ket{1}\) for example.
+
+Let
+
+\begin{gather*}
+	\beta'=\beta e^{i\delta}
+\end{gather*}
+
+Where \(\delta\) can be any phase angle from 0 to \(2\pi\).
+
+This is the same phase as which destructively interfere in the double
+slit experiment. That's why phases exist. Because light is a wave with a
+frequency (and also a particle!)
+
+
+\section{Schrödinger's Equation,
+  Hamiltonian}\label{schruxf6dingers-equation-hamiltonian}
+
+Recall from \hyperref[particle-energies]{particle energies} that
+
+\begin{gather*}
+	\ket{\psi(0)}=\sum_kc_k\ket{E_k}
+\end{gather*}
+
+Because we learned this thing called \hyperref[particle-phases]{particle phases}, we can say that particle
+oscillate at different phases. This is shown using phases
+
+\begin{gather*}
+	\ket{\psi(t)}=\sum_kc_ke^{-i\omega_kt}\ket{E_k}\\
+	=\sum_kc_ke^{-iE_kt/\hbar}\ket{E_k}\\
+\end{gather*}
+
+If we take the derivative from both sides
+
+\begin{gather*}
+	\frac{d}{dt}\ket{\psi(t)}=\frac{d}{dt}\left[\sum_kc_ke^{-iE_kt/\hbar}\ket{E_k}\right]\\
+	=\sum_kc_k\cdot \left(-i\frac{E_k}{\hbar}\right)e^{-iE_kt/\hbar}\ket{E_k}\\
+	=-\frac{i}{\hbar}\sum_kc_k\cdot E_ke^{-iE_kt/\hbar}\ket{E_k}
+\end{gather*}
+
+Let the Hamiltonian \(H\) be the state multiplied by its energy
+
+\begin{gather*}
+	H\ket{E_k}=E_k\ket{E_k}
+\end{gather*}
+
+so
+
+\begin{gather*}
+	=-H\frac{i}{\hbar}\sum_kc_k\cdot e^{-iE_kt/\hbar}\ket{E_k}\\
+	=-\frac{i}{\hbar}H\ket{\psi(t)}
+\end{gather*}
+
+which gives us Schrödinger's equation (in state-vector form)
+
+\begin{gather*}
+	i\hbar\frac{d}{dt}\ket{\psi(t)}=H\ket{\psi(t)}
+\end{gather*}
+
+This lecture introduces more intricate details to defining quantum
+mechanics
+
+
+
 
 
 \section{Gram-Schmidt Procedure}\label{gram-schmidt-procedure}
@@ -1147,7 +1220,7 @@ This is a set \(S\)
 
 The \textbar{} means ``such that''
 
-\subsection{Subsets}\label{subsets}
+\subsection{Subset}\label{subsets}
 
 \hyperref[set]{sets}
 can be subsets (or equal) of another set if all elements of a
@@ -1182,7 +1255,7 @@ Example:
 	4\notin S
 \end{gather*}
 
-\subsection{Standard Number Systems}\label{standard-number-systems}
+\subsection{Standard Number System}\label{standard-number-systems}
 
 There are some standard number systems we gotta keep in mind
 
@@ -1211,9 +1284,9 @@ Where
 where \(\forall p\in \mathbb{Z},q\neq 0\) means for all integers \(p\)
 AND \(q\neq 0\)
 
-\section{Functions}\label{functions-1}
+\subsection{Function II}\label{functions-1}
 
-A function \(f\) is maps numbers from a set \(A\) to set \(B\). It's
+A function, \hyperref[functions]{which we defined earlier}, \(f\), can also be thought of mapping numbers from a set \(A\) to set \(B\). It's
 written like this
 
 \begin{gather*}
@@ -1238,7 +1311,7 @@ itself.
 	q(67)=201
 \end{gather*}
 
-\section{Operators}\label{operators}
+\section{Operator}\label{operators}
 
 Let \(\hat{T}\) be an operator.
 
@@ -1258,7 +1331,7 @@ Then
 	\hat{T}(a\ket{u}+b\ket{v})=a\hat{T}(\ket{u})+b\hat{T}(\ket{v})
 \end{gather*}
 
-also they can be represented as matrices
+also they can be represented as \hyperref[matrix]{matrices}
 
 \begin{gather*}
 	\hat{T}\ket{\psi}=\sum_{m}\psi_m'\ket{m}
@@ -1285,26 +1358,85 @@ where \(\ket{m}\) is the basis for \(\ket{\psi}\)
 
 Operators must be square.
 
-\section{Observables}\label{observables}
+\subsection{Observable}\label{observables}
 
 An observable is represented by a \hyperref[hermitian-matrix]{Hermitian operator} acting on a \hyperref[hilbert-spaces]{Hilbert
 	space}.
 
-\section{Symmetry/Unitary Operators}\label{symmetryunitary-operators}
+\subsection{Unitary Operator}\label{unitary-operator}
 
-Represented by unitary operators. An operator \(\hat{U}\) is unitary if
-
-\begin{gather*}
-	\hat{U}^+\hat{U}=I
-\end{gather*}
-
-inner products are also preserved if unitary
+An operator is unitary if and only if
 
 \begin{gather*}
-	\braket{\hat{U}\psi|\hat{U}\phi}=\braket{\psi|\phi}
+	\hat{U}^+\hat{U}=\hat{U}\hat{U}^+=I
 \end{gather*}
 
-\section{Traces}\label{traces}
+\begin{itemize}
+	\tightlist
+	\item
+	      it preserves inner product
+\end{itemize}
+
+\begin{gather*}
+	\ket{\alpha '}=\hat{U}\ket{\alpha}\\
+	\ket{\beta'}=\hat{U}\ket{\beta}\\
+	\braket{\alpha'|\beta'}=\bra{\alpha}\hat{U}^+\hat{U}\ket{\beta}\\
+	=\bra{\alpha}I\ket{\beta}\\
+	=\braket{\alpha|\beta}
+\end{gather*}
+
+\begin{itemize}
+	\tightlist
+	\item
+	      U is basis chagne between orthonormal basis because you can write
+	      \(\hat{U}\) as
+
+	      \begin{itemize}
+		      \tightlist
+		      \item
+		            as chatgpt puts it: unitary matrices/operators represent a rotation
+		            or change of coordinates in Hilbert space, without changing lengths
+		            or angles.
+	      \end{itemize}
+\end{itemize}
+
+\begin{gather*}
+	\hat{U}=\hat{U}I
+\end{gather*}
+
+I can use completeness relation so that if
+
+\begin{gather*}
+	\hat{U}\ket{\alpha_n}=\ket{\beta_n}
+\end{gather*}
+
+then we can change basis
+
+\begin{gather*}
+	\hat{U}\sum_n\ket{\alpha_n}\bra{\alpha_n}\\
+	=\sum_nU\ket{\alpha_n}\bra{\alpha_n}\\
+	=\sum_n\ket{\beta_n}\bra{\alpha_n}
+\end{gather*}
+
+Both \(\{\ket{\alpha_n}\}\) and \(\{\ket{\beta_n}\}\) are orthonormal
+basis
+
+\section{Linear Algebra II}\label{linear-algebra-ii}
+\subsection{Trace}\label{traces}
+
+Tr(A) is only defined for a \hyperref[square-matrix]{square matrix}.
+
+Given a square matrix \(A\),
+
+\begin{gather*}
+	tr(A)=a_{11}+a_{22}+...+a_{nn}
+\end{gather*}
+
+Note that
+
+\begin{gather*}
+	tr(AB)=tr(BA)
+\end{gather*}
 
 Traces are just adding diagonals together
 
@@ -1326,7 +1458,7 @@ it must be cyclical permutation
 	Tr(\alpha\hat{A}+\beta\hat{B})=\alpha Tr(\hat{A})+\beta Tr(\hat{b})
 \end{gather*}
 
-\section{Determinants}\label{determinants}
+\subsection{Determinant}\label{determinants}
 
 Det is a function that we can apply to matrices to get a scalar. It's
 defined for \(n\times n\) only.
@@ -1361,13 +1493,13 @@ matrix and multiply the diags together
 	\end{pmatrix}=a_{11}a_{22}a_{33}
 \end{gather*}
 
-\subsection{Invertibility of
-	Matrices}\label{invertibility-of-matrices}
+\subsection{Matrix
+	Invertibility}\label{invertibility-of-matrices}
 
 Operator \(\hat{T}\) (i.e., a matrix) is invertible if and only if
 \(det(\hat{T})\neq0\)
 
-\section{Eigenvectors/Eigenvalues}\label{eigenvectorseigenvalues}
+\subsection{Eigenvector/Eigenvalue}\label{eigenvectorseigenvalues}
 
 \url{https://www.youtube.com/watch?v=PFDu9oVAE-g}
 
@@ -1394,7 +1526,7 @@ Eigenstates are eigenvectors of operators.
 	\hat{A}\ket{\psi}=\lambda\ket{\psi}
 \end{gather*}
 
-\subsection{Eigenspaces}\label{eigenspaces}
+\subsection{Eigenspace}\label{eigenspaces}
 An eigenspace of operator \(\hat{A}\) is the set of all \hyperref[eigenvectorseigenvalues]{eigenvectors}/\hyperref[eigenstates]{eigenstates} with the same \hyperref[eigenvectorseigenvalues]{eigenvalue} plus the zero vector.
 
 Example
@@ -1410,8 +1542,24 @@ An eigenbasis of operator \(\hat{A}\) is a set of \hyperref[eigenvectorseigenval
 
 Every Hermitian operator has an \hyperref[eigenbasis]{eigenbasis}.
 
+\subsection{Characteristic Polynomial}\label{characteristic-polynomial}
 
-\section{Subspaces}\label{subspaces}
+polynomial
+\(p(\lambda)=\alpha_0\lambda^n+\alpha_1\lambda^{n-1}+...+\alpha_{n-1}\lambda^{1}+\alpha_n\)
+
+\begin{gather*}
+	p(\lambda)=det(A-\lambda I)
+\end{gather*}
+
+Solving
+
+\begin{gather*}
+	p(\lambda)=0
+\end{gather*}
+
+Gives \(\lambda\) values which are \hyperref[eigenvectorseigenvalues]{eigenvalues} of A
+
+\subsection{Subspace}\label{subspaces}
 
 A
 \hyperref[subsets]{subset}
@@ -1429,29 +1577,13 @@ A
 	      \(\ket{u}\in U, c\in \mathbb{F}\Rarr c\ket{u}\in U\)
 \end{enumerate}
 
-\section{Span Function}\label{span-function}
+\subsection{Span Function}\label{span-function}
 
 A span of vectors is the set of all linear combinations you can build
 from them
 
-\section{Characteristic Polynomial}\label{characteristic-polynomial}
 
-polynomial
-\(p(\lambda)=\alpha_0\lambda^n+\alpha_1\lambda^{n-1}+...+\alpha_{n-1}\lambda^{1}+\alpha_n\)
-
-\begin{gather*}
-	p(\lambda)=det(A-\lambda I)
-\end{gather*}
-
-Solving
-
-\begin{gather*}
-	p(\lambda)=0
-\end{gather*}
-
-Gives \(\lambda\) values which are \hyperref[eigenvectorseigenvalues]{eigenvalues} of A
-
-\section{Invariant subspaces}\label{invariant-subspaces}
+\subsection{Invariant Subspace}\label{invariant-subspaces}
 
 A
 \hyperref[subspaces]{subspace}
@@ -1482,7 +1614,7 @@ When \(\lambda\) is \hyperref[eigenvectorseigenvalues]{Eigenvalue} and \(\ket{u}
 In general, this determinant has degree \(\lambda_i\) are zeroes of
 character polynomial \(\lambda_i\in C\) can be repeated
 
-\section{Commutators}\label{commutators}
+\subsection{Commutator}\label{commutators}
 
 The commutator of two operators \(\hat{A},\hat{B}\) is defined as
 
@@ -1496,7 +1628,7 @@ If \([\hat{A},\hat{B}]=0\) then that means you can commute
 
 If "\(\hat{A}\) commutes with \(\hat{B}\)", then that means \(\hat{A}\hat{B}=\hat{B}\hat{A}\) which also means \([\hat{A},\hat{B}]=0\).
 
-\section{Adjoint}\label{adjoint}
+\subsection{Adjoint}\label{adjoint}
 
 An adjoint is basically a conjugate transpose but for an operator
 (whereas a conjugate transpose can only be applied to a matrix)
@@ -1559,7 +1691,7 @@ equals the conjugate transpose of the matrix of \(\hat{A}\)
 	\hat{A}^+=\text{adjoint of $\hat{A}$}
 \end{gather*}
 
-\section{Hermitian Operators}\label{hermitian-operators}
+\subsection{Hermitian Operator}\label{hermitian-operators}
 
 An operator is Hermitian if and only if the adjoint of the operator is
 equal to itself.
@@ -1579,8 +1711,36 @@ Properties
 The \hyperref[eigenvectorseigenvalues]{eigenvalues} represent possible measurement outcomes. \hyperref[orthonormality]{Orthonormal}
 \hyperref[eigenstates]{eigenstates} \(\ket{\alpha}\) mean that these are definite value states
 
-\section{Positive Semi-Definite (PSD)
-  Operators}\label{positive-semi-definite-psd-operators}
+
+\subsection{Anti-Hermitian Operator}\label{anti-hermitian-operators}
+
+An operator is anti-hermitian if and only if
+
+\begin{gather*}
+	\hat{B}^+=-\hat{B}
+\end{gather*}
+
+note that if you do
+
+\begin{gather*}
+	\hat{A}=i\hat{B}
+\end{gather*}
+
+then \(\hat{A}\) is \hyperref[hermitian-operators]{Hermitian}
+
+Any operator \(\hat{T}\) can be written as linear combination of
+\hyperref[hermitian-operators]{Hermitian} and anti-Hermitian operator.
+
+
+\begin{gather*}
+	\hat{T}=\hat{A}+i\hat{B}\\
+	\hat{A}=\frac{\hat{T}+\hat{T}^+}{2}\\
+	\hat{B}=\frac{\hat{T}-\hat{T}^+}{2i}
+\end{gather*}
+
+Note that this is true for \hyperref[complex-number-decomposition]{regular complex numbers}
+\subsection{Positive Semi-Definite (PSD)
+	Operator}\label{positive-semi-definite-psd-operators}
 
 An operator \(\hat{P}\) is PSD if and only if
 
@@ -1607,13 +1767,39 @@ Example
 	      Projectors are PSD
 \end{itemize}
 
-\subsection{Projectors}\label{projectors}
-Projections are
+\subsection{Projection}\label{projections}
+
+The projection of \(v\) onto a
+\hyperref[vectors]{vector}
+\(u\) is
+
+\begin{gather*}
+	\Pi_u(v)=\frac{\braket{v|u}}{\braket{u|u}}u
+\end{gather*}
+
+Example
+
+\begin{gather*}
+	\ket{\psi}=\begin{bmatrix}a\\b\end{bmatrix}\quad \Rarr \bra{\psi}=\begin{bmatrix}a^* & b^*\end{bmatrix}
+	\\
+	\ket{\phi}=\begin{bmatrix}c\\d\end{bmatrix}\Rarr \bra{\phi}=\begin{bmatrix}c^* & d^*\end{bmatrix}
+\end{gather*}
+
+\begin{gather*}
+	\Pi_\psi(\phi)=\frac{\begin{bmatrix}c^* & d^*\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}}{\begin{bmatrix}a^* & b^*\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}}\begin{bmatrix}a\\b\end{bmatrix}\\
+	=\frac{c^*a+d^*b}{a^*a+b^*b}\begin{bmatrix}a\\b\end{bmatrix}
+\end{gather*}
+
+This is similar to the dot product, but it gives a
+\hyperref[vectors]{vector}
+
+\subsection{Projector}\label{projectors}
+Projectors are
 \hyperref[operators]{operators}
 with a special property
 
 \begin{gather*}
-	\Pi^2=\Pi
+	\hat{\Pi}^2=\hat{\Pi}
 \end{gather*}
 
 A projector operator (aka. a projector) is a
@@ -1621,13 +1807,19 @@ A projector operator (aka. a projector) is a
 that
 
 \begin{gather*}
-	\Pi_u=\frac{\ket{u}\bra{u}}{\braket{u|u}}
+	\hat{\Pi}_u=\frac{\ket{u}\bra{u}}{\braket{u|u}}
 \end{gather*}
+
+Usually, by convention, we pick the representative state \(\ket{u}\) to be normalized, i.e., \(\braket{u|u}=1\).
+So sometimes it can be written as
+\[
+	\hat{\Pi}_u=\ket{u}\bra{u}\quad \text{if} \quad\braket{u|u}=1
+\]
 
 once i apply it to a state \(v\), i get the projection of that state
 \(v\) on state \(u\)
 
-\subsection{Born's Rule}\label{borns-rule}
+\section{Born's Rule}\label{borns-rule}
 
 If a quantum system is in state \(\ket{\psi}\) and you measure
 \hyperref[observables]{observable} \(\hat{A}\) --- the probability of getting \hyperref[eigenvectorseigenvalues]{eigenvalue}
@@ -1637,88 +1829,12 @@ If a quantum system is in state \(\ket{\psi}\) and you measure
 	P_\alpha=|\braket{\alpha|\psi}|^2
 \end{gather*}
 
-\section{Anti-Hermitian Operators}\label{anti-hermitian-operators}
+This only holds true if eigenstate \(\ket{\phi_n}\) is non-degenerate and normalized.
+Usually, the convention is that we pick the representative state \(\braket{\phi_n|\phi_n}=1\) (i.e., it is normalized).
 
-An operator is anti-hermitian if and only if
 
-\begin{gather*}
-	\hat{B}^+=-\hat{B}
-\end{gather*}
+Born's rule is a postulate, meaning that it is based on experimental observations and cannot be derived from first principles.
 
-note that if you do
-
-\begin{gather*}
-	\hat{A}=i\hat{B}
-\end{gather*}
-
-then \(\hat{A}\) is \hyperref[hermitian-operators]{Hermitian}
-
-Any operator \(\hat{T}\) can be written as linear combination of
-\hyperref[hermitian-operators]{Hermitian} and anti-Hermitian operator.
-
-\begin{gather*}
-	\hat{T}=\hat{A}+i\hat{B}\\
-	\hat{A}=\frac{\hat{T}+\hat{T}^+}{2}\\
-	\hat{B}=\frac{\hat{T}-\hat{T}^+}{2i}
-\end{gather*}
-
-\section{Unitary Operator}\label{unitary-operator}
-
-An operator is unitary if and only if
-
-\begin{gather*}
-	\hat{U}^+\hat{U}=\hat{U}\hat{U}^+=I
-\end{gather*}
-
-\begin{itemize}
-	\tightlist
-	\item
-	      it preserves inner product
-\end{itemize}
-
-\begin{gather*}
-	\ket{\alpha '}=\hat{U}\ket{\alpha}\\
-	\ket{\beta'}=\hat{U}\ket{\beta}\\
-	\braket{\alpha'|\beta'}=\bra{\alpha}\hat{U}^+\hat{U}\ket{\beta}\\
-	=\bra{\alpha}I\ket{\beta}\\
-	=\braket{\alpha|\beta}
-\end{gather*}
-
-\begin{itemize}
-	\tightlist
-	\item
-	      U is basis chagne between orthonormal basis because you can write
-	      \(\hat{U}\) as
-
-	      \begin{itemize}
-		      \tightlist
-		      \item
-		            as chatgpt puts it: unitary matrices/operators represent a rotation
-		            or change of coordinates in Hilbert space, without changing lengths
-		            or angles.
-	      \end{itemize}
-\end{itemize}
-
-\begin{gather*}
-	\hat{U}=\hat{U}I
-\end{gather*}
-
-I can use completeness relation so that if
-
-\begin{gather*}
-	\hat{U}\ket{\alpha_n}=\ket{\beta_n}
-\end{gather*}
-
-then we can change basis
-
-\begin{gather*}
-	\hat{U}\sum_n\ket{\alpha_n}\bra{\alpha_n}\\
-	=\sum_nU\ket{\alpha_n}\bra{\alpha_n}\\
-	=\sum_n\ket{\beta_n}\bra{\alpha_n}
-\end{gather*}
-
-Both \(\{\ket{\alpha_n}\}\) and \(\{\ket{\beta_n}\}\) are orthonormal
-basis
 
 \section{Probability Theory}\label{probability-theory}
 
@@ -1759,7 +1875,7 @@ Note that the probabilities are always between 0 and 1
 	0\leq P(x)\leq 1
 \end{gather*}
 
-\subsection{Joint Random Variables}\label{joint-random-variables}
+\subsection{Joint Random Variable}\label{joint-random-variables}
 
 We have a joint random variable \((X,Y)\) and we want to find a pair of
 values
@@ -1796,7 +1912,7 @@ If X, Y are independent (if X occurs, Y has no effect, and vice versa)
 	P(X,Y)=P(X)P(Y)
 \end{gather*}
 
-\subsection{Numerical Random Variables/Expected
+\subsection{Numerical Random Variable/Expected
 	Value}\label{numerical-random-variablesexpected-value}
 
 Uncertainty of a certain measurement
@@ -1829,12 +1945,13 @@ Let \(\mu=\mathbb{E}[X]\)
 it's the square root of the variance
 
 \begin{gather*}
-	\sigma=\sqrt{Var(X)}=\sqrt{\mathbb{E}[X^2]-\mathbb{E}[X]^2}
+	\Delta X=\sqrt{Var(X)}=\sqrt{\mathbb{E}[X^2]-\mathbb{E}[X]^2}
 \end{gather*}
 
-\section{Expected Value of
-  Observables}\label{expected-value-of-observables}
+\subsection{Expected Value of an
+	Observable}\label{expected-value-of-observables}
 
+To determine the mean (EV) of an operator \(\hat{A}\), we must know the state \(\ket{\psi}\) you're in.
 \begin{gather*}
 	\mathbb{E}(A)=\sum_nA_nP(n)\\
 	=\sum A_n|\braket{n|\psi}|^2\\
@@ -1855,23 +1972,8 @@ Another convientn reprsentation is
 
 where \(tr\) is trace
 
-\subsection{Trace}\label{trace}
 
-Tr(A) is only defined for a \hyperref[square-matrix]{square matrix}.
-
-Given a square matrix \(A\),
-
-\begin{gather*}
-	tr(A)=a_{11}+a_{22}+...+a_{nn}
-\end{gather*}
-
-Note that
-
-\begin{gather*}
-	tr(AB)=tr(BA)
-\end{gather*}
-
-\subsection{Diagonalization}\label{diagonalization}
+\section{Diagonalization}\label{diagonalization}
 
 A matrix is diagonalizable if it has \hyperref[linear-independence]{linearly independent} \hyperref[eigenvectorseigenvalues]{eigenvectors}
 which occurs if the geometric multiplicity (dimension of the \hyperref[eigenspaces]{eigenspace})
@@ -1886,7 +1988,7 @@ If matrix \(A\) is diagonalizable then it can be written as
 
 Where \(D=diag(\lambda_1, … , \lambda_n)\)
 
-\section{Matrix Exponentials}\label{matrix-exponentials}
+\section{Matrix Exponential}\label{matrix-exponentials}
 
 The matrix exponential of
 \hyperref[square-matrix]{square
@@ -2173,13 +2275,15 @@ Where
 
 \section{Density Matrix}\label{density-matrix}
 
+Let \(\rho\) be a matrix.
+
 \(\rho\) is a density matrix if it is:
 
 \begin{itemize}
 	\tightlist
 	\item Hermitian
-	\item Positive semi-definite
-	\item \(Tr(\rho)=1\)
+	\item \hyperref[positive-semi-definite-psd-operators]{Positive semi-definite}
+	\item \hyperref[traces]{Trace} \(Tr(\rho)=1\)
 \end{itemize}
 
 It contains all information needed to predict measurement outcomes. For the \hyperref[observables]{observable} \(A\) we see that
@@ -2312,6 +2416,8 @@ Two operators \(\hat{A}\) and \(\hat{B}\) are compatible if and only if they com
 	\hat{A},\hat{B}\quad\text{are compatible}\quad\Leftrightarrow\quad[\hat{A},\hat{B}]=0
 \]
 
+If they are compatible, then they can be measured simultaneously with one basic measurement.
+
 Proof
 \[
 	\Rarr \hat{A}\hat{B}=\sum_{n,m}A_nB_m\ket{\phi_n}\braket{\phi_n|\phi_m}\bra{\phi_m}\\
@@ -2326,5 +2432,215 @@ Proof
 	\hat{A}\hat{B}\ket{\phi_n}=\hat{B}\hat{A}\ket{\phi_n}=A_n\hat{B}\ket{\phi_n}
 \]
 
+
+Example
+
+
+\section{Quantum System}\label{quantum-system}
+A quantum system is defined by:
+\begin{enumerate}
+	\def\labelenumi{\arabic{enumi}.}
+	\tightlist
+	\item A \hyperref[hilbert-spaces]{Hilbert space} \(H\)
+	\item A Hamiltonian \(\hat{H}\) generating time evolution via the \hyperref[schruxf6dingers-equation-hamiltonian]{Schrödinger equation}.
+\end{enumerate}
+The Hilbert space's dimensions defines the fixes the spin of the system.
+
+\subsection{Spin-1/2 System}\label{spin-12-systems}
+This spin is for 2-dimensional Hilbert spaces.
+For spin-1/2 systems,
+\[
+	S_x\triangleq\frac{\hbar}{2}\sigma_x\quad
+	S_y\triangleq\frac{\hbar}{2}\sigma_y\quad
+	S_z\triangleq\frac{\hbar}{2}\sigma_z
+\]
+i.e.,
+\[
+	S_x\triangleq\frac{\hbar}{2}\begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix}\quad
+	S_y\triangleq\frac{\hbar}{2}\begin{pmatrix}0 & -i\\ i & 0\end{pmatrix}\quad
+	S_z\triangleq\frac{\hbar}{2}\begin{pmatrix}1 & 0\\ 0 & -1\end{pmatrix}
+\]
+Note that
+\[
+	\ket{z+}=\ket{\uparrow} = \ket{0}=\begin{pmatrix}1 \\ 0\end{pmatrix}\quad
+	\ket{z-}=\ket{\downarrow} = \ket{1}=\begin{pmatrix}0 \\ 1\end{pmatrix}
+\]
+And
+\[
+	\ket{+}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ 1\end{pmatrix}\quad
+	\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ -1\end{pmatrix}
+\]
+\subsection{Spin-1 System}\label{spin-1-systems}
+This spin is for 3-dimensional Hilbert spaces.
+For spin-1 systems,
+\[
+	S_x\triangleq\frac{\hbar}{2}\Sigma_x\quad
+	S_y\triangleq\frac{\hbar}{2}\Sigma_y\quad
+	S_z\triangleq\frac{\hbar}{2}\Sigma_z
+\]
+i.e.,
+\[
+	S_x\triangleq\frac{\hbar}{\sqrt{2}}\begin{pmatrix}0 & 1 & 0\\ 1 & 0 & 1\\ 0 & 1 & 0\end{pmatrix}\quad
+	S_y\triangleq\frac{\hbar}{\sqrt{2}}\begin{pmatrix}0 & -i & 0\\ i & 0 & -i\\ 0 & i & 0\end{pmatrix}\quad
+	S_z\triangleq\hbar\begin{pmatrix}1 & 0 & 0\\ 0 & 0 & 0\\ 0 & 0 & -1\end{pmatrix}
+\]
+Note that
+\[
+	\ket{1}=\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}\quad
+	\ket{0}=\begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}\quad
+	\ket{-1}=\begin{pmatrix}0 \\ 0 \\ -1\end{pmatrix}\quad
+\]
+\section{Measuring a Quantum State}\label{measuring-a-quantum-state}
+Before:
+The system is in a state \(\ket{\psi}\) and you measure the observable \(\hat{A}\).
+
+Measure: We get an outcome \(A_n\) with probability \(P_n=\bra{\psi}\hat{\Pi}_n\ket{\psi}\)
+
+Given Born's rule for a non-degenerate eigenstate \(\ket{\phi_n}\),
+
+\[
+	P_n=|\braket{\phi_n|\psi}|^2
+\]
+
+
+This is because \hyperref[borns-rule]{Born's rule}.
+Note that \(\hat{\Pi}_n\), the projector onto the \(\lambda_n\)-eigenspace of \(\hat{A}\), is
+\[
+	\hat{\Pi}_n=\ket{\phi_n}\bra{\phi_n}
+\]
+\[
+	\Rarr \hat{\Pi}_n\ket{\psi}=\ket{\phi_n}\braket{\phi_n|\psi}
+\]
+\[
+	\Rarr =\braket{\phi_n|\psi}\ket{\phi_n}
+\]
+So
+\[
+	\Rarr ||\hat{\Pi}_n\ket{\psi}||^2
+\]
+\[
+	\Rarr = ||\braket{\phi_n|\psi}\ket{\phi_n}||^2
+\]
+\[
+	\Rarr = |\braket{\phi_n|\psi}|^2||\ket{\phi_n}||^2
+\]
+We know that the magnitude of the eigenstate \(\ket{\phi_n}\) is 1.
+
+After: State collapses to
+\[
+	\ket{\psi'}=\frac{1}{\sqrt{P_n}}\hat{\Pi}_n\ket{\psi}
+\].
+
+The collapse is true only if this is an idealized measurement that is non-destructive.
+This means that the measurement must not destroy the system (e.g., photon absorbed by detector). There's no noise as well.
+
+\section{Cauchy-Schwarz Inequality}\label{cauchy-schwarz-inequality}
+Given two vectors \(\ket{u},\ket{v}\in \mathbb{C}^n\),
+\[
+	|\braket{u|v}|\leq \|u\|\|v\|
+\]
+It's squared form can be written as
+\[
+	|\braket{u|v}|^2\leq \braket{u|u}\braket{v|v}
+\]
+
+\section{Uncertainty Relation}\label{uncertainty-relation}
+\[
+	\Delta A\Delta B\geq \frac{1}{2}|\braket{[\hat{A},\hat{B}]}|
+\]
+\[
+	\Delta A^2 \Delta B^2 \geq \left(\bra{\psi}\frac{1}{2j}[\hat{A},\hat{B}]\ket{\psi}\right)
+\]
+Proof
+Consider any scalar \(\lambda\in \mathbb{C}\) and any vectors \(\ket{u},\ket{v}\in \mathbb{C}^n\) and we have two states \(\ket{f}\) and \(\ket{g}\).
+
+We subtract it like so \(\ket{f}-\lambda\ket{g}\) is also a vector
+
+Note that for QM systems, \(\braket{u|u}=1\). This is because of Born's rule where the number it represents is the total probability, which needs to sum to 1.
+\[
+	\braket{f-\lambda g|f-\lambda g}\geq 0
+\]
+\[
+	\Rarr\braket{f|f}-\lambda \braket{f|g} - \lambda^*\braket{g|f}+(|\lambda|)^2\braket{g|g}\geq 0
+\]
+
+We want to choose the \(\lambda\) that minimizes the expression.
+
+\[
+	\lambda=\frac{\braket{g|f}}{\braket{g|g}}\quad \Rarr \quad \lambda^*=\frac{\braket{f|g}}{\braket{g|g}},\quad |\lambda|^2=\frac{\braket{f|g}\braket{g|f}}{\braket{g|g}^2}
+\]
+
+Which makes \(\ket{f}-\lambda\ket{g}\) orthogonal to \(\ket{g}\).
+\[
+	\Rarr\braket{f|f}-\frac{\braket{g|f}}{\braket{g|g}} \braket{f|g} -\frac{\braket{f|g}}{\braket{g|g}}\braket{g|f} +\frac{\braket{f|g}\braket{g|f}}{\braket{g|g}^2}\braket{g|g}\geq 0
+\]
+
+Note that \(\braket{g|f}\braket{f|g}=|\braket{f|g}|^2\)
+
+\[
+	\Rarr \braket{f|f}-\frac{|\braket{f|g}|^2}{\braket{g|g}}-\frac{|\braket{f|g}|^2}{\braket{g|g}}+\frac{|\braket{f|g}|^2}{\braket{g|g}}\geq 0
+\]
+\[
+	\Rarr \braket{f|f}-\frac{|\braket{f|g}|^2}{\braket{g|g}}\geq 0
+\]
+Assuming \(\braket{g|g}\geq 0\)
+\[
+	\Rarr \braket{f|f}\braket{g|g}\geq |\braket{f|g}|^2
+\]
+This is Cauchy-Schwarz squared
+
+Consider the observables that we defined above. This can be written as
+\[
+	\ket{f}=(\hat{A}-\mathbb{E}[A]I)\ket{\psi}\quad
+	\ket{g}=(\hat{B}-\mathbb{E}[B]I)\ket{\psi}
+\]
+Note that \(\Delta A\) is the \hyperref[standard-deviation]{standard deviation} of \(\hat{A}\).
+\[
+	\braket{f|f}=\bra{\psi}(\hat{A}-\mathbb{E}[A]I)\ket{\psi}
+\]
+\[
+	= \bra{\psi}\left(\hat{A}^2-2\mathbb{E}[A]\hat{A}+\mathbb{E}[A]^2I\right)\ket{\psi}
+\]
+\[
+	= \bra{\psi}\hat{A}^2\ket{\psi}-2\mathbb{E}[A]\bra{\psi}\hat{A}\ket{\psi}+\mathbb{E}[A]^2\bra{\psi}I\ket{\psi}
+\]
+\[
+	=\mathbb{E}[\hat{A}^2]-2\mathbb{E}[A]^2+\mathbb{E}[A]^2
+\]
+\[
+	=\mathbb{E}[\hat{A}^2]-\mathbb{E}[A]^2
+\]
+\[
+	=\Delta A^2
+\]
+By symmetry
+\[
+	\braket{g|g}=\Delta B^2
+\]
+Plug into our equation above
+\[
+	\Delta A^2\Delta B^2\geq |\braket{f|g}|^2
+\]
+\[
+	\Rarr\Delta A^2\Delta B^2\geq (Im\braket{f|g})^2
+\]
+\[
+	\Rarr\Delta A^2\Delta B^2\geq (Im(\bra{\psi}(\hat{A}-\mathbb{E}[A]I)(\hat{B}-\mathbb{E}[B]I)\ket{\psi}))^2
+\]
+\[
+	\Rarr\Delta A^2\Delta B^2\geq (Im(\mathbb{E}[AB]-2\mathbb{E}[A]\mathbb{E}[B]-+ \mathbb{E}[A]\mathbb{E}[B]))^2
+\]
+\[
+	\Rarr\Delta A^2\Delta B^2\geq (Im(\mathbb{E}[AB]-\mathbb{E}[A]\mathbb{E}[B]))^2
+\]
+Note that \(Im z=\frac{1}{2i}(z-z^*)\)
+\[
+	\Rarr\Delta A^2\Delta B^2\geq \left(\frac{1}{2i}(\mathbb{E}[AB]-\mathbb{E}[BA])\right)^2
+\]
+\[
+	\Rarr\Delta A^2\Delta B^2\geq \left(\bra{\psi}\frac{1}{2i}[\hat{A},\hat{B}]\ket{\psi}\right)^2
+\]
+
+\section{Quantum Information Capacity}\label{quantum-information-capacity}
 
 \end{document}
