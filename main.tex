@@ -1,4 +1,4 @@
-% !TEX program = xelatex
+% !TEX program = pdflatex
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
@@ -23,10 +23,10 @@
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
+% \IfFileExists{microtype.sty}{% use microtype if available
+%   \usepackage[]{microtype}
+%   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+% }{}
 \makeatletter
 \@ifundefined{KOMAClassName}{% if non-KOMA class
   \IfFileExists{parskip.sty}{%
@@ -151,6 +151,9 @@ it makes me want to continue this series! The series is currently
 incomplete.
 
 \newpage
+\makeatletter
+\renewcommand{\l@subsection}{\@dottedtocline{2}{1.5em}{2.8em}}
+\makeatother
 \tableofcontents
 \newpage
 
@@ -228,15 +231,15 @@ Example:
 See how \(A\) is also a variable? In this case, \(m=2, n=3\) as there
 are 2 rows and 3 columns.
 
-We use matrices to represent \hyperref[set]{sets} of numbers because they have an
+We use matrices to represent multiple numbers because they have an
 equivalent in the real world. In this case, quantum states.
 
 \section{Ket (State)}\label{ket-states}
 
-Let \(\ket{x}\) (ket x) be a \(N \times 1\) matrix where \(N\) is any
+Let \(\ket{x}\) (ket x) be a \(N \times 1\) \hyperref[matrices]{matrix} where \(N\) is any
 positive integer (number with no decimals and is greater than 0).
 
-Just like how \(x\) was a variable used to represent ONE number,
+Just like how \(x\) was a \hyperref[variable]{variable} used to represent ONE number,
 \(\ket{x}\) can be used to represent any \(N\times 1\) matrix.
 
 Example:
@@ -283,7 +286,7 @@ Present day, the majority of people concur that light is a wave and
 particle simultaneously.
 
 This means that photons can have a ``state.'' These can be represented
-as kets!
+as \hyperref[ket-states]{kets}!
 
 Sometimes we observe photons having a ``spin'' --- it's not really
 spinning, but physicists use the word for an intrinsic angular momentum
@@ -304,7 +307,7 @@ up or spinning down. Schröndinger's cat.
 We call this position of spinning both up and down simultaneously a
 ``superposition.''
 
-Let's just say \(\ket{+}\) is the state of spinning up and \(\ket{-}\)
+Let's just say the \hyperref[ket-states]{kets} \(\ket{+}\) is the state of spinning up and \(\ket{-}\)
 is the state of spinning down.
 
 Let a ``state'' just be a \(N\times 1\) matrix like what we just said
@@ -354,7 +357,7 @@ If we add \(\ket{x}+3\ket{y}\) we get
 \end{gather*}
 
 
-Notice how we're adding the \(n\)-th \hyperref[element]{elements} of the states together for
+Notice how we're adding the \(n\)-th elements of the states together for
 each row?
 
 We can represent these two states coexisting (i.e., a superposition)
@@ -458,6 +461,21 @@ Example:
 	3\in S\\
 	4\notin S
 \end{gather*}
+\subsection{Union}\label{union}
+
+The union of two sets \(A\) and \(B\) is the set of all elements that are in \(A\) or \(B\) or both.
+
+\[
+	A\cup B=\{x\in A \text{ or } x\in B\}
+\]
+
+\subsection{Intersection}\label{intersection}
+
+The intersection of two sets \(A\) and \(B\) is the set of all elements that are in \(A\) and \(B\).
+
+\[
+	A\cap B=\{x\in A \text{ and } x\in B\}
+\]
 
 \subsection{Standard Number System}\label{standard-number-systems}
 
@@ -487,6 +505,35 @@ Where
 
 where \(\forall p\in \mathbb{Z},q\neq 0\) means for all integers \(p\)
 AND \(q\neq 0\)
+
+\subsection{Partitions}\label{partitions}
+A partition of a set \(S=\{C_1,C_2,…,C_N\}\) is a way of splitting \(S\) into
+\begin{enumerate}
+	\item
+	      disjoint subsets
+	      \[
+		      C_\alpha  \cap C_\beta = \emptyset \quad \forall \quad \alpha \neq \beta
+	      \]
+	\item
+	      that cover \(S\)
+	      \[
+		      \bigcup_{\alpha=1}^N C_\alpha = S
+	      \]
+\end{enumerate}
+\subsection{Strings}\label{strings}
+A string is an ordered sequence of symbols from a finite alphabet. The alphabet is denoted with the set notation (a set of possible symbols to use as an alphabet). Length is specified as the superscript, but if it is unlimited, then it is denoted with an asterisk $*$.
+
+Example
+\[
+	01101011 \in \{0,1\}^*
+\]
+\[
+	cba \in \{a,b,c\}^3
+\]
+\[
+	++++-- \notin \{+,-\}^2
+\]
+
 
 \section{Function}\label{functions}
 
@@ -683,8 +730,7 @@ what \(i^2\) is:
 \end{gather*}
 
 Notice however much you can times \(a\), it won't affect \(b\), and vice
-versa, this means they are \hyperref[basis-states]{basis states} like what we learned last
-lecture!
+versa.
 
 \subsection{Conjugate}\label{conjugate}
 Say
@@ -750,6 +796,10 @@ This is all true
 \[
 	Im(z)=\frac{1}{2i}(z-z^*)
 \]
+\subsection{Absolute Value of Complex Number}\label{absolute-value-of-complex-number}
+\[
+	z\cdot z^*=|z|^2
+\]
 
 
 \section{Linear Algebra I}\label{linear-algebra-i}
@@ -795,7 +845,7 @@ If a set of states are BOTH
 
 then they are called basis states.
 
-Note that \(\ket{+},\ket{-}\) from the previous lecture are ``basis''
+Note that \(\ket{+},\ket{-}\) are ``basis''
 states
 
 \subsection{Inner product I}\label{inner-product}
@@ -1045,6 +1095,52 @@ Let a vector space \(V\) be a set of \hyperref[vectors]{vectors} with
 	\item
 	      scalar multiplication such that
 \end{itemize}
+\subsection{Operator}\label{operators}
+
+Let \(\hat{T}\) be an operator.
+
+An operator is a
+\hyperref[functions]{function}
+where
+
+\begin{gather*}
+	\hat{T}:V\rarr V
+\end{gather*}
+
+where V are the set of all possible \hyperref[vectors]{vectors} in a \hyperref[hilbert-spaces]{Hilbert space}.
+
+Then
+
+\begin{gather*}
+	\hat{T}(a\ket{u}+b\ket{v})=a\hat{T}(\ket{u})+b\hat{T}(\ket{v})
+\end{gather*}
+
+also they can be represented as \hyperref[matrix]{matrices}
+
+\begin{gather*}
+	\hat{T}\ket{\psi}=\sum_{m}\psi_m'\ket{m}
+\end{gather*}
+
+where
+
+\begin{gather*}
+	\begin{bmatrix}
+		\psi_1' \\
+		\psi_2' \\
+		\vdots  \\
+		\psi_d'
+	\end{bmatrix}=
+	\begin{bmatrix}
+		T_{11} & T_{12} & \cdots & T_{1d} \\
+		T_{21} & T_{22} & \cdots & T_{2d} \\
+		\vdots                            \\
+		T_{d1} & T_{d2} & \cdots & T_{dd}
+	\end{bmatrix}\begin{bmatrix}\psi_1 \\ \psi_2 \\ \vdots \\\psi_d\end{bmatrix}
+\end{gather*}
+
+where \(\ket{m}\) is the basis for \(\ket{\psi}\)
+
+Operators must be square.
 
 \begin{gather*}
 	a\ket{v}\in V\quad ;\quad a\in \mathbb{F},\ket{v}\in V
@@ -1141,8 +1237,10 @@ applied to photons via the photoelectric effect) that
 	E=hf
 \end{gather*}
 
-which means energy of a photon is Planck's constant
+It means energy \(E\) of a photon is Planck's constant
 \(h=6.626\times 10^{-34}Js\) times the frequency of the light \(f\).
+
+They are all \hyperref[variable]{variables} so we can substitute them with what we want.
 Because it was experimental, we can't really prove with math that this
 is true, but we proved it with experiments. This is called the
 Planck--Einstein relation.
@@ -1265,7 +1363,7 @@ If we take the derivative from both sides
 	=-\frac{i}{\hbar}\sum_kc_k\cdot E_ke^{-iE_kt/\hbar}\ket{E_k}
 \end{gather*}
 
-Let the Hamiltonian \(H\) be the state multiplied by its energy
+Let the Hamiltonian \(H\)be an \hyperref[operators]{operator} where this is true
 
 \begin{gather*}
 	H\ket{E_k}=E_k\ket{E_k}
@@ -1284,62 +1382,71 @@ which gives us Schrödinger's equation (in state-vector form)
 	i\hbar\frac{d}{dt}\ket{\psi(t)}=H\ket{\psi(t)}
 \end{gather*}
 
-This lecture introduces more intricate details to defining quantum
-mechanics
 
 
 
+\section{Quantum System}\label{quantum-system}
+A quantum system is defined by:
+\begin{enumerate}
+	\def\labelenumi{\arabic{enumi}.}
+	\tightlist
+	\item A \hyperref[hilbert-spaces]{Hilbert space} \(H\)
+	\item A Hamiltonian \(\hat{H}\) generating time evolution via the \hyperref[schruxf6dingers-equation-hamiltonian]{Schrödinger equation}.
+\end{enumerate}
+The Hilbert space's dimensions defines the fixes the spin of the system.
 
+\subsection{Spin-1/2 System}\label{spin-12-systems}
+This spin is for 2-dimensional \hyperref[hilbert-spaces]{Hilbert spaces}.
+Electrons, protons, neutrons and quarks have spin-1/2.
+For spin-1/2 systems,
+\[
+	S_x\triangleq\frac{\hbar}{2}\sigma_x\quad
+	S_y\triangleq\frac{\hbar}{2}\sigma_y\quad
+	S_z\triangleq\frac{\hbar}{2}\sigma_z
+\]
+i.e.,
+\[
+	S_x\triangleq\frac{\hbar}{2}\begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix}\quad
+	S_y\triangleq\frac{\hbar}{2}\begin{pmatrix}0 & -i\\ i & 0\end{pmatrix}\quad
+	S_z\triangleq\frac{\hbar}{2}\begin{pmatrix}1 & 0\\ 0 & -1\end{pmatrix}
+\]
+Note that
+\[
+	\ket{z+}=\ket{\uparrow} = \ket{0}=\begin{pmatrix}1 \\ 0\end{pmatrix}\quad
+	\ket{z-}=\ket{\downarrow} = \ket{1}=\begin{pmatrix}0 \\ 1\end{pmatrix}
+\]
+And
+\[
+	\ket{+}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ 1\end{pmatrix}\quad
+	\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ -1\end{pmatrix}
+\]
+
+\subsection{Spin-1 System}\label{spin-1-systems}
+This spin is for 3-dimensional \hyperref[hilbert-spaces]{Hilbert spaces}.
+W/Z bosons, photons and gluons have spin-1.
+For spin-1 systems,
+\[
+	S_x\triangleq\frac{\hbar}{2}\Sigma_x\quad
+	S_y\triangleq\frac{\hbar}{2}\Sigma_y\quad
+	S_z\triangleq\frac{\hbar}{2}\Sigma_z
+\]
+i.e.,
+\[
+	S_x\triangleq\frac{\hbar}{\sqrt{2}}\begin{pmatrix}0 & 1 & 0\\ 1 & 0 & 1\\ 0 & 1 & 0\end{pmatrix}\quad
+	S_y\triangleq\frac{\hbar}{\sqrt{2}}\begin{pmatrix}0 & -i & 0\\ i & 0 & -i\\ 0 & i & 0\end{pmatrix}\quad
+	S_z\triangleq\hbar\begin{pmatrix}1 & 0 & 0\\ 0 & 0 & 0\\ 0 & 0 & -1\end{pmatrix}
+\]
+Note that
+\[
+	\ket{1}=\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}\quad
+	\ket{0}=\begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}\quad
+	\ket{-1}=\begin{pmatrix}0 \\ 0 \\ -1\end{pmatrix}\quad
+\]
+For photons, $S_z$ is often called rectilinear and $S_x$ is often called diagonal and $S_y$ are often called circular.
 
 
 
 \section{Linear Algebra II}\label{linear-algebra-ii}
-\subsection{Operator}\label{operators}
-
-Let \(\hat{T}\) be an operator.
-
-An operator is a
-\hyperref[functions]{function}
-where
-
-\begin{gather*}
-	\hat{T}:V\rarr V
-\end{gather*}
-
-where V are the set of all possible \hyperref[vectors]{vectors} in a \hyperref[hilbert-spaces]{Hilbert space}.
-
-Then
-
-\begin{gather*}
-	\hat{T}(a\ket{u}+b\ket{v})=a\hat{T}(\ket{u})+b\hat{T}(\ket{v})
-\end{gather*}
-
-also they can be represented as \hyperref[matrix]{matrices}
-
-\begin{gather*}
-	\hat{T}\ket{\psi}=\sum_{m}\psi_m'\ket{m}
-\end{gather*}
-
-where
-
-\begin{gather*}
-	\begin{bmatrix}
-		\psi_1' \\
-		\psi_2' \\
-		\vdots  \\
-		\psi_d'
-	\end{bmatrix}=
-	\begin{bmatrix}
-		T_{11} & T_{12} & \cdots & T_{1d} \\
-		T_{21} & T_{22} & \cdots & T_{2d} \\
-		\vdots                            \\
-		T_{d1} & T_{d2} & \cdots & T_{dd}
-	\end{bmatrix}\begin{bmatrix}\psi_1 \\ \psi_2 \\ \vdots \\\psi_d\end{bmatrix}
-\end{gather*}
-
-where \(\ket{m}\) is the basis for \(\ket{\psi}\)
-
-Operators must be square.
 
 
 
@@ -1368,16 +1475,22 @@ Traces are just adding diagonals together
 Properties:
 
 \begin{gather*}
-	Tr(\hat{A}\hat{B})=Tr(\hat{B}\hat{A})\\
-	Tr(\hat{A}\hat{B}\hat{C})=Tr(\hat{B}\hat{C}\hat{A})=Tr(\hat{C}\hat{A}\hat{B})
+	tr(\hat{A}\hat{B})=tr(\hat{B}\hat{A})\\
+	tr(\hat{A}\hat{B}\hat{C})=tr(\hat{B}\hat{C}\hat{A})=tr(\hat{C}\hat{A}\hat{B})
 \end{gather*}
 
-Note that \(Tr(\hat{A}\hat{B}\hat{C})\neq Tr(\hat{A}\hat{C}\hat{B})\) →
+Note that \(tr(\hat{A}\hat{B}\hat{C})\neq tr(\hat{A}\hat{C}\hat{B})\) →
 it must be cyclical permutation
 
 \begin{gather*}
-	Tr(\alpha\hat{A}+\beta\hat{B})=\alpha Tr(\hat{A})+\beta Tr(\hat{b})
+	tr(\alpha\hat{A}+\beta\hat{B})=\alpha tr(\hat{A})+\beta Tr(\hat{B})
 \end{gather*}
+
+Also note that if you get the traces of a \(1\times 1\) matrix, it is just
+
+\[
+	tr(\begin{pmatrix}a\end{pmatrix})=a
+\]
 
 \subsection{Determinant}\label{determinants}
 
@@ -2048,6 +2161,30 @@ and
 
 If \(c_i\in\mathbb{R}\), then \(\hat{A}\) is \hyperref[hermitian-operators]{Hermitian}
 
+\section{Bloch Sphere}\label{bloch-sphere}
+A general pure state of a qubit is
+\[
+	\ket{\psi}=\cos\frac{\theta}{2}\ket{0}+e^{i\phi}\sin\frac{\theta}{2}\ket{1}\quad \theta\in[0,\pi]\quad \phi\in[0,2\pi]
+\]
+Where the orthogonal states are antipodal (North pole is \(\ket{0}\) and South pole is \(\ket{1}\)).
+The equator contains equal superpositions like \(\ket{+}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\) and \(\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})\).
+
+A state can be on the inside of a Bloch sphere which means its a mixed state. If a state is on the surface of the Bloch sphere, it is a pure state.
+
+A rotation by angle \(\theta\) around the axis \(\hat{n}\) is given by
+\[
+	R_{\hat{n}}(\theta) = e^{-i\theta\,\hat{n}\cdot\vec{\sigma}/2} = \cos\left(\tfrac{\theta}{2}\right)I - i\sin\left(\tfrac{\theta}{2}\right)(n_x\sigma_x + n_y\sigma_y + n_z\sigma_z)
+\]
+Where
+\[
+	R_x(\theta) = \begin{pmatrix} \cos\tfrac{\theta}{2} & -i\sin\tfrac{\theta}{2} \\ -i\sin\tfrac{\theta}{2} & \cos\tfrac{\theta}{2} \end{pmatrix}
+\]
+\[
+	R_y(\theta) = \begin{pmatrix} \cos\tfrac{\theta}{2} & -\sin\tfrac{\theta}{2} \\ \sin\tfrac{\theta}{2} & \cos\tfrac{\theta}{2} \end{pmatrix}
+\]
+\[
+	R_z(\theta) = \begin{pmatrix} e^{-i\theta/2} & 0 \\ 0 & e^{i\theta/2} \end{pmatrix}
+\]
 \section{Observable on a qubit}\label{observable-on-a-qubit}
 
 Any \hyperref[observables]{observable} on a qubit can be written as
@@ -2097,30 +2234,6 @@ We work out the eigenvalues by doing
 Because \(\hat{n}\) is a unit vector,
 \[
 	\lambda=\pm\tfrac{\hbar}{2}
-\]
-\section{Bloch Sphere}\label{bloch-sphere}
-A general pure state of a qubit is
-\[
-	\ket{\psi}=\cos\frac{\theta}{2}\ket{0}+e^{i\phi}\sin\frac{\theta}{2}\ket{1}\quad \theta\in[0,\pi]\quad \phi\in[0,2\pi]
-\]
-Where the orthogonal states are antipodal (North pole is \(\ket{0}\) and South pole is \(\ket{1}\)).
-The equator contains equal superpositions like \(\ket{+}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\) and \(\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})\).
-
-A state can be on the inside of a Bloch sphere which means its a mixed state. If a state is on the surface of the Bloch sphere, it is a pure state.
-
-A rotation by angle \(\theta\) around the axis \(\hat{n}\) is given by
-\[
-	R_{\hat{n}}(\theta) = e^{-i\theta\,\hat{n}\cdot\vec{\sigma}/2} = \cos\left(\tfrac{\theta}{2}\right)I - i\sin\left(\tfrac{\theta}{2}\right)(n_x\sigma_x + n_y\sigma_y + n_z\sigma_z)
-\]
-Where
-\[
-	R_x(\theta) = \begin{pmatrix} \cos\tfrac{\theta}{2} & -i\sin\tfrac{\theta}{2} \\ -i\sin\tfrac{\theta}{2} & \cos\tfrac{\theta}{2} \end{pmatrix}
-\]
-\[
-	R_y(\theta) = \begin{pmatrix} \cos\tfrac{\theta}{2} & -\sin\tfrac{\theta}{2} \\ \sin\tfrac{\theta}{2} & \cos\tfrac{\theta}{2} \end{pmatrix}
-\]
-\[
-	R_z(\theta) = \begin{pmatrix} e^{-i\theta/2} & 0 \\ 0 & e^{i\theta/2} \end{pmatrix}
 \]
 
 
@@ -2241,13 +2354,14 @@ If \(\hat{B}\) is compatible with \(\hat{A}\) (i.e., \(\hat{B}\) is diagonalizab
 \]
 
 \subsection{Compatibility of Observables}\label{compatibility-of-observables}
+If two \hyperref[observables]{observables} are compatible, then they can be measured simultaneously with one basic measurement.
+This means that observing one doesn't affect the other.
+
 Two \hyperref[operators]{operators} \(\hat{A}\) and \(\hat{B}\) are compatible if and only if they commute, i.e. \([\hat{A},\hat{B}]=0\).
 
 \[
 	\hat{A},\hat{B}\quad\text{are compatible}\quad\Leftrightarrow\quad[\hat{A},\hat{B}]=0
 \]
-
-If they are compatible, then they can be measured simultaneously with one basic measurement.
 
 Proof
 \[
@@ -2267,75 +2381,6 @@ Proof
 Example
 
 
-\section{Quantum System}\label{quantum-system}
-A quantum system is defined by:
-\begin{enumerate}
-	\def\labelenumi{\arabic{enumi}.}
-	\tightlist
-	\item A \hyperref[hilbert-spaces]{Hilbert space} \(H\)
-	\item A Hamiltonian \(\hat{H}\) generating time evolution via the \hyperref[schruxf6dingers-equation-hamiltonian]{Schrödinger equation}.
-\end{enumerate}
-The Hilbert space's dimensions defines the fixes the spin of the system.
-
-\subsection{Spin-1/2 System}\label{spin-12-systems}
-This spin is for 2-dimensional \hyperref[hilbert-spaces]{Hilbert spaces}.
-For spin-1/2 systems,
-\[
-	S_x\triangleq\frac{\hbar}{2}\sigma_x\quad
-	S_y\triangleq\frac{\hbar}{2}\sigma_y\quad
-	S_z\triangleq\frac{\hbar}{2}\sigma_z
-\]
-i.e.,
-\[
-	S_x\triangleq\frac{\hbar}{2}\begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix}\quad
-	S_y\triangleq\frac{\hbar}{2}\begin{pmatrix}0 & -i\\ i & 0\end{pmatrix}\quad
-	S_z\triangleq\frac{\hbar}{2}\begin{pmatrix}1 & 0\\ 0 & -1\end{pmatrix}
-\]
-Note that
-\[
-	\ket{z+}=\ket{\uparrow} = \ket{0}=\begin{pmatrix}1 \\ 0\end{pmatrix}\quad
-	\ket{z-}=\ket{\downarrow} = \ket{1}=\begin{pmatrix}0 \\ 1\end{pmatrix}
-\]
-And
-\[
-	\ket{+}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ 1\end{pmatrix}\quad
-	\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ -1\end{pmatrix}
-\]
-\subsection{Spin-1 System}\label{spin-1-systems}
-This spin is for 3-dimensional \hyperref[hilbert-spaces]{Hilbert spaces}.
-For spin-1 systems,
-\[
-	S_x\triangleq\frac{\hbar}{2}\Sigma_x\quad
-	S_y\triangleq\frac{\hbar}{2}\Sigma_y\quad
-	S_z\triangleq\frac{\hbar}{2}\Sigma_z
-\]
-i.e.,
-\[
-	S_x\triangleq\frac{\hbar}{\sqrt{2}}\begin{pmatrix}0 & 1 & 0\\ 1 & 0 & 1\\ 0 & 1 & 0\end{pmatrix}\quad
-	S_y\triangleq\frac{\hbar}{\sqrt{2}}\begin{pmatrix}0 & -i & 0\\ i & 0 & -i\\ 0 & i & 0\end{pmatrix}\quad
-	S_z\triangleq\hbar\begin{pmatrix}1 & 0 & 0\\ 0 & 0 & 0\\ 0 & 0 & -1\end{pmatrix}
-\]
-Note that
-\[
-	\ket{1}=\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}\quad
-	\ket{0}=\begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}\quad
-	\ket{-1}=\begin{pmatrix}0 \\ 0 \\ -1\end{pmatrix}\quad
-\]
-\section{Born's Rule}\label{borns-rule}
-
-If a \hyperref[quantum-system]{quantum system} is in state \(\ket{\psi}\) and you measure
-\hyperref[observables]{observable} \(\hat{A}\) --- the probability of getting \hyperref[eigenvectorseigenvalues]{eigenvalue}
-\(\lambda_\alpha\) (which corresponds to \hyperref[eigenstates]{eigenstate} \(\ket{\alpha}\)) is
-
-\begin{gather*}
-	P_\alpha=|\braket{\alpha|\psi}|^2
-\end{gather*}
-
-This only holds true if eigenstate \(\ket{\phi_n}\) is non-degenerate and normalized.
-Usually, the convention is that we pick the representative state \(\braket{\phi_n|\phi_n}=1\) (i.e., it is normalized).
-
-
-Born's rule is a postulate, meaning that it is based on experimental observations and cannot be derived from first principles.
 
 
 \section{Probability Theory}\label{probability-theory}
@@ -2473,6 +2518,21 @@ Another convientn reprsentation is
 \end{gather*}
 
 where \(tr\) is \hyperref[traces]{trace}
+\section{Born's Rule}\label{borns-rule}
+
+If a \hyperref[quantum-system]{quantum system} is in state \(\ket{\psi}\) and you measure
+\hyperref[observables]{observable} \(\hat{A}\) --- the probability of getting \hyperref[eigenvectorseigenvalues]{eigenvalue}
+\(\lambda_\alpha\) (which corresponds to \hyperref[eigenstates]{eigenstate} \(\ket{\alpha}\)) is
+
+\begin{gather*}
+	P_\alpha=|\braket{\alpha|\psi}|^2
+\end{gather*}
+
+This only holds true if eigenstate \(\ket{\phi_n}\) is non-degenerate and normalized.
+Usually, the convention is that we pick the representative state \(\braket{\phi_n|\phi_n}=1\) (i.e., it is normalized).
+
+
+Born's rule is a postulate, meaning that it is based on experimental observations and cannot be derived from first principles.
 
 \section{Measuring a Quantum State}\label{measuring-a-quantum-state}
 Before:
@@ -2526,17 +2586,17 @@ Let \(\rho\) be a matrix.
 
 \begin{itemize}
 	\tightlist
-	\item Hermitian
+	\item \hyperref[hermitian-matrix]{Hermitian}
 	\item \hyperref[positive-semi-definite-psd-operators]{Positive semi-definite}
 	\item \hyperref[traces]{Trace} \(Tr(\rho)=1\)
 \end{itemize}
 
-It contains all information needed to predict measurement outcomes. For the \hyperref[observables]{observable} \(A\) we see that
+It contains all information needed to predict measurement outcomes.
+It is fundementally the probability distribution over quantum states.
+For the \hyperref[observables]{observable} \(A\) we see that the \hyperref[expected-value-of-observables]{expected value} is
 \[
-	\braket{A}=Tr(\rho A)
+	\mathbb{E}[A]=tr(\rho A)
 \]
-
-At some point we'll touch quantum mechanics. But that point is not yet.
 
 \section{Cauchy-Schwarz Inequality}\label{cauchy-schwarz-inequality}
 Given two \hyperref[vectors]{vectors} \(\ket{u},\ket{v}\in \mathbb{C}^n\),
@@ -2591,7 +2651,8 @@ Assuming \(\braket{g|g}\geq 0\)
 \[
 	\Rarr \braket{f|f}\braket{g|g}\geq |\braket{f|g}|^2
 \]
-This is Cauchy-Schwarz squared
+This is \hyperref[cauchy-schwarz-inequality]{Cauchy-Schwarz} squared
+
 
 Consider the \hyperref[observables]{observables} that we defined above. This can be written as
 \[
@@ -2645,6 +2706,309 @@ Note that \(Im z=\frac{1}{2i}(z-z^*)\)
 	\Rarr\Delta A^2\Delta B^2\geq \left(\bra{\psi}\frac{1}{2i}[\hat{A},\hat{B}]\ket{\psi}\right)^2
 \]
 
+\section{Tensor}\label{tensor}
+\subsection{Tensor Product}\label{tensor-product}
+
 \section{Quantum Information Capacity}\label{quantum-information-capacity}
+
+A classical bit has 2 states: 0 and 1.
+\[
+	\{0,1\}
+\]
+
+A qubit has infinite distinct states. Linear combination (superposition) of
+\[
+	\ket{\psi} = \alpha\ket{0} + \beta\ket{1}
+\]
+
+Example
+
+We can let there be three states in \hyperref[quantum-system]{spin-1/2}.
+\[
+	\ket{z+}\quad\text{british coming by land}
+\]
+\[
+	\ket{z-}\quad\text{british coming by sea}
+\]
+\[
+	\ket{x+}\quad\text{british not coming}
+\]
+
+So i can measure \(S_z\) to be either \(+\hbar/2\) or \(-\hbar/2\).
+If it is \(+\hbar/2\), then the british are not coming by sea. If it is \(-\hbar/2\), then the british are not coming by land.
+
+I can also measure \(S_x\) to be either \(+\hbar/2\) or \(-\hbar/2\).
+If it is \(+\hbar/2\), we don't get any extra information as it could equally be either three. If it is \(-\hbar/2\), then the british are coming either by land or sea.
+
+How reliably can we distinguish between a set of quantum states that serve as signals?
+
+Consider Alice and Bob. Alice sends quantum state to Bob and this state is living in some \hyperref[hilbert-spaces]{Hilbert space} \(H\)
+\[
+	\ket{\psi}\in H\quad dim(H)=d
+\]
+
+Alice encodes \(N\) equally likely messages
+\[
+	\{\ket{\alpha}\}_{\alpha=1}^N
+\]
+
+Bob makes measurements in some \hyperref[basis-states]{basis}
+\[
+	\{\ket{k}\}_{k=1}^{d'}
+\]
+
+Bob measures a larger Hilbert space \(H'\) because he doesn't know the Hilbert space Alice is using.
+\[
+	H\subset H'\quad dim(H')=d'>d
+\]
+Bob still needs to make a determination. But he still needs to make a decision on which of the \(N\) messages sent.
+
+Let
+\[
+	k=1,2,3,4,\cdots,d'\quad d'>N
+\]
+
+for some of these outcomes you can get maybe you assign some like $1,2$ to be message 1 $C_1$ and $3$ to message 2 $C_2$, etc. then you need to cover all possibilities of the message Alice sends. You want to map the outcome to messages. Some of the bins may be empty.
+
+The success probability for Bob to correctly distinguish the different messages.
+\[
+	P_s=\sum_{\alpha=1}^NP(\alpha)\sum_{k\in C_\alpha}P(outcome~k|\text{message $\alpha$ was sent})\\
+\]
+\[
+	=\sum_{\alpha =1}^N\frac{1}{N}\sum_{k\in C_\alpha}|\braket{k|\alpha}|^2
+\]
+We want to try to upperbound this. Let $\{\ket{\phi_n}\}_{r=1}^d$ be some \hyperref[orthonormality]{orthonormal basis} of $H$
+
+We know that
+\[
+	\Pi\ket{\alpha}=\ket{\alpha}
+\]
+And also
+\[
+	(\Pi\ket{\alpha})^\dag=\ket{\alpha}^\dagger
+\]
+\[
+	\bra{\alpha}\Pi^\dag=\bra{\alpha}
+\]
+\[
+	\bra{\alpha}\Pi=\bra{\alpha}
+\]
+So
+\[
+	P_s=\frac{1}{N}\sum_\alpha\sum_{k\in C_\alpha}\braket{\alpha|k}\braket{k|\alpha}\\
+\]
+\[
+	=\frac{1}{N}\sum_\alpha\sum_{k\in C_\alpha}\braket{\alpha|\Pi|k}\braket{k|\Pi|\alpha}\\
+\]
+\[
+	=\frac{1}{N}\sum_\alpha\sum_{k\in C_\alpha}\bra{\alpha}(\Pi\ket{k}\bra{k}\Pi)\ket{\alpha}
+\]
+\[
+	= \frac{1}{N}\sum_\alpha \sum_{k\in C_\alpha}tr(\bra{\alpha}\Pi\ket{k}\bra{k}\Pi\ket{\alpha})\\
+\]
+Using \hyperref[traces]{trace} cyclic property
+\[
+	= \frac{1}{N}\sum_\alpha \sum_{k\in C_\alpha}tr(\ket{\alpha}\bra{\alpha}\cdot \Pi\ket{k}\bra{k}\Pi)\\
+\]
+\[
+	\leq \frac{1}{N}\sum_\alpha \sum_{k\in C_\alpha}tr(\Pi\ket{k}\bra{k}\Pi)\\
+\]
+\[
+	\leq \frac{1}{N}\sum_\alpha \sum_{k\in C_\alpha}tr(\Pi^2\cdot\ket{k}\bra{k})\\
+\]
+\[
+	\leq \frac{1}{N}tr(\Pi^2\sum_\alpha\sum_{k\in C_\alpha}\ket{k}\bra{k})\\
+\]
+\[
+	\leq \frac{1}{N}tr(\Pi^2I)\\
+\]
+\[
+	\leq\frac{1}{N}tr(\Pi)\\
+\]
+Using \hyperref[traces]{trace} cyclic property and the fact that \(tr(\braket{\phi_r|\phi_r})=\braket{\phi_r|\phi_r}\) as it is a \(1\times 1\) matrix.
+\[
+	\leq\frac{1}{N}tr(\sum_{r=1}^d\ket{\phi_r}\bra{\phi_r})
+\]
+\[
+	\leq\frac{1}{N}\sum_{r=1}^dtr(\braket{\phi_r|\phi_r})
+\]
+\[
+	\leq\frac{1}{N}\sum_{r=1}^d\braket{\phi_r|\phi_r}
+\]
+\[
+	\leq\frac{1}{N}\sum_{r=1}^d1
+\]
+\[
+	\leq\frac{d}{N}
+\]
+This means the probability of a successful decoding is at most the number of dimensions of the Hilbert space divided by the number of possible messages Alice can send
+
+\section{Basic Decoding Theory}\label{basic-decoding-theory}
+
+Given that Alice is trying to send a message to Bob, the decoding error is
+\[
+	P_E=1-P_s\geq 1-\frac{d}{N}
+\]
+Note that
+\begin{enumerate}
+	\item If \(N\geq d\), then \(P_E\geq 0\) -- there is no way to reliably distinguish messages
+	\item lower bound in theorem also holds even if alice sends mixed states \(\{\rho_\alpha\}_{\alpha=1}^N\)
+	\item A quantum system with Hilbert space dimension \(d\) has information capacity of \(\log_2(d)\) bits. This is the maximum number of bits that can be stored, communicated, and read reliably. This is the same amount of infromation from classical d-state system.
+\end{enumerate}
+
+\section{Basic Distinguishability Theory}\label{basic-distinguishability-theory}
+
+Probability of successfully distinguishing between two equally likely pure states \(\ket{\alpha_0}, \ket{\alpha_1}\) where \(\braket{\alpha_0|\alpha_1}=\cos\theta\) is
+\[
+	P_s\leq \frac{1}{2}(1+\sin\theta)
+\]
+
+Example I
+
+We want to find the optimal measurement to distinguish between two equally likely pure states \(\ket{\alpha_0}, \ket{\alpha_1}\) where \(\braket{\alpha_0|\alpha_1}=\cos\theta\).
+We can try to do
+
+\[
+	\ket{\alpha_0}=\ket{0}\quad\ket{\alpha_1}=\ket{+}
+\]
+\[
+	\cos\theta =\sin\theta=\frac{1}{\sqrt{2}}
+\]
+and there are is a $\ket{1}$ basis that is ortho to $\ket{0}$. If we measure and get $\ket{1}$ it couldn’t have come from $\ket{\alpha_0}$
+
+But it isn't optimal
+
+Example II
+
+The optimal way is to get the bisection angle between $\ket{\alpha_1},\ket{\alpha_0}$
+\[
+	P_s(\tau)=P(\alpha_0)P(\text{measure $k_0$ given $\ket{\alpha_0}$})+P(\alpha_1)P(\text{measure $k_1$ given $\ket{\alpha_1}$})\\
+\]
+\[
+	=\frac{1}{2}\cos^2(\tau)+\frac{1}{2}\cos^2(\frac{\pi}{2}-\tau-\theta)
+\]
+Optimize to get
+\[
+	\tau^*=\frac{1}{2}\left(\frac{\pi}{2}-\theta\right)\\
+\]
+\[
+	\Rarr \max P_s(\tau)=\frac{1}{2}\cos^2\left(\frac{\pi}{4}-\frac{\theta}{2}\right)+\frac{1}{2}\cos^2(\frac{\pi}{4}-\frac{\theta}{2})\\
+\]
+\[
+	=\frac{1}{2}\left(1+\sin\theta\right)
+\]
+
+\section{Quantum Cryptography}\label{quantum-cryptography}
+
+\subsection{Classical Cryptography}\label{classical-cryptography}
+How do you communicate securely over a public channel?
+
+Using a shared secret key! (Symmetric key encryption)
+
+Let ciphertext $C$, plaintext $P$, and key $K$ be \hyperref[strings]{strings} of bits $\{0,1\}^*$.
+Let $E$ be an encryption \hyperref[functions]{function} and $D$ be a decryption \hyperref[functions]{function}.
+
+\[
+	C=E(P, K)
+\]
+\[
+	P=D(C, K)
+\]
+
+There are three people Alice, Bob and Eve where Alice is trying to send data to Bob over a public channel and Eve is listening to it and maliciously trying to obtain the data.
+
+How do we securely share the secret key $K$ in the first place? Classically we use RSA or Diffie-Hellman, but this relies on
+assumptions about hardness of a computational problem, which may not be hard for a quantum coputer.
+
+
+In the quantum world, we use quantum key distribution (QKD) to securely share the secret key $K$ without Eve being able to intercept it.
+
+\subsection{BB84 Protocol}\label{bb84-protocol}
+This is a type of quantum key distribution protocol. It is named after Bennett and Brassard in 1984.
+
+Alice chooses a basis $b$ and a bit $p$ (i.e., parent)
+\[
+	b\in\{X,Z\}
+	\quad
+	p\in\{0,1\}
+\]
+
+We know there are an infinite number of possible bases in a qubit. There exists three mutually unbiased bases in a qubit $\{Z,X,Y\}$. BB84 chooses $\{X,Z\}$ as part of the definition of the protocol.
+
+Because a qubit is $d=2$ by definition, we can only choose from 2 parents.
+
+Alice then creates a qubit state $\ket{\psi_{b,p}}$ to send to Bob.
+BB84 defines the following mapping:
+
+\begin{tabular}{|c|c|l|}
+	\hline
+	basis $b$ & parent $p$ & qubit state $|\psi_{b,p}\rangle$                         \\
+	\hline
+	$Z$       & $0$        & $|0\rangle$                                              \\
+	$Z$       & $1$        & $|1\rangle$                                              \\
+	$X$       & $0$        & $|+\rangle = \tfrac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$ \\
+	$X$       & $1$        & $|-\rangle = \tfrac{1}{\sqrt{2}}(|0\rangle - |1\rangle)$ \\
+	\hline
+\end{tabular}
+
+Example
+
+To generate a shared key, Alice chooses a string of random bases $\in\{X,Z\}^n$ and parents $\in\{0,1\}^n$ to create a string of qubit $\ket{\psi_{b,p}}$ to send to Bob. Where $n$ is the number of bits to send.
+
+% Step 1: Alice generates two random strings and sends qubits
+\begin{tabular}{|c|cccccccc|}
+	\hline
+	basis $b$                  & $X$         & $Z$         & $Z$         & $X$         & $Z$         & $X$         & $X$         & $Z$         \\
+	parent $p$                 & $1$         & $0$         & $1$         & $1$         & $0$         & $1$         & $0$         & $1$         \\
+	qubit $|\psi_{b,p}\rangle$ & $|-\rangle$ & $|0\rangle$ & $|1\rangle$ & $|-\rangle$ & $|0\rangle$ & $|-\rangle$ & $|+\rangle$ & $|1\rangle$ \\
+	\hline
+\end{tabular}
+
+Bob chooses a string of random bases $\in\{X,Z\}^n$ and measures the $i$-th qubit Alice sent in the $i$-th base.
+
+% Step 2: Bob measures in random bases from {X, Z}
+\begin{tabular}{|c|cccccccc|}
+	\hline
+	Bob's basis $b'$    & $X$         & $X$         & $Z$         & $Z$         & $X$         & $Z$         & $X$         & $Z$         \\
+	\hline
+	example result      & $|-\rangle$ & $|-\rangle$ & $|1\rangle$ & $|0\rangle$ & $|+\rangle$ & $|1\rangle$ & $|+\rangle$ & $|1\rangle$ \\
+	\quad or            & $|-\rangle$ & $|+\rangle$ & $|1\rangle$ & $|1\rangle$ & $|-\rangle$ & $|0\rangle$ & $|+\rangle$ & $|1\rangle$ \\
+	\hline
+	inferred parent (?) & $1$         & $1$         & $1$         & $0$         & $0$         & $1$         & $0$         & $1$         \\
+	correct basis       & \checkmark  &             & \checkmark  &             &             &             & \checkmark  & \checkmark  \\
+	secret key          & $1$         &             & $1$         &             &             &             & $0$         & $1$         \\
+	\hline
+\end{tabular}
+
+Alice and Bob both announce their basis but not their measurement results. Correct basis for half the qubits. Then use the subsequence as the secret key $K$.
+
+\[
+	K = 1101
+\]
+
+Alice and Bob then agree on a random subset $T\subset K$. They publicly announce their bit values only at positions in $T$.
+
+\[
+	QBER=\frac{\text{number of pos. in $T$ where bits differ}}{|T|}
+\]
+
+If quantum bit error rate QBER is lower than the threshold, then proceed with the remaining bits not in $T$. In BB84, the threshold is typically around 11\% because of Shannon-theoretic entropy.
+
+This is secure against Eve as if Eve intercepts a qubit, Eve can only distinguish among $\{\ket{0},\ket{1},\ket{+},\ket{-}\}$
+where error probability  $P_E\geq 1-\frac{d}{N}$ given in \hyperref[basic-decoding-theory]{basic decoding theory}.
+
+If Eve sends qubit along to Bob, they would be wrong half of the time. Alice and Bob can find out in the testing stage. During testing stage, some bits of the key are sent between Alice and Bob and discarded if they do not match. This reduces information that Eve has about the secret key. The probability of the bit disagreeing given Eve intercepted is $\frac{1}{2}\times\frac{1}{2}=\frac{1}{4}$ whereas if Eve doesn't intercept, the probability of the bit disagreeing is $0$.
+
+Due to the non-cloning theorem, Eve cannot copy the qubit and send it to Bob.
+
+
+\subsection{No-Cloning Theorem}\label{no-cloning-theorem}
+
+There exists no unitary operator $U$ that can clone a qubit.
+\[
+	C(\ket{\psi})=\ket{\psi}\otimes\ket{\psi}
+\]
+
+
 
 \end{document}
