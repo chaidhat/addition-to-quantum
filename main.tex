@@ -228,7 +228,7 @@ Example:
 See how \(A\) is also a variable? In this case, \(m=2, n=3\) as there
 are 2 rows and 3 columns.
 
-We use matrices to represent sets of numbers because they have an
+We use matrices to represent \hyperref[set]{sets} of numbers because they have an
 equivalent in the real world. In this case, quantum states.
 
 \section{Ket (State)}\label{ket-states}
@@ -354,7 +354,7 @@ If we add \(\ket{x}+3\ket{y}\) we get
 \end{gather*}
 
 
-Notice how we're adding the \(n\)-th elements of the states together for
+Notice how we're adding the \(n\)-th \hyperref[element]{elements} of the states together for
 each row?
 
 We can represent these two states coexisting (i.e., a superposition)
@@ -427,7 +427,7 @@ The \textbar{} means ``such that''
 \subsection{Subset}\label{subsets}
 
 \hyperref[set]{sets}
-can be subsets (or equal) of another set if all elements of a
+can be subsets (or equal) of another set if all \hyperref[element]{elements} of a
 \hyperref[set]{set}
 is in another
 \hyperref[set]{set}.
@@ -482,7 +482,7 @@ Where
 	\item
 	      \(\mathbb{R}\) are real numbers
 	\item
-	      \(\mathbb{C}\) are complex numbers, \(\mathbb{F}\) are fields
+	      \(\mathbb{C}\) are \hyperref[complex-numbers]{complex numbers}, \(\mathbb{F}\) are fields
 \end{itemize}
 
 where \(\forall p\in \mathbb{Z},q\neq 0\) means for all integers \(p\)
@@ -541,7 +541,7 @@ This is a function that adds up a series of numbers.
 \section{Trigonometry}\label{trigonometry}
 
 
-There's these functions that are useful to know about.
+There's these \hyperref[functions]{functions} that are useful to know about.
 \[
 	\sin(\theta), \cos(\theta), \tan(\theta)
 \]
@@ -615,7 +615,7 @@ To do this, us humans developed some nifty tricks. Here's all of them.
 \end{align*}
 
 \subsection{Integration}\label{integration}
-The opposite of differentiation is integration. This is the Riemann sum.
+The opposite of \hyperref[differentiation]{differentiation} is integration. This is the Riemann sum.
 
 \begin{gather*}
 	\int_\alpha^\beta f(t)\cdot dt=\lim_{n\to\infin}\sum_{i=1}^n f(t_i)\cdot (t_i-t_{i-1})
@@ -701,7 +701,7 @@ make the imaginary part negative)
 	\end{pmatrix}
 \end{gather*}
 
-If you're writing in euler form, then flip the sign of the angle
+If you're writing in \hyperref[euler-form]{euler form}, then flip the sign of the angle
 \[
 	(e^{i\theta})^*=e^{-i\theta}
 \]
@@ -723,7 +723,7 @@ If we rearrange the terms we get
 	=\cos\theta+i\sin\theta
 \end{gather*}
 
-This means we can represent complex numbers in this weird form too:
+This means we can represent \hyperref[complex-numbers]{complex numbers} in this weird form too:
 
 \begin{gather*}
 	z=re^{i\theta}
@@ -929,8 +929,8 @@ Then it's counterpart is a bra
 	\end{pmatrix}
 \end{gather*}
 
-You swap the columns for the rows (transpose!) and make every element
-the conjugate of itself. It becomes a \(1\times N\) matrix instead.
+You swap the columns for the rows (transpose!) and make every \hyperref[element]{element}
+the \hyperref[conjugate]{conjugate} of itself. It becomes a \(1\times N\) matrix instead.
 
 Let this weird transformation be known as a conjugate transpose, denoted
 as
@@ -964,7 +964,7 @@ Let there be two matrices, \(A,B\) with size \(m\times n\) and
 \(n\times p\) respectively. We get a matrix \(C=AB\) which is size
 \(m\times p\).
 
-for an element on row \(i\), column \(j\) in \(C\) we let this be called
+for an \hyperref[element]{element} on row \(i\), column \(j\) in \(C\) we let this be called
 \(C_{ij}\)
 
 \begin{gather*}
@@ -996,7 +996,7 @@ Let this be the notation of if/else
 	x=\begin{cases}1\quad\text{if true}\\0\quad\text{if false}\end{cases}
 \end{gather*}
 
-a set of vectors \(\{v_1,v_2,...,v_n\}\) form an \hyperref[orthonormality]{orthonormal} \hyperref[basis-states]{basis} if
+a set of \hyperref[vectors]{vectors} \(\{v_1,v_2,...,v_n\}\) form an \hyperref[orthonormality]{orthonormal} \hyperref[basis-states]{basis} if
 and only if
 
 \begin{gather*}
@@ -1067,7 +1067,7 @@ exist in a Hilbert space.
 
 \subsection{Inner Product II}\label{inner-product-ii}
 
-building on top of what we said about the inner product,
+building on top of what we said about the \hyperref[inner-product]{inner product},
 
 an inner product is any
 
@@ -1081,7 +1081,7 @@ which is
 	\def\labelenumi{\arabic{enumi}.}
 	\tightlist
 	\item
-	      conjugate symmetric
+	      \hyperref[conjugate]{conjugate} symmetric
 \end{enumerate}
 
 \begin{gather*}
@@ -1214,9 +1214,9 @@ We also just proved that \(E=\hbar\omega\) so that particle with energy
 \end{gather*}
 
 Oscillating means the phase of the particle changes so we can represent
-the phase as a complex number.
+the phase as a \hyperref[complex-numbers]{complex number}.
 
-Let's say there is a two-level quantum system in some superposition.
+Let's say there is a two-level \hyperref[quantum-system]{quantum system} in some superposition.
 This just means
 
 \begin{gather*}
@@ -1417,7 +1417,7 @@ matrix and multiply the diags together
 \subsection{Matrix
 	Invertibility}\label{invertibility-of-matrices}
 
-Operator \(\hat{T}\) (i.e., a matrix) is invertible if and only if
+\hyperref[operators]{Operator} \(\hat{T}\) (i.e., a matrix) is invertible if and only if
 \(det(\hat{T})\neq0\)
 
 \subsection{Eigenvector/Eigenvalue}\label{eigenvectorseigenvalues}
@@ -1431,17 +1431,17 @@ Operator \(\hat{T}\) (i.e., a matrix) is invertible if and only if
 Basically if I apply matrix transformation \(A\) to a vector \(\ket{v}\)
 and it still points in the same direction, it is an Eigenvector. It
 could be multiplied by a scalar value \(\lambda\) (Eigenvalue) after
-applying the transform, which means its magnitude need not be preserved
+applying the transform, which means its \hyperref[magnitude]{magnitude} need not be preserved
 by the transform.
 
 The set of all vector \(\ket{v}\)'s are Eigenvectors of transformation
 \(A\).
 
-An Eigenstate are states instead of vectors, operators instead of
+An \hyperref[eigenstates]{Eigenstate} are states instead of \hyperref[vectors]{vectors}, \hyperref[operators]{operators} instead of
 matrices but are the same thing.
 
 \subsection{Eigenstates}\label{eigenstates}
-Eigenstates are eigenvectors of operators.
+Eigenstates are \hyperref[eigenvectorseigenvalues]{eigenvectors} of \hyperref[operators]{operators}.
 
 \begin{gather*}
 	\hat{A}\ket{\psi}=\lambda\ket{\psi}
@@ -1459,9 +1459,9 @@ If \hyperref[operators]{operator} \(\hat{A}\) has \hyperref[eigenvectorseigenval
 \]
 
 \subsection{Eigenbasis}\label{eigenbasis}
-An eigenbasis of operator \(\hat{A}\) is a set of \hyperref[eigenvectorseigenvalues]{eigenvectors}/\hyperref[eigenstates]{eigenstates} that form a \hyperref[basis-states]{basis} for the \hyperref[hilbert-spaces]{Hilbert space}.
+An eigenbasis of \hyperref[operators]{operator} \(\hat{A}\) is a set of \hyperref[eigenvectorseigenvalues]{eigenvectors}/\hyperref[eigenstates]{eigenstates} that form a \hyperref[basis-states]{basis} for the \hyperref[hilbert-spaces]{Hilbert space}.
 
-Every Hermitian operator has an \hyperref[eigenbasis]{eigenbasis}.
+Every \hyperref[hermitian-operators]{Hermitian operator} has an \hyperref[eigenbasis]{eigenbasis}.
 
 \subsection{Characteristic Polynomial}\label{characteristic-polynomial}
 
@@ -1500,7 +1500,7 @@ A
 
 \subsection{Span Function}\label{span-function}
 
-A span of vectors is the set of all linear combinations you can build
+A span of \hyperref[vectors]{vectors} is the set of all linear combinations you can build
 from them
 
 
@@ -1508,7 +1508,7 @@ from them
 
 A
 \hyperref[subspaces]{subspace}
-\(U\subseteq V\) is called \(\hat{T}\)-invariant if operator \(\hat{T}\)
+\(U\subseteq V\) is called \(\hat{T}\)-invariant if \hyperref[operators]{operator} \(\hat{T}\)
 keeps everything in U inside U. If it is T-invariant, then this must
 always be true:
 
@@ -1524,7 +1524,7 @@ Simplest T invariant subspace is (with dimensions \(d\))
 \end{gather*}
 
 When \(\lambda\) is \hyperref[eigenvectorseigenvalues]{Eigenvalue} and \(\ket{u}\) is \hyperref[eigenvectorseigenvalues]{eigenvector} and
-\(\ket{u}\neq 0\) and you can define these vectors by checking
+\(\ket{u}\neq 0\) and you can define these \hyperref[vectors]{vectors} by checking
 
 \begin{gather*}
 	(\hat{T}-\lambda I)\ket{u}=0\\
@@ -1532,7 +1532,7 @@ When \(\lambda\) is \hyperref[eigenvectorseigenvalues]{Eigenvalue} and \(\ket{u}
 	=(\lambda_1-\lambda)(\lambda_2-\lambda)..(\lambda_d-\lambda)
 \end{gather*}
 
-In general, this determinant has degree \(\lambda_i\) are zeroes of
+In general, this \hyperref[determinants]{determinant} has degree \(\lambda_i\) are zeroes of
 character polynomial \(\lambda_i\in C\) can be repeated
 
 \subsection{Diagonalization}\label{diagonalization}
@@ -1614,7 +1614,7 @@ corresponding to \hyperref[eigenvectorseigenvalues]{eigenvalues} \(\lambda_1,\la
 
 \subsection{Commutator}\label{commutators}
 
-The commutator of two operators \(\hat{A},\hat{B}\) is defined as
+The commutator of two \hyperref[operators]{operators} \(\hat{A},\hat{B}\) is defined as
 
 \begin{gather*}
 	[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}
@@ -1628,7 +1628,7 @@ If "\(\hat{A}\) commutes with \(\hat{B}\)", then that means \(\hat{A}\hat{B}=\ha
 
 \subsection{Adjoint}\label{adjoint}
 
-An adjoint is basically a conjugate transpose but for an operator
+An adjoint is basically a \hyperref[conjugate]{conjugate} transpose but for an \hyperref[operators]{operator}
 (whereas a conjugate transpose can only be applied to a matrix)
 
 Given operator \(\hat{A}\), it's adjoint is the operator \(\hat{A}^+\)
@@ -1643,7 +1643,7 @@ Where, for any operator \(\hat{O}\), a matrix element
 \(\bra{i}\hat{O}\ket{j}\) is just the \((i,j)\)-th element of the matrix
 representing \(\hat{O}\) in basis \(\{\ket{i}\}\)
 
-Note that \(\ket{i}\) and \(\ket{j}\) are arbitrary basis states
+Note that \(\ket{i}\) and \(\ket{j}\) are arbitrary \hyperref[basis-states]{basis states}
 
 where \(A^*\) is the complex conjugation of \(A\)
 
@@ -1691,7 +1691,7 @@ equals the conjugate transpose of the matrix of \(\hat{A}\)
 
 \subsection{Hermitian Matrix}\label{hermitian-matrix}
 
-Let a ``Hermitian matrix'' be a matrix that equals its own conjugate
+Let a ``Hermitian matrix'' be a matrix that equals its own \hyperref[conjugate]{conjugate}
 transpose
 
 If and only if \(A\) is a matrix and is Hermitian, then this is true
@@ -1710,7 +1710,7 @@ Another example:
 
 \subsection{Hermitian Operator}\label{hermitian-operators}
 
-An operator is \hyperref[hermitian-matrix]{Hermitian} if and only if the adjoint of the operator is
+An \hyperref[operators]{operator} is \hyperref[hermitian-matrix]{Hermitian} if and only if the \hyperref[adjoint]{adjoint} of the operator is
 equal to itself.
 
 
@@ -1732,7 +1732,7 @@ The \hyperref[eigenvectorseigenvalues]{eigenvalues} represent possible measureme
 
 \subsection{Anti-Hermitian Operator}\label{anti-hermitian-operators}
 
-An operator is anti-hermitian if and only if
+An \hyperref[operators]{operator} is anti-hermitian if and only if
 
 \begin{gather*}
 	\hat{B}^+=-\hat{B}
@@ -1782,7 +1782,7 @@ Example
 \begin{itemize}
 	\tightlist
 	\item
-	      Projectors are PSD
+	      \hyperref[projectors]{Projectors} are PSD
 \end{itemize}
 
 \subsection{Projection}\label{projections}
@@ -1839,7 +1839,7 @@ once i apply it to a state \(v\), i get the projection of that state
 
 \subsection{Unitary Operator}\label{unitary-operator}
 
-An operator is unitary if and only if
+An \hyperref[operators]{operator} is unitary if and only if
 
 \begin{gather*}
 	\hat{U}^+\hat{U}=\hat{U}\hat{U}^+=I
@@ -1869,7 +1869,7 @@ An operator is unitary if and only if
 		      \tightlist
 		      \item
 		            as chatgpt puts it: unitary matrices/operators represent a rotation
-		            or change of coordinates in Hilbert space, without changing lengths
+		            or change of coordinates in \hyperref[hilbert-spaces]{Hilbert space}, without changing lengths
 		            or angles.
 	      \end{itemize}
 \end{itemize}
@@ -1878,7 +1878,7 @@ An operator is unitary if and only if
 	\hat{U}=\hat{U}I
 \end{gather*}
 
-I can use completeness relation so that if
+I can use \hyperref[completeness]{completeness} relation so that if
 
 \begin{gather*}
 	\hat{U}\ket{\alpha_n}=\ket{\beta_n}
@@ -2050,14 +2050,14 @@ If \(c_i\in\mathbb{R}\), then \(\hat{A}\) is \hyperref[hermitian-operators]{Herm
 
 \section{Observable on a qubit}\label{observable-on-a-qubit}
 
-Any observable on a qubit can be written as
+Any \hyperref[observables]{observable} on a qubit can be written as
 
 \begin{gather*}
 	\hat{A}=a_0\sigma_0+\vec{a}\vec{\sigma_{1,2,3}}
 \end{gather*}
 
 You can think of \(a_0\sigma_0\) as the scalar value and
-\(\vec{a}\vec{\sigma_{1,2,3}}\) as it helps with the Bloch Sphere.
+\(\vec{a}\vec{\sigma_{1,2,3}}\) as it helps with the \hyperref[bloch-sphere]{Bloch Sphere}.
 
 This can be written in spherical units too
 
@@ -2202,7 +2202,7 @@ This means that \(\hat{A}\) maps a vector in the \(E\)-eigenspace of \(\hat{H}\)
 
 
 \section{Spectral Decomposition}\label{spectral-decomposition}
-Let there be a Hermitian operator \(\hat{A}\) on a finite-dimensional \hyperref[hilbert-spaces]{Hilbert space}.
+Let there be a \hyperref[hermitian-operators]{Hermitian operator} \(\hat{A}\) on a finite-dimensional \hyperref[hilbert-spaces]{Hilbert space}.
 
 There exists real eigenvalues \(\{a_n\}\) and orthogonal \hyperref[projectors]{projectors} \(\{\hat{\Pi}_a\}\) such that
 
@@ -2227,9 +2227,9 @@ So \(\{a_n\}\) is the spectrum of \(\hat{A}\).
 And that means you can think \(\hat{A}\) as scaling each eigenspace by its own eigenvalue.
 
 \section{Compatibility}\label{compatibility}
-Compatibility is a property of two operators.
+Compatibility is a property of two \hyperref[operators]{operators}.
 
-If \(\ket{\phi_n}\) is the \(n\)-th \hyperref[eigenstates]{eigenstate} of \(\hat{A}\) (i.e., the eigenbasis of \(\hat{A}\)),
+If \(\ket{\phi_n}\) is the \(n\)-th \hyperref[eigenstates]{eigenstate} of \(\hat{A}\) (i.e., the \hyperref[eigenbasis]{eigenbasis} of \(\hat{A}\)),
 
 Let
 \[
@@ -2241,7 +2241,7 @@ If \(\hat{B}\) is compatible with \(\hat{A}\) (i.e., \(\hat{B}\) is diagonalizab
 \]
 
 \subsection{Compatibility of Observables}\label{compatibility-of-observables}
-Two operators \(\hat{A}\) and \(\hat{B}\) are compatible if and only if they commute, i.e. \([\hat{A},\hat{B}]=0\).
+Two \hyperref[operators]{operators} \(\hat{A}\) and \(\hat{B}\) are compatible if and only if they commute, i.e. \([\hat{A},\hat{B}]=0\).
 
 \[
 	\hat{A},\hat{B}\quad\text{are compatible}\quad\Leftrightarrow\quad[\hat{A},\hat{B}]=0
@@ -2278,7 +2278,7 @@ A quantum system is defined by:
 The Hilbert space's dimensions defines the fixes the spin of the system.
 
 \subsection{Spin-1/2 System}\label{spin-12-systems}
-This spin is for 2-dimensional Hilbert spaces.
+This spin is for 2-dimensional \hyperref[hilbert-spaces]{Hilbert spaces}.
 For spin-1/2 systems,
 \[
 	S_x\triangleq\frac{\hbar}{2}\sigma_x\quad
@@ -2302,7 +2302,7 @@ And
 	\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ -1\end{pmatrix}
 \]
 \subsection{Spin-1 System}\label{spin-1-systems}
-This spin is for 3-dimensional Hilbert spaces.
+This spin is for 3-dimensional \hyperref[hilbert-spaces]{Hilbert spaces}.
 For spin-1 systems,
 \[
 	S_x\triangleq\frac{\hbar}{2}\Sigma_x\quad
@@ -2323,7 +2323,7 @@ Note that
 \]
 \section{Born's Rule}\label{borns-rule}
 
-If a quantum system is in state \(\ket{\psi}\) and you measure
+If a \hyperref[quantum-system]{quantum system} is in state \(\ket{\psi}\) and you measure
 \hyperref[observables]{observable} \(\hat{A}\) --- the probability of getting \hyperref[eigenvectorseigenvalues]{eigenvalue}
 \(\lambda_\alpha\) (which corresponds to \hyperref[eigenstates]{eigenstate} \(\ket{\alpha}\)) is
 
@@ -2340,7 +2340,7 @@ Born's rule is a postulate, meaning that it is based on experimental observation
 
 \section{Probability Theory}\label{probability-theory}
 
-probability space \(\Sigma\) has points and elements and associated
+probability space \(\Sigma\) has points and \hyperref[element]{elements} and associated
 probabilities with them
 
 example:
@@ -2453,7 +2453,7 @@ it's the square root of the variance
 \subsection{Expected Value of an
 	Observable}\label{expected-value-of-observables}
 
-To determine the mean (EV) of an operator \(\hat{A}\), we must know the state \(\ket{\psi}\) you're in.
+To determine the mean (EV) of an \hyperref[operators]{operator} \(\hat{A}\), we must know the state \(\ket{\psi}\) you're in.
 \begin{gather*}
 	\mathbb{E}(A)=\sum_nA_nP(n)\\
 	=\sum A_n|\braket{n|\psi}|^2\\
@@ -2472,15 +2472,15 @@ Another convientn reprsentation is
 	tr(\bra{\psi}\hat{A}\ket{\psi})
 \end{gather*}
 
-where \(tr\) is trace
+where \(tr\) is \hyperref[traces]{trace}
 
 \section{Measuring a Quantum State}\label{measuring-a-quantum-state}
 Before:
-The system is in a state \(\ket{\psi}\) and you measure the observable \(\hat{A}\).
+The system is in a state \(\ket{\psi}\) and you measure the \hyperref[observables]{observable} \(\hat{A}\).
 
 Measure: We get an outcome \(A_n\) with probability \(P_n=\bra{\psi}\hat{\Pi}_n\ket{\psi}\)
 
-Given Born's rule for a non-degenerate eigenstate \(\ket{\phi_n}\),
+Given \hyperref[borns-rule]{Born's rule} for a non-degenerate \hyperref[eigenstates]{eigenstate} \(\ket{\phi_n}\),
 
 \[
 	P_n=|\braket{\phi_n|\psi}|^2
@@ -2488,7 +2488,7 @@ Given Born's rule for a non-degenerate eigenstate \(\ket{\phi_n}\),
 
 
 This is because \hyperref[borns-rule]{Born's rule}.
-Note that \(\hat{\Pi}_n\), the projector onto the \(\lambda_n\)-eigenspace of \(\hat{A}\), is
+Note that \(\hat{\Pi}_n\), the \hyperref[projectors]{projector} onto the \(\lambda_n\)-\hyperref[eigenspaces]{eigenspace} of \(\hat{A}\), is
 \[
 	\hat{\Pi}_n=\ket{\phi_n}\bra{\phi_n}
 \]
@@ -2508,7 +2508,7 @@ So
 \[
 	\Rarr = |\braket{\phi_n|\psi}|^2||\ket{\phi_n}||^2
 \]
-We know that the magnitude of the eigenstate \(\ket{\phi_n}\) is 1.
+We know that the \hyperref[magnitude]{magnitude} of the eigenstate \(\ket{\phi_n}\) is 1.
 
 After: State collapses to
 \[
@@ -2539,7 +2539,7 @@ It contains all information needed to predict measurement outcomes. For the \hyp
 At some point we'll touch quantum mechanics. But that point is not yet.
 
 \section{Cauchy-Schwarz Inequality}\label{cauchy-schwarz-inequality}
-Given two vectors \(\ket{u},\ket{v}\in \mathbb{C}^n\),
+Given two \hyperref[vectors]{vectors} \(\ket{u},\ket{v}\in \mathbb{C}^n\),
 \[
 	|\braket{u|v}|\leq \|u\|\|v\|
 \]
@@ -2556,11 +2556,11 @@ It's squared form can be written as
 	\Delta A^2 \Delta B^2 \geq \left(\bra{\psi}\frac{1}{2j}[\hat{A},\hat{B}]\ket{\psi}\right)
 \]
 Proof
-Consider any scalar \(\lambda\in \mathbb{C}\) and any vectors \(\ket{u},\ket{v}\in \mathbb{C}^n\) and we have two states \(\ket{f}\) and \(\ket{g}\).
+Consider any scalar \(\lambda\in \mathbb{C}\) and any \hyperref[vectors]{vectors} \(\ket{u},\ket{v}\in \mathbb{C}^n\) and we have two states \(\ket{f}\) and \(\ket{g}\).
 
 We subtract it like so \(\ket{f}-\lambda\ket{g}\) is also a vector
 
-Note that for QM systems, \(\braket{u|u}=1\). This is because of Born's rule where the number it represents is the total probability, which needs to sum to 1.
+Note that for QM systems, \(\braket{u|u}=1\). This is because of \hyperref[borns-rule]{Born's rule} where the number it represents is the total probability, which needs to sum to 1.
 \[
 	\braket{f-\lambda g|f-\lambda g}\geq 0
 \]
@@ -2593,7 +2593,7 @@ Assuming \(\braket{g|g}\geq 0\)
 \]
 This is Cauchy-Schwarz squared
 
-Consider the observables that we defined above. This can be written as
+Consider the \hyperref[observables]{observables} that we defined above. This can be written as
 \[
 	\ket{f}=(\hat{A}-\mathbb{E}[A]I)\ket{\psi}\quad
 	\ket{g}=(\hat{B}-\mathbb{E}[B]I)\ket{\psi}

@@ -114,6 +114,19 @@ function scanSection(section: Section, allSections: Section[], lines: string[], 
   const matches: Match[] = [];
   const seenTargets = new Set<string>();
 
+  // Pre-scan: find labels that already have \hyperref[label]{...} or \href anywhere in this section
+  const alreadyLinked = new Set<string>();
+  for (let absLine = section.startLine; absLine <= section.endLine; absLine++) {
+    const idx = absLine - 1;
+    if (idx < 0 || idx >= lines.length) continue;
+    const raw = lines[idx];
+    const re = /\\hyperref\[([^\]]+)\]/g;
+    let mm: RegExpExecArray | null;
+    while ((mm = re.exec(raw)) !== null) {
+      alreadyLinked.add(mm[1]);
+    }
+  }
+
   for (let absLine = section.startLine; absLine <= section.endLine; absLine++) {
     const idx = absLine - 1;
     if (idx < 0 || idx >= lines.length) continue;
@@ -127,6 +140,7 @@ function scanSection(section: Section, allSections: Section[], lines: string[], 
     for (const target of allSections) {
       if (target.label === section.label) continue;
       if (seenTargets.has(target.label)) continue;
+      if (alreadyLinked.has(target.label)) continue;
 
       for (const term of target.terms) {
         if (STOPWORDS.has(term)) continue;
