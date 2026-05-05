@@ -111,7 +111,7 @@ This text is written so that, at the start, you only need to know how to do basi
 In the end, you'll know how to do quantum mechanics problems.
 \bigskip
 
-The study guide is loosely sorted by complexity. Everything is derived from concepts introduced in previous sections. As we introduce mathematical concepts, we will use them to better understand quantum mechanics.
+This text is loosely sorted by complexity. Everything is derived from concepts introduced in previous sections. As we introduce mathematical concepts, we will use them to better understand quantum mechanics.
 \bigskip
 
 This is based on the Electrical and Computer Engineering 128 course
@@ -802,6 +802,16 @@ This is all true
 \subsection{Absolute Value of Complex Number}\label{absolute-value-of-complex-number}
 \[
 	z\cdot z^*=|z|^2
+\]
+\subsection{Complex Number Trigonometry}\label{complex-number-trigonometry}
+\[
+	\cos\theta = \frac{e^{i\theta} + e^{-i\theta}}{2}
+\]
+\[
+	\sin\theta = \frac{e^{i\theta} - e^{-i\theta}}{2i}
+\]
+\[
+	\tan\theta = \frac{\sin\theta}{\cos\theta} = \frac{1}{i}\cdot\frac{e^{i\theta} - e^{-i\theta}}{e^{i\theta} + e^{-i\theta}} = -i\cdot\frac{e^{i\theta} - e^{-i\theta}}{e^{i\theta} + e^{-i\theta}}
 \]
 
 
@@ -2187,7 +2197,7 @@ forms a basis for all 2x2 complex matrices. Any 2x2 matrix
 	X^2+Y^2+Z^2=I\\
 	tr(X)=tr(Y)=tr(Z)=0\\
 	XY=iZ, YZ=iX, ZX=iY\\
-	{[}X,Y]=2iZ,\; [Y,Z]=2iX,\; \ldots\\
+	[X, Y] = i\hbar Z, \quad [Y, Z] = i\hbar X, \quad [Z, X] = i\hbar Y\\
 	YX=(XY)^+=(iZ)^+=-iZ
 \end{gather*}
 
@@ -2629,12 +2639,12 @@ For the \hyperref[observables]{observable} \(A\) we see that the \hyperref[expec
 \]
 
 
-\section{Uncertainty Relation}\label{uncertainty-relation}
+\section{Heisenberg Uncertainty Relation}\label{uncertainty-relation}
 \[
-	\Delta A\Delta B\geq \frac{1}{2}|\braket{[\hat{A},\hat{B}]}|
+	\Delta A\Delta B\geq \frac{1}{2}\left|\mathbb{E}\left[[\hat{A},\hat{B}]\right]\right|
 \]
 \[
-	\Delta A^2 \Delta B^2 \geq \left(\bra{\psi}\frac{1}{2j}[\hat{A},\hat{B}]\ket{\psi}\right)
+	\Delta A^2 \Delta B^2 \geq \left|\bra{\psi}\frac{1}{2j}[\hat{A},\hat{B}]\ket{\psi}\right|^2 = \left(\frac{1}{2j}\mathbb{E}\left[[\hat{A},\hat{B}]\right]\right)^2
 \]
 Proof
 Consider any scalar \(\lambda\in \mathbb{C}\) and any \hyperref[vectors]{vectors} \(\ket{u},\ket{v}\in \mathbb{C}^n\) and we have two states \(\ket{f}\) and \(\ket{g}\).
@@ -2777,6 +2787,11 @@ Intelligent set of individuals who worked out that
 \]
 
 if $[A,B]=0$ does not \hyperref[commutators]{commute}, then $e^A e^B = e^{A+B}$
+\subsection{Cross Product}\label{cross-product}
+Works on 3-element rank-1 tensors i.e., 3D vectors.
+\[
+	\vec{A} \times \vec{B} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ A_x & A_y & A_z \\ B_x & B_y & B_z \end{vmatrix} = (A_y B_z - A_z B_y)\hat{i} + (A_z B_x - A_x B_z)\hat{j} + (A_x B_y - A_y B_x)\hat{k}
+\]
 \section{No-Cloning Theorem}\label{no-cloning-theorem}
 
 There exists no unitary operator $U$ that can clone a qubit.
@@ -3429,6 +3444,9 @@ via \hyperref[baker-campbell-hausdorff-formula]{Baker Campbell Hausdorff Formula
 \[
 	U(t,t_0) = e^{-iHt/\hbar}e^{iHt_0/\hbar}
 \]
+\[
+	\Rarr\boxed{U(t,t_0) = e^{-iH(t-t_0)/\hbar}}
+\]
 
 Hence this solves SE
 \[
@@ -3460,7 +3478,23 @@ We know that something \hyperref[commutators]{commutes} with itself, so $[U(t), 
 	\Rarr \tilde{H}(t)=U^\dag(t)HU(t)=H
 \]
 
-\subsection{Observables in time evolution}\label{observables-in-time-evolution}
+Heisenberg equation of motion for $\tilde{A}(t)$
+
+\[
+	\frac{d}{dt}A(t)=\frac{d}{dt}(U^\dag AU + U^\dag A\frac{dU}{dt})
+\]
+\[
+	=-\frac{1}{i\hbar}U^\dag H A U+\frac{1}{i\hbar}U^\dag A H U
+\]
+\[
+	=-\frac{i}{\hbar}(U^\dag HU U^\dag A U - U^\dag A U U^\dag H U)
+\]
+because \hyperref[commutators]{commutator},
+\[
+	\boxed{\frac{d}{dt}\hat{A}(t)=\frac{i}{\hbar}[\hat{H}(t),\hat{A}(t)]}
+\]
+
+\subsection{Ehrenfest Theorem}\label{observables-in-time-evolution}
 Given \hyperref[observables]{observable} $\hat{A}$, recall the \hyperref[expected-value-of-observables]{expectation value} of $\hat{A}$ is
 \[
 	\mathbb{E}[A(t)]=\bra{\psi(t)}A(t)\ket{\psi(t)}
@@ -3477,6 +3511,13 @@ because \hyperref[commutators]{commutator},
 	=\frac{i}{\hbar}\bra{\psi}[H,A]\ket{\psi}
 \]
 
+
+Ehrenfest theorem
+
+\[
+	\boxed{\frac{d}{dt}\mathbb{E}[A(t)]=\frac{i}{\hbar}\mathbb{E}\left[[H,A]\right]}
+\]
+
 Remarks
 
 \begin{enumerate}
@@ -3486,22 +3527,259 @@ Remarks
 	\item Sometimes convientn to change basis to Heisenberg picture to study observable dynamics
 \end{enumerate}
 
-Heisenberg equation of motion for $\tilde{A}(t)$
-
-\[
-	\frac{d}{dt}\tilde{A}(t)=\frac{d}{dt}(U^\dag AU + U^\dag A\frac{dU}{dt})
-\]
-\[
-	=-\frac{1}{i\hbar}U^\dag H A U+\frac{1}{i\hbar}U^\dag A H U
-\]
-\[
-	=-\frac{i}{\hbar}(U^\dag HU U^\dag A U - U^\dag A U U^\dag H U)
-\]
-because \hyperref[commutators]{commutator},
-\[
-	=\frac{i}{\hbar}[\tilde{H}(t),\tilde{A}(t)]
-\]
 
 
 
+\section{Example of Quantum Dynamics}\label{example-of-quantum-dynamics}
+This depends on \hyperref[quantum-dynamics]{quantum dynamics}.
+
+\subsection{Example 1}\label{example-1-of-quantum-dynamics}
+An electron is in an magnetic field in the $z+$ direction. There is a particle in state
+\[
+	\ket{\psi(0)}=\begin{pmatrix}\cos\theta_0/2 \\ e^{i\phi_0}\sin\theta_0/2\end{pmatrix}
+\]
+Find out the expected value of $S_z, S_x, S_y$ at time $t$.
+
+Classical charged particle has
+\[\vec{\mu}=\frac{q}{2m}\vec{s}\]
+
+A quantum one also has a $g$-factor
+\[\vec{\mu}=g\frac{q}{2m}\vec{s}\]
+
+In the case of an electron, $q=e, m=m_e, g\approx 2$
+\[
+	\vec{\mu}=g\underbrace{\frac{e\hbar}{2m_e}}_{\mu_B}\frac{1}{\hbar}\vec{s}
+\]
+Where $\mu_B$ is the Bohr magneton.
+
+The spin in magnetic field $\vec{B}$ experiences a torque.
+
+Clasically, the energy of a magnetic dipole in a B field is
+\[
+	U=-\vec{\mu}\cdot\vec{B}
+\]
+
+In quantum mechanics, the energy is the Hamiltonian operator $\hat{H}$
+Let
+\[
+	\gamma = \frac{g\mu_B}{\hbar}
+\]
+So
+\[
+	\hat{H}=-\vec{\mu}\cdot\vec{B}=-\gamma\vec{s}\cdot\vec{B}
+\]
+
+Since B field is in the $z+$ direction, $\vec{B}=B\hat{S_z}$
+
+\[
+	\hat{H}=-\gamma B \frac{\hbar}{2}\begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}=-\gamma B \hat{S}_z
+\]
+
+To do it the Schrödinger equation way, take the eigenvalues and \hyperref[eigenstates]{eigenstates} of $H$
+\[
+	H\ket{z\pm}=\mp\gamma B \frac{\hbar}{2}\ket{z\pm}
+\]
+Because Hamiltonian is time-independent, we can use the \hyperref[uniform-dynamics]{uniform dynamics} solution to find $U(t,t_0)$
+\[
+	U(t,0)\ket{z\pm}=e^{-iHt/\hbar}\ket{z\pm}=e^{\pm i\gamma B t/2}\ket{z\pm}
+\]
+
+Looking at the state $\ket{\psi(0)}$, we can write it as a superposition of the eigenstates of $H$
+\[
+	\ket{\psi(0)}=\cos\theta_0/2\ket{z+}+e^{i\phi_0}\sin\theta_0/2\ket{z-}
+\]
+\[
+	\ket{\psi(t)}=U(t)\ket{\psi(0)}
+\]
+\[
+	\ket{\psi(t)}=(e^{i\gamma B t/2})\cos\theta_0/2\ket{z+}+(e^{-i\gamma B t/2})e^{i\phi_0}\sin\theta_0/2\ket{z-}
+\]
+Global phase should be separated out
+\[
+	\ket{\psi(t)}=e^{i\gamma B t/2}\left[\cos\theta_0/2\ket{z+}+(e^{i(-\gamma B t+\phi_0)})\sin\theta_0/2\ket{z-}\right]
+\]
+Hence
+\[
+	\langle\psi(t)|\hat{S}_z|\psi(t)\rangle = \frac{\hbar}{2}\begin{pmatrix}\psi_+^* & \psi_-^*\end{pmatrix}\begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}\begin{pmatrix}\psi_+ \\ \psi_-\end{pmatrix}
+\]
+
+\[
+	= \frac{\hbar}{2}\begin{pmatrix}\psi_+^* & \psi_-^*\end{pmatrix}\begin{pmatrix}\psi_+ \\ -\psi_-\end{pmatrix}
+\]
+
+\[
+	= \frac{\hbar}{2}\left(\psi_+^*\psi_+ - \psi_-^*\psi_-\right) = \frac{\hbar}{2}\left(|\psi_+|^2 - |\psi_-|^2\right)
+\]
+
+\[
+	= \frac{\hbar}{2}\left(\cos^2\frac{\theta_0}{2} - \sin^2\frac{\theta_0}{2}\right)
+\]
+
+\[
+	= \frac{\hbar}{2}\cos\theta_0 \quad \text{(Note: unchanging in time)}
+\]
+
+\[
+	\langle\psi(t)|\hat{S}_x|\psi(t)\rangle = \frac{\hbar}{2}\begin{pmatrix}\psi_+^* & \psi_-^*\end{pmatrix}\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}\begin{pmatrix}\psi_+ \\ \psi_-\end{pmatrix}
+\]
+
+\[
+	= \frac{\hbar}{2}\begin{pmatrix}\psi_+^* & \psi_-^*\end{pmatrix}\begin{pmatrix}\psi_- \\ \psi_+\end{pmatrix}
+\]
+
+\[
+	= \frac{\hbar}{2}\left(\psi_+^*\psi_- + \psi_-^*\psi_+\right)
+\]
+
+Plug in \(\psi_+ = e^{+i\gamma B t/2}\cos(\theta_0/2)\) and \(\psi_- = e^{-i\gamma B t/2}e^{i\phi_0}\sin(\theta_0/2)\):
+
+\[
+	\psi_+^*\psi_- = e^{-i\gamma B t/2}\cos\frac{\theta_0}{2} \cdot e^{-i\gamma B t/2}e^{i\phi_0}\sin\frac{\theta_0}{2} = e^{i(\phi_0 - \gamma B t)}\cos\frac{\theta_0}{2}\sin\frac{\theta_0}{2}
+\]
+
+\[
+	\psi_-^*\psi_+ = e^{-i(\phi_0 - \gamma B t)}\cos\frac{\theta_0}{2}\sin\frac{\theta_0}{2}
+\]
+
+\[
+	\psi_+^*\psi_- + \psi_-^*\psi_+ = 2\cos\frac{\theta_0}{2}\sin\frac{\theta_0}{2}\cos(\phi_0 - \gamma B t) = \sin\theta_0 \cos(\phi_0 - \gamma B t)
+\]
+
+\[
+	\Rarr \langle\psi(t)|\hat{S}_x|\psi(t)\rangle = \frac{\hbar}{2}\sin\theta_0 \cos(\phi_0 - \gamma B t)
+\]
+
+\[
+	\langle\psi(t)|\hat{S}_y|\psi(t)\rangle = \frac{\hbar}{2}\begin{pmatrix}\psi_+^* & \psi_-^*\end{pmatrix}\begin{pmatrix}0 & -i \\ i & 0\end{pmatrix}\begin{pmatrix}\psi_+ \\ \psi_-\end{pmatrix}
+\]
+
+\[
+	= \frac{\hbar}{2}\begin{pmatrix}\psi_+^* & \psi_-^*\end{pmatrix}\begin{pmatrix}-i\psi_- \\ i\psi_+\end{pmatrix}
+\]
+
+\[
+	= \frac{\hbar}{2}\left(-i\psi_+^*\psi_- + i\psi_-^*\psi_+\right) = \frac{i\hbar}{2}\left(\psi_-^*\psi_+ - \psi_+^*\psi_-\right)
+\]
+
+Using the same products as above, with \(e^{ix} - e^{-ix} = 2i\sin x\):
+
+\[
+	\psi_-^*\psi_+ - \psi_+^*\psi_- = -2i\cos\frac{\theta_0}{2}\sin\frac{\theta_0}{2}\sin(\phi_0 - \gamma B t) = -i\sin\theta_0\sin(\phi_0 - \gamma B t)
+\]
+
+\[
+	\Rarr \langle\psi(t)|\hat{S}_y|\psi(t)\rangle = \frac{i\hbar}{2}\cdot(-i)\sin\theta_0\sin(\phi_0 - \gamma B t) = \frac{\hbar}{2}\sin\theta_0\sin(\phi_0 - \gamma B t)
+\]
+
+Another way to do it is to use the \hyperref[heisenberg-picture]{Heisenberg picture}
+
+\[
+	\frac{d}{dt}\hat{A}(t) = \frac{i}{\hbar}[\hat{H}, \hat{A}]
+\]
+
+Recalling the \hyperref[pauli-matrices]{Pauli matrices} and their commutators, we can derive it for \hyperref[quantum-system]{spin operators} $S_z,S_x,S_y$.
+
+\[
+	[\hat{S}_x, \hat{S}_y] = i\hbar\hat{S}_z, \quad [\hat{S}_y, \hat{S}_z] = i\hbar\hat{S}_x, \quad [\hat{S}_z, \hat{S}_x] = i\hbar\hat{S}_y
+\]
+
+For our Hamiltonian \(\hat{H} = -\gamma B \hat{S}_z\):
+
+\[
+	\frac{d}{dt}\hat{S}_z(t) = \frac{i}{\hbar}[-\gamma B \hat{S}_z(t), \hat{S}_z(t)] = -\frac{i\gamma B}{\hbar}[\hat{S}_z(t), \hat{S}_z(t)] = 0
+\]
+
+\[
+	\frac{d}{dt}\hat{S}_x(t) = \frac{i}{\hbar}[-\gamma B \hat{S}_z(t), \hat{S}_x(t)]
+\]
+
+\[
+	= -\frac{i\gamma B}{\hbar}[\hat{S}_z(t), \hat{S}_x(t)]
+\]
+
+\[
+	= -\frac{i\gamma B}{\hbar}\cdot i\hbar \hat{S}_y(t) = \gamma B \hat{S}_y(t)
+\]
+
+\[
+	\frac{d}{dt}\hat{S}_y(t) = \frac{i}{\hbar}[-\gamma B \hat{S}_z(t), \hat{S}_y(t)]
+\]
+
+\[
+	= -\frac{i\gamma B}{\hbar}[\hat{S}_z(t), \hat{S}_y(t)]
+\]
+
+\[
+	= -\frac{i\gamma B}{\hbar}\cdot(-i\hbar \hat{S}_x(t)) = -\gamma B \hat{S}_x(t)
+\]
+
+Collecting all three:
+
+\[
+	\frac{d}{dt}(\hat{S}_x, \hat{S}_y, \hat{S}_z) = \gamma B(\hat{S}_y, -\hat{S}_x, 0)
+\]
+
+Using \hyperref[cross-product]{cross product} formula:
+
+\[
+	= -\gamma(0, 0, B)\times(\hat{S}_x, \hat{S}_y, \hat{S}_z)
+\]
+
+\[
+	\boxed{\frac{d\vec{S}}{dt} = -\gamma \vec{B}\times\vec{S}} \quad \text{(Larmor precession)}
+\]
+
+\section{General Qubit Hamiltonian and Dynamics}\label{general-qubit-hamiltonian-and-dynamics}
+Relies on \hyperref[quantum-dynamics]{quantum dynamics}.
+
+This means that any 2x2 Hermitian Hamiltonian can be decomposed into an identity plus a rotation generator part.
+
+\[ H = \begin{pmatrix} g_0 + g_3 & g_1 - ig_2 \\ g_1 + ig_2 & g_0 - g_3 \end{pmatrix} \quad g_i \in \mathbb{R} \]
+
+\[ = g_0 I + g_1 X + g_2 Y + g_3 Z \]
+
+\[ = g_0 I + \vec{g}\cdot\vec{\sigma} \qquad \vec{g} = (g_1, g_2, g_3) = g\hat{n} \]
+
+\[ = g_0 I + g\,\hat{n}\cdot\vec{\sigma} \qquad \vec{\sigma} = (X, Y, Z) = (\sigma_x, \sigma_y, \sigma_z) \]
+
+\[ = g_0 I + \frac{2g}{\hbar}\,\hat{n}\cdot\vec{S} \]
+
+
+Remarks
+\begin{enumerate}
+	\item If and only $B$ is Hermitian then $U=e^{iB}$ is unitary.
+	\item Spin/angular momentum generates rotations
+	\item Unitary $V$ is a dynamical symmetry of system if it commutes with time evolution
+	      \[
+		      [V,U(t)]=0 \Rarr [V,H(t)]=0
+	      \]
+	\item Hermitian $A$ is a conserved quantity if $[A,H(t)]=0$. This also means $V(\theta)=e^{i\theta A}$ is a dynamical symmetry of the system. A conserved quantity generates dynamical symmetries.
+
+\end{enumerate}
+\section{Time Energy Uncertainty}\label{time-energy-uncertainty}
+Relies on \hyperref[quantum-dynamics]{quantum dynamics}.
+
+Time is not an observable.
+
+We could count $N$ full waves of frequency $\omega$ over a time window $T$. You can only count to within $\pm 1$ wave, so $\Delta N\geq 1$.
+
+The uncertainty in the wavecount is $\Delta N$
+
+We know that
+
+\[
+	N=\frac{\omega T}{2\pi} \quad\Rarr \quad \Delta N = \frac{\Delta \omega T}{2\pi} \geq 1 \quad \Rarr \quad \Delta \omega T \geq 2\pi
+\]
+
+From \hyperref[planck-einstein-relation](Planck-Einstein relation),
+\[
+	\Delta E \cdot T\geq h = \frac{\hbar}{2}
+\]
+\[
+	\begin{pmatrix}
+		\alpha   & \beta    \\
+		-\beta^* & \alpha^*
+	\end{pmatrix}
+\]
 \end{document}
+
