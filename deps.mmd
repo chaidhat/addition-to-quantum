@@ -21,7 +21,7 @@ flowchart TD
   angular_frequency_reduced_planck_constant["Angular Frequency, reduced Planck constant"]:::orphan
   particle_energies["Particle Energy"]:::section
   particle_phases["Particle Phase"]:::section
-  schruxf6dingers_equation_hamiltonian["Schrödinger's Equation I, Hamiltonian"]:::section
+  schruxf6dingers_equation_hamiltonian["Schrödinger's Equation, Hamiltonian I,"]:::section
   quantum_system["Quantum System"]:::section
   linear_algebra_ii["Linear Algebra II"]:::section
   observables["Observable"]:::section
@@ -35,7 +35,7 @@ flowchart TD
   measuring_a_quantum_state["Measuring a Quantum State"]:::section
   density_matrix["Density Matrix"]:::section
   uncertainty_relation["Uncertainty Relation"]:::section
-  tensor["Tensor"]:::section
+  linear_algebra_iii["Linear Algebra III"]:::section
   no_cloning_theorem["No-Cloning Theorem"]:::section
   quantum_information_capacity["Quantum Information Capacity"]:::section
   basic_decoding_theory["Basic Decoding Theory"]:::section
@@ -74,8 +74,8 @@ flowchart TD
   borns_rule ~~~ measuring_a_quantum_state
   measuring_a_quantum_state ~~~ density_matrix
   density_matrix ~~~ uncertainty_relation
-  uncertainty_relation ~~~ tensor
-  tensor ~~~ no_cloning_theorem
+  uncertainty_relation ~~~ linear_algebra_iii
+  linear_algebra_iii ~~~ no_cloning_theorem
   no_cloning_theorem ~~~ quantum_information_capacity
   quantum_information_capacity ~~~ basic_decoding_theory
   basic_decoding_theory ~~~ basic_distinguishability_theory
@@ -108,6 +108,7 @@ flowchart TD
   linear_algebra_ii --> linear_algebra_i
   linear_algebra_ii --> hilbert_spaces
   linear_algebra_ii --> set_theory
+  linear_algebra_ii --> calculus
   linear_algebra_ii --> complex_numbers
   linear_algebra_ii --> observables
   observables --> linear_algebra_ii
@@ -140,8 +141,9 @@ flowchart TD
   uncertainty_relation --> borns_rule
   uncertainty_relation --> probability_theory
   uncertainty_relation --> observables
-  tensor --> linear_algebra_i
-  no_cloning_theorem --> tensor
+  linear_algebra_iii --> linear_algebra_i
+  linear_algebra_iii --> linear_algebra_ii
+  no_cloning_theorem --> linear_algebra_iii
   no_cloning_theorem --> linear_algebra_i
   quantum_information_capacity --> quantum_system
   quantum_information_capacity --> hilbert_spaces
@@ -163,8 +165,13 @@ flowchart TD
   quantum_dynamics --> hilbert_spaces
   quantum_dynamics --> borns_rule
   quantum_dynamics --> complex_numbers
+  quantum_dynamics --> ket_states
+  quantum_dynamics --> linear_algebra_iii
+  quantum_dynamics --> observables
+  quantum_dynamics --> calculus
+  quantum_dynamics --> compatibility
 
-  linkStyle 42,49,55,65 stroke:#e74c3c,stroke-width:2px
-  linkStyle 38,39,40,41,43,44,45,46,47,48,50,51,52,53,54,56,57,58,59,60,61,62,63,64,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118 stroke:#444,stroke-width:1px
+  linkStyle 42,49,55,66 stroke:#e74c3c,stroke-width:2px
+  linkStyle 38,39,40,41,43,44,45,46,47,48,50,51,52,53,54,56,57,58,59,60,61,62,63,64,65,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125 stroke:#444,stroke-width:1px
 
-%% Sections: 39, edges: 81, out-of-order (downward, red): 4, in-order (upward, gray): 77
+%% Sections: 39, edges: 88, out-of-order (downward, red): 4, in-order (upward, gray): 84

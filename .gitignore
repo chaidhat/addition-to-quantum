@@ -12,3 +12,4 @@ build/*
 *.nav
 *.snm
 *.vrb
+*.tex.new
