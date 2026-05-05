@@ -21,7 +21,7 @@ flowchart TD
   angular_frequency_reduced_planck_constant["Angular Frequency, reduced Planck constant"]:::orphan
   particle_energies["Particle Energy"]:::section
   particle_phases["Particle Phase"]:::section
-  schruxf6dingers_equation_hamiltonian["Schrödinger's Equation, Hamiltonian"]:::section
+  schruxf6dingers_equation_hamiltonian["Schrödinger's Equation I, Hamiltonian"]:::section
   quantum_system["Quantum System"]:::section
   linear_algebra_ii["Linear Algebra II"]:::section
   observables["Observable"]:::section
@@ -29,15 +29,19 @@ flowchart TD
   bloch_sphere["Bloch Sphere"]:::section
   observable_on_a_qubit["Observable on a qubit"]:::section
   degeneracy["Degeneracy"]:::section
-  spectral_decomposition["Spectral Decomposition"]:::section
   compatibility["Compatibility"]:::section
-  borns_rule["Born's Rule"]:::section
   probability_theory["Probability Theory"]:::section
+  borns_rule["Born's Rule"]:::section
   measuring_a_quantum_state["Measuring a Quantum State"]:::section
   density_matrix["Density Matrix"]:::section
-  cauchy_schwarz_inequality["Cauchy-Schwarz Inequality"]:::section
   uncertainty_relation["Uncertainty Relation"]:::section
-  quantum_information_capacity["Quantum Information Capacity"]:::orphan
+  tensor["Tensor"]:::section
+  no_cloning_theorem["No-Cloning Theorem"]:::section
+  quantum_information_capacity["Quantum Information Capacity"]:::section
+  basic_decoding_theory["Basic Decoding Theory"]:::section
+  basic_distinguishability_theory["Basic Distinguishability Theory"]:::section
+  quantum_cryptography["Quantum Cryptography"]:::section
+  quantum_dynamics["Quantum Dynamics"]:::section
 
   let ~~~ variables_addition
   variables_addition ~~~ matrices
@@ -64,15 +68,19 @@ flowchart TD
   pauli_matrices ~~~ bloch_sphere
   bloch_sphere ~~~ observable_on_a_qubit
   observable_on_a_qubit ~~~ degeneracy
-  degeneracy ~~~ spectral_decomposition
-  spectral_decomposition ~~~ compatibility
-  compatibility ~~~ borns_rule
-  borns_rule ~~~ probability_theory
-  probability_theory ~~~ measuring_a_quantum_state
+  degeneracy ~~~ compatibility
+  compatibility ~~~ probability_theory
+  probability_theory ~~~ borns_rule
+  borns_rule ~~~ measuring_a_quantum_state
   measuring_a_quantum_state ~~~ density_matrix
-  density_matrix ~~~ cauchy_schwarz_inequality
-  cauchy_schwarz_inequality ~~~ uncertainty_relation
-  uncertainty_relation ~~~ quantum_information_capacity
+  density_matrix ~~~ uncertainty_relation
+  uncertainty_relation ~~~ tensor
+  tensor ~~~ no_cloning_theorem
+  no_cloning_theorem ~~~ quantum_information_capacity
+  quantum_information_capacity ~~~ basic_decoding_theory
+  basic_decoding_theory ~~~ basic_distinguishability_theory
+  basic_distinguishability_theory ~~~ quantum_cryptography
+  quantum_cryptography ~~~ quantum_dynamics
 
   matrices --> variables_addition
   ket_states --> matrices
@@ -86,6 +94,7 @@ flowchart TD
   linear_algebra_i --> ket_states
   linear_algebra_i --> functions
   linear_algebra_i --> hilbert_spaces
+  linear_algebra_i --> matrices
   hilbert_spaces --> linear_algebra_i
   hilbert_spaces --> complex_numbers
   particle_energies --> linear_algebra_i
@@ -110,32 +119,52 @@ flowchart TD
   degeneracy --> linear_algebra_ii
   degeneracy --> schruxf6dingers_equation_hamiltonian
   degeneracy --> hilbert_spaces
-  spectral_decomposition --> linear_algebra_ii
-  spectral_decomposition --> hilbert_spaces
-  spectral_decomposition --> linear_algebra_i
   compatibility --> linear_algebra_i
   compatibility --> linear_algebra_ii
   compatibility --> observables
-  borns_rule --> quantum_system
-  borns_rule --> observables
-  borns_rule --> linear_algebra_ii
   probability_theory --> set_theory
   probability_theory --> linear_algebra_i
   probability_theory --> linear_algebra_ii
+  borns_rule --> quantum_system
+  borns_rule --> observables
+  borns_rule --> probability_theory
+  borns_rule --> linear_algebra_ii
   measuring_a_quantum_state --> observables
   measuring_a_quantum_state --> borns_rule
   measuring_a_quantum_state --> linear_algebra_ii
   measuring_a_quantum_state --> linear_algebra_i
   density_matrix --> linear_algebra_ii
   density_matrix --> observables
-  cauchy_schwarz_inequality --> linear_algebra_i
+  density_matrix --> probability_theory
   uncertainty_relation --> linear_algebra_i
   uncertainty_relation --> borns_rule
-  uncertainty_relation --> cauchy_schwarz_inequality
-  uncertainty_relation --> observables
   uncertainty_relation --> probability_theory
+  uncertainty_relation --> observables
+  tensor --> linear_algebra_i
+  no_cloning_theorem --> tensor
+  no_cloning_theorem --> linear_algebra_i
+  quantum_information_capacity --> quantum_system
+  quantum_information_capacity --> hilbert_spaces
+  quantum_information_capacity --> linear_algebra_i
+  quantum_information_capacity --> borns_rule
+  quantum_information_capacity --> linear_algebra_ii
+  basic_decoding_theory --> quantum_information_capacity
+  basic_decoding_theory --> hilbert_spaces
+  basic_distinguishability_theory --> basic_decoding_theory
+  quantum_cryptography --> set_theory
+  quantum_cryptography --> functions
+  quantum_cryptography --> pauli_matrices
+  quantum_cryptography --> basic_decoding_theory
+  quantum_cryptography --> no_cloning_theorem
+  quantum_dynamics --> schruxf6dingers_equation_hamiltonian
+  quantum_dynamics --> linear_algebra_i
+  quantum_dynamics --> linear_algebra_ii
+  quantum_dynamics --> probability_theory
+  quantum_dynamics --> hilbert_spaces
+  quantum_dynamics --> borns_rule
+  quantum_dynamics --> complex_numbers
 
-  linkStyle 38,45,50,60 stroke:#e74c3c,stroke-width:2px
-  linkStyle 34,35,36,37,39,40,41,42,43,44,46,47,48,49,51,52,53,54,55,56,57,58,59,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93 stroke:#444,stroke-width:1px
+  linkStyle 42,49,55,65 stroke:#e74c3c,stroke-width:2px
+  linkStyle 38,39,40,41,43,44,45,46,47,48,50,51,52,53,54,56,57,58,59,60,61,62,63,64,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118 stroke:#444,stroke-width:1px
 
-%% Sections: 35, edges: 60, out-of-order (downward, red): 4, in-order (upward, gray): 56
+%% Sections: 39, edges: 81, out-of-order (downward, red): 4, in-order (upward, gray): 77

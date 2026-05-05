@@ -99,13 +99,16 @@
 \maketitle
 
 
-Hi, my name is Chai and I'm taking a quantum mechanics course at UCLA.
+Hi, my name is Chai and I'm taking an undergraduate quantum mechanics course at UCLA.
 \bigskip
 
-At the start, you only need to know how to add and multiply numbers.
+It's \underline{\href{https://www.reddit.com/r/ucla/comments/1lhbq9z/ece_128_hardest_class_at_ucla/}{known as one of the hardest classes at UCLA}.}
 \bigskip
 
-After reading this study guide, you'll know how to do quantum mechanics problems.
+This text is written so that, at the start, you only need to know how to do basic middle school arithmetic.
+\bigskip
+
+In the end, you'll know how to do quantum mechanics problems.
 \bigskip
 
 The study guide is loosely sorted by complexity. Everything is derived from concepts introduced in previous sections. As we introduce mathematical concepts, we will use them to better understand quantum mechanics.
@@ -1340,8 +1343,8 @@ slit experiment. That's why phases exist. Because light is a wave with a
 frequency (and also a particle!)
 
 
-\section{Schrödinger's Equation,
-  Hamiltonian}\label{schruxf6dingers-equation-hamiltonian}
+\section{Schrödinger's Equation, Hamiltonian I,
+ }\label{schruxf6dingers-equation-hamiltonian}
 
 Recall from \hyperref[particle-energies]{particle energies} that
 
@@ -1727,6 +1730,11 @@ corresponding to \hyperref[eigenvectorseigenvalues]{eigenvalues} \(\lambda_1,\la
 	(e^{iH})^+e^{iH}=I
 \end{gather*}
 
+Note that if $A$ is a matrix, then, via \hyperref[taylor-series]{Taylor series}, we have
+\[e^{At} = \sum_{k=0}^{\infty}\frac{A^k t^k}{k!} = I + At + \frac{(At)^2}{2!} + \frac{(At)^3}{3!} + \cdots\]
+
+\[\frac{d}{dt}e^{At} = \sum_{k=1}^{\infty}\frac{kA^k t^{k-1}}{k!} = A\sum_{k=1}^{\infty}\frac{A^{k-1}t^{k-1}}{(k-1)!} = Ae^{At} = e^{At}A\]
+
 \subsection{Commutator}\label{commutators}
 
 The commutator of two \hyperref[operators]{operators} \(\hat{A},\hat{B}\) is defined as
@@ -1803,6 +1811,16 @@ equals the conjugate transpose of the matrix of \(\hat{A}\)
 \begin{gather*}
 	\hat{A}^+=\text{adjoint of $\hat{A}$}
 \end{gather*}
+
+\subsection{Normal Operator}\label{normal-operator}
+
+An \hyperref[operators]{operator} $A$ is normal if and only if
+
+\begin{gather*}
+	\hat{A}\hat{A}^+=\hat{A}^+\hat{A}
+\end{gather*}
+
+Not to be confused with \hyperref[normal]{normal}.
 
 \subsection{Hermitian Matrix}\label{hermitian-matrix}
 
@@ -2009,6 +2027,30 @@ then we can change basis
 
 Both \(\{\ket{\alpha_n}\}\) and \(\{\ket{\beta_n}\}\) are orthonormal
 basis
+\subsection{Spectral Decomposition}\label{spectral-decomposition}
+Let there be a \hyperref[hermitian-operators]{Hermitian operator} \(\hat{A}\) on a finite-dimensional \hyperref[hilbert-spaces]{Hilbert space}.
+Spectral theorem says that a  \(\hat{A}\) is unitarily \hyperref[diagonalization]{diagonalizable} and only if it is \hyperref[normal-operator]{normal}.
+There exists real eigenvalues \(\{a_n\}\), \hyperref[orthonormality]{orthonormal} \hyperref[eigenvectorseigenvalues]{eigenvectors} \(\{\ket{k}\}\) which form orthogonal \hyperref[projectors]{projectors} \(\{\hat{\Pi}_n\}\) such that
+
+\[
+	\hat{A}=\sum_{n=1}^N a_n\hat{\Pi}_n=\sum_{n=1}^N a_n\ket{k}\bra{k}
+\]
+
+where projectors satisfy
+
+\begin{enumerate}
+	\def\labelenumi{\arabic{enumi}.}
+	\tightlist
+	\item
+	      \(\hat{\Pi}_n\hat{\Pi}_m=0\) for \(n\neq m\) which means they are \hyperref[orthogonality]{orthogonal}
+	\item
+	      \(\sum_{n=1}^N \hat{\Pi}_n=\hat{I}\) which means they are a complete set of projectors
+	\item this projector projects onto the \(a_n\)-\hyperref[eigenspaces]{eigenspace} of \(\hat{A}\)
+\end{enumerate}
+
+So \(\{a_n\}\) is the spectrum of \(\hat{A}\).
+
+And that means you can think \(\hat{A}\) as scaling each eigenspace by its own eigenvalue.
 
 \section{Observable}\label{observables}
 
@@ -2316,30 +2358,6 @@ This means that \(\hat{A}\ket{\psi}\) is in the \(E\)-\hyperref[eigenspaces]{eig
 This means that \(\hat{A}\) maps a vector in the \(E\)-eigenspace of \(\hat{H}\) to another vector in the \(E\)-eigenspace of \(\hat{H}\).
 
 
-\section{Spectral Decomposition}\label{spectral-decomposition}
-Let there be a \hyperref[hermitian-operators]{Hermitian operator} \(\hat{A}\) on a finite-dimensional \hyperref[hilbert-spaces]{Hilbert space}.
-
-There exists real eigenvalues \(\{a_n\}\) and orthogonal \hyperref[projectors]{projectors} \(\{\hat{\Pi}_a\}\) such that
-
-\[
-	\hat{A}=\sum_{n=1}^N a_n\hat{\Pi}_a
-\]
-
-where projectors satisfy
-
-\begin{enumerate}
-	\def\labelenumi{\arabic{enumi}.}
-	\tightlist
-	\item
-	      \(\hat{\Pi}_n\hat{\Pi}_m=0\) for \(n\neq m\) which means they are \hyperref[orthogonality]{orthogonal}
-	\item
-	      \(\sum_{n=1}^N \hat{\Pi}_n=\hat{I}\) which means they are a complete set of projectors
-	\item this projector projects onto the \(a_n\)-\hyperref[eigenspaces]{eigenspace} of \(\hat{A}\)
-\end{enumerate}
-
-So \(\{a_n\}\) is the spectrum of \(\hat{A}\).
-
-And that means you can think \(\hat{A}\) as scaling each eigenspace by its own eigenvalue.
 
 \section{Compatibility}\label{compatibility}
 Compatibility is a property of two \hyperref[operators]{operators}.
@@ -2520,10 +2538,20 @@ Another convientn reprsentation is
 \end{gather*}
 
 where \(tr\) is \hyperref[traces]{trace}
+\subsection{Cauchy-Schwarz Inequality}\label{cauchy-schwarz-inequality}
+Given two \hyperref[vectors]{vectors} \(\ket{u},\ket{v}\in \mathbb{C}^n\),
+\[
+	|\braket{u|v}|\leq \|u\|\|v\|
+\]
+It's squared form can be written as
+\[
+	|\braket{u|v}|^2\leq \braket{u|u}\braket{v|v}
+\]
+
 \section{Born's Rule}\label{borns-rule}
 
 If a \hyperref[quantum-system]{quantum system} is in state \(\ket{\psi}\) and you measure
-\hyperref[observables]{observable} \(\hat{A}\) --- the probability of getting \hyperref[eigenvectorseigenvalues]{eigenvalue}
+\hyperref[observables]{observable} \(\hat{A}\) --- the \hyperref[probability-theory]{probability} of getting \hyperref[eigenvectorseigenvalues]{eigenvalue}
 \(\lambda_\alpha\) (which corresponds to \hyperref[eigenstates]{eigenstate} \(\ket{\alpha}\)) is
 
 \begin{gather*}
@@ -2600,15 +2628,6 @@ For the \hyperref[observables]{observable} \(A\) we see that the \hyperref[expec
 	\mathbb{E}[A]=tr(\rho A)
 \]
 
-\section{Cauchy-Schwarz Inequality}\label{cauchy-schwarz-inequality}
-Given two \hyperref[vectors]{vectors} \(\ket{u},\ket{v}\in \mathbb{C}^n\),
-\[
-	|\braket{u|v}|\leq \|u\|\|v\|
-\]
-It's squared form can be written as
-\[
-	|\braket{u|v}|^2\leq \braket{u|u}\braket{v|v}
-\]
 
 \section{Uncertainty Relation}\label{uncertainty-relation}
 \[
@@ -2708,7 +2727,9 @@ Note that \(Im z=\frac{1}{2i}(z-z^*)\)
 	\Rarr\Delta A^2\Delta B^2\geq \left(\bra{\psi}\frac{1}{2i}[\hat{A},\hat{B}]\ket{\psi}\right)^2
 \]
 
-\section{Tensor}\label{tensor}
+\section{Linear Algebra III}\label{linear-algebra-iii}
+Hold on, this is advanced linear algebra!
+\subsection{Tensor}\label{tensor}
 A scalar is a rank-0 tensor (0D).
 
 A vector is a rank-1 tensor (1D).
@@ -2747,9 +2768,19 @@ The dimensions are multiplied
 \[
 	dim(V\otimes W)=dim(V)\times dim(W)
 \]
+
+\subsection{Baker Campbell Hausdorff Formula}\label{baker-campbell-hausdorff-formula}
+
+Intelligent set of individuals who worked out that
+\[
+	e^A e^B = exp(A+B+\frac{1}{2}[A,B]+\frac{1}{12}[A,[A,B]]-\frac{1}{12}[B,[A,B]]+\cdots)
+\]
+
+if $[A,B]=0$ does not \hyperref[commutators]{commute}, then $e^A e^B = e^{A+B}$
 \section{No-Cloning Theorem}\label{no-cloning-theorem}
 
 There exists no unitary operator $U$ that can clone a qubit.
+Note that $\otimes$ is the \hyperref[tensor-product]{tensor product}.
 \[
 	C(\ket{\psi})=\ket{\psi}\otimes\ket{\psi}
 \]
@@ -2842,6 +2873,7 @@ The success probability for Bob to correctly distinguish the different messages.
 \[
 	P_s=\sum_{\alpha=1}^NP(\alpha)\sum_{k\in C_\alpha}P(outcome~k|\text{message $\alpha$ was sent})\\
 \]
+Recall \hyperref[borns-rule]{Born's rule} that
 \[
 	=\sum_{\alpha =1}^N\frac{1}{N}\sum_{k\in C_\alpha}|\braket{k|\alpha}|^2
 \]
@@ -2913,6 +2945,7 @@ This means the probability of a successful decoding is at most the number of dim
 
 \section{Basic Decoding Theory}\label{basic-decoding-theory}
 
+This is based on \hyperref[quantum-information-capacity]{quantum information capacity}.
 Given that Alice is trying to send a message to Bob, the decoding error is
 \[
 	P_E=1-P_s\geq 1-\frac{d}{N}
@@ -2921,10 +2954,12 @@ Note that
 \begin{enumerate}
 	\item If \(N\geq d\), then \(P_E\geq 0\) -- there is no way to reliably distinguish messages
 	\item lower bound in theorem also holds even if alice sends mixed states \(\{\rho_\alpha\}_{\alpha=1}^N\)
-	\item A quantum system with Hilbert space dimension \(d\) has information capacity of \(\log_2(d)\) bits. This is the maximum number of bits that can be stored, communicated, and read reliably. This is the same amount of infromation from classical d-state system.
+	\item A quantum system with \hyperref[hilbert-spaces]{Hilbert space} dimension \(d\) has information capacity of \(\log_2(d)\) bits. This is the maximum number of bits that can be stored, communicated, and read reliably. This is the same amount of infromation from classical d-state system.
 \end{enumerate}
 
 \section{Basic Distinguishability Theory}\label{basic-distinguishability-theory}
+
+This refines \hyperref[basic-decoding-theory]{basic decoding theory}.
 
 Probability of successfully distinguishing between two equally likely pure states \(\ket{\alpha_0}, \ket{\alpha_1}\) where \(\braket{\alpha_0|\alpha_1}=\cos\theta\) is
 \[
@@ -2994,7 +3029,7 @@ In the quantum world, we use quantum key distribution (QKD) to securely share th
 \subsection{BB84 Protocol}\label{bb84-protocol}
 This is a type of quantum key distribution protocol. It is named after Bennett and Brassard in 1984.
 
-Alice chooses a basis $b$ and a bit $p$ (i.e., parent)
+Alice chooses a basis $b$ (subset of the \hyperref[pauli-matrices]{Pauli matrices}) and a bit $p$ (i.e., parent)
 \[
 	b\in\{X,Z\}
 	\quad
@@ -3069,6 +3104,403 @@ If Eve sends qubit along to Bob, they would be wrong half of the time. Alice and
 
 Due to the \hyperref[no-cloning-theorem]{no-cloning theorem}, Eve cannot copy the qubit and send it to Bob.
 
+
+
+\section{Quantum Dynamics}\label{quantum-dynamics}
+Quantum dynamics is the study of how quantum systems evolve over time.
+\subsection{Isolated System}\label{isolated-system}
+
+This builds on \hyperref[schruxf6dingers-equation-hamiltonian]{Schrödinger's equation}.
+State changes from $t_1\rarr t_2$ according to some linear \hyperref[operators]{operator} $U(t_2, t_1)$.
+\[
+	\ket{\psi(t_2)}=U(t_2, t_1)\ket{\psi(t_1)}
+\]
+
+Properties
+\begin{enumerate}
+	\tightlist
+	\item $t_2=t_1$ gives no change
+	      \[
+		      \ket{\psi(t_1)}=U(t_1, t_1)\ket{\psi(t_1)}
+	      \]
+	      \[
+		      U(t_1, t_1)=I
+	      \]
+	\item composition
+	      \[
+		      \ket{\psi(t_3)}=U(t_3, t_2)\ket{\psi(t_2)}
+	      \]
+	      \[
+		      =U(t_3, t_2)U(t_2, t_1)\ket{\psi(t_1)}
+	      \]
+	      \[
+		      =U(t_3, t_1)\ket{\psi(t_1)}
+	      \]
+	      hence
+	      \[
+		      U(t_3, t_1)=U(t_3, t_2)U(t_2, t_1)
+	      \]
+	\item inverse
+	      \[
+		      I=U(t_1,t_2)U(t_2,t_1)
+	      \]
+	      \[
+		      U(t_1,t_2)=U^{-1}(t_2,t_1)=U^\dag(t_2, t_1)
+	      \]
+	\item diagonalizable
+	      \[
+		      U^\dag U = U U^\dag
+	      \]
+	      this means \hyperref[spectral-decomposition]{spectral theorem} applies.
+	      For every orthonormal basis $\{\ket{k}\}$,
+	      \[
+		      U=\sum_k\lambda_k\ket{k}\bra{k}
+	      \]
+	      \[
+		      I=\bra{k}U^\dag U\ket{k}
+	      \]
+	      \[
+		      \lambda_k=e^{i\theta_k}
+	      \]
+\end{enumerate}
+
+
+\subsection{Unitary Evolution}\label{unitary-evolution}
+
+Postulates of an \hyperref[isolated-system]{isolated system}:
+
+\begin{enumerate}
+	\tightlist
+	\item $U(t_2,t_1)$ should be independent of initial state.
+	      \[
+		      \alpha\ket{\psi}+\beta\ket{\phi}\rarr U(t_2,t_1)(\alpha\ket{\psi}+\beta\ket{\phi})=
+	      \]
+	\item must preserve \hyperref[probability-theory]{probablity} (must sum to 1) if isolated which means $U$ must be \hyperref[unitary-operator]{unitary} if \hyperref[hilbert-spaces]{Hilbert space} is finite dimensional.
+	\item assume $U$ is unitary in infinite dimensional Hilbert space.
+\end{enumerate}
+
+Unpacking 2. we see that
+\[
+	\braket{\psi|\psi}=1
+\]
+This is because \hyperref[borns-rule]{Born's rule} says that, over $\ket{k}$ basis states,
+\[
+	\sum_k |\braket{k|\psi}|^2=1
+\]
+as probability must sum to 1.
+Using \hyperref[absolute-value-of-complex-number]{this lemma}, we get
+\[
+	\sum_k|\braket{k|\psi}|^2=\sum_k\braket{\psi|k}\braket{k|\psi}=\bra{\psi}\left(\sum_k\ket{k}\bra{k}\right)\ket{\psi}
+\]
+\[
+	=\bra{\psi}I\ket{\psi}=\braket{\psi|\psi}
+\]
+
+so if we evolve it over time then
+\[
+	(U\ket{\psi})^\dag U\ket{\psi}=1\quad\forall\quad\ket{\psi}
+\]
+\[
+	\Rarr \quad \bra{\psi}U^+U \ket{\psi}=1
+\]
+\[
+	\Rarr \quad U^+U=I
+\]
+
+This means that $U$ is \hyperref[unitary-operator]{unitary}.
+
+Note that
+
+\[
+	U(t_0,t)=U^{-1}(t,t_0)=U^\dag(t,t_0)
+\]
+\subsection{Schrödinger Equation, Hamiltonian II}\label{schrodinger-equation}
+Let's derive the Schrödinger equation from the postulates of an \hyperref[isolated-system]{isolated system}.
+
+Let $t_0$ be the initial time and $t$ be the time after some time has passed.
+
+Let
+\[
+	|\psi(t)\rangle = U(t, t_0) |\psi(t_0)\rangle
+\]
+So
+
+\[
+	\frac{\partial}{\partial t} |\psi(t)\rangle = \frac{\partial U(t, t_0)}{\partial t} |\psi(t_0)\rangle
+\]
+Due to its inverse property where $U(t_0,t)U(t,t_0)=I$,
+
+\[
+	= \frac{\partial U(t, t_0)}{\partial t} \, U(t_0, t) |\psi(t)\rangle
+\]
+
+\[
+	= \underbrace{\frac{\partial U(t, t_0)}{\partial t} \, U^\dagger(t, t_0)}_{\Lambda(t, t_0)} |\psi(t)\rangle
+\]
+
+
+Properties
+\begin{enumerate}
+	\tightlist
+	\item \(\Lambda(t, t_0)\) is \hyperref[anti-hermitian-operators]{anti-Hermitian}.
+
+	      Note:
+	      \[
+		      \Lambda^\dagger(t, t_0) = U(t, t_0) \, \frac{\partial U^\dagger(t, t_0)}{\partial t}
+	      \]
+
+	      Differentiate \(U(t, t_0) U^\dagger(t, t_0) = I\):
+	      \[
+		      \frac{\partial}{\partial t}\!\left[U(t, t_0) U^\dagger(t, t_0)\right] = \frac{\partial U(t, t_0)}{\partial t} U^\dagger(t, t_0) + U(t, t_0) \frac{\partial U^\dagger(t, t_0)}{\partial t} = 0
+	      \]
+
+	      \[
+		      \Rightarrow \;\; \Lambda(t, t_0) + \Lambda^\dagger(t, t_0) = 0
+	      \]
+
+	      \[
+		      \Rightarrow \;\; \Lambda = -\Lambda^\dagger \;\;\text{is anti-Hermitian.}
+	      \]
+	\item \(\Lambda(t, t_0)\) is independent of $t_0$
+	      \[
+		      \Lambda (t,t_0)=\frac{\partial U(t, t_0)}{\partial t} U^\dagger(t, t_0)
+	      \]
+	      \[
+		      =\frac{\partial U(t, t_0)}{\partial t} U(t_0,t_1)U^\dag(t_0,t_1)
+		      U^\dagger(t, t_0)
+	      \]
+	      \[
+		      =\frac{\partial}{\partial t}[U(t,t_0)U(t_0,t_1)][U(t,t_0)U(t_0, t_1)]^\dag
+	      \]
+	      \[
+		      =\frac{\partial U(t,t_1)}{\partial t}U^\dag(t,t_1)=\Lambda (t,t_1)
+	      \]
+	      For any $t_0,t_1$
+\end{enumerate}
+
+Let
+
+\[
+	\Lambda (t)\triangleq \Lambda (t,t_0)
+\]
+\[
+	\Rarr \frac{d}{dt}\ket{\psi(t)} = \frac{\partial}{\partial t}U(t, t_0)U^\dag(t,t_0) |\psi(t)\rangle
+\]
+\[
+	=\Lambda (t)\ket{\psi(t)}
+\]
+
+Then, let
+\[
+	\boxed{H(t)\triangleq i\hbar \Lambda (t) = i\hbar \frac{\partial U(t, t_0)}{\partial t} U^\dagger(t, t_0)}
+\]
+
+This is known as the Hamiltonian, which has the units of energy. In natural units where $\hbar=1$, it is simply inverse time $s^{-1}$.
+
+We arrive at the Schrödinger equation:
+\[
+	\boxed{i\hbar \frac{d}{dt}\ket{\psi(t)}=H(t)\ket{\psi(t)}}
+\]
+Remarks
+
+\begin{enumerate}
+	\tightlist
+	\item Derived Schrödinger equation from only the assumption of unitary time evolution. The Hamiltonian operator is derived from $U(t,t_0)$
+	\item Converse is true where we can construct $U(t,t_0)$ from knowledge of $H(t)$
+	\item in many physical systems, it easier to find $H(t)$ than finding $U(t,t_0)$
+\end{enumerate}
+
+\subsection{Example of Finding Hamiltonian}\label{example-of-finding-hamiltonian}
+
+Let there be a particle in space where energy is kinetic energy plus potential energy.
+
+In classical physics, we know that
+\[
+	KE = \frac{1}{2}mv^2 = \frac{p^2}{2m}
+\]
+where $KE$ is kinetic energy, $m$ is mass, $v$ is velocity and $p=mv$ is momentum.
+We know that potential energy $V(x)$ is a function of position $x$.
+
+Hence in classical physics, energy is
+\[
+	E=KE+V(x)=\frac{p^2}{2m}+V(x)
+\]
+
+A wavelength $\lambda$ travelling in the direction $x$ can be written as $e^{ikx}$ where wave number $k$ is defined as
+\[
+	k\triangleq \frac{2\pi}{\lambda}
+\]
+
+de Broglie in 1924 hypothesized that every particle has wave-like behavior with wavelength $\lambda$
+\[
+	\lambda = \frac{h}{p}
+\]
+\[
+	\Rarr p=\frac{h}{2\pi/k}=\hbar k
+\]
+
+But we want this as an operator where the plane wave is an \hyperref[eigenstates]{eigenstate} of \(\hat{p}\) with eigenvalue $\hbar k$ (its momentum).
+
+\[
+	\hat{p}e^{ikx}=\hbar ke^{ikx}
+\]
+Now differentiate $e^{ikx}$ w.r.t $x$
+\[
+	\Rarr \frac{\partial}{\partial x}e^{ikx}=ike^{ikx}
+\]
+Multiply by $\hbar/i$
+\[
+	\Rarr \frac{\hbar}{i}\frac{\partial}{\partial x}e^{ikx}=\hbar ke^{ikx}
+\]
+Comparing like terms we find
+\[
+	\hat{p}=\frac{\hbar}{i}\frac{\partial}{\partial x}
+\]
+
+
+Anyways, after doing all of that, we're going to guess the Hamiltonian.
+Guess that the Hamiltonian is $H(t)=E$
+\[
+	H(t)=\frac{\hat{p}^2}{2m}+V(\hat{x})
+\]
+Expand the state into basis via \hyperref[spectral-decomposition]{spectral decomposition}
+
+\[
+	\ket{\psi(t)}=\sum_k\braket{x_k|\psi(t)}\ket{x_k}=\int dx \braket{x|\psi(t)}\ket{x}
+\]
+
+The intergral is the continuum limit of the discretized version on the left.
+Let's take the Schrödinger equation and apply it to the state.
+
+\[
+	\bra{x}i\hbar \frac{d}{dt}\ket{\psi(t)}=\bra{x}H(t)\ket{\psi(t)}
+\]
+LHS and RHS are both manipulated to get
+\[
+	i\hbar \frac{\partial}{\partial t}\braket{x|\psi(t)} =H(t)\braket{x|\psi(t)}
+\]
+\[
+	\Rarr i\hbar \frac{\partial}{\partial t}\braket{x|\psi(t)} =\bra{x}\frac{\hat{p}^2}{2m}\ket{\psi(t)}+V(x)\braket{x|\psi(t)}
+\]
+\[
+	\Rarr i\hbar \frac{\partial}{\partial t}\braket{x|\psi(t)} =-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}\braket{x|\psi(t)}+V(x)\braket{x|\psi(t)}
+\]
+\[
+	\Rarr i\hbar \frac{\partial}{\partial t}\braket{x|\psi(t)} =\left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right)\braket{x|\psi(t)}
+\]
+If we solve this for specific systems and check against measurements, it will confirm whether or not our guess for $H(t)$ was right
+\subsection{Wavefunction}\label{wavefunction}
+Where $\ket{\psi(t)}$ is a \hyperref[ket-states]{state} in the \hyperref[hilbert-spaces]{Hilbert space}, $\psi(x,t)$ is the wavefunction w.r.t time $t$ and position $x$.
+
+Let
+\[
+	\psi(x,t)\triangleq\braket{x|\psi(t)}
+\]
+\subsection{Uniform dynamics}\label{uniform-dynamics}
+
+This is a time-indepndent Hamiltonian $H(t)=H$.
+
+We set an ODE for $U$ which we derived earlier.
+
+\[i\hbar\frac{dU}{dt} = HU \iff \frac{dU}{dt} = -\frac{iH}{\hbar}U\]
+
+If we try it for a scalar value, it is similar to
+\[
+	\frac{dy}{dt} = ky(t) \implies y(t) = e^{kt}y(0)
+\]
+
+Recall \hyperref[matrix-exponentials]{matrix exponential}:
+
+Guess that $U(t,t_0) = e^{-iHt/\hbar}U_0$
+
+Check:
+\[\frac{dU}{dt} = -\frac{iH}{\hbar}e^{-iHt/\hbar}U_0 = -\frac{iH}{\hbar}U \]
+
+Hence true.
+
+Note $U_0$ is some integration constant which we haven't defined yet.
+We find $U_0$
+
+\[I = U(t_0,t_0) = e^{-iHt_0/\hbar}U_0 \implies U_0 = e^{iHt_0/\hbar}\]
+
+\[\implies U(t,t_0) = e^{-iHt/\hbar}e^{iHt_0/\hbar}\]
+
+via \hyperref[baker-campbell-hausdorff-formula]{Baker Campbell Hausdorff Formula}, since $[H,H]=0$ (trivially as any operator commutes with itself)
+\[
+	U(t,t_0) = e^{-iHt/\hbar}e^{iHt_0/\hbar}
+\]
+
+Hence this solves SE
+\[
+	i\hbar \frac{d}{dt}U(t,t_0) = HU(t,t_0)
+\]
+\subsection{Heisenberg Picture}\label{heisenberg-picture}
+
+Let observable $\hat{A}$. The Heisen picture operator is
+\[
+	\tilde{A}(t)=U^\dag (t)AU(t)
+\]
+
+\begin{tabular}{|l|c|c|}
+	\hline
+	           & Schrödinger Picture                                     & Heisenberg Picture                                                      \\
+	\hline
+	State      & $|\psi(t)\rangle = U(t)|\psi(0)\rangle$                 & $|\psi(0)\rangle$ constant                                              \\
+	Observable & $A$ constant                                            & $\tilde{A}(t) = U^\dagger(t)\, A\, U(t)$                                \\
+	Dynamics   & $i\hbar\dfrac{d|\psi\rangle}{dt} = H(t)|\psi(t)\rangle$ & $\dfrac{d\tilde{A}}{dt} = \dfrac{i}{\hbar}[\tilde{H}(t), \tilde{A}(t)]$ \\
+	\hline
+\end{tabular}
+
+For \hyperref[uniform-dynamics]{uniform dynamics}, $\tilde{H}(t)=\tilde{H}$. That means $U(t)\triangleq U(t,t_0)= e^{-iHt/\hbar}e^{iHt_0/\hbar}$
+
+We know that something \hyperref[commutators]{commutes} with itself, so $[U(t), H]=0$
+
+
+\[
+	\Rarr \tilde{H}(t)=U^\dag(t)HU(t)=H
+\]
+
+\subsection{Observables in time evolution}\label{observables-in-time-evolution}
+Given \hyperref[observables]{observable} $\hat{A}$, recall the \hyperref[expected-value-of-observables]{expectation value} of $\hat{A}$ is
+\[
+	\mathbb{E}[A(t)]=\bra{\psi(t)}A(t)\ket{\psi(t)}
+\]
+If we \hyperref[differentiation]{differentiate} w.r.t time
+\[
+	\frac{d}{dt}\mathbb{E}[A(t)]=\left(\frac{d}{dt}\bra{\psi(t)}\right)A(t)\ket{\psi(t)}+\bra{\psi(t)}A(t)\left(\frac{d}{dt}\ket{\psi(t)}\right)
+\]
+\[
+	= -\frac{1}{i\hbar}\bra{\psi}HA\ket{\psi}+\bra{\psi}A\frac{1}{i\hbar}H\ket{\psi}
+\]
+because \hyperref[commutators]{commutator},
+\[
+	=\frac{i}{\hbar}\bra{\psi}[H,A]\ket{\psi}
+\]
+
+Remarks
+
+\begin{enumerate}
+	\tightlist
+	\item If $[H,A]=0$, then $\frac{d}{dt}\mathbb{E}[A(t)]=0$
+	      The \hyperref[expected-value-of-observables]{expected value} of A is conserved if A and H are \hyperref[compatibility]{compatible}. For example, energy H is always conserved in an \hyperref[isolated-system]{isolated system}!
+	\item Sometimes convientn to change basis to Heisenberg picture to study observable dynamics
+\end{enumerate}
+
+Heisenberg equation of motion for $\tilde{A}(t)$
+
+\[
+	\frac{d}{dt}\tilde{A}(t)=\frac{d}{dt}(U^\dag AU + U^\dag A\frac{dU}{dt})
+\]
+\[
+	=-\frac{1}{i\hbar}U^\dag H A U+\frac{1}{i\hbar}U^\dag A H U
+\]
+\[
+	=-\frac{i}{\hbar}(U^\dag HU U^\dag A U - U^\dag A U U^\dag H U)
+\]
+because \hyperref[commutators]{commutator},
+\[
+	=\frac{i}{\hbar}[\tilde{H}(t),\tilde{A}(t)]
+\]
 
 
 
