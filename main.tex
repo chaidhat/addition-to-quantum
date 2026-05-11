@@ -68,6 +68,7 @@
 \date{}
 
 \usepackage[margin=1in]{geometry}
+\usepackage{multicol}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -1432,8 +1433,11 @@ Note that
 \]
 And
 \[
-	\ket{+}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ 1\end{pmatrix}\quad
-	\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ -1\end{pmatrix}
+	\ket{x+}=\ket{+}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ 1\end{pmatrix}\quad
+	\ket{x-}=\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ -1\end{pmatrix}
+\]
+\[
+	|y+\rangle = \frac{1}{\sqrt{2}}\big(|z+\rangle + i|z-\rangle\big) = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix}, \qquad |y-\rangle = \frac{1}{\sqrt{2}}\big(|z+\rangle - i|z-\rangle\big) = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -i \end{pmatrix}
 \]
 
 \subsection{Spin-1 System}\label{spin-1-systems}
@@ -1685,7 +1689,7 @@ The matrix exponential of
 	matrix} \(X\) is defined by a power series
 
 \begin{gather*}
-	e^X=\sum_{n=0}^\infin\frac{X^n}{n!}
+	e^X\triangleq \sum_{n=0}^\infin\frac{X^n}{n!}
 \end{gather*}
 
 Properties of this
@@ -3781,5 +3785,207 @@ From \hyperref[planck-einstein-relation](Planck-Einstein relation),
 		-\beta^* & \alpha^*
 	\end{pmatrix}
 \]
+\newpage
+\newgeometry{margin=2cm}
+\section{Cheat Sheet}\label{cheat-sheet}
+\begin{multicols}{2}
+	\[
+		\ket{a}\triangleq\begin{pmatrix} a_0\\ a_1\end{pmatrix}
+		\quad a_0,a_1\in \C
+	\]
+	\[
+		|a\rangle\langle a| = \begin{pmatrix} a_0 \\ a_1 \end{pmatrix}\begin{pmatrix} a_0^* & a_1^* \end{pmatrix} = \begin{pmatrix} a_0 a_0^* & a_0 a_1^* \\ a_1 a_0^* & a_1 a_1^* \end{pmatrix} = \begin{pmatrix} |a_0|^2 & a_0 a_1^* \\ a_1 a_0^* & |a_1|^2 \end{pmatrix}
+	\]
+	\[
+		\langle a | a \rangle = \begin{pmatrix} a_0^* & a_1^* \end{pmatrix} \begin{pmatrix} a_0 \\ a_1 \end{pmatrix} = a_0^* a_0 + a_1^* a_1 = |a_0|^2 + |a_1|^2
+	\]
+	\subsection*	{2x2 matrix times 2x2 matrix}
+	\[
+		\begin{pmatrix} A_{1,1} & A_{1,2} \\ A_{2,1} & A_{2,2} \end{pmatrix} \begin{pmatrix} B_{1,1} & B_{1,2} \\ B_{2,1} & B_{2,2} \end{pmatrix}=
+	\]
+	\[
+		\begin{pmatrix} A_{1,1}B_{1,1} + A_{1,2}B_{2,1} & A_{1,1}B_{1,2} + A_{1,2}B_{2,2} \\ A_{2,1}B_{1,1} + A_{2,2}B_{2,1} & A_{2,1}B_{1,2} + A_{2,2}B_{2,2} \end{pmatrix}
+	\]
+	\subsection*	{3x1 matrix times 1x3 matrix}
+	\[
+		\begin{pmatrix} A_{1,1} \\ A_{2,1} \\ A_{3,1} \end{pmatrix} \begin{pmatrix} B_{1,1} & B_{1,2} & B_{1,3} \end{pmatrix}=
+	\]
+	\[
+		\begin{pmatrix} A_{1,1}B_{1,1} & A_{1,1}B_{1,2} & A_{1,1}B_{1,3} \\ A_{2,1}B_{1,1} & A_{2,1}B_{1,2} & A_{2,1}B_{1,3} \\ A_{3,1}B_{1,1} & A_{3,1}B_{1,2} & A_{3,1}B_{1,3} \end{pmatrix}
+	\]
+	\subsection*	{1x3 matrix times 3x1 matrix}
+	\[
+		\begin{pmatrix} A_{1,1} & A_{1,2} & A_{1,3} \end{pmatrix} \begin{pmatrix} B_{1,1} \\ B_{2,1} \\ B_{3,1} \end{pmatrix} =
+	\]
+	\[
+		A_{1,1}B_{1,1} + A_{1,2}B_{2,1} + A_{1,3}B_{3,1}
+	\]
+	\subsection*{Tranpose, adjoint}
+	\[
+		(A^T)_{i,j} = A_{j,i}
+		\quad
+		(A^\dagger)_{i,j} = A^*_{j,i}
+	\]
+
+	\subsection*{Hermitian, Unitary Operators}
+	\[
+		A \text{ is Hermitian} \iff A^\dagger = A
+	\]
+	\[
+		U \text{ is Unitary} \iff U^\dagger U = U U^\dagger = I
+	\]
+
+	\subsection*{Matrix Exponential}
+	For a square matrix $X$,
+	\[
+		e^X \triangleq \sum_{n=0}^{\infty} \frac{X^n}{n!}
+	\]
+	\[
+		e^{At} = I + At + \frac{(At)^2}{2!} + \frac{(At)^3}{3!} + \cdots
+	\]
+	\[
+		\frac{d}{dt} e^{At} = A e^{At} = e^{At} A
+	\]
+	$U(t)=e^{tX}$ is the unique solution to $\frac{dU}{dt}=XU(t)$, $U(0)=I$.
+
+	If $X = PDP^{-1}$ with $D=\mathrm{diag}(\lambda_1,\dots,\lambda_n)$,
+	\[
+		e^X = P\,\mathrm{diag}(e^{\lambda_1},\dots,e^{\lambda_n})\,P^{-1}
+	\]
+	If $H$ is Hermitian, then $e^{iH}$ is unitary:
+	\[
+		(e^{iH})^\dagger e^{iH} = I
+	\]
+	\subsection*{Taylor Series}
+	\[
+		f(x) = \sum_{n=0}^{\infty} \frac{1}{n!}\left.\frac{d^n f}{dx^n}\right|_a (x-a)^n
+	\]
+	\[
+		e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
+	\]
+	\[
+		\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots
+	\]
+	\[
+		\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots
+	\]
+
+	\subsection*{Euler's Formula}
+	\[
+		e^{i\theta} = \cos\theta + i\sin\theta
+	\]
+	\[
+		\cos\theta = \frac{e^{i\theta}+e^{-i\theta}}{2}\quad
+		\sin\theta = \frac{e^{i\theta}-e^{-i\theta}}{2i}
+	\]
+	\subsection*{EV, Variance, Standard Deviation}
+	\[
+		\mathbb{E}[X] = \sum_x x P(x)
+	\]
+	\[
+		Var(X) = \mathbb{E}[X^2] - \mathbb{E}[X]^2
+	\]
+	\[
+		Std(X) = \sqrt{Var(X)}
+	\]
+
+	\subsection*{Spin-1/2, Pauli Matrices}
+
+	This spin is for 2-dimensional \hyperref[hilbert-spaces]{Hilbert spaces}.
+	Electrons, protons, neutrons and quarks have spin-1/2.
+	For spin-1/2 systems,
+	\[
+		S_x\triangleq\frac{\hbar}{2}\sigma_x\quad
+		S_y\triangleq\frac{\hbar}{2}\sigma_y\quad
+		S_z\triangleq\frac{\hbar}{2}\sigma_z
+	\]
+	\[
+		S_x\triangleq\frac{\hbar}{2}\begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix}\quad
+		S_y\triangleq\frac{\hbar}{2}\begin{pmatrix}0 & -i\\ i & 0\end{pmatrix}\quad
+		S_z\triangleq\frac{\hbar}{2}\begin{pmatrix}1 & 0\\ 0 & -1\end{pmatrix}
+	\]
+	\[
+		\ket{z+}=\ket{\uparrow} = \ket{0}=\begin{pmatrix}1 \\ 0\end{pmatrix}\quad
+		\ket{z-}=\ket{\downarrow} = \ket{1}=\begin{pmatrix}0 \\ 1\end{pmatrix}
+	\]
+	\[
+		\ket{x+}=\ket{+}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ 1\end{pmatrix}\quad
+	\]
+	\[
+		\ket{x-}=\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ -1\end{pmatrix}
+	\]
+	\[
+		|y+\rangle = \frac{1}{\sqrt{2}}\left(|z+\rangle + i|z-\rangle\right) = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix}
+	\]
+	\[
+		|y-\rangle = \frac{1}{\sqrt{2}}\left(|z+\rangle - i|z-\rangle\right) = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -i \end{pmatrix}
+	\]
+	\subsection*{Spin-1}
+
+	This spin is for 3-dimensional \hyperref[hilbert-spaces]{Hilbert spaces}.
+	W/Z bosons, photons and gluons have spin-1.
+	For spin-1 systems,
+	\[
+		S_x\triangleq\frac{\hbar}{2}\Sigma_x\quad
+		S_y\triangleq\frac{\hbar}{2}\Sigma_y\quad
+		S_z\triangleq\frac{\hbar}{2}\Sigma_z
+	\]
+	\[
+		S_x\triangleq\frac{\hbar}{\sqrt{2}}\begin{pmatrix}0 & 1 & 0\\ 1 & 0 & 1\\ 0 & 1 & 0\end{pmatrix}\quad
+		S_y\triangleq\frac{\hbar}{\sqrt{2}}\begin{pmatrix}0 & -i & 0\\ i & 0 & -i\\ 0 & i & 0\end{pmatrix}\quad
+	\]
+	\[
+		S_z\triangleq\hbar\begin{pmatrix}1 & 0 & 0\\ 0 & 0 & 0\\ 0 & 0 & -1\end{pmatrix}
+	\]
+	\[
+		\ket{1}=\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}\quad
+		\ket{0}=\begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}\quad
+		\ket{-1}=\begin{pmatrix}0 \\ 0 \\ -1\end{pmatrix}\quad
+	\]
+	For photons, $S_z$ is often called rectilinear and $S_x$ is often called diagonal and $S_y$ are often called circular.
+
+	\subsection*{Schrödinger Equation}
+
+	\[
+		i\hbar \frac{d}{dt}\ket{\psi(t)}=H(t)\ket{\psi(t)}
+	\]
+
+	\subsection*{Uniform Dynamics}
+
+	For time independent Hamiltonian $H(t)=H$,
+
+	\[
+		\Rarr U(t,t_0) = e^{-iH(t-t_0)/\hbar}
+	\]
+
+	\[
+		\ket{\psi(t)}=U(t,t_0)\ket{\psi(t_0)}
+	\]
+	\subsection*{Born's Rule}
+
+	The probability of observing eigenvalue $\lambda_\alpha$ of an eigenstate $\ket{\alpha}$ is
+	\[
+		P_\alpha=|\braket{\alpha|\psi}|^2
+	\]
+
+	\subsection*{Heisenberg Picture}
+	\[
+		\Delta A\Delta B\geq \frac{1}{2}\left|\mathbb{E}\left[[\hat{A},\hat{B}]\right]\right|
+	\]
+	\[
+		\Delta A^2 \Delta B^2 \geq \left|\bra{\psi}\frac{1}{2j}[\hat{A},\hat{B}]\ket{\psi}\right|^2 = \left(\frac{1}{2j}\mathbb{E}\left[[\hat{A},\hat{B}]\right]\right)^2
+	\]
+
+	\subsection*{Ehrenfest Theorem}
+	\[
+		\frac{d}{dt}\mathbb{E}[A(t)]=\frac{i}{\hbar}\mathbb{E}\left[[H,A]\right]
+	\]
+
+	\subsection*{Time Energy Uncertainty}
+	\[
+		\Delta E \cdot T\geq h = \frac{\hbar}{2}
+	\]
+
+\end{multicols}
 \end{document}
 
