@@ -2753,35 +2753,56 @@ A matrix is a rank-2 tensor (2D).
 A rank-$n$ tensor is an $n$-dimensional array with $n$ indices.
 \subsection{Tensor Product}\label{tensor-product}
 
-Given \hyperref[vector-spaces]{vector spaces} $V$ and $W$, the tensor product $V\otimes W$ is a new vector space satisfying two features:
+Let
+\[
+	\ket{v, w} \triangleq \ket{v}\otimes\ket{w}
+\]
+
+Given \hyperref[vector-spaces]{vector spaces} $H_A$ and $H_B$, the tensor product $H_A\otimes H_B$ is a new vector space
+
+Properties
 \begin{enumerate}
-	\tightlist
-	\item Bilinear pairing where
+	\item $|v\rangle \in {H}_A, \ |w\rangle \in {H}_B \implies |v\rangle \otimes |w\rangle \in {H}_{AB}$
 
-	      \[
-		      \otimes : V\times W\rarr V\otimes W
-	      \]
-	      satisfies
-	      \[
-		      (v_1+v_2)\otimes w=v_1\otimes w+v_2\otimes w
-	      \]
-	      \[
-		      v\otimes (w_1+w_2)=v\otimes w_1+v\otimes w_2
-	      \]
-	      \[
-		      (\lambda v)\otimes w=\lambda (v\otimes w)\quad \forall \lambda \in \mathbb{F}
-	      \]
-	\item For any vector space U and bilinear map $B:V\times W\rarr U$, there exists a unique bilinear map $\tilde{B}:V\otimes W \rarr U$ such that
-	      \[
-		      B(v,w)=\tilde{B}(v\otimes w)
-	      \]
+	\item Distributive law:
+	      \begin{align*}
+		      |v\rangle \otimes (c_0 |w_0\rangle + c_1 |w_1\rangle) & = c_0 (|v\rangle \otimes |w_0\rangle) + c_1 (|v\rangle \otimes |w_1\rangle) \\
+		      (c_0 |v_0\rangle + c_1 |v_1\rangle) \otimes |w\rangle & = c_0 (|v_0\rangle \otimes |w\rangle) + c_1 (|v_1\rangle \otimes |w\rangle)
+	      \end{align*}
 
+	\item Inner product
+	      \begin{align*}
+		      \langle v_1, w_1 \mid v_2, w_2 \rangle & = (\langle v_1 | \otimes \langle w_1 |)(|v_2\rangle \otimes |w_2\rangle) \\
+		                                             & = \langle v_1 | v_2 \rangle \langle w_1 | w_2 \rangle
+	      \end{align*}
+
+	\item $\forall \, |\psi\rangle \in \mathcal{H}_{AB}, \ |\psi\rangle = \sum_{\mu} c_\mu |v_\mu\rangle \otimes |w_\mu\rangle$ \\
+	      for some sequence of $(c_\mu, |v_\mu\rangle, |w_\mu\rangle)$
+\end{enumerate}
+
+Note
+\begin{enumerate}
+	\item $\ket{v}\otimes\ket{w}\neq\ket{w}\otimes\ket{v}$
+	\item $a\ket{w}\otimes\ket{v}=\ket{w}\otimes a\ket{v}=a(\ket{w}\otimes\ket{v})$
+	\item $0\otimes\ket{v}=\ket{w}\otimes 0 = 0$
+	\item $\braket{v_i, w_{j} | v_k, w_l}=\braket{v_i | v_k}\braket{w_j | w_l}=\delta_{ik}\delta_{jl}$
 \end{enumerate}
 
 The dimensions are multiplied
 \[
-	dim(V\otimes W)=dim(V)\times dim(W)
+	dim(H_A\otimes H_B)=dim(H_A)\times dim(H_B)
 \]
+\[
+	\dim(\underbrace{\mathbb{C}^2 \otimes \mathbb{C}^2 \otimes \cdots \otimes \mathbb{C}^2}_{n}) = 2^n \quad \text{(dim of } n\text{-qubit Hilbert space)}
+\]
+
+\subsection{Tensor Product Basis Theorem}\label{product-basis-theorem}
+If $\{\ket{v_i}\}_{i=1}^{dim(H_A)}$ is an orthonormal basis for $H_A$ and $\{\ket{w_j}\}_{j=1}^{dim(H_B)}$ is an orthonormal basis for $H_B$, then
+\[
+	\{\ket{v_i}\otimes\ket{w_j}; 1\leq i \leq dim(H_A), 1\leq j \leq dim(H_B)\}
+\]
+is an orthonormal basis for $H_A\otimes H_B$.
+
 
 \subsection{Baker Campbell Hausdorff Formula}\label{baker-campbell-hausdorff-formula}
 
@@ -3779,12 +3800,289 @@ From \hyperref[planck-einstein-relation](Planck-Einstein relation),
 \[
 	\Delta E \cdot T\geq h = \frac{\hbar}{2}
 \]
+
+\section{Composite Systems}\label{composite-systems}
+
+\subsection{Product vs. Entangled States}\label{product-vs-entangled-states}
+Recall \hyperref[tensor-product]{tensor product} of two Hilbert spaces $H_A$ and $H_B$.
 \[
-	\begin{pmatrix}
-		\alpha   & \beta    \\
-		-\beta^* & \alpha^*
-	\end{pmatrix}
+	\ket{\psi}=\sum_{ij} a_{ij}\ket{v_i	}\otimes\ket{w_j}\quad \in H_A\otimes H_B
 \]
+The following is a product state. For some $\ket{v^*}\in H_A$ and $\ket{w^*}\in H_B$, a product state can be written as a tensor product of the two states
+\[
+	\boxed{\ket{\psi}=\ket{v^*}\otimes\ket{w^*}}\quad \ket{v^*}\in H_A, \ket{w^*}\in H_B
+\]
+An entangled state is any state $\ket{\psi}$ which is not a product state. This means it is not always possible to assign state vectors to individual subsystems.
+
+Einstein famously called this "Spooky action at a distance."
+
+Example 1
+
+Let $\dim H_A = \dim H_B = 2$. Let
+\[
+	\ket{\psi_1}=\frac{1}{2}(\ket{0,0}+\ket{0,1}+\ket{1,0}+\ket{1,1})
+\]
+Note these are being tensor producted with each other but notation wise, we don't write $\otimes$ for simplicity.
+\[
+	= \frac{1}{2}\big(|0\rangle |0\rangle + |0\rangle |1\rangle + |1\rangle |0\rangle + |1\rangle |1\rangle\big) \\
+\]
+\[
+	= \frac{1}{2}\big(|0\rangle(|0\rangle + |1\rangle) + |1\rangle(|0\rangle + |1\rangle)\big)
+\]
+\[
+	= \frac{1}{2}(|0\rangle + |1\rangle)(|0\rangle + |1\rangle)
+\]
+As $\ket{0}+\ket{1}$ forms a state inside $H_A$ and also $H_B$, this follows the form
+\[
+	\ket{\psi}=\ket{v^*}\ket{w^*}\quad \ket{v^*}\in H_A, \ket{w^*}\in H_B
+\]
+
+Example 2
+
+Let
+\[
+	\ket{\psi_2}=\frac{1}{2}(\ket{0,0}+\ket{0,1}+\ket{1,0}-\ket{1,1})
+\]
+\[
+	= \frac{1}{2}\big(|0\rangle |0\rangle + |0\rangle |1\rangle + |1\rangle |0\rangle - |1\rangle |1\rangle\big) \\
+\]
+\[
+	= \frac{1}{2}\big(|0\rangle(|0\rangle + |1\rangle) + |1\rangle(|0\rangle - |1\rangle)\big)
+\]
+\[
+	= \frac{1}{2}\big(|0\rangle\ket{+}+\ket{1}\ket{-}\big)
+\]
+This does not follow the form
+\[
+	\ket{\psi}=\ket{v^*}\ket{w^*}\quad \ket{v^*}\in H_A, \ket{w^*}\in H_B
+\]
+This is not written cleanly as a product of two product states in $H_A$, $H_B$ respectively. Hence it is entangled.
+
+\subsubsection{Checking if a state is entangled}\label{checking-if-a-state-is-entangled}
+To check if a state is entangled, this is an easy way to do it.
+Let this be the state that we want to check if it is entangled.
+\[
+	a_{11}\ket{v_1,w_1}+a_{12}\ket{v_1, w_2}+a_{21}\ket{v_2, w_1} + a_{22}\ket{v_2, w_2}
+\]
+Does it follow in this form
+\[
+	(a_1\ket{v_1}+a_2\ket{v_2})\otimes(b_1\ket{w_1}+b_2\ket{w_2})
+\]
+To have a solution
+\[
+	a_{11} = a_1b_1
+\]
+\[
+	a_{21} = a_2b_1
+\]
+\[
+	a_{12} = a_1b_2
+\]
+\[
+	a_{22} = a_2b_2
+\]
+\[
+	a_{11}a_{22}-a_{12}a_{21}=a_1b_1a_2b_2-a_1a_2a_2b_1=0
+\]
+Must all be true.
+
+Hence
+\[\text{product state} \Leftrightarrow \det\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}=0\]
+
+
+\subsection{Operators in Tensor product space}\label{operators-in-tensor-product-space}
+Let $F\in L(H_A), G \in L (H_B)$ be operators.
+
+Then $F\otimes G \in L(H_A\otimes H_B)$ is defined as
+\[
+	(F\otimes G)\ket{v, w} \triangleq F\ket{v}\otimes G\ket{w}
+\]
+
+Upgrading subsystem operators
+
+\[
+	F\in L(H_A)\rarr F\otimes I \in L(H_A\otimes H_B)
+\]
+\[
+	G\in L(H_B)\rarr G\otimes I \in L(H_A\otimes H_B)
+\]
+
+Where $L$ is the set of all linear operators on a Hilbert space.
+This means that any operator acting on a subsystem $H_A$ can be upgraded to an operator that makes it act on a larger dimension $H_A\otimes H_B$.
+
+This is because
+\[
+	(F\otimes I)(I \otimes G)\ket{v, w} =(F\otimes I)(\ket{v}\otimes G\ket{w}) = F\ket{v}\otimes G\ket{w}
+\]
+Conversely,
+\[
+	(I\otimes G)(F\otimes I)(\ket{v}\otimes \ket{w})=F\ket{v}\otimes G\ket{w}
+\]
+Notation wise, let
+\[
+	F^{(A)}\triangleq F\otimes I
+\]
+\[
+	G^{(B)}\triangleq I\otimes G
+\]
+Note
+\[
+	\boxed{[F^{(A)}, G^{(B)}]= [F\otimes I, I\otimes G]=0}
+\]
+
+\subsection{Hamiltonian of Composite Systems}\label{hamiltonian-of-composite-systems}
+\subsubsection{Non-interacting Hamiltonian}\label{non-interacting-hamiltonian}
+\[
+	H^{(total)}=H^{(A)}+H^{(B)}
+\]
+Where $H^{(A)}, H^{(B)}$ are non interacting.
+
+Two spin-1/2 particles exist where
+\[
+	H^{(total)}=\hat{S}^{(total)}_x+ \hat{S}^{(A)}_x + \hat{S}^{(B)}_x
+\]
+\[
+	=\hat{S}_x\otimes I + I \otimes \hat{S}_x
+\]
+Let there be a state where
+\[
+	\ket{\psi}=a_{11}\ket{+,+}+a_{12}\ket{+,-}+a_{21}\ket{-,+}+a_{22}\ket{-,-}
+\]
+Recall what a $\hat{S}_x$ operator does \hyperref[spin-12-systems]{here}.
+\[
+	S_x\triangleq\frac{\hbar}{2}\begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix}\quad
+\]
+basically,
+\[
+	\hat{S_x}^{(A)}=\frac{\hbar}{2}\begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix}\otimes \begin{pmatrix}1 & 0\\ 0 & 1\end{pmatrix}
+\]
+\[
+	= \frac{\hbar}{2}\begin{pmatrix} 0 \cdot I & 1 \cdot I \\ 1 \cdot I & 0 \cdot I \end{pmatrix}
+\]
+\[
+	= \frac{\hbar}{2}\begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{pmatrix}
+\]
+So
+\[
+	\hat{S}_x^{(A)}\ket{\psi}=\frac{\hbar}{2}(a_{11}\ket{+,+}+a_{12}\ket{+,-}-a_{21}\ket{-,+}-a_{22}\ket{-,-})
+\]
+\[
+	\hat{S}_x^{(B)}\ket{\psi}=\frac{\hbar}{2}(a_{11}\ket{+,+}-a_{12}\ket{+,-}+a_{21}\ket{-,+}-a_{22}\ket{-,-})
+\]
+
+\[
+	\hat{S}_x^{(total)}\ket{\psi}=\hbar(a_{11}\ket{+,+}-a_{12}\ket{-,-})
+\]
+\begin{tabular}{|c|c|}
+	\hline
+	Eigenstate of $\hat{S}_x^{(\text{tot})}$ & Eigenvalue                    \\
+	\hline
+	$|+,+\rangle$                            & $S_x^{(\text{tot})} = \hbar$  \\
+	$|+,-\rangle, \ |-,+\rangle$             & $S_x^{(\text{tot})} = 0$      \\
+	$|-,-\rangle$                            & $S_x^{(\text{tot})} = -\hbar$ \\
+	\hline
+\end{tabular}
+Looks like a spin-1
+\subsubsection{Time Evolution of Non-interacting Composite Systems}\label{time-evolution-of-non-interacting-composite-systems}
+If $H=\hat{S}_x^{(total)}$ then
+\[
+	e^{-it\hat{S}_x^{(total)}}=e^{-it\left(\hat{S}_x^{(A)}+\hat{S}_x^{(B)}\right)}
+\]
+\[
+	=e^{-it\hat{S}_x^{(A)}}e^{-it\hat{S}_x^{(B)}}
+\]
+\[
+	=(e^{-it\hat{S}}\otimes I)(I \otimes e^{-it\hat{S}})
+\]
+\[
+	=e^{-it\hat{S}_x}\otimes e^{-it\hat{S}_x}
+\]
+Note that
+\[
+	H^{(\text{tot})} = H_1^{(A)} + H_2^{(B)} \implies U^{(\text{tot})} = U_1^{(A)} U_2^{(B)} = U_1 \otimes U_2
+\]
+\[
+	U^{(\text{tot})}(|v\rangle \otimes |w\rangle) = (U_1 |v\rangle) \otimes (U_2 |w\rangle)
+\]
+\[
+	\text{product state} \longrightarrow \text{product state}
+\]
+
+Unitary evolution under non-interacting Hamiltonian cannot generate an entangled state.
+
+
+\subsubsection{Interacting Hamiltonian}\label{interacting-hamiltonian}
+\[
+	H = \underbrace{H^{(A)} \otimes I + I \otimes H^{(B)}}_{\text{local part}} + \underbrace{H_{\text{int}}}_{\text{interaction term}}
+\]
+Where $H_{int}$ is any operator on $H_A\otimes H_B$.
+
+Example
+
+Note $\sigma_x$ is defined in \hyperref[pauli-matrices]{Pauli matrix}.
+\[
+	H^{(total)}=\hbar \omega \sigma_x^{(A)}\sigma_x^{(B)}=\hbar\omega (\sigma_x\otimes \sigma_x)
+\]
+Note that $\sigma_x\otimes \sigma_x$ cannot be written as $\sigma_x\otimes I + I \otimes \sigma_x$ hence this belongs in the $H_{int}$ term.
+We observe that the unitary evolution is
+\[
+	U^{(total)}=e^{-itH/\hbar}=e^{-i\omega t(\sigma_x\otimes \sigma_x)}
+\]
+Suppose $\ket{\psi(0)} = \ket{0} \otimes \ket{0}$
+\[
+	\ket{\psi(0)} = \frac{\ket{+} + \ket{-}}{\sqrt{2}} \otimes \frac{\ket{+} + \ket{-}}{\sqrt{2}} \\
+\]
+\[
+	= \frac{1}{2}\left(\ket{+,+} + \ket{+,-} + \ket{-,+} + \ket{-,-}\right)
+\]
+Then via the unitary time evolution we get
+\begin{align*}
+	\ket{\psi(t)} & = e^{-i\omega t \sigma_x \otimes \sigma_x}\ket{\psi(0)}                                                                                                                                                                                 \\
+	              & = \frac{1}{2}\left(e^{-i\omega t \sigma_x \otimes \sigma_x}\ket{+,+} + e^{-i\omega t \sigma_x \otimes \sigma_x}\ket{+,-} + e^{-i\omega t \sigma_x \otimes \sigma_x}\ket{-,+} + e^{-i\omega t \sigma_x \otimes \sigma_x}\ket{-,-}\right) \\
+	              & = \frac{1}{2}\left(e^{-i\omega t}\ket{+,+} + e^{i\omega t}\ket{+,-} + e^{i\omega t}\ket{-,+} + e^{-i\omega t}\ket{-,-}\right)
+\end{align*}
+Note
+\[
+	e^{-i\omega t \sigma_x \otimes \sigma_x} \ket{+,+} = e^{-i\omega t} \ket{+,+}
+\]
+\[
+	e^{-i\omega t \sigma_x \otimes \sigma_x} \ket{+,-} = e^{+i\omega t} \ket{+,-}
+\]
+\[
+	e^{-i\omega t \sigma_x \otimes \sigma_x} \ket{-,+} = e^{+i\omega t} \ket{-,+}
+\]
+\[
+	e^{-i\omega t \sigma_x \otimes \sigma_x} \ket{-,-} = e^{-i\omega t} \ket{-,-}
+\]
+So
+\[
+	\det \frac{1}{2}\begin{pmatrix} e^{-i\omega t} & e^{i\omega t} \\ e^{i\omega t} & e^{-i\omega t} \end{pmatrix} = \frac{1}{4}\left(e^{-2i\omega t} - e^{2i\omega t}\right) = -\frac{i}{2}\sin(2\omega t) \neq 0
+\]
+\[
+	\implies \text{Entangled state for } t > 0, \quad t \neq \frac{k\pi}{\omega}
+\]
+\[
+	\text{Maximal when } t = \frac{\pi}{4\omega}
+\]
+\subsection{Measurement Entanglement}\label{measurement-entanglement}
+Entanglement doesn't always require a interacting Hamiltonian. They can also be created by jointly measuring a product state.
+
+Suppose we start with $\ket{\psi} = \ket{0} \otimes \ket{0}$
+\[
+	\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix} = \frac{1}{2}\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix} \longrightarrow \text{product state}
+\]
+Measure $\hat{S}_x^{(\text{tot})}$, get 0 with $\frac{1}{2}$ probability. Mathematically, we use a \hyperref[projectors]{projector} to measure the state. Via the projection rule we get
+\[
+	\frac{1}{\sqrt{1/2}} \Pi_{S_x} = 0 \quad \ket{\psi} = \frac{1}{\sqrt{2}}\left(\ket{+,-} + \ket{-,+}\right)
+\]
+\[
+	\frac{1}{\sqrt{2}}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \longrightarrow \text{entangled state!}
+\]
+This means that joint measurement can product entanglement.
+Equivalent to interacting via third party.
+
+
+
 \newpage
 \newgeometry{margin=2cm}
 \section{Cheat Sheet}\label{cheat-sheet}
