@@ -1354,7 +1354,7 @@ slit experiment. That's why phases exist. Because light is a wave with a
 frequency (and also a particle!)
 
 
-\section{Schrödinger's Equation, Hamiltonian I,
+\section{Schrödinger's Equation, Hamiltonian I
  }\label{schruxf6dingers-equation-hamiltonian}
 
 Recall from \hyperref[particle-energies]{particle energies} that
@@ -2742,7 +2742,7 @@ Note that \(Im z=\frac{1}{2i}(z-z^*)\)
 \]
 
 \section{Linear Algebra III}\label{linear-algebra-iii}
-Hold on, this is advanced linear algebra!
+Hold on to your seats, this is advanced linear algebra!
 \subsection{Tensor}\label{tensor}
 A scalar is a rank-0 tensor (0D).
 
@@ -2751,6 +2751,9 @@ A vector is a rank-1 tensor (1D).
 A matrix is a rank-2 tensor (2D).
 
 A rank-$n$ tensor is an $n$-dimensional array with $n$ indices.
+
+A tensor is a subset of a \hyperref[vectors]{vector}.
+
 \subsection{Tensor Product}\label{tensor-product}
 
 Let
@@ -2796,12 +2799,68 @@ The dimensions are multiplied
 	\dim(\underbrace{\mathbb{C}^2 \otimes \mathbb{C}^2 \otimes \cdots \otimes \mathbb{C}^2}_{n}) = 2^n \quad \text{(dim of } n\text{-qubit Hilbert space)}
 \]
 
-\subsection{Tensor Product Basis Theorem}\label{product-basis-theorem}
-If $\{\ket{v_i}\}_{i=1}^{dim(H_A)}$ is an orthonormal basis for $H_A$ and $\{\ket{w_j}\}_{j=1}^{dim(H_B)}$ is an orthonormal basis for $H_B$, then
 \[
 	\{\ket{v_i}\otimes\ket{w_j}; 1\leq i \leq dim(H_A), 1\leq j \leq dim(H_B)\}
 \]
 is an orthonormal basis for $H_A\otimes H_B$.
+
+\subsection{Kronecker Product}\label{kronecker-product}
+The Kronecker product is a way to compute the \hyperref[tensor-product]{tensor product} of two matrices. It outputs a matrix as well.
+
+Let there be a spin-1/2 system and two particles living $H_A$ and $H_B$ respectively which spans $\ket{0}_A, \ket{1}_A$ and $\ket{0}_B, \ket{1}_B$ respectively.
+The tensor product basis for $H_A\otimes H_B$ is
+\[
+	\{\ket{0}_A\otimes\ket{0}_B, \ket{0}_A\otimes\ket{1}_B, \ket{1}_A\otimes\ket{0}_B, \ket{1}_A\otimes\ket{1}_B\}
+\]
+This can be rewritten as
+\[
+	\ket{00}\triangleq\ket{0}_A\otimes\ket{0}_B
+\]
+\[
+	\ket{01}\triangleq\ket{0}_A\otimes\ket{1}_B
+\]
+\[
+	\ket{10}\triangleq\ket{1}_A\otimes\ket{0}_B
+\]
+\[
+	\ket{11}\triangleq\ket{1}_A\otimes\ket{1}_B
+\]
+
+
+Let $\ket{0}, \ket{1}$ be a rank-1 tensor, i.e., a vector. Recall from \hyperref[ket-states]{ket states} and \hyperref[quantum-system]{quantum systems} that it is defined as
+\[
+	\ket{0}=\begin{pmatrix}
+		1 \\
+		0
+	\end{pmatrix}
+	\quad
+	\ket{1}=\begin{pmatrix}
+		0 \\
+		1
+	\end{pmatrix}
+\]
+Note that
+\[
+	\ket{0}_A=\begin{pmatrix} 1 \\ 0 \end{pmatrix}
+	\quad
+	\ket{0}_B=\begin{pmatrix} 1 \\ 0 \end{pmatrix}
+\]
+But when we compute the tensor product (for matrices this is known as the Kronecker product), we get
+\[
+	|0\rangle_A \otimes |0\rangle_B = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \otimes \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 1 \cdot \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\ 0 \cdot \begin{pmatrix} 1 \\ 0 \end{pmatrix} \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}
+\]
+We can see the full basis of the new Hilbert space $H_A\otimes H_B$ as
+\[
+	|00\rangle = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix},\quad |01\rangle = \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix},\quad |10\rangle = \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix},\quad |11\rangle = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix}
+\]
+
+
+\subsection{Tensor Product Space}\label{tensor-product-space}
+Think of it like a \hyperref[vector-spaces]{vector space} for \hyperref[tensor]{tensors}.
+
+Just like how a vector space is a set of vectors that is closed under addition and scalar multiplication, a tensor product space is a set of tensors that is closed under addition and scalar multiplication.
+
+It is computed by using the \hyperref[tensor-product]{tensor product}.
 
 
 \subsection{Baker Campbell Hausdorff Formula}\label{baker-campbell-hausdorff-formula}
@@ -3554,11 +3613,54 @@ Remarks
 
 
 
+\subsection{Hamiltonian Rotation Quirk}\label{hamiltonian-rotation-quirk}
 
-\section{Example of Quantum Dynamics}\label{example-of-quantum-dynamics}
-This depends on \hyperref[quantum-dynamics]{quantum dynamics}.
+Any 2x2 Hermitian Hamiltonian can be decomposed into an identity plus a rotation generator part.
+This means that every single-qubit Hamiltonian is a rotation. The Pauli basis spans all 2x2 Hermitian matrices.
 
-\subsection{Example 1}\label{example-1-of-quantum-dynamics}
+\[ H = \begin{pmatrix} g_0 + g_3 & g_1 - ig_2 \\ g_1 + ig_2 & g_0 - g_3 \end{pmatrix} \quad g_i \in \mathbb{R} \]
+
+\[ = g_0 I + g_1 X + g_2 Y + g_3 Z \]
+
+\[ = g_0 I + \vec{g}\cdot\vec{\sigma} \qquad \vec{g} = (g_1, g_2, g_3) = g\hat{n} \]
+
+\[ = g_0 I + g\,\hat{n}\cdot\vec{\sigma} \qquad \vec{\sigma} = (X, Y, Z) = (\sigma_x, \sigma_y, \sigma_z) \]
+
+\[ = g_0 I + \frac{2g}{\hbar}\,\hat{n}\cdot\vec{S} \]
+
+
+Remarks
+\begin{enumerate}
+	\item If and only $B$ is Hermitian then $U=e^{iB}$ is unitary.
+	\item Spin/angular momentum generates rotations
+	\item Unitary $V$ is a dynamical symmetry of system if it commutes with time evolution
+	      \[
+		      [V,U(t)]=0 \Rarr [V,H(t)]=0
+	      \]
+	\item Hermitian $A$ is a conserved quantity if $[A,H(t)]=0$. This also means $V(\theta)=e^{i\theta A}$ is a dynamical symmetry of the system. A conserved quantity generates dynamical symmetries.
+
+\end{enumerate}
+
+\subsection{Time Energy Uncertainty}\label{time-energy-uncertainty}
+Relies on \hyperref[quantum-dynamics]{quantum dynamics}.
+
+Time is not an observable.
+
+We could count $N$ full waves of frequency $\omega$ over a time window $T$. You can only count to within $\pm 1$ wave, so $\Delta N\geq 1$.
+
+The uncertainty in the wavecount is $\Delta N$
+
+We know that
+
+\[
+	N=\frac{\omega T}{2\pi} \quad\Rarr \quad \Delta N = \frac{\Delta \omega T}{2\pi} \geq 1 \quad \Rarr \quad \Delta \omega T \geq 2\pi
+\]
+
+From \hyperref[planck-einstein-relation](Planck-Einstein relation),
+\[
+	\Delta E \cdot T\geq h = \frac{\hbar}{2}
+\]
+\subsection{Example of Quantum Dynamics}\label{example-of-quantum-dynamics}
 An electron is in an magnetic field in the $z+$ direction. There is a particle in state
 \[
 	\ket{\psi(0)}=\begin{pmatrix}\cos\theta_0/2 \\ e^{i\phi_0}\sin\theta_0/2\end{pmatrix}
@@ -3754,63 +3856,34 @@ Using \hyperref[cross-product]{cross product} formula:
 	\boxed{\frac{d\vec{S}}{dt} = -\gamma \vec{B}\times\vec{S}} \quad \text{(Larmor precession)}
 \]
 
-\section{General Qubit Hamiltonian and Dynamics}\label{general-qubit-hamiltonian-and-dynamics}
-Relies on \hyperref[quantum-dynamics]{quantum dynamics}.
-
-This means that any 2x2 Hermitian Hamiltonian can be decomposed into an identity plus a rotation generator part.
-
-\[ H = \begin{pmatrix} g_0 + g_3 & g_1 - ig_2 \\ g_1 + ig_2 & g_0 - g_3 \end{pmatrix} \quad g_i \in \mathbb{R} \]
-
-\[ = g_0 I + g_1 X + g_2 Y + g_3 Z \]
-
-\[ = g_0 I + \vec{g}\cdot\vec{\sigma} \qquad \vec{g} = (g_1, g_2, g_3) = g\hat{n} \]
-
-\[ = g_0 I + g\,\hat{n}\cdot\vec{\sigma} \qquad \vec{\sigma} = (X, Y, Z) = (\sigma_x, \sigma_y, \sigma_z) \]
-
-\[ = g_0 I + \frac{2g}{\hbar}\,\hat{n}\cdot\vec{S} \]
-
-
-Remarks
-\begin{enumerate}
-	\item If and only $B$ is Hermitian then $U=e^{iB}$ is unitary.
-	\item Spin/angular momentum generates rotations
-	\item Unitary $V$ is a dynamical symmetry of system if it commutes with time evolution
-	      \[
-		      [V,U(t)]=0 \Rarr [V,H(t)]=0
-	      \]
-	\item Hermitian $A$ is a conserved quantity if $[A,H(t)]=0$. This also means $V(\theta)=e^{i\theta A}$ is a dynamical symmetry of the system. A conserved quantity generates dynamical symmetries.
-
-\end{enumerate}
-\section{Time Energy Uncertainty}\label{time-energy-uncertainty}
-Relies on \hyperref[quantum-dynamics]{quantum dynamics}.
-
-Time is not an observable.
-
-We could count $N$ full waves of frequency $\omega$ over a time window $T$. You can only count to within $\pm 1$ wave, so $\Delta N\geq 1$.
-
-The uncertainty in the wavecount is $\Delta N$
-
-We know that
-
-\[
-	N=\frac{\omega T}{2\pi} \quad\Rarr \quad \Delta N = \frac{\Delta \omega T}{2\pi} \geq 1 \quad \Rarr \quad \Delta \omega T \geq 2\pi
-\]
-
-From \hyperref[planck-einstein-relation](Planck-Einstein relation),
-\[
-	\Delta E \cdot T\geq h = \frac{\hbar}{2}
-\]
 
 \section{Composite Systems}\label{composite-systems}
+\subsection{Composite System}\label{composite-system}
+A \hyperref[quantum-system]{quantum system} made up of two or more sub quantum systems.
+Let $H_A$ and $H_B$ be two state spaces. The state space of the composite system is
+\[
+	H_{AB} = H_A\otimes H_B
+\]
 
-\subsection{Product vs. Entangled States}\label{product-vs-entangled-states}
+It is represented by a \hyperref[tensor-product-space]{tensor product space}.
+
+\subsection{States on a Composite System}\label{states-on-a-composite-system}
+Recall all the way back to what a \hyperref[ket-states]{quantum state} is.
+
+A composite quantum state is a state that lives in a \hyperref[composite-system]{composite system}.
 Recall \hyperref[tensor-product]{tensor product} of two Hilbert spaces $H_A$ and $H_B$.
+A state on a composite system can be written as a sum of tensor products of states on the individual subsystems.
+
 \[
 	\ket{\psi}=\sum_{ij} a_{ij}\ket{v_i	}\otimes\ket{w_j}\quad \in H_A\otimes H_B
 \]
+Another way to notationally write this is
+\[
+	\boxed{\ket{\psi^{(AB)}}=\sum_{ij} a_{ij}\ket{v_i}_A\otimes\ket{w_j}_B}
+\]
 The following is a product state. For some $\ket{v^*}\in H_A$ and $\ket{w^*}\in H_B$, a product state can be written as a tensor product of the two states
 \[
-	\boxed{\ket{\psi}=\ket{v^*}\otimes\ket{w^*}}\quad \ket{v^*}\in H_A, \ket{w^*}\in H_B
+	\ket{\psi}=\ket{v^*}\otimes\ket{w^*}\quad \ket{v^*}\in H_A, \ket{w^*}\in H_B
 \]
 An entangled state is any state $\ket{\psi}$ which is not a product state. This means it is not always possible to assign state vectors to individual subsystems.
 
@@ -3890,7 +3963,9 @@ Hence
 \[\text{product state} \Leftrightarrow \det\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}=0\]
 
 
-\subsection{Operators in Tensor product space}\label{operators-in-tensor-product-space}
+\subsection{Observables on a Composite System}\label{operators-in-tensor-product-space}
+Don't forget that operators can sometimes be \hyperref[observables]{observables}.
+
 Let $F\in L(H_A), G \in L (H_B)$ be operators.
 
 Then $F\otimes G \in L(H_A\otimes H_B)$ is defined as
@@ -3898,7 +3973,7 @@ Then $F\otimes G \in L(H_A\otimes H_B)$ is defined as
 	(F\otimes G)\ket{v, w} \triangleq F\ket{v}\otimes G\ket{w}
 \]
 
-Upgrading subsystem operators
+Upgrading/promoting subsystem operators gets us
 
 \[
 	F\in L(H_A)\rarr F\otimes I \in L(H_A\otimes H_B)
@@ -3925,12 +4000,46 @@ Notation wise, let
 \[
 	G^{(B)}\triangleq I\otimes G
 \]
+This is form is overloaded, so don't get confused with notation of \hyperref[states-on-a-composite-system]{states} which also can have an superscript $(A)$.
+
 Note
 \[
 	\boxed{[F^{(A)}, G^{(B)}]= [F\otimes I, I\otimes G]=0}
 \]
 
-\subsection{Hamiltonian of Composite Systems}\label{hamiltonian-of-composite-systems}
+For a composite system $H = H_A \otimes H_B$, an operators acting only on one subsystem extends to the full space by tensoring with the identity on the other.
+
+\begin{tabular}{|l|c|c|}
+	\hline
+	             & Subsystem $A$           & Subsystem $B$           \\
+	\hline
+	Operator     & $Q^{(A)} = Q \otimes I$ & $R^{(B)} = I \otimes R$ \\
+	Eigenvalues  & $q_a$                   & $r_b$                   \\
+	Eigenvectors & $\ket{a}$               & $\ket{b}$               \\
+	Index range  & $a = 1, 2, \dots, d_A$  & $b = 1, 2, \dots, d_B$  \\
+	\hline
+\end{tabular}
+
+Sum
+\[
+	Q^{(A)} + R^{(B)} = Q \otimes I + I \otimes R
+\]
+\begin{itemize}
+	\item Eigenvectors: $\ket{a} \otimes \ket{b}$
+	\item Eigenvalues: $q_a + r_b$
+\end{itemize}
+
+Product
+\[
+	Q^{(A)} R^{(B)} = Q \otimes R
+\]
+\begin{itemize}
+	\item Eigenvectors: $\ket{a} \otimes \ket{b}$
+	\item Eigenvalues: $q_a\, r_b$
+\end{itemize}
+
+
+\subsection{Hamiltonian on a Composite System}\label{hamiltonian-of-composite-systems}
 \subsubsection{Non-interacting Hamiltonian}\label{non-interacting-hamiltonian}
 \[
 	H^{(total)}=H^{(A)}+H^{(B)}
@@ -4064,10 +4173,17 @@ So
 \[
 	\text{Maximal when } t = \frac{\pi}{4\omega}
 \]
-\subsection{Measurement Entanglement}\label{measurement-entanglement}
+
+
+
+\subsection{Measuring a Composite System}\label{measuring-a-composite-system}
+For a non-composite system, recall that the set of measurements you can make is the eigenvalues of the \hyperref[observables]{observable}.
+
+Recall \hyperref[measuring-a-quantum-state]{measuring a quantum state}.
+
 Entanglement doesn't always require a interacting Hamiltonian. They can also be created by jointly measuring a product state.
 
-Suppose we start with $\ket{\psi} = \ket{0} \otimes \ket{0}$
+Suppose we start with $\ket{\psi} = \ket{0} \otimes \ket{0}$ but measured in the $x$ axis
 \[
 	\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix} = \frac{1}{2}\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix} \longrightarrow \text{product state}
 \]
@@ -4081,7 +4197,107 @@ Measure $\hat{S}_x^{(\text{tot})}$, get 0 with $\frac{1}{2}$ probability. Mathem
 This means that joint measurement can product entanglement.
 Equivalent to interacting via third party.
 
+Consider a composite system $H_{\text{Alice}} \otimes H_{\text{Bob}}$ with subsystem observables having eigenvalues $q_a$, $r_b$ and eigenvectors $\ket{a}$, $\ket{b}$.
 
+Joint probability for outcome $(q_a, r_b)$:
+\[
+	P(a, b) = \bigl|\braket{a, b | \Psi^{(AB)}}\bigr|^2
+\]
+
+Marginal probabilities:
+\[
+	P(a) = \sum_b p(a, b), \qquad P(b) = \sum_a p(a, b)
+\]
+
+No-signalling from $A$ to $B$. Expand the joint state in the product basis:
+\[
+	\ket{\Psi^{(AB)}} = \sum_{a,b} c_{ab} \ket{a} \otimes \ket{b}, \qquad p(a, b) = |c_{ab}|^2
+\]
+Group the sum by $b$ to isolate Bob's basis:
+\[
+	\ket{\Psi^{(AB)}} = \sum_b \underbrace{\Bigl(\sum_a c_{ab} \ket{a}\Bigr)}_{\ket{\phi_b} \ \text{(unnormalized!)}} \otimes \ket{b}
+	= \sum_b \ket{\phi_b} \otimes \ket{b}
+\]
+With this notation, $P(a, b) = |\braket{a | \phi_b}|^2$, so Bob's marginal is
+\[
+	P(b) = \sum_a P(a, b) = \sum_a \braket{\phi_b | a} \braket{a | \phi_b} = \braket{\phi_b | \phi_b}
+\]
+The middle step used $\sum_a \ket{a}\bra{a} = I$ --- which holds for \emph{any} orthonormal basis $\{\ket{a}\}$ on Alice's side. Therefore $p(b)$ is independent of the choice of Alice's measurement basis. Alice cannot influence Bob's marginal statistics by switching what she measures.
+
+
+Suppose we apply $U^{(A)}$  to Alice's subsystem
+\[
+	\ket{\Psi^{(AB)}} = U^{(A)} \otimes I \ket{\Psi^{(AB)}}=\sum_b U\ket{\phi_b} \otimes \ket{b}
+\]
+\subsection{Neutron Interferometry}\label{neutron-interferometry}
+
+Let
+\[
+	R_{\hat{n}}(\theta) = e^{-i \theta \hat{J}_{\hat{n}} / \hbar}
+\]
+This is how you rotate a quantum state by an angle $\theta$ around $\hat{n}$ where $\hat{J}_{\hat{n}}$ is the angular momentum operator along $\hat{n}$.
+
+We experimentally observed that
+
+\[
+	R_x(2\pi) = e^{-i 2\pi \hat{S}_x / \hbar} = -I, \qquad R_x(4\pi) = I
+\]
+
+Given a $\hat{S_x}$ operation, turning it $\theta=2\pi$ causes there to be a negative sign infront of the $I$. Rotating it another $2\pi$ causes it to return to the same state. This is definitely not how it works in classical physics, where if you rotate something $2\pi$ you'd get right back to where it started.
+This actually means we live in a $4\pi$-world through experimental verification.
+
+This was tested by using a neutron interferometer. Basically, imagine if a neutron at $\ket{\psi}$ hits a silicon crystal beam splitter. The state of the neutron is its position $\{u,l\} $ tensor product its spin $\{+, -\}$.
+This is just how we define it.
+
+Basis: $\{\ket{n,+},\ \ket{n,-},\ \ket{\ell,+},\ \ket{\ell,-}\}$
+
+\[
+	\ket{\psi} = \ket{\text{position}} \otimes \ket{\text{spin}}
+\]
+
+Neutron beam splitter (silicon crystal): $\ket{n,s}$ splits into transmitted $\ket{n,s}$ and reflected $\ket{\ell,s}$.
+
+\[
+	(B \otimes I)\ket{n,s} = \tfrac{1}{\sqrt{2}}\bigl(\ket{n} + \ket{\ell}\bigr) \otimes \ket{s}
+\]
+\[
+	(B \otimes I)\ket{\ell,s} = \tfrac{1}{\sqrt{2}}\bigl(\ket{n} - \ket{\ell}\bigr) \otimes \ket{s}
+\]
+\[
+	B = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}
+\]
+
+The lower path passes through a static magnetic field $B$, which applies a spin rotation $R_x(\theta)$. The two paths recombine at a second beam splitter, with detectors $D_0$ and $D_1$ on the two outputs.
+
+The full evolution is
+\[
+	\ket{\psi_{\text{out}}} = (B \otimes I)\, U\, (B \otimes I)\, \ket{u, s}
+\]
+where the magnetic field implements the conditional rotation
+\[
+	U = \ket{u}\bra{u} \otimes I + \ket{\ell}\bra{\ell} \otimes R_x(\theta).
+\]
+
+Case $\theta = 2\pi$:
+\[
+	\ket{u, s} \;\xrightarrow{B \otimes I}\; \tfrac{1}{\sqrt{2}}\bigl(\ket{u} + \ket{\ell}\bigr) \otimes \ket{s}
+\]
+\[
+	\xrightarrow{R_x(2\pi) = -I}\; \tfrac{1}{\sqrt{2}}\bigl(\ket{u} - \ket{\ell}\bigr) \otimes \ket{s}
+	\;\xrightarrow{B \otimes I}\; \ket{\ell, s}
+\]
+$\Rightarrow$ neutron at $D_1$.
+
+Case $\theta = 4\pi$:
+\[
+	\ket{u, s} \;\longrightarrow\; \ket{u, s} \quad\Rightarrow\text{ neutron at } D_0.
+\]
+
+This is fully deterministic as in general, $P(D_0) = \cos^2(\theta/4)$ and $P(D_1) = \sin^2(\theta/4)$, so $\theta = 2\pi, 4\pi$ are the special tunings where one probability hits $1$.
+
+This is the physical consequence of $R_{\hat{n}}(2\pi) = -I \neq I$.
+
+This experimentally proves that we live in a $4\pi$-world.
 
 \newpage
 \newgeometry{margin=2cm}
