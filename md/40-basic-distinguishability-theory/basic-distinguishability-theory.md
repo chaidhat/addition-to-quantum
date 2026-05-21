@@ -1,6 +1,6 @@
 # Basic Distinguishability Theory
 
-This refines [<span class="underline">basic decoding theory</span>](#basic-decoding-theory).
+This refines [[basic-decoding-theory]].
 
 Probability of successfully distinguishing between two equally likely pure states $\left\lvert \alpha_0 \right\rangle, \left\lvert \alpha_1 \right\rangle$ where $\left\langle \alpha_0|\alpha_1 \right\rangle=\cos\theta$ is
 $$P_s\leq \frac{1}{2}(1+\sin\theta)$$

@@ -1,6 +1,6 @@
 # Trigonometry
 
-There’s these [<span class="underline">functions</span>](#functions) that are useful to know about.
+There’s these [[functions]] that are useful to know about.
 $$\sin(\theta), \cos(\theta), \tan(\theta)$$
 Where $\theta$ is the angle in radians.
 

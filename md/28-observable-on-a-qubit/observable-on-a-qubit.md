@@ -1,13 +1,13 @@
 # Observable on a qubit
 
-Any [<span class="underline">observable</span>](#observables) on a qubit can be written as
+Any [[observables|observable]] on a qubit can be written as
 
 $$\begin{gather*}
     \hat{A}=a_0\sigma_0+\vec{a}\vec{\sigma_{1,2,3}}
 \end{gather*}$$
 
 You can think of $a_0\sigma_0$ as the scalar value and
-$\vec{a}\vec{\sigma_{1,2,3}}$ as it helps with the [<span class="underline">Bloch Sphere</span>](#bloch-sphere).
+$\vec{a}\vec{\sigma_{1,2,3}}$ as it helps with the [[bloch-sphere]].
 
 This can be written in spherical units too
 

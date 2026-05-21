@@ -8,7 +8,7 @@ $$\left\lvert \psi \right\rangle = \alpha\left\lvert 0 \right\rangle + \beta\lef
 
 Example
 
-We can let there be three states in [<span class="underline">spin-1/2</span>](#quantum-system).
+We can let there be three states in [[quantum-system|spin-1/2]].
 $$\left\lvert z+ \right\rangle\quad\text{british coming by land}$$
 $$\left\lvert z- \right\rangle\quad\text{british coming by sea}$$
 $$\left\lvert x+ \right\rangle\quad\text{british not coming}$$
@@ -21,13 +21,13 @@ If it is $+\hbar/2$, we don’t get any extra information as it could equally be
 
 How reliably can we distinguish between a set of quantum states that serve as signals?
 
-Consider Alice and Bob. Alice sends quantum state to Bob and this state is living in some [<span class="underline">Hilbert space</span>](#hilbert-spaces) $H$
+Consider Alice and Bob. Alice sends quantum state to Bob and this state is living in some [[hilbert-spaces|Hilbert space]] $H$
 $$\left\lvert \psi \right\rangle\in H\quad dim(H)=d$$
 
 Alice encodes $N$ equally likely messages
 $$\{\left\lvert \alpha \right\rangle\}_{\alpha=1}^N$$
 
-Bob makes measurements in some [<span class="underline">basis</span>](#basis-states)
+Bob makes measurements in some [[basis-states|basis]]
 $$\{\left\lvert k \right\rangle\}_{k=1}^{d'}$$
 
 Bob measures a larger Hilbert space $H'$ because he doesn’t know the Hilbert space Alice is using.
@@ -42,9 +42,9 @@ for some of these outcomes you can get maybe you assign some like $1,2$ to be me
 The success probability for Bob to correctly distinguish the different messages.
 $$P_s=\sum_{\alpha=1}^NP(\alpha)\sum_{k\in C_\alpha}P(outcome~k|\text{message $\alpha$ was sent})\\
 $$
-Recall [<span class="underline">Born’s rule</span>](#borns-rule) that
+Recall [[borns-rule]] that
 $$=\sum_{\alpha =1}^N\frac{1}{N}\sum_{k\in C_\alpha}|\left\langle k|\alpha \right\rangle|^2$$
-We want to try to upperbound this. Let $\{\left\lvert \phi_n \right\rangle\}_{r=1}^d$ be some [<span class="underline">orthonormal basis</span>](#orthonormality) of $H$
+We want to try to upperbound this. Let $\{\left\lvert \phi_n \right\rangle\}_{r=1}^d$ be some [[orthonormality|orthonormal basis]] of $H$
 
 We know that
 $$\Pi\left\lvert \alpha \right\rangle=\left\lvert \alpha \right\rangle$$
@@ -60,7 +60,7 @@ $$
 $$=\frac{1}{N}\sum_\alpha\sum_{k\in C_\alpha}\left\langle \alpha \right\rvert(\Pi\left\lvert k \right\rangle\left\langle k \right\rvert\Pi)\left\lvert \alpha \right\rangle$$
 $$= \frac{1}{N}\sum_\alpha \sum_{k\in C_\alpha}tr(\left\langle \alpha \right\rvert\Pi\left\lvert k \right\rangle\left\langle k \right\rvert\Pi\left\lvert \alpha \right\rangle)\\
 $$
-Using [<span class="underline">trace</span>](#traces) cyclic property
+Using [[traces|trace]] cyclic property
 $$= \frac{1}{N}\sum_\alpha \sum_{k\in C_\alpha}tr(\left\lvert \alpha \right\rangle\left\langle \alpha \right\rvert\cdot \Pi\left\lvert k \right\rangle\left\langle k \right\rvert\Pi)\\
 $$
 $$\leq \frac{1}{N}\sum_\alpha \sum_{k\in C_\alpha}tr(\Pi\left\lvert k \right\rangle\left\langle k \right\rvert\Pi)\\
@@ -73,7 +73,7 @@ $$\leq \frac{1}{N}tr(\Pi^2I)\\
 $$
 $$\leq\frac{1}{N}tr(\Pi)\\
 $$
-Using [<span class="underline">trace</span>](#traces) cyclic property and the fact that $tr(\left\langle \phi_r|\phi_r \right\rangle)=\left\langle \phi_r|\phi_r \right\rangle$ as it is a $1\times 1$ matrix.
+Using [[traces|trace]] cyclic property and the fact that $tr(\left\langle \phi_r|\phi_r \right\rangle)=\left\langle \phi_r|\phi_r \right\rangle$ as it is a $1\times 1$ matrix.
 $$\leq\frac{1}{N}tr(\sum_{r=1}^d\left\lvert \phi_r \right\rangle\left\langle \phi_r \right\rvert)$$
 $$\leq\frac{1}{N}\sum_{r=1}^dtr(\left\langle \phi_r|\phi_r \right\rangle)$$
 $$\leq\frac{1}{N}\sum_{r=1}^d\left\langle \phi_r|\phi_r \right\rangle$$

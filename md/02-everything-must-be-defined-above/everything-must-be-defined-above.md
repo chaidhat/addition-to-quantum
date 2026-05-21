@@ -5,11 +5,10 @@ elementary school math) in a section before it.
 
 Example
 
-[<span class="underline">invariant
-subspace</span>](#invariant-subspaces) →
-[<span class="underline">subspace</span>](#subspaces)
+[[invariant-subspaces|invariant
+subspace]] →
+[[subspaces|subspace]]
 →
-[<span class="underline">subset</span>](#subsets)
+[[subsets|subset]]
 →
-[<span class="underline">set
-theory</span>](#set-theory)
+[[set-theory]]

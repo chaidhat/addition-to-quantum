@@ -1,7 +1,7 @@
 # No-Cloning Theorem
 
 There exists no unitary operator $U$ that can clone a qubit.
-Note that $\otimes$ is the [<span class="underline">tensor product</span>](#tensor-product).
+Note that $\otimes$ is the [[tensor-product]].
 $$C(\left\lvert \psi \right\rangle)=\left\lvert \psi \right\rangle\otimes\left\lvert \psi \right\rangle$$
 
 Proof
@@ -17,4 +17,4 @@ $$
 $$\neq\frac{1}{\sqrt{2}}(\left\lvert 0 \right\rangle\left\lvert 0 \right\rangle+\left\lvert 1 \right\rangle\left\lvert 1 \right\rangle)\\
 $$
 $$\neq \left\lvert + \right\rangle\left\lvert + \right\rangle$$
-This breaks the [<span class="underline">linearity of operators</span>](#operators).
+This breaks the [[operators|linearity of operators]].

@@ -116,4 +116,4 @@ $$\begin{gather*}
     \hat{A}\hat{B}=\sum_{i=0}^3c_i\sigma^i
 \end{gather*}$$
 
-If $c_i\in\mathbb{R}$, then $\hat{A}$ is [<span class="underline">Hermitian</span>](#hermitian-operators)
+If $c_i\in\mathbb{R}$, then $\hat{A}$ is [[hermitian-operators|Hermitian]]

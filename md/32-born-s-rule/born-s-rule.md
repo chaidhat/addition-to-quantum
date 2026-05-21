@@ -1,8 +1,8 @@
 # Born’s Rule
 
-If a [<span class="underline">quantum system</span>](#quantum-system) is in state $\left\lvert \psi \right\rangle$ and you measure
-[<span class="underline">observable</span>](#observables) $\hat{A}$ — the [<span class="underline">probability</span>](#probability-theory) of getting [<span class="underline">eigenvalue</span>](#eigenvectorseigenvalues)
-$\lambda_\alpha$ (which corresponds to [<span class="underline">eigenstate</span>](#eigenstates) $\left\lvert \alpha \right\rangle$) is
+If a [[quantum-system]] is in state $\left\lvert \psi \right\rangle$ and you measure
+[[observables|observable]] $\hat{A}$ — the [[probability-theory|probability]] of getting [[eigenvectorseigenvalues|eigenvalue]]
+$\lambda_\alpha$ (which corresponds to [[eigenstates|eigenstate]] $\left\lvert \alpha \right\rangle$) is
 
 $$\begin{gather*}
     P_\alpha=|\left\langle \alpha|\psi \right\rangle|^2
