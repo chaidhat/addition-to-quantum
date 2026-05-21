@@ -1,0 +1,267 @@
+{
+  "main": {
+    "id": "599b4512b5e675af",
+    "type": "split",
+    "children": [
+      {
+        "id": "2db6f776fbeeb185",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c72a3c3a294e08b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "md/31-probability-theory/06-expected-value-of-an-observable.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06-expected-value-of-an-observable"
+            }
+          },
+          {
+            "id": "7228f2ef973bfd47",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "md/31-probability-theory/06-expected-value-of-an-observable.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06-expected-value-of-an-observable"
+            }
+          },
+          {
+            "id": "5953cdfd964a7057",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "md/31-probability-theory/06-expected-value-of-an-observable.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06-expected-value-of-an-observable"
+            }
+          },
+          {
+            "id": "6f609a15aa796743",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "md/31-probability-theory/06-expected-value-of-an-observable.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06-expected-value-of-an-observable"
+            }
+          },
+          {
+            "id": "4e3a41975794f61d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "readme.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "readme"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2ee465a4b79d40f5",
+    "type": "split",
+    "children": [
+      {
+        "id": "bdaf9676743c97f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9e5a0fe9a134c8ec",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0584e99726099c89",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "4da351d694d76817",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "959bdf0c8c9d5af5",
+    "type": "split",
+    "children": [
+      {
+        "id": "c086a1ef942b5a32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ba51c12d87a94161",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "readme.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for readme"
+            }
+          },
+          {
+            "id": "6d221abc8e39da3f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "readme.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from readme"
+            }
+          },
+          {
+            "id": "b8dc6d01a77faaea",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "710f75bfccc7e1bb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "33e0746958e776b8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "readme.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of readme"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "4e3a41975794f61d",
+  "lastOpenFiles": [
+    "cheatsheetonly.pdf",
+    "main.pdf",
+    "readme.md",
+    "md/43-composite-systems/09-entanglement-and-quantum-nonlocality.md",
+    "md/43-composite-systems/08-no-communication-theorem.md",
+    "md/43-composite-systems/07-bell-states.md",
+    "md/43-composite-systems/04-hamiltonian-on-a-composite-system.md",
+    "md/43-composite-systems/03-observables-on-a-composite-system.md",
+    "md/36-linear-algebra-iii/03-kronecker-product.md",
+    "md/36-linear-algebra-iii/00-intro.md",
+    "md/34-density-matrix/density-matrix.md",
+    "md/31-probability-theory/07-cauchy-schwarz-inequality.md",
+    "md/31-probability-theory/06-expected-value-of-an-observable.md",
+    "md/31-probability-theory/04-spread.md",
+    "md/33-measuring-a-quantum-state/measuring-a-quantum-state.md",
+    "md/31-probability-theory/03-numerical-random-variable-expected-value.md",
+    "md/31-probability-theory/00-intro.md",
+    "md/11-function/function.md",
+    "md/05-variable-addition/variable-addition.md",
+    "md/04-let/let.md",
+    "md/03-chaimongkol-ucla-edu/chaimongkol-ucla-edu.md"
+  ]
+}

@@ -21,6 +21,7 @@ There is no deeper depth in use. Inline paragraph "headings" should be plain tex
 
 ## Workflow notes
 
+- **Always work directly on `main`. Do NOT create a worktree (do not call `EnterWorktree`), even in background sessions.** Edit `main.tex` in place in the user's working copy. The bg-isolation guard is disabled for this repo via `.claude/settings.json` (`"worktree": {"bgIsolation": "none"}`).
 - The doc is mostly transcriptions of handwritten lecture notes. Faithfully transcribe what's in the image; only fix obvious typos when asked.
-- After each edit, compile with `latexmk -pdf -interaction=nonstopmode main.tex` to confirm it still builds. The 3 unresolved `Hyper reference` warnings at lines 246 / 1177 / 1259 are pre-existing and not caused by edits.
+- After each edit, compile with `latexmk -pdf -f -interaction=nonstopmode main.tex` to confirm it still builds. The `-f` flag is required: there are 3 pre-existing unresolved `Hyper reference` warnings at lines 246 / 1177 / 1259, and without `-f` latexmk halts after pass 1 (before cross-references resolve) with pdflatex return code 1. With `-f` it completes all passes and ends with just those 3 expected warnings.
 - Output PDF lives at `build/main.pdf`.

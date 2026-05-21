@@ -4229,6 +4229,14 @@ Suppose we apply $U^{(A)}$  to Alice's subsystem
 \[
 	\ket{\Psi^{(AB)}} = U^{(A)} \otimes I \ket{\Psi^{(AB)}}=\sum_b U\ket{\phi_b} \otimes \ket{b}
 \]
+
+This means that the marginal probability distributiuon of Bob's outcome becomes
+\[
+	P'(b)=\bra{\phi_b}U^+U \ket{\phi_b}=\braket{\phi_b|\phi_b}=P(b)
+\]
+
+This means Bob's probabilities are unaffected.
+
 \subsection{Neutron Interferometry}\label{neutron-interferometry}
 
 Let
@@ -4298,6 +4306,142 @@ This is fully deterministic as in general, $P(D_0) = \cos^2(\theta/4)$ and $P(D_
 This is the physical consequence of $R_{\hat{n}}(2\pi) = -I \neq I$.
 
 This experimentally proves that we live in a $4\pi$-world.
+\subsection{Bell States}\label{bell-states}
+For reference, Bell defined these as
+\[
+	\begin{aligned}
+		\ket{\Phi^+} & = \tfrac{1}{\sqrt{2}}\left(\ket{00} + \ket{11}\right) \\
+		\ket{\Phi^-} & = \tfrac{1}{\sqrt{2}}\left(\ket{00} - \ket{11}\right) \\
+		\ket{\Psi^+} & = \tfrac{1}{\sqrt{2}}\left(\ket{01} + \ket{10}\right) \\
+		\ket{\Psi^-} & = \tfrac{1}{\sqrt{2}}\left(\ket{01} - \ket{10}\right)
+	\end{aligned}
+\]
+
+\subsection{No Communication Theorem}\label{no-communication-theorem}
+With access to state $$\ket{\Psi^{(AB)}}$$ which may or may not be entangled, Alice cannot convey information to Bob by
+\begin{enumerate}
+	\item Choosing a basic measurement on $A$
+	\item Choosing a unitary evolution operator for $A$
+\end{enumerate}
+
+But Alice's choice of measurement basis cannot affect Bob's measurement statistics, her measurement outcome CAN affect Bob's state.
+
+Let $\ket{\psi_a}$ be the state of Bob's qubit conditioned on Alice's outcome $a$.
+
+
+\[
+	\ket{\psi_a} \triangleq \braket{a^{(A)}|\Psi^{(AB)}}
+\]
+Let $a$ be the outcome of Alice's measurement. If measured in the z axis, it'd be $a\in\{0,1\}$ and if measured in the x axis, it'd be $a\in\{+,-\}$.
+
+We can decompose the earlier state into
+\[
+	\ket{\Psi^{(AB)}}=\sum_a\ket{a}\otimes \ket{\psi_a}
+\]
+What does this mean? This means the basis $\ket{a}$ cross tensor product with the state itself. This promotes
+Via Born's rule
+\[
+	P(a,b)=|\braket{b|\psi_a}|^2
+\]
+Via \hyperref[conditional-probability]{conditional probability}
+\[
+	P(b|a)=\frac{1}{P(a)}|\braket{b|\psi_a}|^2=\frac{\braket{\psi_a|b}\braket{b|\psi_a}}{\braket{\psi_a|\psi_a}}
+\]
+\[
+	=|\braket{b|\hat{\psi}_a}|^2
+\]
+Recall \hyperref[magnitude]{magnitude}
+\[
+	\ket{\hat{\psi}_a}\triangleq\frac{1}{\sqrt{P(a)}}\ket{\psi_a}=\frac{\ket{\psi_a}}{||\ket{\psi_a}||}=\frac{\ket{\psi_a}}{\sqrt{\braket{\psi_a|\psi_a}}}
+\]
+
+Note that generally, conditional state can be obtained via a partial inner product.
+\[
+	\boxed{\braket{a^{(A)}|\Psi^{(AB)}}\triangleq(\bra{a}\otimes I)\ket{\Psi^{(AB)}}}
+\]
+Note this yields a vector in $H_B$.
+Where $\ket{\Psi^{(AB)}}$ is in $H_A \otimes H_B$
+
+Example:
+\[
+	\ket{\Psi^{(AB)}_-}=\frac{1}{\sqrt{2}}\left(\ket{{0}^{(A)}}\otimes \ket{1^{(B)}}-\ket{1^{(A)}}\otimes \ket{{0}^{(B)}}\right)
+\]
+Suppose Alice measures in z basis
+
+\[
+	\ket{\Psi^{(AB)}_-}=\frac{1}{\sqrt{2}}\left(\ket{{0}^{(A)}}\otimes \ket{1^{(B)}}-\ket{1^{(A)}}\otimes \ket{{0}^{(B)}}\right)
+\]
+\[
+	\begin{array}{c|c}
+		\text{Outcome} & \text{conditional state (unnormalized)}                                                                                  \\
+		\hline
+		a = 0          & \ket{\psi_0^{(B)}} = \braket{{0}^{(A)} | \Phi_-^{(AB)}} = \frac{1}{\sqrt{2}} \ket{1^{(B)}} \qquad p(a=0) = \tfrac{1}{2}  \\[1em]
+		a = 1          & \ket{\psi_1^{(B)}} = \braket{1^{(A)} | \Phi_-^{(AB)}} = -\frac{1}{\sqrt{2}} \ket{{0}^{(B)}} \qquad p(a=1) = \tfrac{1}{2}
+	\end{array}
+\]
+
+We can see that Bob's qubit is projected onto z eigenstate opposite to Alice's outcome.
+
+Let's say that Alice measures in x basis.
+
+\[
+	\begin{array}{c|l}
+		\text{Outcome} & \text{Conditional state (unnormalized)}                                                                                                                            \\
+		\hline
+		a = +          & \begin{aligned}
+			                 \ket{\psi_+^{(B)}} & = \braket{+^{(A)} | \Phi_-^{(AB)}}                                                                                                           \\
+			                                    & = \frac{\bra{{0}^{(A)}} + \bra{1^{(A)}}}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} \left( \ket{{0}^{(A)} 1^{(B)}} - \ket{1^{(A)} {0}^{(B)}} \right) \\
+			                                    & = \frac{\ket{1^{(B)}}}{2} - \frac{\ket{{0}^{(B)}}}{2} = -\frac{\ket{-^{(B)}}}{\sqrt{2}}
+		                 \end{aligned} \\
+		               & \qquad p(a=+) = \tfrac{1}{2}                                                                                                                                       \\[1em]
+		a = -          & \ket{\psi_-^{(B)}} = \braket{-^{(A)} | \Phi_-^{(AB)}} = \frac{\ket{+^{(B)}}}{\sqrt{2}}                                                                             \\
+		               & \qquad p(a=-) = \tfrac{1}{2}
+	\end{array}
+\]
+
+Bob's qubit is projected to opposite basis state as ALice's measurement
+Somehow, Alice's choice of measurement basis affects Bob's state.
+If Alice measures in z basis, Bob's conditional state is $\ket{0}$ or $\ket{1}$ with 50/50 probability. If Alice measures in x basis, Bob's conditional state is $\ket{+}$ or $\ket{-}$ with 50/50 probability.
+\[
+	\hat{\rho}_B = \tfrac{1}{2} \ket{0}\bra{0} + \tfrac{1}{2} \ket{1}\bra{1} = \tfrac{1}{2} \ket{+}\bra{+} + \tfrac{1}{2} \ket{-}\bra{-} = \frac{1}{2}I
+\]
+\subsection{Entanglement and Quantum Nonlocality}\label{entanglement-quantum-nonlocality}
+
+In quantum mechanics -> if $z$ and $x$ observables are incompaible, getting a definite value for $z$ means losing the ability to know $x$.
+
+Einstein-Podolsky-Rosen (1935) argued that quantum mehcanics is incomplete as physics should obey principles of local realism whereby
+\begin{enumerate}
+	\item locality: measurement results cannot dpeend on what happens far away
+	\item realism: if something is predictable without disturbance, it must have already been there
+\end{enumerate}
+
+EPR postulated that let there be a pair of qubits in $\ket{\Psi_-^{(AB)}}$. Alice takes one and Bob takes one. They then separate light years from each other.
+Alice now measures her qubit in the z basis. Let's say she gets $0$.
+\[
+	\ket{\Psi_-^{(AB)}}=\frac{1}{\sqrt{2}}\left(\ket{{0}^{(A)}}\otimes \ket{1^{(B)}}-\ket{1^{(A)}}\otimes \ket{{0}^{(B)}}\right)
+\]
+Multiplying by $\bra{{0}^{(A)}}$ on the left, we get
+\[
+	\braket{{0}^{(A)} | \Psi_-^{(AB)}} = \left(\bra{0}^{(A)} \otimes I^{(B)}\right) \ket{\Psi_-^{(AB)}}
+\]
+\[
+	= \left(\bra{0}^{(A)} \otimes I^{(B)}\right) \cdot \tfrac{1}{\sqrt{2}}\left(\ket{{0}^{(A)}} \otimes \ket{1^{(B)}} - \ket{1^{(A)}} \otimes \ket{{0}^{(B)}}\right)
+\]
+\[
+	= \tfrac{1}{\sqrt{2}}\left[\left(\bra{0}^{(A)} \otimes I^{(B)}\right)\left(\ket{{0}^{(A)}} \otimes \ket{1^{(B)}}\right) - \left(\bra{0}^{(A)} \otimes I^{(B)}\right)\left(\ket{1^{(A)}} \otimes \ket{{0}^{(B)}}\right)\right]
+\]
+\[
+	=\frac{1}{\sqrt{2}}\ket{1^{(B)}}
+\]
+That means, via. Born's rule, if Alice observed a $0$ outcome, Bob's qubit is in the state $\ket{1}$ with 100\% probability.
+
+EPR argues that it breaks local realism as local realism wants Bob's qubit to have definite values of x and z observables.
+
+Another example would be let there be two qualities of a particle: hardness $\{hard,soft\}$ and color $\{black, white\}$ if there is a particle with $(\hat{z}+, \hat{x}+)$ which just means it's like $(soft, white)$. This is not an eigenstate because in quantum mechanics, knowing $\hat{z}=+$ means losing the ability to know $\hat{x}=-$ or $\hat{x}=+$.
+We're just constructing a model that obeys EPR.
+
+
+
 
 \newpage
 \newgeometry{margin=2cm}
