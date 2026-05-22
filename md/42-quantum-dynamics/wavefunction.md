@@ -1,8 +1,9 @@
 # Wavefunction
 
-Where $`\left\lvert \psi(t) \right\rangle`$ is a [[ket-states|state]] in the [[hilbert-spaces|Hilbert space]], $`\psi(x,t)`$ is the wavefunction w.r.t time $`t`$ and position $`x`$.
+Where $\left\lvert \psi(t) \right\rangle$ is a [[ket-states|state]] in the [[hilbert-spaces|Hilbert space]], $\psi(x,t)$ is the wavefunction w.r.t time $t$ and position $x$.
 
 Let
-``` math
+
+$$
 \psi(x,t)\triangleq\left\langle x|\psi(t) \right\rangle
-```
+$$

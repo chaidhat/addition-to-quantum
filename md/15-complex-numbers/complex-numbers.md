@@ -6,7 +6,7 @@ Numbers can be complex.
 
 Let’s say we have two funny looking 2x2 matrices. Just bear with me.
 
-``` math
+$$
 \begin{gather*}
     M_R=\begin{pmatrix}1 & 0 \\
                    0 & 1
@@ -15,12 +15,12 @@ Let’s say we have two funny looking 2x2 matrices. Just bear with me.
                    1 & 0
     \end{pmatrix}
 \end{gather*}
-```
+$$
 
-Now we can put two scalars $`a,b`$ infront of these numbers and add it
+Now we can put two scalars $a,b$ infront of these numbers and add it
 up like we did before:
 
-``` math
+$$
 \begin{gather*}
     z=a\begin{pmatrix}1 & 0 \\
                    0 & 1
@@ -31,24 +31,24 @@ up like we did before:
                    b & a
     \end{pmatrix}
 \end{gather*}
-```
+$$
 
 We can write this weird looking matrix differently:
 
-``` math
+$$
 \begin{gather*}
     z=a+bi
 \end{gather*}
-```
+$$
 
-What is $`i`$? Well, we don’t know. It’s not a variable! But we know
-what $`i^2`$ is:
+What is $i$? Well, we don’t know. It’s not a variable! But we know
+what $i^2$ is:
 
-``` math
+$$
 \begin{gather*}
     i^2=-1
 \end{gather*}
-```
+$$
 
-Notice however much you can times $`a`$, it won’t affect $`b`$, and vice
+Notice however much you can times $a$, it won’t affect $b$, and vice
 versa.

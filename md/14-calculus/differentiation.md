@@ -1,16 +1,16 @@
 # Differentiation
 
 To differentiate something means to see how fast it changes with respect
-to (w.r.t) something else changing, for example, time $`t`$. Imagine you step forward in time by a very small step $`h`$.
-As $`h\rightarrow 0`$, the change in $`x`$ becomes the derivative of $`x`$ with respect to time.
+to (w.r.t) something else changing, for example, time $t$. Imagine you step forward in time by a very small step $h$.
+As $h\rightarrow 0$, the change in $x$ becomes the derivative of $x$ with respect to time.
 
-``` math
+$$
 \frac{d}{dt}f(t)=\lim_{h\to 0} \frac{f(t+h)-f(t)}{h}
-```
+$$
 
 To do this, us humans developed some nifty tricks. Here’s all of them.
 
-``` math
+$$
 \begin{align*}
     \frac{d}{dx}[f(x) \pm g(x)]                & = f'(x) \pm g'(x)                                                    \\
     \frac{d}{dx}[x^n]                          & = nx^{n-1}                                                           \\
@@ -36,4 +36,4 @@ To do this, us humans developed some nifty tricks. Here’s all of them.
     \frac{d}{dx}[f^{-1}(x)]                    & = \frac{1}{f'(f^{-1}(x))}                                            \\
     \frac{d^n}{dx^n}[f(x)g(x)]                 & = \sum_{k=0}^{n} \binom{n}{k} f^{(k)}(x)\,g^{(n-k)}(x)
 \end{align*}
-```
+$$

@@ -6,6 +6,6 @@ A vector is a rank-1 tensor (1D).
 
 A matrix is a rank-2 tensor (2D).
 
-A rank-$`n`$ tensor is an $`n`$-dimensional array with $`n`$ indices.
+A rank-$n$ tensor is an $n$-dimensional array with $n$ indices.
 
 A tensor is a subset of a [[vectors|vector]].

@@ -1,12 +1,12 @@
 # Bra, Transpose
 
-We just learned what ket $`\left\lvert x \right\rangle`$ means — a $`N\times 1`$ vector.
+We just learned what ket $\left\lvert x \right\rangle$ means — a $N\times 1$ vector.
 Let that ALSO be called a ket. If we flip it horizontally, we get a bra
-$`\left\langle x \right\rvert`$.
+$\left\langle x \right\rvert$.
 
 If a ket is
 
-``` math
+$$
 \begin{gather*}
     \left\lvert x \right\rangle=\begin{pmatrix}
         1+3i \\
@@ -23,11 +23,11 @@ If a ket is
         1
     \end{pmatrix}
 \end{gather*}
-```
+$$
 
 Then it’s counterpart is a bra
 
-``` math
+$$
 \begin{gather*}
     \left\langle x \right\rvert=\begin{pmatrix}
         1-3i &
@@ -44,16 +44,16 @@ Then it’s counterpart is a bra
         1
     \end{pmatrix}
 \end{gather*}
-```
+$$
 
 You swap the columns for the rows (transpose!) and make every [[element]]
-the [[conjugate]] of itself. It becomes a $`1\times N`$ matrix instead.
+the [[conjugate]] of itself. It becomes a $1\times N$ matrix instead.
 
 Let this weird transformation be known as a conjugate transpose, denoted
 as
 
-``` math
+$$
 \begin{gather*}
     \left\langle v \right\rvert=(\left\lvert v \right\rangle)^+
 \end{gather*}
-```
+$$

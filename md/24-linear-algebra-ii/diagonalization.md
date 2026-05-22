@@ -5,12 +5,12 @@ which occurs if the geometric multiplicity (dimension of the [[eigenspaces|eigen
 equals the algebraic multiplicity (root multiplicity in the
 [[characteristic-polynomial|characterstic polynomial]]) for every [[eigenvectorseigenvalues|eigenvalue]].
 
-If matrix $`A`$ is diagonalizable then it can be written as
+If matrix $A$ is diagonalizable then it can be written as
 
-``` math
+$$
 \begin{gather*}
     A=PDP^{-1}
 \end{gather*}
-```
+$$
 
-Where $`D=diag(\lambda_1, … , \lambda_n)`$
+Where $D=diag(\lambda_1, … , \lambda_n)$

@@ -1,20 +1,20 @@
 # Characteristic Polynomial
 
 polynomial
-$`p(\lambda)=\alpha_0\lambda^n+\alpha_1\lambda^{n-1}+...+\alpha_{n-1}\lambda^{1}+\alpha_n`$
+$p(\lambda)=\alpha_0\lambda^n+\alpha_1\lambda^{n-1}+...+\alpha_{n-1}\lambda^{1}+\alpha_n$
 
-``` math
+$$
 \begin{gather*}
     p(\lambda)=det(A-\lambda I)
 \end{gather*}
-```
+$$
 
 Solving
 
-``` math
+$$
 \begin{gather*}
     p(\lambda)=0
 \end{gather*}
-```
+$$
 
-Gives $`\lambda`$ values which are [[eigenvectorseigenvalues|eigenvalues]] of A
+Gives $\lambda$ values which are [[eigenvectorseigenvalues|eigenvalues]] of A

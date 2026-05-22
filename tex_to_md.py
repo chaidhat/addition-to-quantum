@@ -17,9 +17,9 @@ cross-reference targets used in [text](#label) links. Those links are
 rewritten to Obsidian wikilinks `[[target|text]]` (or `[[target]]` when
 text matches the target).
 
-Output is `gfm+tex_math_dollars`:
-  - Display math uses ```math fenced blocks (rendered by GitHub).
-  - Inline math uses $`...`$ (also rendered by GitHub).
+Output starts from `gfm+tex_math_dollars` and is post-processed so that:
+  - Display math uses $$...$$ (paragraph-separated by blank lines).
+  - Inline math uses $...$ (no backticks).
   - Tables are GFM pipe tables.
   - Underlines come out as <u>…</u>, which we strip from link text.
 
@@ -236,6 +236,41 @@ def _strip_underline(text: str) -> str:
     return _UNDERLINE_RE.sub(lambda m: m.group(1) or m.group(2), text)
 
 
+_FENCE_OPEN_RE = re.compile(r"^\s*```\s*math\s*$")
+_FENCE_CLOSE_RE = re.compile(r"^\s*```\s*$")
+_INLINE_MATH_RE = re.compile(r"\$`([^`\n]+)`\$")
+
+
+def normalize_math(text: str) -> str:
+    """Convert pandoc's gfm math output to plain TeX-style markdown:
+    ```math fences become $$...$$ blocks separated by blank lines, and
+    $`...`$ inline math becomes $...$."""
+    lines = text.split("\n")
+    out: list[str] = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if _FENCE_OPEN_RE.match(line):
+            j = i + 1
+            while j < len(lines) and not _FENCE_CLOSE_RE.match(lines[j]):
+                j += 1
+            math_content = lines[i + 1:j]
+            if out and out[-1].strip() != "":
+                out.append("")
+            out.append("$$")
+            out.extend(math_content)
+            out.append("$$")
+            next_idx = j + 1
+            if next_idx < len(lines) and lines[next_idx].strip() != "":
+                out.append("")
+            i = next_idx
+            continue
+        out.append(line)
+        i += 1
+    joined = "\n".join(out)
+    return _INLINE_MATH_RE.sub(r"$\1$", joined)
+
+
 # Match a markdown link: [text](target). Text may contain nested
 # brackets at one level (e.g. `[<u>x</u>]`); target excludes whitespace
 # and parentheses.
@@ -284,6 +319,7 @@ def main(argv: list[str]) -> int:
 
     print(f"Running pandoc on {TEX}...")
     md = run_pandoc(TEX)
+    md = normalize_math(md)
     tex_headers = parse_tex_headers(TEX.read_text())
     md, headers = attach_labels(md, tex_headers)
 
