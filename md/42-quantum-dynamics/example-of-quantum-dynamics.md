@@ -1,12 +1,12 @@
 # Example of Quantum Dynamics
 
-An electron is in an magnetic field in the $z+$ direction. There is a particle in state
+An electron is in an magnetic field in the $z+$ direction. There is a particle in [[ket-states|state]]
 
 $$
 \left\lvert \psi(0) \right\rangle=\begin{pmatrix}\cos\theta_0/2 \\ e^{i\phi_0}\sin\theta_0/2\end{pmatrix}
 $$
 
-Find out the expected value of $S_z, S_x, S_y$ at time $t$.
+Find out the [[expected-value-of-observables|expected value]] of $S_z, S_x, S_y$ at time $t$.
 
 Classical charged particle has
 
@@ -36,7 +36,7 @@ $$
 U=-\vec{\mu}\cdot\vec{B}
 $$
 
-In quantum mechanics, the energy is the Hamiltonian operator $\hat{H}$
+In quantum mechanics, the energy is the Hamiltonian [[operators|operator]] $\hat{H}$
 Let
 
 $$
@@ -55,7 +55,7 @@ $$
 \hat{H}=-\gamma B \frac{\hbar}{2}\begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}=-\gamma B \hat{S}_z
 $$
 
-To do it the Schrödinger equation way, take the eigenvalues and [[eigenstates]] of $H$
+To do it the [[schruxf6dingers-equation-hamiltonian|Schrödinger equation]] way, take the [[eigenvectorseigenvalues|eigenvalues]] and [[eigenstates]] of $H$
 
 $$
 H\left\lvert z\pm \right\rangle=\mp\gamma B \frac{\hbar}{2}\left\lvert z\pm \right\rangle

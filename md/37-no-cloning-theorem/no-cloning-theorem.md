@@ -1,6 +1,6 @@
 # No-Cloning Theorem
 
-There exists no unitary operator $U$ that can clone a qubit.
+There exists no [[unitary-operator|unitary]] operator $U$ that can clone a [[qubit]].
 Note that $\otimes$ is the [[tensor-product]].
 
 $$

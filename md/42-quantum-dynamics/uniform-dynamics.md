@@ -1,8 +1,8 @@
 # Uniform dynamics
 
-This is a time-indepndent Hamiltonian $H(t)=H$.
+This is a time-indepndent [[schruxf6dingers-equation-hamiltonian|Hamiltonian]] $H(t)=H$.
 
-We set an ODE for $U$ which we derived earlier.
+We [[set]] an ODE for $U$ which we derived earlier.
 
 $$
 i\hbar\frac{dU}{dt} = HU \iff \frac{dU}{dt} = -\frac{iH}{\hbar}U
@@ -37,7 +37,7 @@ $$
 \implies U(t,t_0) = e^{-iHt/\hbar}e^{iHt_0/\hbar}
 $$
 
-via [[baker-campbell-hausdorff-formula]], since $[H,H]=0$ (trivially as any operator commutes with itself)
+via [[baker-campbell-hausdorff-formula]], since $[H,H]=0$ (trivially as any [[operators|operator]] [[commutators|commutes]] with itself)
 
 $$
 U(t,t_0) = e^{-iHt/\hbar}e^{iHt_0/\hbar}

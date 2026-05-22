@@ -1,6 +1,6 @@
 # Spread
 
-How do we measure spread from $\mathbb{E}[X]$?
+How do we measure spread from [[expected-value-of-observables|expected value]] $\mathbb{E}[X]$?
 
 Let $\mu=\mathbb{E}[X]$
 

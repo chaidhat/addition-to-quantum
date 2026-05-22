@@ -1,16 +1,12 @@
 # Quantum Information Capacity
 
-A classical bit has 2 states: 0 and 1.
+A classical bit has 2 [[states]]: 0 and 1.
 
 $$
 \{0,1\}
 $$
 
-A qubit has infinite distinct states. Linear combination (superposition) of
-
-$$
-\left\lvert \psi \right\rangle = \alpha\left\lvert 0 \right\rangle + \beta\left\lvert 1 \right\rangle
-$$
+A [[qubit]] has infinite distinct [[states-on-a-composite-system|states]]. 
 
 Example
 
@@ -34,9 +30,9 @@ If it is $+\hbar/2$, then the british are not coming by sea. If it is $-\hbar/2$
 I can also measure $S_x$ to be either $+\hbar/2$ or $-\hbar/2$.
 If it is $+\hbar/2$, we don’t get any extra information as it could equally be either three. If it is $-\hbar/2$, then the british are coming either by land or sea.
 
-How reliably can we distinguish between a set of quantum states that serve as signals?
+How reliably can we distinguish between a [[set]] of quantum states that serve as signals?
 
-Consider Alice and Bob. Alice sends quantum state to Bob and this state is living in some [[hilbert-spaces|Hilbert space]] $H$
+Consider Alice and Bob. Alice sends [[ket-states|quantum state]] to Bob and this state is living in some [[hilbert-spaces|Hilbert space]] $H$
 
 $$
 \left\lvert \psi \right\rangle\in H\quad dim(H)=d
@@ -70,7 +66,7 @@ $$
 
 for some of these outcomes you can get maybe you assign some like $1,2$ to be message 1 $C_1$ and $3$ to message 2 $C_2$, etc. then you need to cover all possibilities of the message Alice sends. You want to map the outcome to messages. Some of the bins may be empty.
 
-The success probability for Bob to correctly distinguish the different messages.
+The success [[probability-theory|probability]] for Bob to correctly distinguish the different messages.
 
 $$
 P_s=\sum_{\alpha=1}^NP(\alpha)\sum_{k\in C_\alpha}P(outcome~k|\text{message $\alpha$ was sent})\\
@@ -148,7 +144,7 @@ $$
 \leq\frac{1}{N}tr(\Pi)\\
 $$
 
-Using [[traces|trace]] cyclic property and the fact that $tr(\left\langle \phi_r|\phi_r \right\rangle)=\left\langle \phi_r|\phi_r \right\rangle$ as it is a $1\times 1$ matrix.
+Using [[traces|trace]] cyclic property and the fact that $tr(\left\langle \phi_r|\phi_r \right\rangle)=\left\langle \phi_r|\phi_r \right\rangle$ as it is a $1\times 1$ [[matrices|matrix]].
 
 $$
 \leq\frac{1}{N}tr(\sum_{r=1}^d\left\lvert \phi_r \right\rangle\left\langle \phi_r \right\rvert)

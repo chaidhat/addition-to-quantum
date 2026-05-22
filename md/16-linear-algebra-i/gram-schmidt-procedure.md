@@ -4,7 +4,7 @@ If you have
 [[linear-independence|linearly
 independent]] vectors and want to convert them into an
 [[orthonormality|orthonormal]]
-set, you can follow the Gram-Schmidt procedure.
+[[set]], you can follow the Gram-Schmidt procedure.
 
 Given $v_1,v_2,…,v_n$ as
 [[linear-independence|LI]]

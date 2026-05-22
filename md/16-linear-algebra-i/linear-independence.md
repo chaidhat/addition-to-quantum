@@ -1,6 +1,6 @@
 # Linear Independence
 
-Let “linearly independent states” be states that you cannot create
+Let “linearly independent [[ket-states|states]]” be [[states]] that you cannot create
 another linearly independent state from multiplying and adding another
 linearly independent state.
 
@@ -13,7 +13,7 @@ $$
 \end{gather*}
 $$
 
-is having $c_i=0$ for all ($\forall$) $c_i$.
+is having $c_i=0$ for all [[planck-einstein-relation|(]]$\forall$) $c_i$.
 
 Example:
 

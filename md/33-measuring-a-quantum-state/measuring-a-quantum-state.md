@@ -1,9 +1,9 @@
 # Measuring a Quantum State
 
 Before:
-The system is in a state $\left\lvert \psi \right\rangle$ and you measure the [[observables|observable]] $\hat{A}$.
+The system is in a [[ket-states|state]] $\left\lvert \psi \right\rangle$ and you measure the [[observables|observable]] $\hat{A}$.
 
-Measure: We get an outcome $A_n$ with probability $P_n=\left\langle \psi \right\rvert\hat{\Pi}_n\left\lvert \psi \right\rangle$
+Measure: We get an outcome $A_n$ with [[probability-theory|probability]] $P_n=\left\langle \psi \right\rvert\hat{\Pi}_n\left\lvert \psi \right\rangle$
 
 Given [[borns-rule]] for a non-degenerate [[eigenstates|eigenstate]] $\left\lvert \phi_n \right\rangle$,
 

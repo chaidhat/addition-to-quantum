@@ -14,8 +14,8 @@ could be multiplied by a scalar value $\lambda$ (Eigenvalue) after
 applying the transform, which means its [[magnitude]] need not be preserved
 by the transform.
 
-The set of all vector $\left\lvert v \right\rangle$’s are Eigenvectors of transformation
+The [[set]] of all vector $\left\lvert v \right\rangle$’s are Eigenvectors of transformation
 $A$.
 
-An [[eigenstates|Eigenstate]] are states instead of [[vectors]], [[operators]] instead of
-matrices but are the same thing.
+An [[eigenstates|Eigenstate]] are [[ket-states|states]] instead of [[vectors]], [[operators]] instead of
+[[matrices]] but are the same thing.

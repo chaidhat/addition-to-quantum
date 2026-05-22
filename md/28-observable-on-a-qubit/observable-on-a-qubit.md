@@ -1,6 +1,6 @@
 # Observable on a qubit
 
-Any [[observables|observable]] on a qubit can be written as
+Any [[observables|observable]] on a [[qubit]] can be written as
 
 $$
 \begin{gather*}
@@ -20,7 +20,7 @@ $$
 $$
 
 spin along $\hat{n}$ can be described as $\hat{S}=\frac{\hbar}{2}\vec{\sigma}$.
-This is known as the "spin along the unit vector $\hat{n}$".
+This is known as the "spin along the unit [[vectors|vector]] $\hat{n}$".
 To do this we project $\hat{S}$ onto $\hat{n}$.
 
 $$
@@ -39,7 +39,7 @@ $$
 \Rightarrow\hat{S}_{\hat{n}} = \frac{\hbar}{2}\begin{pmatrix} n_z & n_x - i n_y \\ n_x + i n_y & -n_z \end{pmatrix}.
 $$
 
-We work out the eigenvalues by doing
+We work out the [[eigenvectorseigenvalues|eigenvalues]] by doing
 
 $$
 det(\hat{S}_{\hat{n}} - \lambda I) = 0

@@ -12,7 +12,7 @@ where projectors satisfy
 
 1.  $\hat{\Pi}_n\hat{\Pi}_m=0$ for $n\neq m$ which means they are [[orthogonality|orthogonal]]
 
-2.  $\sum_{n=1}^N \hat{\Pi}_n=\hat{I}$ which means they are a complete set of projectors
+2.  $\sum_{n=1}^N \hat{\Pi}_n=\hat{I}$ which means they are a complete [[set]] of projectors
 
 3.  this projector projects onto the $a_n$-[[eigenspaces|eigenspace]] of $\hat{A}$
 

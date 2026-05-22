@@ -2,7 +2,7 @@
 
 This refines [[basic-decoding-theory]].
 
-Probability of successfully distinguishing between two equally likely pure states $\left\lvert \alpha_0 \right\rangle, \left\lvert \alpha_1 \right\rangle$ where $\left\langle \alpha_0|\alpha_1 \right\rangle=\cos\theta$ is
+Probability of successfully distinguishing between two equally likely pure [[ket-states|states]] $\left\lvert \alpha_0 \right\rangle, \left\lvert \alpha_1 \right\rangle$ where $\left\langle \alpha_0|\alpha_1 \right\rangle=\cos\theta$ is
 
 $$
 P_s\leq \frac{1}{2}(1+\sin\theta)
@@ -10,7 +10,7 @@ $$
 
 Example I
 
-We want to find the optimal measurement to distinguish between two equally likely pure states $\left\lvert \alpha_0 \right\rangle, \left\lvert \alpha_1 \right\rangle$ where $\left\langle \alpha_0|\alpha_1 \right\rangle=\cos\theta$.
+We want to find the optimal measurement to distinguish between two equally likely pure [[states]] $\left\lvert \alpha_0 \right\rangle, \left\lvert \alpha_1 \right\rangle$ where $\left\langle \alpha_0|\alpha_1 \right\rangle=\cos\theta$.
 We can try to do
 
 $$
@@ -21,7 +21,7 @@ $$
 \cos\theta =\sin\theta=\frac{1}{\sqrt{2}}
 $$
 
-and there are is a $\left\lvert 1 \right\rangle$ basis that is ortho to $\left\lvert 0 \right\rangle$. If we measure and get $\left\lvert 1 \right\rangle$ it couldn’t have come from $\left\lvert \alpha_0 \right\rangle$
+and there are is a $\left\lvert 1 \right\rangle$ [[basis-states|basis]] that is ortho to $\left\lvert 0 \right\rangle$. If we measure and get $\left\lvert 1 \right\rangle$ it couldn’t have come from $\left\lvert \alpha_0 \right\rangle$
 
 But it isn’t optimal
 

@@ -20,10 +20,10 @@ $$
 \end{gather*}
 $$
 
-- U is basis chagne between orthonormal basis because you can write
+- U is [[basis-states|basis]] chagne between [[orthonormality|orthonormal basis]] because you can write
   $\hat{U}$ as
 
-  - as chatgpt puts it: unitary matrices/operators represent a rotation
+  - as chatgpt puts it: unitary [[matrices]]/operators represent a rotation
     or change of coordinates in [[hilbert-spaces|Hilbert space]], without changing lengths
     or angles.
 

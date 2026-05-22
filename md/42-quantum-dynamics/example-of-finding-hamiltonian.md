@@ -9,7 +9,7 @@ KE = \frac{1}{2}mv^2 = \frac{p^2}{2m}
 $$
 
 where $KE$ is kinetic energy, $m$ is mass, $v$ is velocity and $p=mv$ is momentum.
-We know that potential energy $V(x)$ is a function of position $x$.
+We know that potential energy $V(x)$ is a [[functions|function]] of position $x$.
 
 Hence in classical physics, energy is
 
@@ -33,13 +33,13 @@ $$
 \Rightarrow p=\frac{h}{2\pi/k}=\hbar k
 $$
 
-But we want this as an operator where the plane wave is an [[eigenstates|eigenstate]] of $\hat{p}$ with eigenvalue $\hbar k$ (its momentum).
+But we want this as an [[operators|operator]] where the plane wave is an [[eigenstates|eigenstate]] of $\hat{p}$ with [[eigenvectorseigenvalues|eigenvalue]] $\hbar k$ (its momentum).
 
 $$
 \hat{p}e^{ikx}=\hbar ke^{ikx}
 $$
 
-Now differentiate $e^{ikx}$ w.r.t $x$
+Now [[differentiation|differentiate]] $e^{ikx}$ w.r.t $x$
 
 $$
 \Rightarrow\frac{\partial}{\partial x}e^{ikx}=ike^{ikx}
@@ -64,14 +64,14 @@ $$
 H(t)=\frac{\hat{p}^2}{2m}+V(\hat{x})
 $$
 
-Expand the state into basis via [[spectral-decomposition]]
+Expand the [[ket-states|state]] into [[basis-states|basis]] via [[spectral-decomposition]]
 
 $$
 \left\lvert \psi(t) \right\rangle=\sum_k\left\langle x_k|\psi(t) \right\rangle\left\lvert x_k \right\rangle=\int dx \left\langle x|\psi(t) \right\rangle\left\lvert x \right\rangle
 $$
 
 The intergral is the continuum limit of the discretized version on the left.
-Let’s take the Schrödinger equation and apply it to the state.
+Let’s take the [[schruxf6dingers-equation-hamiltonian|Schrödinger equation]] and apply it to the state.
 
 $$
 \left\langle x \right\rvert i\hbar \frac{d}{dt}\left\lvert \psi(t) \right\rangle=\left\langle x \right\rvert H(t)\left\lvert \psi(t) \right\rangle

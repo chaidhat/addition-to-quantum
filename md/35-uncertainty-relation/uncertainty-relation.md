@@ -9,11 +9,11 @@ $$
 $$
 
 Proof
-Consider any scalar $\lambda\in \mathbb{C}$ and any [[vectors]] $\left\lvert u \right\rangle,\left\lvert v \right\rangle\in \mathbb{C}^n$ and we have two states $\left\lvert f \right\rangle$ and $\left\lvert g \right\rangle$.
+Consider any scalar $\lambda\in \mathbb{C}$ and any [[vectors]] $\left\lvert u \right\rangle,\left\lvert v \right\rangle\in \mathbb{C}^n$ and we have two [[ket-states|states]] $\left\lvert f \right\rangle$ and $\left\lvert g \right\rangle$.
 
 We subtract it like so $\left\lvert f \right\rangle-\lambda\left\lvert g \right\rangle$ is also a vector
 
-Note that for QM systems, $\left\langle u|u \right\rangle=1$. This is because of [[borns-rule]] where the number it represents is the total probability, which needs to sum to 1.
+Note that for QM systems, $\left\langle u|u \right\rangle=1$. This is because of [[borns-rule]] where the number it represents is the total [[probability-theory|probability]], which needs to sum to 1.
 
 $$
 \left\langle f-\lambda g|f-\lambda g \right\rangle\geq 0
@@ -29,7 +29,7 @@ $$
 \lambda=\frac{\left\langle g|f \right\rangle}{\left\langle g|g \right\rangle}\quad \Rightarrow\quad \lambda^*=\frac{\left\langle f|g \right\rangle}{\left\langle g|g \right\rangle},\quad |\lambda|^2=\frac{\left\langle f|g \right\rangle\left\langle g|f \right\rangle}{\left\langle g|g \right\rangle^2}
 $$
 
-Which makes $\left\lvert f \right\rangle-\lambda\left\lvert g \right\rangle$ orthogonal to $\left\lvert g \right\rangle$.
+Which makes $\left\lvert f \right\rangle-\lambda\left\lvert g \right\rangle$ [[orthogonality|orthogonal]] to $\left\lvert g \right\rangle$.
 
 $$
 \Rightarrow\left\langle f|f \right\rangle-\frac{\left\langle g|f \right\rangle}{\left\langle g|g \right\rangle} \left\langle f|g \right\rangle -\frac{\left\langle f|g \right\rangle}{\left\langle g|g \right\rangle}\left\langle g|f \right\rangle +\frac{\left\langle f|g \right\rangle\left\langle g|f \right\rangle}{\left\langle g|g \right\rangle^2}\left\langle g|g \right\rangle\geq 0

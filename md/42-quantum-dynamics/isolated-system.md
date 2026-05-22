@@ -49,14 +49,14 @@ $$
     U(t_1,t_2)=U^{-1}(t_2,t_1)=U^\dag(t_2, t_1)
 $$
 
-4.  diagonalizable
+4.  [[diagonalization|diagonalizable]]
 
 $$
     U^\dag U = U U^\dag
 $$
 
     this means [[spectral-decomposition|spectral theorem]] applies.
-    For every orthonormal basis $\{\left\lvert k \right\rangle\}$,
+    For every [[orthonormality|orthonormal basis]] $\{\left\lvert k \right\rangle\}$,
 
 $$
     U=\sum_k\lambda_k\left\lvert k \right\rangle\left\langle k \right\rvert

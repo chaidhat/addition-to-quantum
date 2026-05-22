@@ -1,6 +1,6 @@
 # Function
 
-Also let us notate a state as a function of time. What’s a function?
+Also let us notate a [[ket-states|state]] as a function of time. What’s a function?
 
 Example:
 
@@ -21,7 +21,7 @@ $$
 \end{gather*}
 $$
 
-A function $f$, can also be thought of mapping numbers from a set $A$ to set $B$. It’s
+A function $f$, can also be thought of mapping numbers from a [[set]] $A$ to set $B$. It’s
 written like this
 
 $$

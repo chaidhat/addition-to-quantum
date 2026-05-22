@@ -1,6 +1,6 @@
 # Expected Value of an Observable
 
-To determine the mean (EV) of an [[operators|operator]] $\hat{A}$, we must know the state $\left\lvert \psi \right\rangle$ you’re in.
+To determine the mean (EV) of an [[operators|operator]] $\hat{A}$, we must know the [[ket-states|state]] $\left\lvert \psi \right\rangle$ you’re in.
 
 $$
 \begin{gather*}

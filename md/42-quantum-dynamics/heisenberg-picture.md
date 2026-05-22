@@ -1,6 +1,6 @@
 # Heisenberg Picture
 
-Let observable $\hat{A}$. The Heisen picture operator is
+Let [[observables|observable]] $\hat{A}$. The Heisen picture [[operators|operator]] is
 
 $$
 \tilde{A}(t)=U^\dag (t)AU(t)

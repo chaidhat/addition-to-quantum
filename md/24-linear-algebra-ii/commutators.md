@@ -9,7 +9,7 @@ $$
 $$
 
 If $[\hat{A},\hat{B}]=0$ then that means you can commute
-[[bra-ket-matrix-multiplication|matrix
+[[bra-ket-matrix-multiplication|[[matrices|matrix]]
 multiplication]].
 
 If "$\hat{A}$ commutes with $\hat{B}$", then that means $\hat{A}\hat{B}=\hat{B}\hat{A}$ which also means $[\hat{A},\hat{B}]=0$.

@@ -6,7 +6,7 @@ $$
 \left\lvert v, w \right\rangle \triangleq \left\lvert v \right\rangle\otimes\left\lvert w \right\rangle
 $$
 
-Given [[vector-spaces]] $H_A$ and $H_B$, the tensor product $H_A\otimes H_B$ is a new vector space
+Given [[vector-spaces]] $H_A$ and $H_B$, the tensor product $H_A\otimes H_B$ is a new [[vectors|vector]] space
 
 Properties
 
@@ -57,4 +57,4 @@ $$
 \{\left\lvert v_i \right\rangle\otimes\left\lvert w_j \right\rangle; 1\leq i \leq dim(H_A), 1\leq j \leq dim(H_B)\}
 $$
 
-is an orthonormal basis for $H_A\otimes H_B$.
+is an [[orthonormality|orthonormal basis]] for $H_A\otimes H_B$.

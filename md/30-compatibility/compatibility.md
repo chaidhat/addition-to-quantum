@@ -10,7 +10,7 @@ $$
 \hat{A}=\sum_{n=1}^N a_n\left\lvert \phi_n \right\rangle\left\langle \phi_n \right\rvert
 $$
 
-If $\hat{B}$ is compatible with $\hat{A}$ (i.e., $\hat{B}$ is diagonalizable with $\hat{A}$) then,
+If $\hat{B}$ is compatible with $\hat{A}$ (i.e., $\hat{B}$ is [[diagonalization|diagonalizable]] with $\hat{A}$) then,
 
 $$
 \hat{B}=\sum_{n=1}^N b_n\left\lvert \phi_n \right\rangle\left\langle \phi_n \right\rvert

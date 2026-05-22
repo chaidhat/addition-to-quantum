@@ -2,7 +2,7 @@
 
 Relies on [[quantum-dynamics]].
 
-Time is not an observable.
+Time is not an [[observables|observable]].
 
 We could count $N$ full waves of frequency $\omega$ over a time window $T$. You can only count to within $\pm 1$ wave, so $\Delta N\geq 1$.
 

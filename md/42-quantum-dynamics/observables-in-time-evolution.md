@@ -33,4 +33,4 @@ Remarks
 1.  If $[H,A]=0$, then $\frac{d}{dt}\mathbb{E}[A(t)]=0$
     The [[expected-value-of-observables|expected value]] of A is conserved if A and H are [[compatibility|compatible]]. For example, energy H is always conserved in an [[isolated-system]]!
 
-2.  Sometimes convientn to change basis to Heisenberg picture to study observable dynamics
+2.  Sometimes convientn to change [[basis-states|basis]] to Heisenberg picture to study observable dynamics

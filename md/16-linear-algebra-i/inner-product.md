@@ -1,6 +1,6 @@
 # Inner product I
 
-Inner product of states $\left\lvert u \right\rangle$ and $\left\lvert v \right\rangle$ is defined as
+Inner product of [[ket-states|states]] $\left\lvert u \right\rangle$ and $\left\lvert v \right\rangle$ is defined as
 
 $$
 \begin{gather*}

@@ -12,7 +12,7 @@ $$
 \end{gather*}
 $$
 
-where V are the set of all possible [[vectors]] in a [[hilbert-spaces|Hilbert space]].
+where V are the [[set]] of all possible [[vectors]] in a [[hilbert-spaces|Hilbert space]].
 
 In quantum mechanics, all observed operators are linear which means
 
@@ -51,7 +51,7 @@ $$
 \end{gather*}
 $$
 
-where $\left\lvert m \right\rangle$ is the basis for $\left\lvert \psi \right\rangle$
+where $\left\lvert m \right\rangle$ is the [[basis-states|basis]] for $\left\lvert \psi \right\rangle$
 
 Operators must be square.
 

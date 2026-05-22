@@ -1,4 +1,4 @@
-# Hermitian Matrix
+# [[hermitian-operators|Hermitian]] Matrix
 
 Let a “Hermitian matrix” be a matrix that equals its own [[conjugate]]
 transpose
@@ -11,7 +11,7 @@ $$
 \end{gather*}
 $$
 
-This means a bra and ket are Hermitian matrices of each other!
+This means a bra and ket are Hermitian [[matrices]] of each other!
 
 Another example:
 

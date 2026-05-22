@@ -1,6 +1,6 @@
 # Schrödinger Equation, Hamiltonian II
 
-Let’s derive the Schrödinger equation from the postulates of an [[isolated-system]].
+Let’s derive the [[schruxf6dingers-equation-hamiltonian|Schrödinger equation]] from the postulates of an [[isolated-system]].
 
 Let $t_0$ be the initial time and $t$ be the time after some time has passed.
 
@@ -101,7 +101,7 @@ $$
 
 Remarks
 
-1.  Derived Schrödinger equation from only the assumption of unitary time evolution. The Hamiltonian operator is derived from $U(t,t_0)$
+1.  Derived Schrödinger equation from only the assumption of [[unitary-operator|unitary]] time evolution. The Hamiltonian [[operators|operator]] is derived from $U(t,t_0)$
 
 2.  Converse is true where we can construct $U(t,t_0)$ from knowledge of $H(t)$
 

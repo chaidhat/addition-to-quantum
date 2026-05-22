@@ -1,6 +1,6 @@
 # Normal
 
-$\left\lvert \psi \right\rangle$ is normal if it has
+$\left\lvert \psi \right\rangle$ is [[normal-operator|normal]] if it has
 [[magnitude]]
 1
 

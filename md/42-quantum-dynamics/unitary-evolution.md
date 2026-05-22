@@ -18,7 +18,7 @@ $$
 \left\langle \psi|\psi \right\rangle=1
 $$
 
-This is because [[borns-rule]] says that, over $\left\lvert k \right\rangle$ basis states,
+This is because [[borns-rule]] says that, over $\left\lvert k \right\rangle$ [[basis-states|basis]] [[ket-states|states]],
 
 $$
 \sum_k |\left\langle k|\psi \right\rangle|^2=1

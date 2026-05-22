@@ -8,7 +8,7 @@ $$
 \end{gather*}
 $$
 
-This means we’re multiplying these two matrices
+This means we’re multiplying these two [[matrices]]
 $\begin{bmatrix}c^* & d^*\end{bmatrix},\begin{bmatrix}a\\b\end{bmatrix}$
 together.
 
@@ -58,9 +58,10 @@ $$
 \end{gather*}
 $$
 
-a set of [[vectors]] $\{v_1,v_2,...,v_n\}$ form an [[orthonormality|orthonormal]] [[basis-states|basis]] if
+a [[set]] of [[vectors]] $\{v_1,v_2,...,v_n\}$ form an [[orthonormality|orthonormal]] [[basis-states|basis]] if
 and only if
 
+where $\delta_{ij}$ is the [[kronecker-delta]]
 $$
 \begin{gather*}
     \left\langle v_i|v_j \right\rangle=\delta_{ij}=\begin{cases}1\quad i=j\\0\quad i\neq j\end{cases}

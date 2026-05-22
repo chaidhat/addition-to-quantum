@@ -1,4 +1,6 @@
 # Complex Number Trigonometry
+You can represent the [[trigonometry|trigonometric functions]] as [[complex-numbers|complex numbers]]
+
 
 $$
 \cos\theta = \frac{e^{i\theta} + e^{-i\theta}}{2}

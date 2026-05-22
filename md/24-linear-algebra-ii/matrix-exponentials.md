@@ -13,7 +13,7 @@ Properties of this
 
 - differential equations
 
-  - the function $U(t)=e^{tX}$ is the only unique soln. to
+  - the [[functions|function]] $U(t)=e^{tX}$ is the only unique soln. to
 
 $$
 \begin{gather*}
@@ -21,7 +21,7 @@ $$
 \end{gather*}
 $$
 
-- diagonalizable matrices → if $X$ is diagonalizable (which is
+- [[diagonalization|diagonalizable]] [[matrices]] → if $X$ is diagonalizable (which is
   guaranteed for, e.g., real [[symmetric-matrix|symmetric]] or [[hermitian-matrix|Hermitian matrices]]) then
   we can write $X=PDP^{-1}$ with
   $D=diag(\lambda_1, … \lambda_n)$ then
@@ -32,7 +32,7 @@ $$
 \end{gather*}
 $$
 
-where $P$ is the basis matrix — a matrix whose columns are the
+where $P$ is the [[basis-states|basis]] matrix — a matrix whose columns are the
 [[eigenvectorseigenvalues|eigenvectors]] $X$ w.r.t $\hat{A}$.
 
 Specifically, if $v_1,v_2,…,v_n$ are [[eigenvectorseigenvalues|eigenvectors]] of $X$

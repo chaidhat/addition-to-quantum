@@ -1,3 +1,4 @@
+This builds on [[probability-theory]]
 # Conditional Probability
 
 from a joint distribution → if I select $y$ for $Y$ with

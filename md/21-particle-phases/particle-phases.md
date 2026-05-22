@@ -23,7 +23,7 @@ $$
 
 Because $\alpha,\beta$ can be complex, we proved experimentally that a
 glass polarizer, like a polarized sunglass, can change the phase of the
-state $\left\lvert 1 \right\rangle$ for example.
+[[ket-states|state]] $\left\lvert 1 \right\rangle$ for example.
 
 Let
 

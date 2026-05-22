@@ -1,6 +1,6 @@
 # Superposition, Matrix Addition
 
-A photon can have a probability of $x\%$ of spinning up (+). This
+A photon can have a [[probability-theory|probability]] of $x\%$ of spinning up [[planck-einstein-relation|(]]+). This
 means it would have $(100-x)\%$ of spinning down (-), since the
 probabilities must add up. The photon actually is both spinning up and
 spinning down until we observe it, where it collapses to either spinning
@@ -12,10 +12,10 @@ We call this position of spinning both up and down simultaneously a
 Let’s just say the [[ket-states|kets]] $\left\lvert + \right\rangle$ is the state of spinning up and $\left\lvert - \right\rangle$
 is the state of spinning down.
 
-Let a “state” just be a $N\times 1$ matrix like what we just said
-above. So $\left\lvert x \right\rangle,\left\lvert \psi \right\rangle,\left\lvert \phi \right\rangle$ are all states.
+Let a “state” just be a $N\times 1$ [[matrices|matrix]] like what we just said
+above. So $\left\lvert x \right\rangle,\left\lvert \psi \right\rangle,\left\lvert \phi \right\rangle$ are all [[states]].
 
-Some states can be made of other states.
+Some [[states-on-a-composite-system|states]] can be made of other states.
 
 Example:
 
@@ -62,7 +62,7 @@ $$
 \end{gather*}
 $$
 
-Notice how we’re adding the $n$-th elements of the states together for
+Notice how we’re adding the $n$-th [[element|elements]] of the states together for
 each row?
 
 We can represent these two states coexisting (i.e., a superposition)

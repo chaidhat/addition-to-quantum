@@ -1,6 +1,6 @@
 # Matrix
 
-Let a “matrix” be a set of numbers ordered in a neat grid. Now we
+Let a “matrix” be a [[set]] of numbers ordered in a neat grid. Now we
 can manipulate a lot of numbers simultaneously. Interestingly enough,
 they are the solution to a lot of real world including machine learning
 and quantum mechanics.
@@ -24,8 +24,8 @@ $$
 \end{gather*}
 $$
 
-See how $A$ is also a variable? In this case, $m=2, n=3$ as there
+See how $A$ is also a [[variable]]? In this case, $m=2, n=3$ as there
 are 2 rows and 3 columns.
 
 We use matrices to represent multiple numbers because they have an
-equivalent in the real world. In this case, quantum states.
+equivalent in the real world. In this case, quantum [[ket-states|states]].

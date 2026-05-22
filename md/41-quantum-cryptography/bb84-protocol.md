@@ -2,7 +2,7 @@
 
 This is a type of quantum key distribution protocol. It is named after Bennett and Brassard in 1984.
 
-Alice chooses a basis $b$ (subset of the [[pauli-matrices]]) and a bit $p$ (i.e., parent)
+Alice chooses a [[basis-states|basis]] $b$ [[planck-einstein-relation|(]][[subsets|subset]] of the [[pauli-matrices]]) and a bit $p$ (i.e., parent)
 
 $$
 b\in\{X,Z\}
@@ -10,11 +10,11 @@ b\in\{X,Z\}
     p\in\{0,1\}
 $$
 
-We know there are an infinite number of possible bases in a qubit. There exists three mutually unbiased bases in a qubit $\{Z,X,Y\}$. BB84 chooses $\{X,Z\}$ as part of the definition of the protocol.
+We know there are an infinite number of possible bases in a [[qubit]]. There exists three mutually unbiased bases in a qubit $\{Z,X,Y\}$. BB84 chooses $\{X,Z\}$ as part of the definition of the protocol.
 
 Because a qubit is $d=2$ by definition, we can only choose from 2 parents.
 
-Alice then creates a qubit state $\left\lvert \psi_{b,p} \right\rangle$ to send to Bob.
+Alice then creates a qubit [[ket-states|state]] $\left\lvert \psi_{b,p} \right\rangle$ to send to Bob.
 BB84 defines the following mapping:
 
 | basis $b$ | parent $p$ | qubit state $|\psi_{b,p}\rangle$ |
@@ -59,7 +59,7 @@ $$
 If quantum bit error rate QBER is lower than the threshold, then proceed with the remaining bits not in $T$. In BB84, the threshold is typically around 11% because of Shannon-theoretic entropy.
 
 This is secure against Eve as if Eve intercepts a qubit, Eve can only distinguish among $\{\left\lvert 0 \right\rangle,\left\lvert 1 \right\rangle,\left\lvert + \right\rangle,\left\lvert - \right\rangle\}$
-where error probability $P_E\geq 1-\frac{d}{N}$ given in [[basic-decoding-theory]].
+where error [[probability-theory|probability]] $P_E\geq 1-\frac{d}{N}$ given in [[basic-decoding-theory]].
 
 If Eve sends qubit along to Bob, they would be wrong half of the time. Alice and Bob can find out in the testing stage. During testing stage, some bits of the key are sent between Alice and Bob and discarded if they do not match. This reduces information that Eve has about the secret key. The probability of the bit disagreeing given Eve intercepted is $\frac{1}{2}\times\frac{1}{2}=\frac{1}{4}$ whereas if Eve doesn’t intercept, the probability of the bit disagreeing is $0$.
 

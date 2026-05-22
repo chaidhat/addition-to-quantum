@@ -1,6 +1,6 @@
-# Baker Campbell Hausdorff Formula
+# Baker, Campbell, and Hausdorff (1897-1906) 
 
-Intelligent set of individuals who worked out that
+Intelligent [[set]] of individuals who worked out that
 
 $$
 e^A e^B = exp(A+B+\frac{1}{2}[A,B]+\frac{1}{12}[A,[A,B]]-\frac{1}{12}[B,[A,B]]+\cdots)

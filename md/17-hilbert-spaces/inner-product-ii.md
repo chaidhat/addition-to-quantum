@@ -12,7 +12,7 @@ $$
 
 which is
 
-1.  [[conjugate]] symmetric
+1.  [[conjugate]] [[symmetric-matrix|symmetric]]
 
 $$
 \begin{gather*}

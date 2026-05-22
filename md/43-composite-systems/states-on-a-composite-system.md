@@ -4,7 +4,7 @@ Recall all the way back to what a [[ket-states|quantum state]] is.
 
 A composite quantum state is a state that lives in a [[composite-system]].
 Recall [[tensor-product]] of two Hilbert spaces $H_A$ and $H_B$.
-A state on a composite system can be written as a sum of tensor products of states on the individual subsystems.
+A state on a composite system can be written as a sum of tensor products of [[states]] on the individual subsystems.
 
 $$
 \left\lvert \psi \right\rangle=\sum_{ij} a_{ij}\left\lvert v_i  \right\rangle\otimes\left\lvert w_j \right\rangle\quad \in H_A\otimes H_B
@@ -22,7 +22,7 @@ $$
 \left\lvert \psi \right\rangle=\left\lvert v^* \right\rangle\otimes\left\lvert w^* \right\rangle\quad \left\lvert v^* \right\rangle\in H_A, \left\lvert w^* \right\rangle\in H_B
 $$
 
-An entangled state is any state $\left\lvert \psi \right\rangle$ which is not a product state. This means it is not always possible to assign state vectors to individual subsystems.
+An entangled state is any state $\left\lvert \psi \right\rangle$ which is not a product state. This means it is not always possible to assign state [[vectors]] to individual subsystems.
 
 Einstein famously called this "Spooky action at a distance."
 

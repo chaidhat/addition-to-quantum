@@ -1,6 +1,6 @@
 # Partitions
 
-A partition of a set $S=\{C_1,C_2,…,C_N\}$ is a way of splitting $S$ into
+A partition of a [[set]] $S=\{C_1,C_2,…,C_N\}$ is a way of splitting $S$ into
 
 1.  disjoint subsets
 

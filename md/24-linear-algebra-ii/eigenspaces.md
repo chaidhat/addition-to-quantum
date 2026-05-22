@@ -1,6 +1,6 @@
 # Eigenspace
 
-An eigenspace of operator $\hat{A}$ is the set of all [[eigenvectorseigenvalues|eigenvectors]]/[[eigenstates]] with the same [[eigenvectorseigenvalues|eigenvalue]] plus the zero vector.
+An eigenspace of operator $\hat{A}$ is the [[set]] of all [[eigenvectorseigenvalues|eigenvectors]]/[[eigenstates]] with the same [[eigenvectorseigenvalues|eigenvalue]] plus the zero [[vectors|vector]].
 
 Example
 

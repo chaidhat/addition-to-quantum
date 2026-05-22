@@ -1,4 +1,4 @@
-# Hamiltonian on a Composite System
+# [[schruxf6dingers-equation-hamiltonian|Hamiltonian]] on a Composite System
 
 ### Non-interacting Hamiltonian
 
@@ -8,7 +8,7 @@ $$
 
 Where $H^{(A)}, H^{(B)}$ are non interacting.
 
-Two spin-1/2 particles exist where
+Two [[quantum-system|spin-1/2]] particles exist where
 
 $$
 H^{(total)}=\hat{S}^{(total)}_x+ \hat{S}^{(A)}_x + \hat{S}^{(B)}_x
@@ -18,13 +18,13 @@ $$
 =\hat{S}_x\otimes I + I \otimes \hat{S}_x
 $$
 
-Let there be a state where
+Let there be a [[ket-states|state]] where
 
 $$
 \left\lvert \psi \right\rangle=a_{11}\left\lvert +,+ \right\rangle+a_{12}\left\lvert +,- \right\rangle+a_{21}\left\lvert -,+ \right\rangle+a_{22}\left\lvert -,- \right\rangle
 $$
 
-Recall what a $\hat{S}_x$ operator does [[spin-12-systems|here]].
+Recall what a $\hat{S}_x$ [[operators|operator]] does [[spin-12-systems|here]].
 
 $$
 S_x\triangleq\frac{\hbar}{2}\begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix}\quad
@@ -58,7 +58,7 @@ $$
 \hat{S}_x^{(total)}\left\lvert \psi \right\rangle=\hbar(a_{11}\left\lvert +,+ \right\rangle-a_{12}\left\lvert -,- \right\rangle)
 $$
 
-| Eigenstate of $\hat{S}_x^{(\text{tot})}$ | Eigenvalue |
+| [[eigenstates|Eigenstate]] of $\hat{S}_x^{(\text{tot})}$ | [[eigenvectorseigenvalues|Eigenvalue]] |
 |:--:|:--:|
 | $|+,+\rangle$ | $S_x^{(\text{tot})} = \hbar$ |
 | $|+,-\rangle, \ |-,+\rangle$ | $S_x^{(\text{tot})} = 0$ |
@@ -119,7 +119,7 @@ H^{(total)}=\hbar \omega \sigma_x^{(A)}\sigma_x^{(B)}=\hbar\omega (\sigma_x\otim
 $$
 
 Note that $\sigma_x\otimes \sigma_x$ cannot be written as $\sigma_x\otimes I + I \otimes \sigma_x$ hence this belongs in the $H_{int}$ term.
-We observe that the unitary evolution is
+We observe that the [[unitary-operator|unitary]] evolution is
 
 $$
 U^{(total)}=e^{-itH/\hbar}=e^{-i\omega t(\sigma_x\otimes \sigma_x)}

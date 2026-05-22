@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7f08d2e67c45ddaa",
+            "id": "e2e342dbd5bcc30c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/43-composite-systems/states-on-a-composite-system.md",
+                "file": "md/05-variables-addition/variables-addition.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "states-on-a-composite-system"
+              "title": "variables-addition"
             }
           }
         ]
@@ -54,7 +54,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -180,44 +181,46 @@
       "bases:Create new base": false
     }
   },
-  "active": "7f08d2e67c45ddaa",
+  "active": "e2e342dbd5bcc30c",
   "lastOpenFiles": [
-    "md/43-composite-systems/neutron-interferometry.md",
-    "md/43-composite-systems/hamiltonian-of-composite-systems.md",
-    "md/43-composite-systems/composite-system.md",
-    "md/12-summation/summation.md",
-    "md/44-cheat-sheet/uniform-dynamics-2.md",
-    "md/44-cheat-sheet/tranpose-adjoint.md",
-    "md/44-cheat-sheet/time-energy-uncertainty-2.md",
-    "md/44-cheat-sheet/taylor-series-2.md",
-    "md/44-cheat-sheet/spin-1.md",
-    "md/44-cheat-sheet/spin-1-2-pauli-matrices.md",
-    "md/44-cheat-sheet/schr-dinger-equation.md",
-    "md/44-cheat-sheet/matrix-exponential.md",
-    "md/44-cheat-sheet/hermitian-unitary-operators.md",
-    "md/44-cheat-sheet/heisenberg-picture-2.md",
-    "md/44-cheat-sheet/ev-variance-standard-deviation.md",
-    "md/44-cheat-sheet/euler-s-formula.md",
-    "md/44-cheat-sheet/ehrenfest-theorem.md",
-    "md/44-cheat-sheet/cheat-sheet.md",
-    "md/44-cheat-sheet/born-s-rule.md",
-    "md/44-cheat-sheet/3x1-matrix-times-1x3-matrix.md",
-    "md/44-cheat-sheet/2x2-matrix-times-2x2-matrix.md",
-    "md/44-cheat-sheet/1x3-matrix-times-3x1-matrix.md",
+    "md/06-matrices/matrices.md",
+    "md/24-linear-algebra-ii/hermitian-matrix.md",
+    "md/15-complex-numbers/conjugate.md",
+    "md/36-linear-algebra-iii/kronecker-product.md",
+    "md/16-linear-algebra-i/basis-states.md",
+    "md/31-probability-theory/standard-deviation.md",
+    "md/31-probability-theory/joint-random-variables.md",
+    "md/31-probability-theory/numerical-random-variablesexpected-value.md",
+    "md/31-probability-theory/probability-theory.md",
+    "md/31-probability-theory/expected-value-of-observables.md",
+    "md/31-probability-theory/spread.md",
+    "md/31-probability-theory/conditional-probability.md",
+    "md/05-variables-addition/variables-addition.md",
+    "variable.md",
+    "md/23-quantum-system/spin-12-systems.md",
+    "md/23-quantum-system/spin-1-systems.md",
+    "md/19-angular-frequency-reduced-planck-constant/angular-frequency-reduced-planck-constant.md",
+    "md/16-linear-algebra-i/operators.md",
+    "md/14-calculus/taylor-series.md",
+    "md/14-calculus/integration.md",
+    "md/14-calculus/differentiation.md",
+    "md/16-linear-algebra-i/vectors.md",
+    "alias.txt",
+    "scripts/add_links.py",
+    "scripts/add_links.py.tmp.6172.aa64fc1652de",
+    "scripts/build_aliases.py",
+    "alias.json",
+    "build_aliases.py",
+    "md/16-linear-algebra-i/bra-ket-matrix-multiplication.md",
+    "md/36-linear-algebra-iii/cross-product.md",
+    "md/32-borns-rule/borns-rule.md",
+    "md/24-linear-algebra-ii/projections.md",
+    "Untitled.canvas",
+    "Untitled 1.canvas",
+    "Pasted image 20260521231146.png",
+    "main.pdf",
+    "hw-md",
     "md/44-cheat-sheet",
-    "md/43-composite-systems/states-on-a-composite-system.md",
-    "md/43-composite-systems/operators-in-tensor-product-space.md",
-    "md/43-composite-systems/no-communication-theorem.md",
-    "md/43-composite-systems/measuring-a-composite-system.md",
-    "md/43-composite-systems",
-    "md/42-quantum-dynamics",
-    "md/41-quantum-cryptography",
-    "md/40-basic-distinguishability-theory",
-    "md/39-basic-decoding-theory",
-    "md/38-quantum-information-capacity",
-    "md/37-no-cloning-theorem",
-    "md/36-linear-algebra-iii",
-    "md/35-uncertainty-relation",
-    "Untitled.canvas"
+    "md/43-composite-systems"
   ]
 }
