@@ -8,12 +8,16 @@ is in another
 
 Example:
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     S\subset\{3,5,1982549,67\}
-\end{gather*}$$
+\end{gather*}
+```
 
 We have a line underneath to show it could be a subset OR equal
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     S\subseteq\{3,5,1982549\}
-\end{gather*}$$
+\end{gather*}
+```

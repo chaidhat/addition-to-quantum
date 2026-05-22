@@ -8,7 +8,9 @@ if it’s in a set (duh)
 
 Example:
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     3\in S\\
     4\notin S
-\end{gather*}$$
+\end{gather*}
+```

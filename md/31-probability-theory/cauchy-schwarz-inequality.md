@@ -1,6 +1,10 @@
 # Cauchy-Schwarz Inequality
 
-Given two [[vectors]] $\left\lvert u \right\rangle,\left\lvert v \right\rangle\in \mathbb{C}^n$,
-$$|\left\langle u|v \right\rangle|\leq \|u\|\|v\|$$
+Given two [[vectors]] $`\left\lvert u \right\rangle,\left\lvert v \right\rangle\in \mathbb{C}^n`$,
+``` math
+|\left\langle u|v \right\rangle|\leq \|u\|\|v\|
+```
 It’s squared form can be written as
-$$|\left\langle u|v \right\rangle|^2\leq \left\langle u|u \right\rangle\left\langle v|v \right\rangle$$
+``` math
+|\left\langle u|v \right\rangle|^2\leq \left\langle u|u \right\rangle\left\langle v|v \right\rangle
+```

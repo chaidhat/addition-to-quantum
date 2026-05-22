@@ -4,45 +4,57 @@ building on top of what we said about the [[inner-product]],
 
 an inner product is any
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     \langle u|v\rangle
-\end{gather*}$$
+\end{gather*}
+```
 
 which is
 
 1.  [[conjugate]] symmetric
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     \left\langle u|v \right\rangle^*=\left\langle v|u \right\rangle
-\end{gather*}$$
+\end{gather*}
+```
 
 Example
 
 let
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     \left\lvert \psi \right\rangle=\begin{bmatrix}a\\b\end{bmatrix}\quad \Rightarrow\left\langle \psi \right\rvert=\begin{bmatrix}a^* & b^*\end{bmatrix}
     \\
     \left\lvert \phi \right\rangle=\begin{bmatrix}c\\d\end{bmatrix}\Rightarrow\left\langle \phi \right\rvert=\begin{bmatrix}c^* & d^*\end{bmatrix}
-\end{gather*}$$
+\end{gather*}
+```
 
 so
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     (\left\langle \psi|\phi \right\rangle)^*=\left(\begin{bmatrix}a^* & b^*\end{bmatrix}\begin{bmatrix}c\\d\end{bmatrix}\right)^*=(a^*c+b^*d)^*=ac^*+bd^*=c^*a+d^*b\\
     =\left\langle \phi|\psi \right\rangle
-\end{gather*}$$
+\end{gather*}
+```
 
-so $\phi,\psi$ are conjugate symmetric
+so $`\phi,\psi`$ are conjugate symmetric
 
 1.  linear
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     \langle u|(a|v\rangle + b|w\rangle) = a\langle u|v\rangle + b\langle u|w\rangle
-\end{gather*}$$
+\end{gather*}
+```
 
 1.  positive definite
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     \forall |u\rangle \neq 0, \quad \langle u|u\rangle > 0
-\end{gather*}$$
+\end{gather*}
+```

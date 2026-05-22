@@ -2,38 +2,50 @@
 
 Tr(A) is only defined for a [[square-matrix]].
 
-Given a square matrix $A$,
+Given a square matrix $`A`$,
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     tr(A)=a_{11}+a_{22}+...+a_{nn}
-\end{gather*}$$
+\end{gather*}
+```
 
 Note that
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     tr(AB)=tr(BA)
-\end{gather*}$$
+\end{gather*}
+```
 
 Traces are just adding diagonals together
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     tr(\hat{T})=\sum_n\left\langle n \right\rvert\hat{T}\left\lvert n \right\rangle=\sum_nT_{nn}
-\end{gather*}$$
+\end{gather*}
+```
 
 Properties:
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     tr(\hat{A}\hat{B})=tr(\hat{B}\hat{A})\\
     tr(\hat{A}\hat{B}\hat{C})=tr(\hat{B}\hat{C}\hat{A})=tr(\hat{C}\hat{A}\hat{B})
-\end{gather*}$$
+\end{gather*}
+```
 
-Note that $tr(\hat{A}\hat{B}\hat{C})\neq tr(\hat{A}\hat{C}\hat{B})$ →
+Note that $`tr(\hat{A}\hat{B}\hat{C})\neq tr(\hat{A}\hat{C}\hat{B})`$ →
 it must be cyclical permutation
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     tr(\alpha\hat{A}+\beta\hat{B})=\alpha tr(\hat{A})+\beta Tr(\hat{B})
-\end{gather*}$$
+\end{gather*}
+```
 
-Also note that if you get the traces of a $1\times 1$ matrix, it is just
+Also note that if you get the traces of a $`1\times 1`$ matrix, it is just
 
-$$tr(\begin{pmatrix}a\end{pmatrix})=a$$
+``` math
+tr(\begin{pmatrix}a\end{pmatrix})=a
+```

@@ -11,10 +11,14 @@
             "id": "7f08d2e67c45ddaa",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "md/43-composite-systems/states-on-a-composite-system.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "states-on-a-composite-system"
             }
           }
         ]
@@ -178,6 +182,12 @@
   },
   "active": "7f08d2e67c45ddaa",
   "lastOpenFiles": [
+    "Untitled.base",
+    "2026-05-21.md",
+    "Untitled.canvas",
+    "md/43-composite-systems/states-on-a-composite-system.md",
+    "md/23-quantum-system/spin-12-systems.md",
+    "md/43-composite-systems/hamiltonian-of-composite-systems.md",
     "md/31-probability-theory/probability-theory.md",
     "md/31-probability-theory/joint-random-variables.md",
     "md/31-probability-theory/conditional-probability.md",
@@ -199,11 +209,6 @@
     "md/44-cheat-sheet/matrix-exponential.md",
     "md/44-cheat-sheet/hermitian-unitary-operators.md",
     "md/44-cheat-sheet/heisenberg-picture-1.md",
-    "md/44-cheat-sheet/ev-variance-standard-deviation.md",
-    "md/44-cheat-sheet/eulers-formula.md",
-    "md/44-cheat-sheet/ehrenfest-theorem.md",
-    "md/44-cheat-sheet/cheat-sheet.md",
-    "md/44-cheat-sheet/borns-rule-1.md",
     "md/44-cheat-sheet",
     "md/43-composite-systems",
     "md/42-quantum-dynamics",
@@ -212,7 +217,6 @@
     "md/39-basic-decoding-theory",
     "md/38-quantum-information-capacity",
     "md/37-no-cloning-theorem",
-    "md/36-linear-algebra-iii",
-    "md/35-uncertainty-relation"
+    "md/36-linear-algebra-iii"
   ]
 }

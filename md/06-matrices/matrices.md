@@ -7,22 +7,24 @@ and quantum mechanics.
 
 Let’s make a new
 [[variables-addition|variable]]
-called $A$.
+called $`A`$.
 
-Let $A$ be a matrix of size $m\times n$ where $m$ is the height of
-the matrix (how many rows it has) and $n$ is the width (how many
+Let $`A`$ be a matrix of size $`m\times n`$ where $`m`$ is the height of
+the matrix (how many rows it has) and $`n`$ is the width (how many
 columns it has).
 
 Example:
 
-$$\begin{gather*}
+``` math
+\begin{gather*}
     A=\begin{pmatrix}
         1 & 2 & 5 \\
         3 & 4 & 9
     \end{pmatrix}
-\end{gather*}$$
+\end{gather*}
+```
 
-See how $A$ is also a variable? In this case, $m=2, n=3$ as there
+See how $`A`$ is also a variable? In this case, $`m=2, n=3`$ as there
 are 2 rows and 3 columns.
 
 We use matrices to represent multiple numbers because they have an

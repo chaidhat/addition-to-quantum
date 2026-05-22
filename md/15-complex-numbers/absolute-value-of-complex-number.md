@@ -1,3 +1,5 @@
 # Absolute Value of Complex Number
 
-$$z\cdot z^*=|z|^2$$
+``` math
+z\cdot z^*=|z|^2
+```

@@ -12,4 +12,4 @@ Properties
 - [[observables]] are usually some kind of Hermitian operator
 
 The [[eigenvectorseigenvalues|eigenvalues]] represent possible measurement outcomes. [[orthonormality|Orthonormal]]
-[[eigenstates]] $\left\lvert \alpha \right\rangle$ mean that these are definite value states
+[[eigenstates]] $`\left\lvert \alpha \right\rangle`$ mean that these are definite value states

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-r"""Convert main.tex into a tree of markdown files for Obsidian.
+r"""Convert main.tex into a tree of GitHub-flavored markdown files for
+Obsidian / GitHub viewing.
 
 Layout:
 - One folder per \section, prefixed `NN-` for ordering.
@@ -16,8 +17,15 @@ cross-reference targets used in [text](#label) links. Those links are
 rewritten to Obsidian wikilinks `[[target|text]]` (or `[[target]]` when
 text matches the target).
 
-The custom \hyperref macro in the source wraps link text in \underline,
-which pandoc emits as <span class="underline">…</span>. We strip those.
+Output is `gfm+tex_math_dollars`:
+  - Display math uses ```math fenced blocks (rendered by GitHub).
+  - Inline math uses $`...`$ (also rendered by GitHub).
+  - Tables are GFM pipe tables.
+  - Underlines come out as <u>…</u>, which we strip from link text.
+
+Because GFM output strips the `{#label}` attributes, we recover the
+label for each header by scanning the original main.tex in order and
+zipping the result with the headers we see in the markdown.
 
 Usage:
     python3 tex_to_md.py [output_dir]
@@ -42,9 +50,8 @@ def run_pandoc(tex_path: Path) -> str:
             "pandoc",
             str(tex_path),
             "-f", "latex",
-            "-t", "markdown-raw_tex-smart-fenced_divs-bracketed_spans",
+            "-t", "gfm+tex_math_dollars",
             "--wrap=preserve",
-            "--markdown-headings=atx",
         ],
         capture_output=True,
         text=True,
@@ -62,33 +69,89 @@ def slugify(text: str) -> str:
     return text or "untitled"
 
 
-# Match `# Title` and `## Title`, optionally followed by `{#label …}`.
-_HEADER_RE = re.compile(r"^(#{1,6})\s+(.*?)(?:\s+\{([^{}]*)\})?\s*$")
-# Pull `#id` out of pandoc attribute brace contents.
-_ID_IN_ATTR_RE = re.compile(r"#([\w:-]+)")
+# Find \section / \subsection / \subsubsection (optionally starred), the
+# title in braces, and optionally a \label{...} that immediately
+# follows (possibly on the next line).
+_TEX_HEADER_RE = re.compile(
+    r"\\(section|subsection|subsubsection)(\*?)\s*"
+    r"\{([^{}]*)\}\s*"
+    r"(?:\\label\{([^}]+)\})?",
+    re.DOTALL,
+)
+_LEVEL_OF = {"section": 1, "subsection": 2, "subsubsection": 3}
 
 
-def parse_header(line: str) -> tuple[int, str, str | None] | None:
-    """Return (level, title, label) if `line` is a markdown header."""
-    m = _HEADER_RE.match(line)
+def parse_tex_headers(tex: str) -> list[dict]:
+    """Return an ordered list of {level, title, label} for every
+    \\section / \\subsection / \\subsubsection in the TeX body."""
+    # Strip everything before \begin{document} so preamble macros that
+    # use \section etc. don't trip us up.
+    begin = tex.find(r"\begin{document}")
+    body = tex[begin:] if begin >= 0 else tex
+    headers = []
+    for m in _TEX_HEADER_RE.finditer(body):
+        kind, _starred, title, label = m.groups()
+        headers.append({
+            "level": _LEVEL_OF[kind],
+            "title": " ".join(title.split()),  # collapse whitespace
+            "label": label,
+        })
+    return headers
+
+
+# Pull the trailing `{#id …}` attribute off a markdown header line,
+# even though gfm shouldn't emit one — keep it robust just in case.
+_MD_HEADER_RE = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
+
+
+def parse_md_header(line: str) -> tuple[int, str] | None:
+    m = _MD_HEADER_RE.match(line)
     if not m:
         return None
-    level = len(m.group(1))
-    title = m.group(2).strip()
-    label = None
-    if m.group(3):
-        id_match = _ID_IN_ATTR_RE.search(m.group(3))
-        if id_match:
-            label = id_match.group(1)
-    return level, title, label
+    return len(m.group(1)), m.group(2).strip()
 
 
-def split_markdown(md: str) -> tuple[str, list[dict]]:
-    """Return (preface, sections).
+def attach_labels(md: str, tex_headers: list[dict]) -> tuple[
+    str, list[dict]
+]:
+    """Walk the markdown line by line, matching each `#+` header to the
+    next TeX header of the same level. Returns the markdown unchanged
+    and a list of (level, title, label, line_index)."""
+    out_headers = []
+    queue = list(tex_headers)
+    for i, line in enumerate(md.splitlines()):
+        parsed = parse_md_header(line)
+        if not parsed:
+            continue
+        level, title = parsed
+        # Pop the next TeX header at this level (skipping mismatches
+        # so we stay resilient if pandoc inserts a stray header).
+        chosen = None
+        while queue:
+            cand = queue[0]
+            if cand["level"] == level:
+                chosen = queue.pop(0)
+                break
+            # Levels don't match: pandoc may have skipped one. Move on.
+            queue.pop(0)
+        label = chosen["label"] if chosen else None
+        out_headers.append({
+            "level": level, "title": title, "label": label, "line": i,
+        })
+    return md, out_headers
 
-    Each section dict has: title, label, intro, subsections (list of
-    dicts with: title, label, body).
-    """
+
+def split_markdown(
+    md: str, headers: list[dict]
+) -> tuple[str, list[dict]]:
+    """Use the header annotations to split markdown into preface +
+    sections (each with intro + subsections). Subsubsections stay
+    inline as `### Title` inside whichever file they appear in."""
+    lines = md.splitlines()
+    # Filter to just level-1 and level-2 headers, since those drive the
+    # file layout. Level-3 stay inline.
+    splits = [h for h in headers if h["level"] in (1, 2)]
+
     preface_lines: list[str] = []
     sections: list[dict] = []
     current_section: dict | None = None
@@ -106,34 +169,43 @@ def split_markdown(md: str) -> tuple[str, list[dict]]:
             preface_lines.extend(buffer)
         buffer = []
 
-    for line in md.splitlines():
-        parsed = parse_header(line)
-        if parsed and parsed[0] == 1:
+    split_idx = 0
+    for i, line in enumerate(lines):
+        is_split = (
+            split_idx < len(splits) and splits[split_idx]["line"] == i
+        )
+        if is_split:
+            h = splits[split_idx]
+            split_idx += 1
             flush()
-            _, title, label = parsed
-            current_sub = None
-            current_section = {
-                "title": title,
-                "label": label,
-                "intro": "",
-                "subsections": [],
-            }
-            sections.append(current_section)
-        elif parsed and parsed[0] == 2:
-            flush()
-            _, title, label = parsed
-            if current_section is None:
+            if h["level"] == 1:
+                current_sub = None
                 current_section = {
-                    "title": "Untitled",
-                    "label": None,
+                    "title": h["title"],
+                    "label": h["label"],
                     "intro": "",
                     "subsections": [],
                 }
                 sections.append(current_section)
-            current_sub = {"title": title, "label": label, "body": ""}
-            current_section["subsections"].append(current_sub)
-        else:
-            buffer.append(line)
+            else:  # level 2
+                if current_section is None:
+                    current_section = {
+                        "title": "Untitled",
+                        "label": None,
+                        "intro": "",
+                        "subsections": [],
+                    }
+                    sections.append(current_section)
+                current_sub = {
+                    "title": h["title"],
+                    "label": h["label"],
+                    "body": "",
+                }
+                current_section["subsections"].append(current_sub)
+            # Skip the header line itself; the title goes into the
+            # file via write_file().
+            continue
+        buffer.append(line)
     flush()
 
     preface = "\n".join(preface_lines).strip("\n")
@@ -141,8 +213,7 @@ def split_markdown(md: str) -> tuple[str, list[dict]]:
 
 
 def pick_slug(label: str | None, title: str, taken: set[str]) -> str:
-    """Choose a filename slug. Prefers the LaTeX label; falls back to
-    a slugified title. Disambiguates against `taken`."""
+    """Choose a unique filename slug. Prefer the LaTeX label."""
     base = label if label else slugify(title)
     base = base or "untitled"
     slug = base
@@ -154,11 +225,20 @@ def pick_slug(label: str | None, title: str, taken: set[str]) -> str:
     return slug
 
 
-_UNDERLINE_SPAN_RE = re.compile(
-    r'<span class="underline">(.*?)</span>', re.DOTALL
+# Strip pandoc-emitted underline wrappers in both flavors.
+_UNDERLINE_RE = re.compile(
+    r'<u>(.*?)</u>|<span class="underline">(.*?)</span>',
+    re.DOTALL,
 )
-# Match a markdown link: [text](target). Text may contain balanced
-# brackets; target has no spaces and no parens.
+
+
+def _strip_underline(text: str) -> str:
+    return _UNDERLINE_RE.sub(lambda m: m.group(1) or m.group(2), text)
+
+
+# Match a markdown link: [text](target). Text may contain nested
+# brackets at one level (e.g. `[<u>x</u>]`); target excludes whitespace
+# and parentheses.
 _LINK_RE = re.compile(r"\[((?:[^\[\]]|\[[^\[\]]*\])*?)\]\(([^()\s]+)\)")
 
 
@@ -167,23 +247,19 @@ def _norm(s: str) -> str:
 
 
 def transform_links(text: str, label_to_slug: dict[str, str]) -> str:
-    """Strip underline-span wrappers, rewrite internal links as
-    Obsidian wikilinks. Leaves external links as markdown links."""
-    # Strip underline spans first (they wrap link text in pandoc output).
-    text = _UNDERLINE_SPAN_RE.sub(r"\1", text)
+    """Strip underline wrappers; rewrite #-anchor links as Obsidian
+    wikilinks. External links keep their markdown form."""
+    text = _strip_underline(text)
 
     def repl(m: re.Match) -> str:
-        link_text = m.group(1)
+        link_text = _strip_underline(m.group(1)).strip()
         target = m.group(2)
-        # Strip residual span wrappers inside link text.
-        link_text = _UNDERLINE_SPAN_RE.sub(r"\1", link_text).strip()
         if target.startswith("#"):
             label = target[1:]
             slug = label_to_slug.get(label, label)
             if _norm(link_text) == _norm(slug) or not link_text:
                 return f"[[{slug}]]"
             return f"[[{slug}|{link_text}]]"
-        # External / non-anchor link — leave as a normal markdown link.
         return f"[{link_text}]({target})"
 
     return _LINK_RE.sub(repl, text)
@@ -208,25 +284,20 @@ def main(argv: list[str]) -> int:
 
     print(f"Running pandoc on {TEX}...")
     md = run_pandoc(TEX)
+    tex_headers = parse_tex_headers(TEX.read_text())
+    md, headers = attach_labels(md, tex_headers)
 
-    preface, sections = split_markdown(md)
+    preface, sections = split_markdown(md, headers)
 
-    # First pass: assign a unique filename slug to every section /
-    # subsection so we can rewrite cross-references.
+    # Assign a unique filename slug for every header.
     taken: set[str] = set()
-    if preface.strip():
-        preface_slug = pick_slug(None, "preface", taken)
-    else:
-        preface_slug = None
-
+    preface_slug = pick_slug(None, "preface", taken) if preface.strip() else None
     for sec in sections:
-        sec_slug = pick_slug(sec["label"], sec["title"], taken)
-        sec["slug"] = sec_slug
+        sec["slug"] = pick_slug(sec["label"], sec["title"], taken)
         for sub in sec["subsections"]:
             sub["slug"] = pick_slug(sub["label"], sub["title"], taken)
 
-    # Build label → slug map covering every header that has a label
-    # AND every header (by slug — pandoc may use it as the anchor).
+    # Build label → slug map for cross-reference rewriting.
     label_to_slug: dict[str, str] = {}
     for sec in sections:
         if sec["label"]:
@@ -235,7 +306,7 @@ def main(argv: list[str]) -> int:
             if sub["label"]:
                 label_to_slug[sub["label"]] = sub["slug"]
 
-    # Second pass: write files with link rewriting.
+    # Write files with link rewriting.
     if preface_slug:
         body = transform_links(preface.strip(), label_to_slug)
         (out_dir / f"{preface_slug}.md").write_text(body + "\n")

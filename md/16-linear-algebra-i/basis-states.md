@@ -10,5 +10,5 @@ If a set of states are BOTH
 
 then they are called basis states.
 
-Note that $\left\lvert + \right\rangle,\left\lvert - \right\rangle$ are “basis”
+Note that $`\left\lvert + \right\rangle,\left\lvert - \right\rangle`$ are “basis”
 states
