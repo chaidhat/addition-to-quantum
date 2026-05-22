@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/05-variables-addition/variables-addition.md",
+                "file": "md/40-composite-systems/bells-theorem.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "variables-addition"
+              "title": "bells-theorem"
             }
           }
         ]
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -183,44 +182,44 @@
   },
   "active": "e2e342dbd5bcc30c",
   "lastOpenFiles": [
-    "md/06-matrices/matrices.md",
-    "md/24-linear-algebra-ii/hermitian-matrix.md",
-    "md/15-complex-numbers/conjugate.md",
-    "md/36-linear-algebra-iii/kronecker-product.md",
-    "md/16-linear-algebra-i/basis-states.md",
-    "md/31-probability-theory/standard-deviation.md",
-    "md/31-probability-theory/joint-random-variables.md",
-    "md/31-probability-theory/numerical-random-variablesexpected-value.md",
-    "md/31-probability-theory/probability-theory.md",
-    "md/31-probability-theory/expected-value-of-observables.md",
-    "md/31-probability-theory/spread.md",
-    "md/31-probability-theory/conditional-probability.md",
-    "md/05-variables-addition/variables-addition.md",
-    "variable.md",
-    "md/23-quantum-system/spin-12-systems.md",
-    "md/23-quantum-system/spin-1-systems.md",
-    "md/19-angular-frequency-reduced-planck-constant/angular-frequency-reduced-planck-constant.md",
-    "md/16-linear-algebra-i/operators.md",
-    "md/14-calculus/taylor-series.md",
-    "md/14-calculus/integration.md",
-    "md/14-calculus/differentiation.md",
-    "md/16-linear-algebra-i/vectors.md",
-    "alias.txt",
-    "scripts/add_links.py",
-    "scripts/add_links.py.tmp.6172.aa64fc1652de",
-    "scripts/build_aliases.py",
-    "alias.json",
-    "build_aliases.py",
-    "md/16-linear-algebra-i/bra-ket-matrix-multiplication.md",
-    "md/36-linear-algebra-iii/cross-product.md",
-    "md/32-borns-rule/borns-rule.md",
-    "md/24-linear-algebra-ii/projections.md",
-    "Untitled.canvas",
+    "md/40-composite-systems/composite-system.md",
+    "md/40-composite-systems/einstein-podolsky-rosen.md",
+    "md/40-composite-systems/clauser-horne-shimony-holt.md",
+    "md/40-composite-systems/bell-states.md",
+    "md/07-set-theory/strings.md",
+    "md/07-set-theory/set.md",
+    "md/07-set-theory/partitions.md",
+    "md/07-set-theory/intersection.md",
+    "md/07-set-theory/element.md",
+    "md/05-photons-wave-particle-duality/photons-wave-particle-duality.md",
+    "md/04-ket-states/ket-states.md",
+    "md/03-matrices/matrices.md",
+    "md/02-variables-addition/variables-addition.md",
+    "md/13-linear-algebra-i/vectors.md",
+    "md/28-probability-theory/cauchy-schwarz-inequality.md",
+    "md/21-linear-algebra-ii/invertibility-of-matrices.md",
+    "md/40-composite-systems/local-realism.md",
+    "md/22-observables/observables.md",
+    "[[hilbert-spaces.md",
+    "[hilbert-spaces.md",
+    "md/01-let/let.md",
+    "md/00-intro/intro.md",
+    "md/40-composite-systems/states-on-a-composite-system.md",
+    "md/40-composite-systems/singlet.md",
+    "md/40-composite-systems/operators-in-tensor-product-space.md",
+    "md/40-composite-systems/no-communication-theorem.md",
+    "md/40-composite-systems",
+    "md/39-quantum-dynamics",
+    "md/38-quantum-cryptography",
+    "md/37-basic-distinguishability-theory",
+    "md/36-basic-decoding-theory",
+    "md/35-quantum-information-capacity",
+    "md/34-no-cloning-theorem",
+    "md/33-linear-algebra-iii",
+    "md/32-uncertainty-relation",
+    "md/31-density-matrix",
     "Untitled 1.canvas",
-    "Pasted image 20260521231146.png",
-    "main.pdf",
-    "hw-md",
-    "md/44-cheat-sheet",
-    "md/43-composite-systems"
+    "Untitled.canvas",
+    "Pasted image 20260521231146.png"
   ]
 }

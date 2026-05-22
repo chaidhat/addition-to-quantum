@@ -9,7 +9,7 @@ basis be just a [[set]] of [[basis-states]] $E_1,E_2, …, E_k$. This means a
 photon can be at those energies.
 
 A state is a superposition of all those energies. Recall that a super
-position is just a sum [[planck-einstein-relation|(]]$\sum$) of those energies. I put $k$ under
+position is just a sum [[planck-einstein-relation|]]$\sum$) of those energies. I put $k$ under
 the sum showing we must add all the energies and their corresponding
 $c_k$ values (aka. coefficients) together.
 
