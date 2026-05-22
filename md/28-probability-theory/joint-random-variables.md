@@ -1,7 +1,7 @@
 This builds on [[probability-theory]]
 # Joint Random Variable
 
-We have a joint random [[variable]] $(X,Y)$ and we want to find a pair of
+We have a joint random [[variables-addition|variable]] $(X,Y)$ and we want to find a pair of
 values
 
 $$

@@ -37,7 +37,7 @@ $$
 \implies U(t,t_0) = e^{-iHt/\hbar}e^{iHt_0/\hbar}
 $$
 
-via [[baker-campbell-hausdorff-formula]], since $[H,H]=0$ (trivially as any [[operators|operator]] [[commutators|commutes]] with itself)
+via [[baker-campbell-hausdorff]], since $[H,H]=0$ (trivially as any [[operators|operator]] [[commutators|commutes]] with itself)
 
 $$
 U(t,t_0) = e^{-iHt/\hbar}e^{iHt_0/\hbar}

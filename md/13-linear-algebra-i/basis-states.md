@@ -8,7 +8,7 @@ If a [[set]] of [[ket-states|states]] are BOTH
 - span the whole space (i.e., every state in the space can be written as
   a linear combination of these things)
 
-then they are called basis [[states]].
+then they are called basis [[ket-states]].
 
 Note that $\left\lvert + \right\rangle,\left\lvert - \right\rangle$ are “basis”
 [[states-on-a-composite-system|states]]

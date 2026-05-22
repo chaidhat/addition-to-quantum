@@ -49,7 +49,7 @@ $$
 \sigma_A^X=1\Rightarrow \sigma_B^X=-1
 $$
 
-[[local-realism|Local realism]] assumes that before every measurement, every observable has a pre-existing definite value determined by some hidden [[variable]] $\lambda$. So in any given run, $A_1,A_2,B_1,B_2$ all have predetermined definite values.
+[[local-realism|Local realism]] assumes that before every measurement, every observable has a pre-existing definite value determined by some hidden [[variables-addition|variable]] $\lambda$. So in any given run, $A_1,A_2,B_1,B_2$ all have predetermined definite values.
 
 | λ | A | B (forced) |
 |---|---|---|

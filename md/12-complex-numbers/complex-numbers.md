@@ -41,7 +41,7 @@ $$
 \end{gather*}
 $$
 
-What is $i$? Well, we don’t know. It’s not a [[variable]]! But we know
+What is $i$? Well, we don’t know. It’s not a [[variables-addition|variable]]! But we know
 what $i^2$ is:
 
 $$

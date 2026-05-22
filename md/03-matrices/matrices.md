@@ -24,7 +24,7 @@ $$
 \end{gather*}
 $$
 
-See how $A$ is also a [[variable]]? In this case, $m=2, n=3$ as there
+See how $A$ is also a variable? In this case, $m=2, n=3$ as there
 are 2 rows and 3 columns.
 
 We use matrices to represent multiple numbers because they have an

@@ -2,9 +2,7 @@
 
 Let $\hat{T}$ be an operator.
 
-An operator is a
-[[functions|function]]
-where
+An operator is a [[functions|function]] where
 
 $$
 \begin{gather*}

@@ -12,5 +12,5 @@ A Hilbert space is a [[vector-spaces|vector space]], possibly infinite-dimension
 
 $H$ has an [[inner-product]] and is complete.
 
-The [[ket-states|states]] we wrote before for example $\left\lvert \psi \right\rangle$ are [[states]] which
+The [[ket-states|states]] we wrote before for example $\left\lvert \psi \right\rangle$ are [[ket-states]] which
 exist in a Hilbert space.

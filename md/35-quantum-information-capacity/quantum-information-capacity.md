@@ -1,6 +1,6 @@
 # Quantum Information Capacity
 
-A classical bit has 2 [[states]]: 0 and 1.
+A classical bit has 2 states: 0 and 1.
 
 $$
 \{0,1\}

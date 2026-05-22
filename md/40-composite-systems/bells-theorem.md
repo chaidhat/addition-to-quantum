@@ -8,7 +8,7 @@ Each measurements returns $\pm 1$
 $$
 A_i,B_j\in\{\pm 1\}
 $$
-[[local-realism|Local realism]] assumes that before every measurement, every [[observables|observable]] has a pre-existing definite value determined by some hidden [[variable]] $\lambda$. So in any given run, $A_1,A_2,B_1,B_2$ all have predetermined definite values.
+[[local-realism|Local realism]] assumes that before every measurement, every [[observables|observable]] has a pre-existing definite value determined by some hidden [[variables-addition|variable]] $\lambda$. So in any given run, $A_1,A_2,B_1,B_2$ all have predetermined definite values.
 
 Let $Q$ be a combination observable where
 $$
@@ -72,3 +72,5 @@ $$
 The shows that the two are mathematically [[compatibility|incompatible]]. Bell's theorem in concrete form.
 
 $2\sqrt{2}$ is known a Tsirelson's bound. The maximum [[clauser-horne-shimony-holt]] value a [[ket-states|state]] can get.
+
+See how it is exploited with [[greenberger-horne-zeilinger]]

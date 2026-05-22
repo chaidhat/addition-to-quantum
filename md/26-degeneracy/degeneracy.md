@@ -26,7 +26,7 @@ $$
 \Rightarrow\hat{H}=E_0\left\lvert 0 \right\rangle\left\langle 0 \right\rvert+E_1\left\lvert 1a \right\rangle\left\langle 1a \right\rvert+E_2\left\lvert 1b \right\rangle\left\langle 1b \right\rvert
 $$
 
-The [[states]] $\left\lvert 1a \right\rangle,\left\lvert 1b \right\rangle$ are degenerate if and only if $E_1=E_2$. If $E_0=E_1, E_1\neq E_2$ then $\left\lvert 0 \right\rangle$ is degenerate with $\left\lvert 1a \right\rangle$.
+The [[ket-states]] $\left\lvert 1a \right\rangle,\left\lvert 1b \right\rangle$ are degenerate if and only if $E_1=E_2$. If $E_0=E_1, E_1\neq E_2$ then $\left\lvert 0 \right\rangle$ is degenerate with $\left\lvert 1a \right\rangle$.
 
 This just means that you can’t detect the difference between [[states-on-a-composite-system|states]] given only the energy/[[eigenvectorseigenvalues|eigenvalue]].
 
