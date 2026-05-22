@@ -18,7 +18,7 @@ $$
 =\hat{S}_x\otimes I + I \otimes \hat{S}_x
 $$
 
-Let there be a [[ket-states|state]] where
+[[Let]] there be a [[ket-states|state]] where
 
 $$
 \left\lvert \psi \right\rangle=a_{11}\left\lvert +,+ \right\rangle+a_{12}\left\lvert +,- \right\rangle+a_{21}\left\lvert -,+ \right\rangle+a_{22}\left\lvert -,- \right\rangle

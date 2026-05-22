@@ -1,6 +1,6 @@
 # Particle Energy
 
-We just said photons have discrete energy levels. Let’s say they have
+We just said photons have discrete energy levels. [[Let]]’s say they have
 $k$ energy levels.
 
 We know experimentally, that any [[ket-states|state]] $\left\lvert \psi(t) \right\rangle$ (e.g., spin) of

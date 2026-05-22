@@ -28,7 +28,7 @@ Einstein famously called this "Spooky action at a distance."
 
 Example 1
 
-Let $\dim H_A = \dim H_B = 2$. Let
+[[Let]] $\dim H_A = \dim H_B = 2$. Let
 
 $$
 \left\lvert \psi_1 \right\rangle=\frac{1}{2}(\left\lvert 0,0 \right\rangle+\left\lvert 0,1 \right\rangle+\left\lvert 1,0 \right\rangle+\left\lvert 1,1 \right\rangle)

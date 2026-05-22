@@ -1,6 +1,6 @@
 # Set
 
-Let a set be an unordered collection of
+[[Let]] a set be an unordered collection of
 [[element|elements]]
 
 Example:

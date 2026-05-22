@@ -34,7 +34,7 @@ A map just links a thing to another thing.
 
 Example
 
-Let $q$ be a function
+[[Let]] $q$ be a function
 
 $$
 \begin{gather*}

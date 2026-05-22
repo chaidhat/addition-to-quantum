@@ -14,7 +14,7 @@ which may or may not be entangled, Alice cannot convey information to Bob by
 
 But Alice’s choice of measurement [[basis-states|basis]] cannot affect Bob’s measurement statistics, her measurement outcome CAN affect Bob’s state.
 
-Let $\left\lvert \psi_a \right\rangle$ be the state of Bob’s [[qubit]] conditioned on Alice’s outcome $a$.
+[[Let]] $\left\lvert \psi_a \right\rangle$ be the state of Bob’s [[qubit]] conditioned on Alice’s outcome $a$.
 
 $$
 \left\lvert \psi_a \right\rangle \triangleq \left\langle a^{(A)}|\Psi^{(AB)} \right\rangle

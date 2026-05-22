@@ -58,7 +58,7 @@ $$
 
 Bob still needs to make a determination. But he still needs to make a decision on which of the $N$ messages sent.
 
-Let
+[[Let]]
 
 $$
 k=1,2,3,4,\cdots,d'\quad d'>N

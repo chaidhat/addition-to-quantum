@@ -12,7 +12,7 @@ $$
 Oscillating means the phase of the particle changes so we can represent
 the phase as a [[complex-numbers|complex number]].
 
-Let’s say there is a two-level [[quantum-system]] in some superposition.
+[[Let]]’s say there is a two-level [[quantum-system]] in some superposition.
 This just means
 
 $$

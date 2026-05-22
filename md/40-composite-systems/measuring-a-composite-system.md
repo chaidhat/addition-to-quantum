@@ -22,7 +22,7 @@ $$
 \frac{1}{\sqrt{2}}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \longrightarrow \text{entangled state!}
 $$
 
-This means that joint measurement can product entanglement.
+This means that joint measurement can product [[states-on-a-composite-system|entanglement]].
 Equivalent to interacting via third party.
 
 Consider a composite system $H_{\text{Alice}} \otimes H_{\text{Bob}}$ with subsystem observables having eigenvalues $q_a$, $r_b$ and [[eigenvectorseigenvalues|eigenvectors]] $\left\lvert a \right\rangle$, $\left\lvert b \right\rangle$.

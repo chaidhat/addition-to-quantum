@@ -37,7 +37,7 @@ U=-\vec{\mu}\cdot\vec{B}
 $$
 
 In quantum mechanics, the energy is the Hamiltonian [[operators|operator]] $\hat{H}$
-Let
+[[Let]]
 
 $$
 \gamma = \frac{g\mu_B}{\hbar}

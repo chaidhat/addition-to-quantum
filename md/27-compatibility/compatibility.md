@@ -4,7 +4,7 @@ Compatibility is a property of two [[operators]].
 
 If $\left\lvert \phi_n \right\rangle$ is the $n$-th [[eigenstates|eigenstate]] of $\hat{A}$ (i.e., the [[eigenbasis]] of $\hat{A}$),
 
-Let
+[[Let]]
 
 $$
 \hat{A}=\sum_{n=1}^N a_n\left\lvert \phi_n \right\rangle\left\langle \phi_n \right\rvert

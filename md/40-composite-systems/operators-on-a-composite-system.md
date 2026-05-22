@@ -2,7 +2,7 @@
 
 Don’t forget that [[operators]] can sometimes be [[observables]].
 
-Let $F\in L(H_A), G \in L (H_B)$ be operators.
+[[Let]] $F\in L(H_A), G \in L (H_B)$ be operators.
 
 Then $F\otimes G \in L(H_A\otimes H_B)$ is defined as
 

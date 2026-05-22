@@ -29,6 +29,10 @@ for md_file in sorted(MD_DIR.rglob("*.md")):
         target = target.split("#", 1)[0].split("^", 1)[0].strip()
         if not target:
             continue
+        # Skip junk displays (punctuation-only, no letters) — these usually
+        # come from malformed source links like `[[foo|(]]`.
+        if not re.search(r"[A-Za-z]", display):
+            continue
         aliases.setdefault(target, set()).add(display)
 
 result = {k: sorted(v) for k, v in sorted(aliases.items())}

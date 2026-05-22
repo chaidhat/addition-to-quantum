@@ -10,7 +10,7 @@ $$
 
 Example I
 
-We want to find the optimal measurement to distinguish between two equally likely pure states $\left\lvert \alpha_0 \right\rangle, \left\lvert \alpha_1 \right\rangle$ where $\left\langle \alpha_0|\alpha_1 \right\rangle=\cos\theta$.
+We want to find the optimal measurement to distinguish between two equally likely pure [[states-on-a-composite-system|states]] $\left\lvert \alpha_0 \right\rangle, \left\lvert \alpha_1 \right\rangle$ where $\left\langle \alpha_0|\alpha_1 \right\rangle=\cos\theta$.
 We can try to do
 
 $$

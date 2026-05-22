@@ -2,7 +2,7 @@
 
 This disproves [[einstein-podolsky-rosen]]
 
-Let Alice have two possible measurements $A_1$ or $A_2$. She picks one per experimental run. Bob has two possible measurements $B_1$ or $B_2$. He also picks one per run.
+[[Let]] Alice have two possible measurements $A_1$ or $A_2$. She picks one per experimental run. Bob has two possible measurements $B_1$ or $B_2$. He also picks one per run.
 
 Each measurements returns $\pm 1$ 
 $$

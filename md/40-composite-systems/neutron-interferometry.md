@@ -1,6 +1,6 @@
 # Neutron Interferometry
 
-Let
+[[Let]]
 
 $$
 R_{\hat{n}}(\theta) = e^{-i \theta \hat{J}_{\hat{n}} / \hbar}

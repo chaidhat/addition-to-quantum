@@ -2,7 +2,7 @@
 
 How do we measure spread from [[expected-value-of-observables|expected value]] $\mathbb{E}[X]$?
 
-Let $\mu=\mathbb{E}[X]$
+[[Let]] $\mu=\mathbb{E}[X]$
 
 $$
 \begin{gather*}

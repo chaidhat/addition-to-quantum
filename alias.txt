@@ -1,4 +1,7 @@
 {
+  "Let": [
+    "Let"
+  ],
   "absolute-value-of-complex-number": [
     "this lemma"
   ],
@@ -11,8 +14,8 @@
   "anti-hermitian-operators": [
     "anti-Hermitian"
   ],
-  "baker-campbell-hausdorff-formula": [
-    "baker-campbell-hausdorff-formula"
+  "baker-campbell-hausdorff": [
+    "baker-campbell-hausdorff"
   ],
   "basic-decoding-theory": [
     "basic-decoding-theory"
@@ -25,6 +28,7 @@
     "bell-states"
   ],
   "bells-theorem": [
+    "Bell's Theorem",
     "bells-theorem"
   ],
   "bloch-sphere": [
@@ -38,6 +42,9 @@
   ],
   "characteristic-polynomial": [
     "characterstic polynomial"
+  ],
+  "classical-cryptography": [
+    "classical-cryptography"
   ],
   "clauser-horne-shimony-holt": [
     "clauser-horne-shimony-holt"
@@ -121,6 +128,9 @@
     "function",
     "functions"
   ],
+  "greenberger-horne-zeilinger": [
+    "greenberger-horne-zeilinger"
+  ],
   "heisenberg-picture": [
     "heisenberg-picture"
   ],
@@ -141,6 +151,9 @@
   ],
   "inner-product": [
     "inner-product"
+  ],
+  "invariant-subspaces": [
+    "invariant subspace"
   ],
   "isolated-system": [
     "isolated-system"
@@ -216,9 +229,6 @@
     "Pauli matrix",
     "pauli-matrices"
   ],
-  "planck-einstein-relation": [
-    "("
-  ],
   "positive-semi-definite-psd-operators": [
     "Positive semi-definite"
   ],
@@ -259,9 +269,6 @@
     "set",
     "sets"
   ],
-  "set-theory": [
-    "set-theory"
-  ],
   "singlet": [
     "singlet"
   ],
@@ -270,7 +277,8 @@
     "spectral-decomposition"
   ],
   "spin-12-systems": [
-    "here"
+    "here",
+    "spin-1/2"
   ],
   "square-matrix": [
     "square-matrix"
@@ -278,10 +286,8 @@
   "standard-deviation": [
     "standard-deviation"
   ],
-  "states": [
-    "states"
-  ],
   "states-on-a-composite-system": [
+    "entanglement",
     "states"
   ],
   "strings": [
@@ -321,10 +327,6 @@
   ],
   "unitary-operator": [
     "unitary"
-  ],
-  "variable": [
-    "variable",
-    "variables"
   ],
   "variables-addition": [
     "variable"

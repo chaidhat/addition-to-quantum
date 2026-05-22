@@ -1,8 +1,8 @@
 # Quantum Teleportation
 This applies [[states-on-a-composite-system|entanglement]].
-Let there be Alice and Bob who are separated. Alice has [[qubit]] A and B. Bob has qubit C. B and C are entangled.
+[[Let]] there be Alice and Bob who are separated. Alice has [[qubit]] A and B. Bob has qubit C. B and C are entangled.
 
-Alice wants to send Bob qubit A in unknown state
+Alice wants to send Bob qubit A in unknown [[ket-states|state]]
 $$
 \ket{\upsilon^{(A)}}=\alpha\ket{0}+\beta\ket{1}
 $$

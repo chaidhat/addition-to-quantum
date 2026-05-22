@@ -1,6 +1,6 @@
 # [[hermitian-operators|Hermitian]] Matrix
 
-Let a “Hermitian matrix” be a matrix that equals its own [[conjugate]]
+[[Let]] a “Hermitian matrix” be a matrix that equals its own [[conjugate]]
 transpose
 
 If and only if $A$ is a matrix and is Hermitian, then this is true

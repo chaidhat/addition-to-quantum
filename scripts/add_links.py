@@ -87,6 +87,10 @@ def process_file(md_file: Path, aliases: dict[str, list[str]]) -> int:
         for display in displays:
             if not display:
                 continue
+            # Skip junk displays with no letters (e.g. stray "(") so we don't
+            # propagate malformed source links into other files.
+            if not re.search(r"[A-Za-z]", display):
+                continue
             candidates.append((-len(display), key, display))
     candidates.sort()
 

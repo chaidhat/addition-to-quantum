@@ -1,6 +1,6 @@
 # Schrödinger Equation, Hamiltonian II
 
-Let’s derive the [[schruxf6dingers-equation-hamiltonian|Schrödinger equation]] from the postulates of an [[isolated-system]].
+[[Let]]’s derive the [[schruxf6dingers-equation-hamiltonian|Schrödinger equation]] from the postulates of an [[isolated-system]].
 
 Let $t_0$ be the initial time and $t$ be the time after some time has passed.
 

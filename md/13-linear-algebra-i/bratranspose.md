@@ -1,7 +1,7 @@
 # Bra, Transpose
 
 We just learned what ket $\left\lvert x \right\rangle$ means — a $N\times 1$ [[vectors|vector]].
-Let that ALSO be called a ket. If we flip it horizontally, we get a bra
+[[Let]] that ALSO be called a ket. If we flip it horizontally, we get a bra
 $\left\langle x \right\rvert$.
 
 If a ket is

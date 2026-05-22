@@ -1,6 +1,6 @@
 # Example of Finding Hamiltonian
 
-Let there be a particle in space where energy is kinetic energy plus potential energy.
+[[Let]] there be a particle in space where energy is kinetic energy plus potential energy.
 
 In classical physics, we know that
 

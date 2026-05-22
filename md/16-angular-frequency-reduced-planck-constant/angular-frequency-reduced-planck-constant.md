@@ -4,7 +4,7 @@ Some dude in physics was like let’s make a new, transformed version of
 frequency called angular frequency $\omega$! (Not to be confused with
 angular momentum, which is a different physical quantity.)
 
-Let
+[[Let]]
 
 $$
 \begin{gather*}

@@ -1,6 +1,6 @@
 # Operator
 
-Let $\hat{T}$ be an operator.
+[[Let]] $\hat{T}$ be an operator.
 
 An operator is a [[functions|function]] where
 

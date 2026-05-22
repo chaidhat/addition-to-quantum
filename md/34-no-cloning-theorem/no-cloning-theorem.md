@@ -9,7 +9,7 @@ $$
 
 Proof
 
-Let
+[[Let]]
 
 $$
 C\left\lvert 0 \right\rangle\rightarrow\left\lvert 0 \right\rangle\left\lvert 0 \right\rangle

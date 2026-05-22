@@ -4,7 +4,7 @@ Math is complicated. Some can say it’s complex.
 
 Numbers can be complex.
 
-Let’s say we have two funny looking 2x2 [[matrices]]. Just bear with me.
+[[Let]]’s say we have two funny looking 2x2 [[matrices]]. Just bear with me.
 
 $$
 \begin{gather*}

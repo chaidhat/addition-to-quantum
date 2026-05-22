@@ -28,7 +28,7 @@ $$
 \end{gather*}
 $$
 
-Let the Hamiltonian $H$be an [[operators|operator]] where this is true
+[[Let]] the Hamiltonian $H$be an [[operators|operator]] where this is true
 
 $$
 \begin{gather*}
