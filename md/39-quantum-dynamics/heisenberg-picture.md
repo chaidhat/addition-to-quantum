@@ -1,4 +1,4 @@
-# Heisenberg Picture
+# Heisenberg Picture (Heisenberg, 1925)
 
 [[Let]] [[observables|observable]] $\hat{A}$. The Heisen picture [[operators|operator]] is
 
@@ -6,11 +6,11 @@ $$
 \tilde{A}(t)=U^\dag (t)AU(t)
 $$
 
-|  | Schrödinger Picture | Heisenberg Picture |
-|:---|:--:|:--:|
-| State | $|\psi(t)\rangle = U(t)|\psi(0)\rangle$ | $|\psi(0)\rangle$ constant |
-| Observable | $A$ constant | $\tilde{A}(t) = U^\dagger(t)\, A\, U(t)$ |
-| Dynamics | $i\hbar\dfrac{d|\psi\rangle}{dt} = H(t)|\psi(t)\rangle$ | $\dfrac{d\tilde{A}}{dt} = \dfrac{i}{\hbar}[\tilde{H}(t), \tilde{A}(t)]$ |
+|            | Schrödinger Picture |            Heisenberg Picture            |                 |                                                                         |                          |
+| :--------- | :-----------------: | :--------------------------------------: | --------------- | ----------------------------------------------------------------------- | ------------------------ |
+| State      |          $          |          \psi(t)\rangle = U(t)           | \psi(0)\rangle$ | $                                                                       | \psi(0)\rangle$ constant |
+| Observable |    $A$ constant     | $\tilde{A}(t) = U^\dagger(t)\, A\, U(t)$ |                 |                                                                         |                          |
+| Dynamics   |   $i\hbar\dfrac{d   |         \psi\rangle}{dt} = H(t)          | \psi(t)\rangle$ | $\dfrac{d\tilde{A}}{dt} = \dfrac{i}{\hbar}[\tilde{H}(t), \tilde{A}(t)]$ |                          |
 
 For [[uniform-dynamics]], $\tilde{H}(t)=\tilde{H}$. That means $U(t)\triangleq U(t,t_0)= e^{-iHt/\hbar}e^{iHt_0/\hbar}$
 

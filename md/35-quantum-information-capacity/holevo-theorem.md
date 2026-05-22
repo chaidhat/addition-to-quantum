@@ -1,4 +1,4 @@
-# Quantum Information Capacity
+# Holevo's Theorem (Holevo, 1973) - Quantum Information Capacity
 
 A classical bit has 2 states: 0 and 1.
 

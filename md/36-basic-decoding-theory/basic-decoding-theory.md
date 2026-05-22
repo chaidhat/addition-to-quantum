@@ -1,6 +1,6 @@
 # Basic Decoding Theory
 
-This is based on [[quantum-information-capacity]].
+This is based on [[holevo-theorem]].
 Given that Alice is trying to send a message to Bob, the decoding error is
 
 $$
