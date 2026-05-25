@@ -1,6 +1,6 @@
 # No Communication Theorem
 
-With access to [[ket-states|state]]
+With access to [[ket-state|state]]
 
 $$
 \left\lvert \Psi^{(AB)} \right\rangle
@@ -10,9 +10,9 @@ which may or may not be entangled, Alice cannot convey information to Bob by
 
 1.  Choosing a basic measurement on $A$
 
-2.  Choosing a [[unitary-operator|unitary]] evolution [[operators|operator]] for $A$
+2.  Choosing a [[unitary-operator|unitary]] evolution [[operator|operator]] for $A$
 
-But Alice’s choice of measurement [[basis-states|basis]] cannot affect Bob’s measurement statistics, her measurement outcome CAN affect Bob’s state.
+But Alice’s choice of measurement [[basis-state|basis]] cannot affect Bob’s measurement statistics, her measurement outcome CAN affect Bob’s state.
 
 Let $\left\lvert \psi_a \right\rangle$ be the state of Bob’s [[qubit]] conditioned on Alice’s outcome $a$.
 

@@ -1,7 +1,7 @@
 # Measuring a Quantum State
 
 Before:
-The system is in a [[ket-states|state]] $\left\lvert \psi \right\rangle$ and you measure the [[observables|observable]] $\hat{A}$.
+The system is in a [[ket-state|state]] $\left\lvert \psi \right\rangle$ and you measure the [[observables|observable]] $\hat{A}$.
 
 Measure: We get an outcome $A_n$ with [[probability-theory|probability]] $P_n=\left\langle \psi \right\rvert\hat{\Pi}_n\left\lvert \psi \right\rangle$
 

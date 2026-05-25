@@ -1,7 +1,7 @@
 # Isolated System
 
 This builds on [[schruxf6dingers-equation-hamiltonian|Schrödinger’s equation]].
-State changes from $t_1\rightarrow t_2$ according to some linear [[operators|operator]] $U(t_2, t_1)$.
+State changes from $t_1\rightarrow t_2$ according to some linear [[operator|operator]] $U(t_2, t_1)$.
 
 $$
 \left\lvert \psi(t_2) \right\rangle=U(t_2, t_1)\left\lvert \psi(t_1) \right\rangle

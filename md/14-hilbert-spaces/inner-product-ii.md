@@ -57,7 +57,7 @@ $$
 \end{gather*}
 $$
 
-1.  positive definite
+1.  positive [[definite]]
 
 $$
 \begin{gather*}

@@ -1,4 +1,4 @@
-Recall in discrete case, any [[operators|operator]] $\hat{A}$ has a matrix representation.
+Recall in discrete case, any [[operator|operator]] $\hat{A}$ has a [[matrix|matrix]] representation.
 Discrete matrix representation
 $$
 \hat{A}=\sum_{m,n}\ket{m}\bra{m}\hat{A}\ket{n}\bra{n}=\sum_{n,m}A_{mn}\ket{m}\bra{n}

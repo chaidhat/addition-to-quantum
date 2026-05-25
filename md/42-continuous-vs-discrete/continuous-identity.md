@@ -1,8 +1,8 @@
-For discrete basis:
+For discrete [[basis-state|basis]]:
 $$
 I=\sum_n\ket{n}\bra{n}
 $$
-Think about how this just creates a $n\times n$ diagonal matrix with 1's in it.
+Think about how this just creates a $n\times n$ diagonal [[matrix|matrix]] with 1's in it.
 
 For a [[non-denumerable-basis|continuous]] basis:
 $$

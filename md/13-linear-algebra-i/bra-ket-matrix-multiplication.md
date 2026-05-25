@@ -8,7 +8,7 @@ $$
 \end{gather*}
 $$
 
-This means we’re multiplying these two [[matrices]]
+This means we’re multiplying these two [[matrix]]
 $\begin{bmatrix}c^* & d^*\end{bmatrix},\begin{bmatrix}a\\b\end{bmatrix}$
 together.
 
@@ -48,7 +48,7 @@ $$
 $$
 
 Where $x+,x-$ are [[orthonormality|orthonormal]] to each other. Another way we can say
-this is $\{\left\lvert x+ \right\rangle,\left\lvert x- \right\rangle\}$ forms an [[orthonormality|orthonormal]] [[basis-states|basis]].
+this is $\{\left\lvert x+ \right\rangle,\left\lvert x- \right\rangle\}$ forms an [[orthonormality|orthonormal]] [[basis-state|basis]].
 
 Let this be the notation of if/else
 
@@ -58,7 +58,7 @@ $$
 \end{gather*}
 $$
 
-a [[set]] of [[vectors]] $\{v_1,v_2,...,v_n\}$ form an [[orthonormality|orthonormal]] [[basis-states|basis]] if
+a [[set]] of [[vectors]] $\{v_1,v_2,...,v_n\}$ form an [[orthonormality|orthonormal]] [[basis-state|basis]] if
 and only if
 
 where $\delta_{ij}$ is the [[kronecker-delta]]

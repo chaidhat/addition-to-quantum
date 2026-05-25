@@ -9,7 +9,7 @@ $$
 $$
 
 Proof
-Consider any scalar $\lambda\in \mathbb{C}$ and any [[vectors]] $\left\lvert u \right\rangle,\left\lvert v \right\rangle\in \mathbb{C}^n$ and we have two [[ket-states|states]] $\left\lvert f \right\rangle$ and $\left\lvert g \right\rangle$.
+Consider any scalar $\lambda\in \mathbb{C}$ and any [[vectors]] $\left\lvert u \right\rangle,\left\lvert v \right\rangle\in \mathbb{C}^n$ and we have two [[ket-state|states]] $\left\lvert f \right\rangle$ and $\left\lvert g \right\rangle$.
 
 We subtract it like so $\left\lvert f \right\rangle-\lambda\left\lvert g \right\rangle$ is also a vector
 

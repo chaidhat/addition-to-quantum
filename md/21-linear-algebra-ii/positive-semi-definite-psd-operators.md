@@ -1,10 +1,10 @@
-# Positive Semi-Definite (PSD) [[operators|Operator]]
+# Positive Semi-Definite (PSD) [[operator|Operator]]
 
 An operator $\hat{P}$ is PSD if and only if
 
 - $\hat{P}$ is [[hermitian-operators|Hermitian]]
 
-- this holds true for all [[ket-states|states]] $\left\lvert \psi \right\rangle$ :
+- this holds true for all [[ket-state|states]] $\left\lvert \psi \right\rangle$ :
 
 $$
 \begin{gather*}

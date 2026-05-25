@@ -2,7 +2,7 @@
 
 Let $\hat{T}$ be an operator.
 
-An operator is a [[functions|function]] where
+An operator is a [[function|function]] where
 
 $$
 \begin{gather*}
@@ -22,7 +22,7 @@ $$
 
 If we were to observe a non-linear operator, then that would cause wacky things.
 
-also they can be represented as [[matrices]]
+also they can be represented as [[matrix]]
 
 $$
 \begin{gather*}
@@ -51,7 +51,7 @@ $$
 \end{gather*}
 $$
 
-where $\left\lvert m \right\rangle$ is the [[basis-states|basis]] for $\left\lvert \psi \right\rangle$
+where $\left\lvert m \right\rangle$ is the [[basis-state|basis]] for $\left\lvert \psi \right\rangle$
 
 Operators must be square.
 

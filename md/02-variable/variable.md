@@ -1,4 +1,4 @@
-# Variable, Addition
+# Variable
 
 Let ([[let|see what let means]]) a variable be a symbol that represents a literal thing.
 

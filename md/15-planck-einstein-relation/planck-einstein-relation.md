@@ -12,7 +12,7 @@ $$
 It means energy $E$ of a photon is Planck’s constant
 $h=6.626\times 10^{-34}Js$ times the frequency of the light $f$.
 
-They are all [[variables-addition|variable]] so we can substitute them with what we want.
+They are all [[variable|variable]] so we can substitute them with what we want.
 Because it was experimental, we can’t really prove with math that this
 is true, but we proved it with experiments. This is called the
 Planck–Einstein relation.

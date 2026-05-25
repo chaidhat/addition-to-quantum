@@ -2,7 +2,7 @@
 
 Uncertainty of a certain measurement
 
-- a numerical RV X labels events by values that are real numbers X.
+- a numerical RV X labels events by values that are [[standard-number-systems|real]] numbers X.
 
 - the mean or [[expected-value-of-observables|expected value]]
 

@@ -14,7 +14,7 @@ See [[singlet]]
 
 ## Properties
 
-1. [[orthonormality|Orthonormal]] [[basis-states|basis]] for $H_A\otimes H_B=\mathbb{C}^2\otimes \mathbb{C}^2$
+1. [[orthonormality|Orthonormal]] [[basis-state|basis]] for $H_A\otimes H_B=\mathbb{C}^2\otimes \mathbb{C}^2$
 $$
 \ket{00} = \tfrac{1}{\sqrt{2}}\big(\ket{\Phi_+} + \ket{\Phi_-}\big), \quad \ket{11} = \tfrac{1}{\sqrt{2}}\big(\ket{\Phi_+} - \ket{\Phi_-}\big)
 $$

@@ -11,7 +11,7 @@ $$
 \end{gather*}
 $$
 
-This means a bra and ket are Hermitian [[matrices]] of each other!
+This means a bra and ket are Hermitian [[matrix]] of each other!
 
 Another example:
 

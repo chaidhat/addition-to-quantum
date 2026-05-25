@@ -1,9 +1,9 @@
 # Ket (State)
 
-Let $\left\lvert x \right\rangle$ (ket x) be a $N \times 1$ [[matrices|matrix]] where $N$ is any
+Let $\left\lvert x \right\rangle$ (ket x) be a $N \times 1$ [[matrix|matrix]] where $N$ is any
 positive integer (number with no decimals and is greater than 0).
 
-Just like how $x$ was a [[variables-addition|variable]] used to represent ONE number,
+Just like how $x$ was a [[variable|variable]] used to represent ONE number,
 $\left\lvert x \right\rangle$ can be used to represent any $N\times 1$ matrix.
 
 Example:

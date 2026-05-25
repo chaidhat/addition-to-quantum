@@ -4,7 +4,7 @@ For a non-composite system, recall that the [[set]] of measurements you can make
 
 Recall [[measuring-a-quantum-state]].
 
-Entanglement doesn’t always require a interacting [[schruxf6dingers-equation-hamiltonian|Hamiltonian]]. They can also be created by jointly measuring a product [[ket-states|state]].
+Entanglement doesn’t always require a interacting [[schruxf6dingers-equation-hamiltonian|Hamiltonian]]. They can also be created by jointly measuring a product [[ket-state|state]].
 
 Suppose we start with $\left\lvert \psi \right\rangle = \left\lvert 0 \right\rangle \otimes \left\lvert 0 \right\rangle$ but measured in the $x$ axis
 
@@ -39,7 +39,7 @@ $$
 P(a) = \sum_b p(a, b), \qquad P(b) = \sum_a p(a, b)
 $$
 
-No-signalling from $A$ to $B$. Expand the joint state in the product [[basis-states|basis]]:
+No-signalling from $A$ to $B$. Expand the joint state in the product [[basis-state|basis]]:
 
 $$
 \left\lvert \Psi^{(AB)} \right\rangle = \sum_{a,b} c_{ab} \left\lvert a \right\rangle \otimes \left\lvert b \right\rangle, \qquad p(a, b) = |c_{ab}|^2

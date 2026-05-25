@@ -1,6 +1,6 @@
 # Observables on a Composite System
 
-Don’t forget that [[operators]] can sometimes be [[observables]].
+Don’t forget that [[operator]] can sometimes be [[observables]].
 
 Let $F\in L(H_A), G \in L (H_B)$ be operators.
 

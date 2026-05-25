@@ -1,6 +1,6 @@
 # Element
 
-an element is either a [[variables-addition|variable]] or a number or a literal in our
+an element is either a [[variable|variable]] or a number or a literal in our
 definition
 
 $$

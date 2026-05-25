@@ -9,10 +9,10 @@ up or spinning down. Schröndinger’s cat.
 We call this position of spinning both up and down simultaneously a
 “superposition.”
 
-Lets just say the [[ket-states|kets]] $\left\lvert + \right\rangle$ is the state of spinning up and $\left\lvert - \right\rangle$
+Lets just say the [[ket-state|kets]] $\left\lvert + \right\rangle$ is the state of spinning up and $\left\lvert - \right\rangle$
 is the state of spinning down.
 
-Let a “state” just be a $N\times 1$ [[matrices|matrix]] like what we just said
+Let a “state” just be a $N\times 1$ [[matrix|matrix]] like what we just said
 above. So $\left\lvert x \right\rangle,\left\lvert \psi \right\rangle,\left\lvert \phi \right\rangle$ are all states.
 
 Some [[states-on-a-composite-system|states]] can be made of other states.

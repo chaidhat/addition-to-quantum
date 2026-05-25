@@ -1,7 +1,7 @@
 # Projector
 
 Projectors are
-[[operators]]
+[[operator]]
 with a special property
 
 $$
@@ -20,7 +20,7 @@ $$
 \end{gather*}
 $$
 
-Usually, by convention, we pick the representative [[ket-states|state]] $\left\lvert u \right\rangle$ to be normalized, i.e., $\left\langle u|u \right\rangle=1$.
+Usually, by convention, we pick the representative [[ket-state|state]] $\left\lvert u \right\rangle$ to be normalized, i.e., $\left\langle u|u \right\rangle=1$.
 So sometimes it can be written as
 
 $$

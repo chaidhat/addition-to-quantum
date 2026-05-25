@@ -30,15 +30,15 @@ So basically
 $$
 abc = \begin{cases} -1 & \text{if } x+y+z = 0 \\ +1 & \text{if } x+y+z = 2 \end{cases}
 $$
-[[local-realism|Local realism]] caps this at 75% as classically if they were to guess, there would be 2^2=4 possible [[functions]] per player and 4^3=64 total strategies. Can any of them win all four scenarios? There are no strategies that win all of the time. The best that one can do is 75%.
+[[local-realism|Local realism]] caps this at 75% as classically if they were to guess, there would be 2^2=4 possible [[function]] per player and 4^3=64 total strategies. Can any of them win all four scenarios? There are no strategies that win all of the time. The best that one can do is 75%.
 
-Quantum strategy allows Alice, Bob and Charlie to share the GHZ [[ket-states|state]]
+Quantum strategy allows Alice, Bob and Charlie to share the GHZ [[ket-state|state]]
 $$
 \ket{\text{GHZ}} = \tfrac{1}{\sqrt{2}}\big(\ket{000} - \ket{111}\big)
 $$
 
 If you receive a 0 bit, then measure $\sigma^X$ otherwise if you receive a 1 bit, then measure $\sigma^Y$
-This turns the GHZ state of all four [[operators|operator]] products 
+This turns the GHZ state of all four [[operator|operator]] products 
 $\sigma^X\sigma^X \sigma^X$ and $\sigma^X \sigma^Y\sigma^Y$ and all its cyclic permutations.
 
 These all have the right [[eigenvectorseigenvalues|eigenvalues]] to win every scenario with [[probability-theory|probability]] one.

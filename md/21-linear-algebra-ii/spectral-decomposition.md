@@ -1,8 +1,8 @@
 # Spectral Decomposition
 
 Let there be a [[hermitian-operators|Hermitian operator]] $\hat{A}$ on a finite-dimensional [[hilbert-spaces|Hilbert space]].
-Spectral theorem says that an operator $\hat{A}$ can be spectrally decomposed if it is unitarily [[diagonalization|diagonalizable]]  i.e., [[normal-operator|normal]].
-There exists real eigenvalues $\{a_n\}$, [[orthonormality|orthonormal]] [[eigenvectorseigenvalues|eigenvectors]] $\{\left\lvert k \right\rangle\}$ which form orthogonal [[projectors]] $\{\hat{\Pi}_n\}$ such that
+Spectral theorem says that an [[operator|operator]] $\hat{A}$ can be spectrally decomposed if it is unitarily [[diagonalization|diagonalizable]]  i.e., [[normal-operator|normal]].
+There exists [[standard-number-systems|real]] eigenvalues $\{a_n\}$, [[orthonormality|orthonormal]] [[eigenvectorseigenvalues|eigenvectors]] $\{\left\lvert k \right\rangle\}$ which form orthogonal [[projectors]] $\{\hat{\Pi}_n\}$ such that
 
 $$
 \hat{A}=\sum_{n=1}^N a_n\hat{\Pi}_n=\sum_{n=1}^N a_n\left\lvert k \right\rangle\left\langle k \right\rvert

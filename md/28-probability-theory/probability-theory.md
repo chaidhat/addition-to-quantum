@@ -22,7 +22,7 @@ $$
 $$
 
 We have a random variable $X$. You have an event in that random
-[[variables-addition|variable]] space called $x$. The probability of finding that event in
+[[variable|variable]] space called $x$. The probability of finding that event in
 that random variable distribution
 
 $$

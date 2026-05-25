@@ -21,7 +21,7 @@ Where
 
 - $\mathbb{R}$ are real numbers
 
-- $\mathbb{C}$ are [[complex-numbers]], $\mathbb{F}$ are fields
+- $\mathbb{C}$ are [[complex-number]], $\mathbb{F}$ are fields
 
 where $\forall p\in \mathbb{Z},q\neq 0$ means for all integers $p$
 AND $q\neq 0$

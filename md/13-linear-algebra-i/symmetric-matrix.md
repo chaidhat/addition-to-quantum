@@ -1,6 +1,6 @@
 # Symmetric Matrix
 
-A [[matrices|matrix]] $X$ where
+A [[matrix|matrix]] $X$ where
 
 $$
 \begin{gather*}

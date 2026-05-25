@@ -1,6 +1,6 @@
 # Degeneracy
 
-Two or more [[linear-independence|linear independent]] quantum [[ket-states|states]] [[planck-einstein-relation|(]][[eigenstates]]) share the same [[eigenvectorseigenvalues|eigenvalue]].
+Two or more [[linear-independence|linear independent]] quantum [[ket-state|states]] [[planck-einstein-relation|(]][[eigenstates]]) share the same [[eigenvectorseigenvalues|eigenvalue]].
 An energy level $E_n$ is degenerate if there exist multiple [[linear-independence|linearly independent]] [[eigenstates]] $\left\lvert \psi_1 \right\rangle, \left\lvert \psi_2 \right\rangle, \ldots, \left\lvert \psi_n \right\rangle$ which satisfy
 
 $$
@@ -9,7 +9,7 @@ $$
 
 Where if $g=1$, the energy level is non-degenerate.
 If $g>1$, the energy level is degenerate.
-If something is degenerate, that implies there is no unique [[basis-states|basis]]. What you want to write down should be a [[projections|projection]] onto the [[subspaces]].
+If something is degenerate, that implies there is no unique [[basis-state|basis]]. What you want to write down should be a [[projections|projection]] onto the [[subspaces]].
 
 $$
 \hat{H}\triangleq\begin{pmatrix}
@@ -26,11 +26,11 @@ $$
 \Rightarrow\hat{H}=E_0\left\lvert 0 \right\rangle\left\langle 0 \right\rvert+E_1\left\lvert 1a \right\rangle\left\langle 1a \right\rvert+E_2\left\lvert 1b \right\rangle\left\langle 1b \right\rvert
 $$
 
-The [[ket-states]] $\left\lvert 1a \right\rangle,\left\lvert 1b \right\rangle$ are degenerate if and only if $E_1=E_2$. If $E_0=E_1, E_1\neq E_2$ then $\left\lvert 0 \right\rangle$ is degenerate with $\left\lvert 1a \right\rangle$.
+The [[ket-state]] $\left\lvert 1a \right\rangle,\left\lvert 1b \right\rangle$ are degenerate if and only if $E_1=E_2$. If $E_0=E_1, E_1\neq E_2$ then $\left\lvert 0 \right\rangle$ is degenerate with $\left\lvert 1a \right\rangle$.
 
 This just means that you can’t detect the difference between [[states-on-a-composite-system|states]] given only the energy/[[eigenvectorseigenvalues|eigenvalue]].
 
-Remember the [[eigenvectorseigenvalues|eigenvalue]] is observed as energy if the [[operators|operator]] is the [[schruxf6dingers-equation-hamiltonian|Hamiltonian]].
+Remember the [[eigenvectorseigenvalues|eigenvalue]] is observed as energy if the [[operator|operator]] is the [[schruxf6dingers-equation-hamiltonian|Hamiltonian]].
 
 This means the Hamiltonian alone is not enough to determine the state.
 

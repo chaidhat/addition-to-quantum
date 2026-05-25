@@ -6,7 +6,7 @@ $$
 \left\lvert \psi \right\rangle=\cos\frac{\theta}{2}\left\lvert 0 \right\rangle+e^{i\phi}\sin\frac{\theta}{2}\left\lvert 1 \right\rangle\quad \theta\in[0,\pi]\quad \phi\in[0,2\pi]
 $$
 
-Where the [[orthogonality|orthogonal]] [[ket-states|states]] are antipodal (North pole is $\left\lvert 0 \right\rangle$ and South pole is $\left\lvert 1 \right\rangle$).
+Where the [[orthogonality|orthogonal]] [[ket-state|states]] are antipodal (North pole is $\left\lvert 0 \right\rangle$ and South pole is $\left\lvert 1 \right\rangle$).
 The equator contains equal superpositions like $\left\lvert + \right\rangle=\frac{1}{\sqrt{2}}(\left\lvert 0 \right\rangle+\left\lvert 1 \right\rangle)$ and $\left\lvert - \right\rangle=\frac{1}{\sqrt{2}}(\left\lvert 0 \right\rangle-\left\lvert 1 \right\rangle)$.
 
 A state can be on the inside of a Bloch sphere which means its a mixed state. If a state is on the surface of the Bloch sphere, it is a pure state.

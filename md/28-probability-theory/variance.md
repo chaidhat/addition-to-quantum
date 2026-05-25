@@ -1,6 +1,6 @@
 # Variance
 
-Let $\mu=\mathbb{E}[X]$ where $\mathbb{E}[X]$ is the [[expected-value-of-observables|expected value]] of probability distribution $X$.
+Let $\mu=\mathbb{E}[X]$ where $\mathbb{E}[X]$ is the [[expected-value-of-observables|expected value]] of [[probability-theory|probability]] distribution $X$.
 
 $$
 \begin{gather*}

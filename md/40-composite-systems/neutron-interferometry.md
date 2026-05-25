@@ -6,7 +6,7 @@ $$
 R_{\hat{n}}(\theta) = e^{-i \theta \hat{J}_{\hat{n}} / \hbar}
 $$
 
-This is how you rotate a [[ket-states|quantum state]] by an angle $\theta$ around $\hat{n}$ where $\hat{J}_{\hat{n}}$ is the [[angular-frequency-reduced-planck-constant|angular momentum]] operator along $\hat{n}$.
+This is how you rotate a [[ket-state|quantum state]] by an angle $\theta$ around $\hat{n}$ where $\hat{J}_{\hat{n}}$ is the [[angular-frequency-reduced-planck-constant|angular momentum]] operator along $\hat{n}$.
 
 We experimentally observed that
 
@@ -14,7 +14,7 @@ $$
 R_x(2\pi) = e^{-i 2\pi \hat{S}_x / \hbar} = -I, \qquad R_x(4\pi) = I
 $$
 
-Given a $\hat{S_x}$ [[operators|operation]], turning it $\theta=2\pi$ causes there to be a negative sign infront of the $I$. Rotating it another $2\pi$ causes it to return to the same state. This is definitely not how it works in classical physics, where if you rotate something $2\pi$ you’d get right back to where it started.
+Given a $\hat{S_x}$ [[operator|operation]], turning it $\theta=2\pi$ causes there to be a negative sign infront of the $I$. Rotating it another $2\pi$ causes it to return to the same state. This is definitely not how it works in classical physics, where if you rotate something $2\pi$ you’d get right back to where it started.
 This actually means we live in a $4\pi$-world through experimental verification.
 
 This was tested by using a neutron interferometer. Basically, imagine if a neutron at $\left\lvert \psi \right\rangle$ hits a silicon crystal beam splitter. The state of the neutron is its position $\{u,l\}$ tensor product its spin $\{+, -\}$.

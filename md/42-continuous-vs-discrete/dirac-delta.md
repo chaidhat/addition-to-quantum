@@ -1,4 +1,4 @@
-Similar to the [[kronecker-delta]], but for continuous values
+Similar to the [[kronecker-delta]], but for [[non-denumerable-basis|continuous]] values
 $$
 \delta (x)\triangleq\begin{cases}1&x=0\\0&x\neq 0\end{cases}\quad x\in\mathbb{R}
 $$
@@ -21,7 +21,7 @@ $$
 $$
 \int_{-\infty}^\infty\delta(x-x')f(x')dx'=f(x)
 $$
-5.  Note the [[continuous-time-fourier-transform|Fourier Transform]] representation of the [[dirac-delta-function]].
+5.  Note the [[continuous-time-fourier-transform|Fourier Transform]] representation of the [[dirac-delta]].
 $$
 \delta(z)=\frac{1}{2\pi}\int_{-\infty}^\infty e^{iyz}dy
 $$

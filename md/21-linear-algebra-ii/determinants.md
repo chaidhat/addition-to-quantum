@@ -1,6 +1,6 @@
 # Determinant
 
-Det is a [[functions|function]] that we can apply to [[matrices]] to get a scalar. It’s
+Det is a [[function|function]] that we can apply to [[matrix]] to get a scalar. It’s
 defined for $n\times n$ only.
 
 For a $2\times 2$ matrix it’s just

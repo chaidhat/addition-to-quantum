@@ -1,6 +1,6 @@
 # Inner product I
 
-Inner product of [[ket-states|states]] $\left\lvert u \right\rangle$ and $\left\lvert v \right\rangle$ is defined as
+Inner product of [[ket-state|states]] $\left\lvert u \right\rangle$ and $\left\lvert v \right\rangle$ is defined as
 
 $$
 \begin{gather*}
@@ -8,5 +8,5 @@ $$
 \end{gather*}
 $$
 
-(if the entries are real numbers, the [[conjugate|conjugates]] do nothing and this
+(if the entries are [[standard-number-systems|real]] numbers, the [[conjugate|conjugates]] do nothing and this
 reduces to the usual dot product.)

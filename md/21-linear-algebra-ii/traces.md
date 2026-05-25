@@ -2,7 +2,7 @@
 
 Tr(A) is only defined for a [[square-matrix]].
 
-Given a square [[matrices|matrix]] $A$,
+Given a square [[matrix|matrix]] $A$,
 
 $$
 \begin{gather*}

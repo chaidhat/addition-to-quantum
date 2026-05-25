@@ -1,6 +1,6 @@
 # Unitary Operator
 
-An [[operators|operator]] is unitary if and only if
+An [[operator|operator]] is unitary if and only if
 
 $$
 \begin{gather*}
@@ -20,10 +20,10 @@ $$
 \end{gather*}
 $$
 
-- U is [[basis-states|basis]] chagne between [[orthonormality|orthonormal basis]] because you can write
+- U is [[basis-state|basis]] chagne between [[orthonormality|orthonormal basis]] because you can write
   $\hat{U}$ as
 
-  - as chatgpt puts it: unitary [[matrices]]/operators represent a rotation
+  - as chatgpt puts it: unitary [[matrix]]/operators represent a rotation
     or change of coordinates in [[hilbert-spaces|Hilbert space]], without changing lengths
     or angles.
 

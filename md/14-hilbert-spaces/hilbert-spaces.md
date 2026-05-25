@@ -8,9 +8,9 @@ $$
 \end{gather*}
 $$
 
-A Hilbert space is a [[vector-spaces|vector space]], possibly infinite-dimensional.
+A Hilbert space is a [[vector-space|vector space]], possibly infinite-dimensional.
 
 $H$ has an [[inner-product]] and is complete.
 
-The [[ket-states|states]] we wrote before for example $\left\lvert \psi \right\rangle$ are [[ket-states]] which
+The [[ket-state|states]] we wrote before for example $\left\lvert \psi \right\rangle$ are [[ket-state]] which
 exist in a Hilbert space.

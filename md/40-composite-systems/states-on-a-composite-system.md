@@ -1,10 +1,10 @@
 # States on a Composite System
 
-Recall all the way back to what a [[ket-states|quantum state]] is.
+Recall all the way back to what a [[ket-state|quantum state]] is.
 
 A composite quantum state is a state that lives in a [[composite-system]].
 Recall [[tensor-product]] of two Hilbert spaces $H_A$ and $H_B$.
-A state on a composite system can be written as a sum of tensor products of [[ket-states]] on the individual subsystems.
+A state on a composite system can be written as a sum of tensor products of [[ket-state]] on the individual subsystems.
 
 $$
 \left\lvert \psi \right\rangle=\sum_{ij} a_{ij}\left\lvert v_i  \right\rangle\otimes\left\lvert w_j \right\rangle\quad \in H_A\otimes H_B
@@ -131,4 +131,4 @@ Note that
 $$
 \ket{0^{(A)}}\ket{1^{(B)}}=\ket{0,1}=\ket{01}
 $$
-The first bit is implicitly in the [[basis-states|basis]] of the first [[qubit]], the second bit is implicitly in the basis of the second qubit
+The first bit is implicitly in the [[basis-state|basis]] of the first [[qubit]], the second bit is implicitly in the basis of the second qubit

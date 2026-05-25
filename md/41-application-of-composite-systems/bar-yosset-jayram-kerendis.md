@@ -23,13 +23,13 @@ If Bob had to give XORs for all $n/2$ pairs, Alice would need to send all of $x$
 
 Classically, we'd need to send $\Omega(\sqrt{n})$ bits. 
 
-In QM, we'd only need to send $O(\log n)$ [[qubit|qubits]]. Alice can encode all of $x$ into amplitudes of a [[ket-states|quantum state]] on only $\log_2 n$ qubits and send that.
+In QM, we'd only need to send $O(\log n)$ [[qubit|qubits]]. Alice can encode all of $x$ into amplitudes of a [[ket-state|quantum state]] on only $\log_2 n$ qubits and send that.
 
 Alice prepares
 $$
 \ket{\psi_x} = \tfrac{1}{\sqrt{n}}\sum_{i=1}^{n} (-1)^{x_i}\ket{i}
 $$
-Bob measures $\ket{\psi_x}$ in the [[basis-states|basis]]
+Bob measures $\ket{\psi_x}$ in the [[basis-state|basis]]
 $$
 \left\{\frac{1}{\sqrt{2}}(\ket{i}\pm\ket{j})\quad|\quad(i,j)\in M\right\}
 $$

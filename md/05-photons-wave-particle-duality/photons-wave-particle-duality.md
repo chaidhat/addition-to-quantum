@@ -15,10 +15,10 @@ Present day, the majority of people concur that light is a wave and
 particle simultaneously.
 
 This means that photons can have a “state.” These can be represented
-as [[ket-states|kets]]!
+as [[ket-state|kets]]!
 
 Sometimes we observe photons having a “spin” — it’s not really
 spinning, but physicists use the word for an intrinsic [[angular-frequency-reduced-planck-constant|angular momentum]]
 that particles carry. Photons have spin 1; for photons this shows up
 as polarization (e.g. circular polarization corresponds to the two
-helicity [[ket-states]]).
+helicity [[ket-state]]).

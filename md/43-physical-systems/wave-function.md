@@ -1,6 +1,6 @@
-# Wave function
+# Wave [[function|function]]
 
-Where $\left\lvert \psi(t) \right\rangle$ is a [[ket-states|state]] in the [[hilbert-spaces|Hilbert space]], $\psi(x,t)$ is the wavefunction w.r.t time $t$ and position $x$.
+Where $\left\lvert \psi(t) \right\rangle$ is a [[ket-state|state]] in the [[hilbert-spaces|Hilbert space]], $\psi(x,t)$ is the wavefunction w.r.t time $t$ and position $x$.
 
 Let
 
@@ -9,7 +9,7 @@ $$
 $$
 
 Note
-If an operator $\hat{A}$ acts on a wavefunction $\psi(x)$, evaluated at $x$, the notation looks like this
+If an [[operator|operator]] $\hat{A}$ acts on a wavefunction $\psi(x)$, evaluated at $x$, the notation looks like this
 $$
 (\hat{A}\psi)(x)
 $$

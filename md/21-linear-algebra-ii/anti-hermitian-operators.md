@@ -1,6 +1,6 @@
 # Anti-Hermitian Operator
 
-An [[operators|operator]] is anti-hermitian if and only if
+An [[operator|operator]] is anti-hermitian if and only if
 
 $$
 \begin{gather*}

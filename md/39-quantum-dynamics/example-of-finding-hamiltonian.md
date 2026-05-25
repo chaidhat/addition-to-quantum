@@ -9,7 +9,7 @@ KE = \frac{1}{2}mv^2 = \frac{p^2}{2m}
 $$
 
 where $KE$ is kinetic energy, $m$ is mass, $v$ is velocity and $p=mv$ is momentum.
-We know that potential energy $V(x)$ is a [[functions|function]] of position $x$.
+We know that potential energy $V(x)$ is a [[function|function]] of position $x$.
 
 Hence in classical physics, energy is
 
@@ -33,7 +33,7 @@ $$
 \Rightarrow p=\frac{h}{2\pi/k}=\hbar k
 $$
 
-But we want this as an [[operators|operator]] where the plane wave is an [[eigenstates|eigenstate]] of $\hat{p}$ with [[eigenvectorseigenvalues|eigenvalue]] $\hbar k$ (its momentum).
+But we want this as an [[operator|operator]] where the plane wave is an [[eigenstates|eigenstate]] of $\hat{p}$ with [[eigenvectorseigenvalues|eigenvalue]] $\hbar k$ (its momentum).
 
 $$
 \hat{p}e^{ikx}=\hbar ke^{ikx}
@@ -64,7 +64,7 @@ $$
 H(t)=\frac{\hat{p}^2}{2m}+V(\hat{x})
 $$
 
-Expand the [[ket-states|state]] into [[basis-states|basis]] via [[spectral-decomposition]]
+Expand the [[ket-state|state]] into [[basis-state|basis]] via [[spectral-decomposition]]
 
 $$
 \left\lvert \psi(t) \right\rangle=\sum_k\left\langle x_k|\psi(t) \right\rangle\left\lvert x_k \right\rangle=\int dx \left\langle x|\psi(t) \right\rangle\left\lvert x \right\rangle

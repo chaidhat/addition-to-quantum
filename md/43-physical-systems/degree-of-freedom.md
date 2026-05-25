@@ -1,6 +1,6 @@
 # Degrees of Freedom
 
-A [[ket-states|state]] $\ket{\psi}\in H$ of a [[spin-12-systems||quantum particles]] is a [[vectors|vector]] in [[complex-numbers|complex]] [[hilbert-spaces||Hilbert space]]. 
+A [[ket-state|state]] $\ket{\psi}\in H$ of a [[spin-12-systems||quantum particles]] is a [[vectors|vector]] in [[complex-number|complex]] [[hilbert-spaces||Hilbert space]]. 
 
 Generally a particle has multiple degrees of freedom
 $$
@@ -31,7 +31,7 @@ Normalization
 $$
 1=\braket{\psi_{spin}|\psi_{spin}}=\sum_{n=0}^{d-1}|\psi_n|^2
 $$
-Measurement probability: Born's rule
+Measurement [[probability-theory|probability]]: Born's rule
 $$
 Pr(n)=|\psi_n|^2
 $$
@@ -53,7 +53,7 @@ $$
 $$
 
 Note this is called a [[wave-function]]
-It's like a function that outputs the eigen"values" of the output
+It's like a [[function|function]] that outputs the eigen"values" of the output
 
 inner product
 $$

@@ -1,6 +1,6 @@
 # Pauli Matrices
 
-Three [[matrices]] which are defined as
+Three [[matrix]] which are defined as
 
 $$
 \begin{gather*}
@@ -92,7 +92,7 @@ $$
 $$
 
 the [[set]] $\{\sigma_0,\sigma_x,\sigma_y,\sigma_z\}$ spans all 2x2
-[[complex-numbers|complex]] matrices
+[[complex-number|complex]] matrices
 
 $$
 \begin{gather*}
@@ -102,7 +102,7 @@ $$
 
 where
 
-forms a [[basis-states|basis]] for all 2x2 complex matrices. Any 2x2 matrix
+forms a [[basis-state|basis]] for all 2x2 complex matrices. Any 2x2 matrix
 
 $$
 \begin{gather*}

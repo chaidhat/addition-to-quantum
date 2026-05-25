@@ -1,7 +1,7 @@
 This builds on [[probability-theory]]
 # Joint Random Variable
 
-We have a joint random [[variables-addition|variable]] $(X,Y)$ and we want to find a pair of
+We have a joint random [[variable|variable]] $(X,Y)$ and we want to find a pair of
 values
 
 $$
@@ -11,7 +11,7 @@ $$
 \end{gather*}
 $$
 
-If i have one [[variables-addition|variable]], then the other one can be inferred from the
+If i have one [[variable|variable]], then the other one can be inferred from the
 other.
 
 $$

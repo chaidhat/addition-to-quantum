@@ -3,7 +3,7 @@ Builds on [[classical-cryptography]]
 
 This is a type of quantum key distribution protocol. It is named after Bennett and Brassard in 1984.
 
-Alice chooses a [[basis-states|basis]] $b$ [[planck-einstein-relation|(]][[subsets|subset]] of the [[pauli-matrices]]) and a bit $p$ (i.e., parent)
+Alice chooses a [[basis-state|basis]] $b$ [[planck-einstein-relation|(]][[subsets|subset]] of the [[pauli-matrices]]) and a bit $p$ (i.e., parent)
 
 $$
 b\in\{X,Z\}
@@ -15,7 +15,7 @@ We know there are an infinite number of possible bases in a [[qubit]]. There exi
 
 Because a qubit is $d=2$ by definition, we can only choose from 2 parents.
 
-Alice then creates a qubit [[ket-states|state]] $\left\lvert \psi_{b,p} \right\rangle$ to send to Bob.
+Alice then creates a qubit [[ket-state|state]] $\left\lvert \psi_{b,p} \right\rangle$ to send to Bob.
 BB84 defines the following mapping:
 
 | basis $b$ | parent $p$ | qubit state $ | \psi_{b,p}\rangle$              |            |            |

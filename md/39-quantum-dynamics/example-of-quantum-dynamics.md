@@ -1,6 +1,6 @@
 # Example of Quantum Dynamics
 
-An electron is in an magnetic field in the $z+$ direction. There is a particle in [[ket-states|state]]
+An electron is in an magnetic field in the $z+$ direction. There is a particle in [[ket-state|state]]
 
 $$
 \left\lvert \psi(0) \right\rangle=\begin{pmatrix}\cos\theta_0/2 \\ e^{i\phi_0}\sin\theta_0/2\end{pmatrix}
@@ -36,7 +36,7 @@ $$
 U=-\vec{\mu}\cdot\vec{B}
 $$
 
-In quantum mechanics, the energy is the Hamiltonian [[operators|operator]] $\hat{H}$
+In quantum mechanics, the energy is the Hamiltonian [[operator|operator]] $\hat{H}$
 Let
 
 $$

@@ -1,6 +1,6 @@
 # Normal Operator
 
-An [[operators|operator]] $A$ is normal if and only if
+An [[operator|operator]] $A$ is normal if and only if
 
 $$
 \begin{gather*}

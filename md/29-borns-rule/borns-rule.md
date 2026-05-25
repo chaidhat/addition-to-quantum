@@ -1,6 +1,6 @@
 # Born’s Rule
 
-If a [[quantum-system]] is in [[ket-states|state]] $\left\lvert \psi \right\rangle$ and you measure
+If a [[quantum-system]] is in [[ket-state|state]] $\left\lvert \psi \right\rangle$ and you measure
 [[observables|observable]] $\hat{A}$ — the [[probability-theory|probability]] of getting [[eigenvectorseigenvalues|eigenvalue]]
 $\lambda_\alpha$ (which corresponds to [[eigenstates|eigenstate]] $\left\lvert \alpha \right\rangle$) is
 

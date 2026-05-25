@@ -2,7 +2,7 @@
 This applies [[states-on-a-composite-system|entanglement]].
 Let there be Alice and Bob who are separated. Alice has [[qubit]] A and B. Bob has qubit C. B and C are entangled.
 
-Alice wants to send Bob qubit A in unknown [[ket-states|state]]
+Alice wants to send Bob qubit A in unknown [[ket-state|state]]
 $$
 \ket{\upsilon^{(A)}} = \alpha\ket{0^{(A)}}+\beta\ket{1^{(A)}}
 $$
@@ -58,7 +58,7 @@ $$
 $$
 + \tfrac{1}{2}\ket{\Psi_-^{(AB)}}\big(\alpha\ket{1^{(C)}} - \beta\ket{0^{(C)}}\big) \quad \longrightarrow\ i\sigma^{Y(C)}\ket{u^{(C)}}
 $$
-Alice measures in Bell [[basis-states|basis]] and gets four possible outcomes
+Alice measures in Bell [[basis-state|basis]] and gets four possible outcomes
 $$
 1\Rightarrow\Phi_+\quad 2\Rightarrow \Phi_- \quad 3\Rightarrow \Psi_+\quad 4\Rightarrow \Psi_-
 $$
@@ -68,7 +68,7 @@ $$
 \ket{\phi_3^{(C)}}=\frac{1}{\sqrt{P_3}}\braket{\Psi_+^{(AB)}|\upsilon^{(A)}\Phi_+^{(BC)}}=\alpha\ket{1^{(C)}}+\beta\ket{0^{(C)}}
 $$
 Alice tells Bob she got 3
-Bob's [[operators|operation]] conditional on Alice's outcome
+Bob's [[operator|operation]] conditional on Alice's outcome
 $$
 1=I\quad 2=\sigma^Z\quad 3=\sigma^X\quad 4=\sigma^Y
 $$

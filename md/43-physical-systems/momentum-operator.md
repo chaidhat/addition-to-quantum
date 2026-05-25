@@ -1,6 +1,6 @@
-# Momentum Operator
+# Momentum [[operator|Operator]]
 It is a [[continuous-operator]] that represents the position of a particle.
-In the position basis:
+In the position [[basis-state|basis]]:
 $$
 (\hat{p}\psi)(x)=-i\hbar \frac{d}{dx}\psi(x)
 $$
@@ -11,7 +11,7 @@ $$
 Which is just like [[position-operator]] but acts on a different basis.
 
 ### Proof
-Let's say we have two bases for the same Hilbert space: position $\{\ket{x}\}$ and momentum $\{\ket{p}\}$. We need to see the transition amplitude (i.e., the overlap $\braket{x|p}$).
+Let's say we have two bases for the same [[hilbert-spaces|Hilbert space]]: position $\{\ket{x}\}$ and momentum $\{\ket{p}\}$. We need to see the transition amplitude (i.e., the overlap $\braket{x|p}$).
 
 See [[de-broglie]] first
 
@@ -19,7 +19,7 @@ Constant $C$ is fixed as such:
 $$
 \braket{p|p'}=\bra{p}I\ket{p'}
 $$
-Expand out $I$ as continuous spectral decomposition. See [[continuous-identity]].
+Expand out $I$ as [[non-denumerable-basis|continuous]] spectral decomposition. See [[continuous-identity]].
 $$
 =\bra{p}\left(\int\ket{x}\bra{x}dx\right)\ket{p'}
 $$
@@ -27,8 +27,8 @@ To [[continuous-orthonormality|normalize]] it we do
 $$
 \braket{p|p'}=|C|^2\int_{-\infty}^\infty e^{i(p'-px)/\hbar}dx
 $$
-We set it to itself so that we can find $C$ that makes it normal.
-Note the [[continuous-time-fourier-transform|Fourier Transform]] representation of the [[dirac-delta-function]].
+We [[set]] it to itself so that we can find $C$ that makes it [[normal]].
+Note the [[continuous-time-fourier-transform|Fourier Transform]] representation of the [[dirac-delta]].
 $$
 \delta(z)=\frac{1}{2\pi}\int_{-\infty}^\infty (1)e^{iyz}dy
 $$

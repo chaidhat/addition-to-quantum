@@ -1,6 +1,6 @@
 # Heisenberg Picture (Heisenberg, 1925)
 
-Let [[observables|observable]] $\hat{A}$. The Heisen picture [[operators|operator]] is
+Let [[observables|observable]] $\hat{A}$. The Heisen picture [[operator|operator]] is
 
 $$
 \tilde{A}(t)=U^\dag (t)AU(t)

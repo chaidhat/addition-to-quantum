@@ -32,7 +32,7 @@ If it is $+\hbar/2$, we don’t get any extra information as it could equally be
 
 How reliably can we distinguish between a [[set]] of quantum states that serve as signals?
 
-Consider Alice and Bob. Alice sends [[ket-states|quantum state]] to Bob and this state is living in some [[hilbert-spaces|Hilbert space]] $H$
+Consider Alice and Bob. Alice sends [[ket-state|quantum state]] to Bob and this state is living in some [[hilbert-spaces|Hilbert space]] $H$
 
 $$
 \left\lvert \psi \right\rangle\in H\quad dim(H)=d
@@ -44,7 +44,7 @@ $$
 \{\left\lvert \alpha \right\rangle\}_{\alpha=1}^N
 $$
 
-Bob makes measurements in some [[basis-states|basis]]
+Bob makes measurements in some [[basis-state|basis]]
 
 $$
 \{\left\lvert k \right\rangle\}_{k=1}^{d'}
@@ -144,7 +144,7 @@ $$
 \leq\frac{1}{N}tr(\Pi)\\
 $$
 
-Using [[traces|trace]] cyclic property and the fact that $tr(\left\langle \phi_r|\phi_r \right\rangle)=\left\langle \phi_r|\phi_r \right\rangle$ as it is a $1\times 1$ [[matrices|matrix]].
+Using [[traces|trace]] cyclic property and the fact that $tr(\left\langle \phi_r|\phi_r \right\rangle)=\left\langle \phi_r|\phi_r \right\rangle$ as it is a $1\times 1$ [[matrix|matrix]].
 
 $$
 \leq\frac{1}{N}tr(\sum_{r=1}^d\left\lvert \phi_r \right\rangle\left\langle \phi_r \right\rvert)

@@ -2,7 +2,7 @@
 
 A
 [[subspaces|subspace]]
-$U\subseteq V$ is called $\hat{T}$-invariant if [[operators|operator]] $\hat{T}$
+$U\subseteq V$ is called $\hat{T}$-invariant if [[operator|operator]] $\hat{T}$
 keeps everything in U inside U. If it is T-invariant, then this must
 always be true:
 

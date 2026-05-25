@@ -47,7 +47,7 @@ $$
 $$
 
 You swap the columns for the rows (transpose!) and make every [[element]]
-the [[conjugate]] of itself. It becomes a $1\times N$ [[matrices|matrix]] instead.
+the [[conjugate]] of itself. It becomes a $1\times N$ [[matrix|matrix]] instead.
 
 Let this weird transformation be known as a conjugate transpose, denoted
 as

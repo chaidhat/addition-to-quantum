@@ -1,4 +1,4 @@
-This is a denumerable basis
+This is a denumerable [[basis-state|basis]]
 $$
 \{\ket{k}\quad:\quad k=0,1,2,...\}
 $$

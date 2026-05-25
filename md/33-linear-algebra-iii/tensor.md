@@ -4,7 +4,7 @@ A scalar is a rank-0 tensor (0D).
 
 A vector is a rank-1 tensor (1D).
 
-A [[matrices|matrix]] is a rank-2 tensor (2D).
+A [[matrix|matrix]] is a rank-2 tensor (2D).
 
 A rank-$n$ tensor is an $n$-dimensional array with $n$ indices.
 

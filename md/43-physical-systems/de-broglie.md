@@ -7,7 +7,7 @@ i.e.,
 $$
 \Leftrightarrow p=\hbar k
 $$
-We also experimentally found out that a momentum-p eigenstate has a single, [[definite]] wavelength.
+We also experimentally found out that a momentum-p [[eigenstates|eigenstate]] has a single, [[definite]] wavelength.
 
 Let's write the momentum [[wave-function]] $\psi_p(x)$ in polar form.
 $$
@@ -21,7 +21,7 @@ we [[integration|integrate]] that to get
 $$
 \theta(x) = kx + \theta_0
 $$
-Because definite momentum forces the magnitude of the wave to be constant i.e.,
+Because definite momentum forces the [[magnitude]] of the wave to be constant i.e.,
 $$
 |\psi_p(x)|^2 = A(x)^2 = \text{const}
 $$

@@ -1,7 +1,7 @@
 # Adjoint
 
-An adjoint is basically a [[conjugate]] transpose but for an [[operators|operator]]
-(whereas a conjugate transpose can only be applied to a [[matrices|matrix]])
+An adjoint is basically a [[conjugate]] transpose but for an [[operator|operator]]
+(whereas a conjugate transpose can only be applied to a [[matrix|matrix]])
 
 Given operator $\hat{A}$, it’s adjoint is the operator $\hat{A}^+$
 such that $\forall\left\lvert i \right\rangle,\left\lvert j \right\rangle$
@@ -17,9 +17,9 @@ Where, for any operator $\hat{O}$, a matrix [[element]]
 $\left\langle i \right\rvert\hat{O}\left\lvert j \right\rangle$ is just the $(i,j)$-th element of the matrix
 representing $\hat{O}$ in basis $\{\left\lvert i \right\rangle\}$
 
-Note that $\left\lvert i \right\rangle$ and $\left\lvert j \right\rangle$ are arbitrary [[basis-states]]
+Note that $\left\lvert i \right\rangle$ and $\left\lvert j \right\rangle$ are arbitrary [[basis-state]]
 
-where $A^*$ is the [[complex-numbers|complex]] conjugation of $A$
+where $A^*$ is the [[complex-number|complex]] conjugation of $A$
 
 properties:
 

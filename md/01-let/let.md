@@ -15,4 +15,4 @@ blue.
 
 This is the foundation of mathematics. Mathematics is largely axiomatic which means it is created on axioms which we "let" be true.
 
-Physics uses mathematics to describe and model systems in real life.
+Physics uses mathematics to describe and model systems in [[standard-number-systems|real]] life.

@@ -33,4 +33,4 @@ $$
 \neq \left\lvert + \right\rangle\left\lvert + \right\rangle
 $$
 
-This breaks the [[operators|linearity of operators]].
+This breaks the [[operator|linearity of operators]].

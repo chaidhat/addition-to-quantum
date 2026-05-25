@@ -10,7 +10,7 @@ $$
 $$
 
 Oscillating means the phase of the particle changes so we can represent
-the phase as a [[complex-numbers|complex number]].
+the phase as a [[complex-number|complex number]].
 
 Let’s say there is a two-level [[quantum-system]] in some superposition.
 This just means
@@ -23,7 +23,7 @@ $$
 
 Because $\alpha,\beta$ can be complex, we proved experimentally that a
 glass polarizer, like a polarized sunglass, can change the phase of the
-[[ket-states|state]] $\left\lvert 1 \right\rangle$ for example.
+[[ket-state|state]] $\left\lvert 1 \right\rangle$ for example.
 
 Let
 

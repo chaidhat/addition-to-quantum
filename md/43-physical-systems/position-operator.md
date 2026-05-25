@@ -1,6 +1,6 @@
-# Position Operator
+# Position [[operator|Operator]]
 It is a [[continuous-operator]] that represents the position of a particle
-In the position basis:
+In the position [[basis-state|basis]]:
 $$
 (\hat{x}\psi)(x)\rightarrow x\psi(x)
 $$
@@ -13,7 +13,7 @@ check:
 $$
 \hat{x}\ket{x} = \int x'\,\ket{x'}\braket{x'|x}\, dx'
 $$
-This uses the principle in the first note of [[dirac-delta-function]]
+This uses the principle in the first note of [[dirac-delta]]
 $$
 = \int x'\,\ket{x'}\,\delta(x'-x)\, dx'
 $$

@@ -1,5 +1,5 @@
 # Complex Number Trigonometry
-You can represent the [[trigonometry|trigonometric functions]] as [[complex-numbers|complex numbers]]
+You can represent the [[trigonometry|trigonometric functions]] as [[complex-number|complex numbers]]
 
 
 $$

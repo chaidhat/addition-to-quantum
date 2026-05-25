@@ -1,6 +1,6 @@
 # Eigenstates
 
-Eigenstates are [[eigenvectorseigenvalues|eigenvectors]] of [[operators]].
+Eigenstates are [[eigenvectorseigenvalues|eigenvectors]] of [[operator]].
 
 $$
 \begin{gather*}

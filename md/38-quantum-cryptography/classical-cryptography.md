@@ -5,7 +5,7 @@ How do you communicate securely over a public channel?
 Using a shared secret key! (Symmetric key encryption)
 
 Let ciphertext $C$, plaintext $P$, and key $K$ be [[strings]] of bits $\{0,1\}^*$.
-Let $E$ be an encryption [[functions|function]] and $D$ be a decryption [[functions|function]].
+Let $E$ be an encryption [[function|function]] and $D$ be a decryption [[function|function]].
 
 $$
 C=E(P, K)

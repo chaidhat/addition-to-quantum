@@ -18,7 +18,7 @@ $$
 \end{gather*}
 $$
 
-This means we can represent [[complex-numbers]] in this weird form too:
+This means we can represent [[complex-number]] in this weird form too:
 
 $$
 \begin{gather*}

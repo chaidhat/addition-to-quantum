@@ -1,11 +1,9 @@
 {
-  "Let": [
-    "Let"
-  ],
   "absolute-value-of-complex-number": [
     "this lemma"
   ],
   "adjoint": [
+    "Hermitian adjoint",
     "adjoint"
   ],
   "angular-frequency-reduced-planck-constant": [
@@ -81,11 +79,32 @@
     "conjugate",
     "conjugates"
   ],
+  "continuous-identity": [
+    "continuous-identity"
+  ],
+  "continuous-operator": [
+    "continuous-operator"
+  ],
+  "continuous-orthonormality": [
+    "continuous-orthonormality",
+    "normalize"
+  ],
+  "continuous-time-fourier-transform": [
+    "CTFT",
+    "Fourier Transform"
+  ],
+  "convolution": [
+    "Convolution",
+    "convolution"
+  ],
   "cross-product": [
     "cross-product"
   ],
-  "degree-of-freedom": [
-    "degrees of freedom"
+  "de-broglie": [
+    "de-broglie"
+  ],
+  "definite": [
+    "definite"
   ],
   "determinants": [
     "determinant"
@@ -96,6 +115,9 @@
   "differentiation": [
     "differentiate",
     "differentiation"
+  ],
+  "dirac-delta-function": [
+    "dirac-delta-function"
   ],
   "eigenbasis": [
     "eigenbasis"
@@ -152,13 +174,18 @@
   "hilbert-spaces": [
     "Hilbert Space",
     "Hilbert space",
-    "hilbert-spaces"
+    "hilbert-spaces",
+    "|Hilbert space"
   ],
   "holevo-theorem": [
     "holevo-theorem"
   ],
   "inner-product": [
     "inner-product"
+  ],
+  "integration": [
+    "integrate",
+    "integration"
   ],
   "invariant-subspaces": [
     "invariant subspace"
@@ -175,6 +202,10 @@
   ],
   "kronecker-delta": [
     "kronecker-delta"
+  ],
+  "let": [
+    "Let us begin",
+    "see what let means"
   ],
   "linear-independence": [
     "LI",
@@ -200,6 +231,11 @@
   ],
   "no-cloning-theorem": [
     "no-cloning-theorem"
+  ],
+  "non-denumerable-basis": [
+    "Continuous",
+    "continuous",
+    "non-denumerable-basis"
   ],
   "normal": [
     "normal"
@@ -237,8 +273,14 @@
     "Pauli matrix",
     "pauli-matrices"
   ],
+  "position-operator": [
+    "position-operator"
+  ],
   "positive-semi-definite-psd-operators": [
     "Positive semi-definite"
+  ],
+  "probability-density": [
+    "probability-density"
   ],
   "probability-theory": [
     "probability",
@@ -284,13 +326,17 @@
   "spin-12-systems": [
     "here",
     "quantum particle",
-    "spin-1/2"
+    "spin-1/2",
+    "|quantum particles"
+  ],
+  "spread": [
+    "spread"
   ],
   "square-matrix": [
     "square-matrix"
   ],
-  "standard-deviation": [
-    "standard-deviation"
+  "standard-number-systems": [
+    "real"
   ],
   "states-on-a-composite-system": [
     "entanglement",
@@ -338,6 +384,9 @@
   "variables-addition": [
     "variable"
   ],
+  "variance": [
+    "variance"
+  ],
   "vector-spaces": [
     "vector space",
     "vector-spaces"
@@ -345,5 +394,8 @@
   "vectors": [
     "vector",
     "vectors"
+  ],
+  "wave-function": [
+    "wave-function"
   ]
 }

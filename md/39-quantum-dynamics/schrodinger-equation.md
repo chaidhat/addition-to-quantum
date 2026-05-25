@@ -101,7 +101,7 @@ $$
 
 Remarks
 
-1.  Derived Schrödinger equation from only the assumption of [[unitary-operator|unitary]] time evolution. The Hamiltonian [[operators|operator]] is derived from $U(t,t_0)$
+1.  Derived Schrödinger equation from only the assumption of [[unitary-operator|unitary]] time evolution. The Hamiltonian [[operator|operator]] is derived from $U(t,t_0)$
 
 2.  Converse is true where we can construct $U(t,t_0)$ from knowledge of $H(t)$
 

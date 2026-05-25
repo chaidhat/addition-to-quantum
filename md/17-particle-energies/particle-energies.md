@@ -3,9 +3,9 @@
 We just said photons have discrete energy levels. Let’s say they have
 $k$ energy levels.
 
-We know experimentally, that any [[ket-states|state]] $\left\lvert \psi(t) \right\rangle$ (e.g., spin) of
+We know experimentally, that any [[ket-state|state]] $\left\lvert \psi(t) \right\rangle$ (e.g., spin) of
 a [[spin-12-systems|quantum particle]] can be expanded in the energy basis. Let the energy
-basis be just a [[set]] of [[basis-states]] $E_1,E_2, …, E_k$. This means a
+basis be just a [[set]] of [[basis-state]] $E_1,E_2, …, E_k$. This means a
 photon can be at those energies.
 
 A state is a superposition of all those energies. Recall that a super

@@ -34,6 +34,10 @@ for md_file in sorted(MD_DIR.rglob("*.md")):
         # come from malformed source links like `[[foo|(]]`.
         if not re.search(r"[A-Za-z]", display):
             continue
+        # Skip displays containing parentheses — we never want `(` or `)`
+        # to end up as alias values.
+        if "(" in display or ")" in display:
+            continue
         aliases.setdefault(target, set()).add(display)
 
 result = {k: sorted(v) for k, v in sorted(aliases.items())}

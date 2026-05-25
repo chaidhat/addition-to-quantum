@@ -1,7 +1,7 @@
 # Orthogonality
 
 State $\left\lvert u \right\rangle,\left\lvert v \right\rangle$ are orthogonal to each other if the
-[[inner-product]] of [[ket-states|state]] $\left\lvert u \right\rangle$ and $\left\lvert v \right\rangle$ are zero.
+[[inner-product]] of [[ket-state|state]] $\left\lvert u \right\rangle$ and $\left\lvert v \right\rangle$ are zero.
 
 $$
 \begin{gather*}
