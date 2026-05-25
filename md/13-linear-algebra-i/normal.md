@@ -9,3 +9,7 @@ $$
     ||\left\lvert \psi \right\rangle||=1
 \end{gather*}
 $$
+To normalize a state we do
+$$
+1=\braket{\psi_{spin}|\psi_{spin}}=\sum_{n=0}^{d-1}|\psi_n|^2
+$$

@@ -1,6 +1,6 @@
 # Photon, Wave-particle Duality
 
-[[Let]] this be a photon. It’s like a particle of light.
+Let this be a photon. It’s like a particle of light.
 
 People, like Newton, favored the idea that light was a particle. This
 was until Young, a person, performed an experiment called the double

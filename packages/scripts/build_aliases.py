@@ -6,9 +6,10 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-MD_DIR = ROOT / "md"
-OUT = ROOT / "alias.txt"
+HERE = Path(__file__).resolve().parent
+REPO = HERE.parent.parent
+MD_DIR = REPO / "md"
+OUT = HERE / "alias.txt"
 
 LINK_RE = re.compile(r"\[\[([^\[\]\n]+?)\]\]")
 

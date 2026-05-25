@@ -1,7 +1,7 @@
 # Greenberger, Horne, and Zeilinger (1989)
 This exploits [[bells-theorem|Bell's Theorem]]
 
-[[Let]] there be Alice, Bob and Charlie. Each get a single-bit prompt
+Let there be Alice, Bob and Charlie. Each get a single-bit prompt
 $$
 x,y,z\in \{0,1\}
 $$

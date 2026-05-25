@@ -13,3 +13,6 @@ build/*
 *.snm
 *.vrb
 *.tex.new
+
+lecs/*
+lecs/

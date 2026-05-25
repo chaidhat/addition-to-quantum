@@ -1,6 +1,7 @@
 # Standard Number System
 
-There are some standard number systems we gotta keep in mind
+There are some standard number systems we gotta keep in mind.
+They are [[set|sets]] of numbers where
 
 $$
 \begin{gather*}

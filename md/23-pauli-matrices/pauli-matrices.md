@@ -92,7 +92,7 @@ $$
 $$
 
 the [[set]] $\{\sigma_0,\sigma_x,\sigma_y,\sigma_z\}$ spans all 2x2
-complex matrices
+[[complex-numbers|complex]] matrices
 
 $$
 \begin{gather*}

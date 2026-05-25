@@ -60,7 +60,7 @@ $$
     \left\lvert g \right\rangle=(\hat{B}-\mathbb{E}[B]I)\left\lvert \psi \right\rangle
 $$
 
-Note that $\Delta A$ is the [[standard-deviation]] of $\hat{A}$.
+Note that $\Delta A$ is the [[spread]] of $\hat{A}$.
 
 $$
 \left\langle f|f \right\rangle=\left\langle \psi \right\rvert(\hat{A}-\mathbb{E}[A]I)\left\lvert \psi \right\rangle

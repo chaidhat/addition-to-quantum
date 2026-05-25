@@ -1,6 +1,6 @@
 # Tensor Product
 
-[[Let]]
+Let
 
 $$
 \left\lvert v, w \right\rangle \triangleq \left\lvert v \right\rangle\otimes\left\lvert w \right\rangle

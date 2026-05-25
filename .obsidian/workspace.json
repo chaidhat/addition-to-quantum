@@ -8,17 +8,29 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e2e342dbd5bcc30c",
+            "id": "3a3edc432fb67938",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/41-application-of-composite-systems/bar-yosset-jayram-kerendis.md",
+                "file": "md/43-physical-systems/momentum-operator.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "bar-yosset-jayram-kerendis"
+              "title": "momentum-operator"
+            }
+          },
+          {
+            "id": "079e5296aa5522e5",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "lecs/Lec13_ECE128.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Lec13_ECE128"
             }
           }
         ]
@@ -53,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "normalize",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -180,45 +192,46 @@
       "bases:Create new base": false
     }
   },
-  "active": "e2e342dbd5bcc30c",
+  "active": "3a3edc432fb67938",
   "lastOpenFiles": [
-    "md/41-application-of-composite-systems/greenberger-horne-zeilinger.md",
-    "md/35-quantum-information-capacity/holevo-theorem.md",
-    "md/38-quantum-cryptography/bb84-protocol.md",
-    "md/41-application-of-composite-systems/bar-yosset-jayram-kerendis.md",
+    "md/42-continuous-vs-discrete/continuous-operator.md",
+    "md/43-physical-systems/momentum-operator.md",
+    "lecs/Lec13_ECE128.pdf",
+    "Pasted image 20260524201047.png",
+    "md/42-continuous-vs-discrete/continuous-time-fourier-transform.md",
+    "md/43-physical-systems/position-operator.md",
+    "md/43-physical-systems/probability-density.md",
+    "md/43-physical-systems/wave-function.md",
+    "md/42-continuous-vs-discrete/dirac-delta-function.md",
+    "md/42-continuous-vs-discrete/convolution.md",
     "md/41-application-of-composite-systems/quantum-teleportation.md",
-    "md/39-quantum-dynamics/heisenberg-picture.md",
-    "md/39-quantum-dynamics/isolated-system.md",
-    "md/39-quantum-dynamics/observables-in-time-evolution.md",
-    "md/39-quantum-dynamics/quantum-dynamics.md",
-    "md/39-quantum-dynamics/schrodinger-equation.md",
-    "md/39-quantum-dynamics/time-energy-uncertainty.md",
-    "md/39-quantum-dynamics/uniform-dynamics.md",
-    "md/39-quantum-dynamics/unitary-evolution.md",
-    "md/39-quantum-dynamics/wavefunction.md",
-    "md/39-quantum-dynamics/hamiltonian-rotation-quirk.md",
-    "md/39-quantum-dynamics/example-of-quantum-dynamics.md",
-    "md/39-quantum-dynamics/example-of-finding-hamiltonian.md",
-    "md/38-quantum-cryptography/classical-cryptography.md",
-    "md/35-quantum-information-capacity/qubit.md",
-    "md/07-set-theory/strings.md",
-    "md/40-composite-systems/states-on-a-composite-system.md",
-    "md/40-composite-systems/bell-states.md",
-    "md/40-composite-systems/bells-theorem.md",
-    "md/40-composite-systems/singlet.md",
-    "packages/scripts/tex_to_md.py",
-    "packages/scripts/sample.tex",
-    "packages/scripts/relink.pl",
-    "packages/scripts/md2tex.ts",
-    "packages/scripts/build_aliases.py",
-    "packages/scripts/add_links.py",
-    "packages/scripts",
-    "package.json",
-    "scripts/tex_to_md.py",
-    "latex/main.toc",
-    "md/12-complex-numbers/complex-number-decomposition.md",
-    "md/04-ket-states/ket-states.md",
+    "md/41-application-of-composite-systems/greenberger-horne-zeilinger.md",
+    "md/41-application-of-composite-systems/bar-yosset-jayram-kerendis.md",
+    "md/43-physical-systems/de-broglie.md",
+    "md/43-physical-systems/degree-of-freedom.md",
+    "md/42-continuous-vs-discrete/continuous-orthonormality.md",
+    "md/13-linear-algebra-i/normal.md",
+    "md/21-linear-algebra-ii/normal-operator.md",
+    "wave function.md",
+    "md/28-probability-theory/spread.md",
+    "md/28-probability-theory/variance.md",
+    "md/28-probability-theory/definite.md",
+    "md/28-probability-theory/probability-theory.md",
+    "md/28-probability-theory/expected-value-of-observables.md",
+    "md/28-probability-theory/joint-random-variables.md",
+    "md/28-probability-theory/numerical-random-variablesexpected-value.md",
+    "md/32-uncertainty-relation/uncertainty-relation.md",
+    "md/28-probability-theory/cauchy-schwarz-inequality.md",
+    "latex/cheatsheetonly.pdf",
+    "md/43-physical-systems",
+    "lecs/Lec15_ECE128.pdf",
+    "lecs/Lec14_ECE128.pdf",
+    "lecs",
     "Untitled.canvas",
+    "md/42-continuous-vs-discrete",
+    "packages/scripts/alias.txt",
+    "md/42-continuous-vs-discrete",
+    "packages/scripts/tex_to_md.py",
     "Untitled 1.canvas",
     "Pasted image 20260521231146.png"
   ]

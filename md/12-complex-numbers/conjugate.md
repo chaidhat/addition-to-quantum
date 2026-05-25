@@ -6,7 +6,7 @@ $$
 z=a+bi
 $$
 
-[[Let]] the conjugate $z^*$ of $z$ be defined as this (we just
+Let the conjugate $z^*$ of $z$ be defined as this (we just
 make the imaginary part negative)
 
 $$

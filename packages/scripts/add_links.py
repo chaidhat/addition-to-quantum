@@ -14,9 +14,10 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-MD_DIR = ROOT / "md"
-ALIAS_FILE = ROOT / "alias.txt"
+HERE = Path(__file__).resolve().parent
+REPO = HERE.parent.parent
+MD_DIR = REPO / "md"
+ALIAS_FILE = HERE / "alias.txt"
 
 WIKI_LINK_RE = re.compile(r"\[\[([^\[\]\n]+?)\]\]")
 MD_LINK_RE = re.compile(r"\[[^\[\]\n]*\]\([^()\n]*\)")
@@ -131,7 +132,7 @@ def main() -> None:
         if n:
             files_changed += 1
             total_changes += n
-            per_file.append((str(md_file.relative_to(ROOT)), n))
+            per_file.append((str(md_file.relative_to(REPO)), n))
 
     print(f"added {total_changes} links across {files_changed} files")
     for path, n in per_file:

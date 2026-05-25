@@ -1,10 +1,6 @@
 # Subset
 
-[[set|sets]]
-can be subsets (or equal) of another set if all [[element|elements]] of a
-[[set]]
-is in another
-[[set]].
+[[set|sets]] can be subsets (or equal) of another set if all [[element|elements]] of a [[set]] is in another [[set]].
 
 Example:
 

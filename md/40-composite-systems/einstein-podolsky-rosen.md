@@ -5,7 +5,7 @@ In quantum mechanics -> if $z$ and $x$ [[observables]] are [[compatibility|incom
 Einstein-Podolsky-Rosen (1935) argued that quantum mehcanics is incomplete as physics should obey principles of [[local-realism]]
 
 EPR postulated that let there be a pair of [[qubit|qubits]] in $\left\lvert \Psi_-^{(AB)} \right\rangle$. Alice takes one and Bob takes one. They then separate light years from each other.
-Alice now measures her qubit in the z [[basis-states|basis]]. [[Let]]’s say she gets $0$.
+Alice now measures her qubit in the z [[basis-states|basis]]. Let’s say she gets $0$.
 
 $$
 \left\lvert \Psi_-^{(AB)} \right\rangle=\frac{1}{\sqrt{2}}\left(\left\lvert {0}^{(A)} \right\rangle\otimes \left\lvert 1^{(B)} \right\rangle-\left\lvert 1^{(A)} \right\rangle\otimes \left\lvert {0}^{(B)} \right\rangle\right)

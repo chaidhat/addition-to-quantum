@@ -14,7 +14,7 @@ together.
 
 The way we multiply matrices is by performing this algorithm.
 
-[[Let]] there be two matrices, $A,B$ with size $m\times n$ and
+Let there be two matrices, $A,B$ with size $m\times n$ and
 $n\times p$ respectively. We get a matrix $C=AB$ which is size
 $m\times p$.
 

@@ -1,6 +1,6 @@
 # Vector Space
 
-[[Let]] a vector space $V$ be a [[set]] of [[vectors]] with
+Let a vector space $V$ be a [[set]] of [[vectors]] with
 
 - addition such that
 

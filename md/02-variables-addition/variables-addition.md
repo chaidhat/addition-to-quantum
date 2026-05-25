@@ -1,6 +1,6 @@
 # Variable, Addition
 
-[[Let]] a [[variables-addition|variable]] be just a symbol that represents a literal thing.
+Let ([[let|see what let means]]) a variable be a symbol that represents a literal thing.
 
 I can define what number it represents by saying “it’s equal to this”
 

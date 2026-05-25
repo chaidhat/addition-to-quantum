@@ -1,10 +1,6 @@
 # In
 
-We can say an
-[[element]]
-is “in” a
-[[set]]
-if it’s in a set (duh)
+We can say an [[element]] is “in” a [[set]] if it’s in a set (duh)
 
 Example:
 

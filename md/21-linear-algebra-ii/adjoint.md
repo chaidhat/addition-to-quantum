@@ -19,7 +19,7 @@ representing $\hat{O}$ in basis $\{\left\lvert i \right\rangle\}$
 
 Note that $\left\lvert i \right\rangle$ and $\left\lvert j \right\rangle$ are arbitrary [[basis-states]]
 
-where $A^*$ is the complex conjugation of $A$
+where $A^*$ is the [[complex-numbers|complex]] conjugation of $A$
 
 properties:
 

@@ -1,6 +1,6 @@
 # Linear Independence
 
-[[Let]] “linearly independent [[ket-states|states]]” be [[states-on-a-composite-system|states]] that you cannot create
+Let “linearly independent [[ket-states|states]]” be [[states-on-a-composite-system|states]] that you cannot create
 another linearly independent state from multiplying and adding another
 linearly independent state.
 

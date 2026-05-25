@@ -1,12 +1,13 @@
 # Spread
 
-How do we measure spread from [[expected-value-of-observables|expected value]] $\mathbb{E}[X]$?
+Aka. standard deviation
 
-[[Let]] $\mu=\mathbb{E}[X]$
+It's the square root of [[variance]].
 
 $$
+
 \begin{gather*}
-    Var(X)=\left\langle (x-\mu)^2 \right\rangle=\left\langle X^2 \right\rangle-2\mu\left\langle X \right\rangle+\mu^2\\
-    =\left\langle X^2 \right\rangle-\left\langle X \right\rangle^2
+    \Delta X=\sqrt{Var(X)}=\sqrt{\mathbb{E}[X^2]-\mathbb{E}[X]^2}
 \end{gather*}
 $$
+

@@ -1,8 +1,9 @@
 # Kronecker Product
+Not to be confused with [[kronecker-delta]]
 
 The Kronecker product is a way to compute the [[tensor-product]] of two [[matrices]]. It outputs a matrix as well.
 
-[[Let]] there be a [[spin-12-systems|spin-1/2]] system and two particles living $H_A$ and $H_B$ respectively which spans $\left\lvert 0 \right\rangle_A, \left\lvert 1 \right\rangle_A$ and $\left\lvert 0 \right\rangle_B, \left\lvert 1 \right\rangle_B$ respectively.
+Let there be a [[spin-12-systems|spin-1/2]] system and two particles living $H_A$ and $H_B$ respectively which spans $\left\lvert 0 \right\rangle_A, \left\lvert 1 \right\rangle_A$ and $\left\lvert 0 \right\rangle_B, \left\lvert 1 \right\rangle_B$ respectively.
 The tensor product [[basis-states|basis]] for $H_A\otimes H_B$ is
 
 $$

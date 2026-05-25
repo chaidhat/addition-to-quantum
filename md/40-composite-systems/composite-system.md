@@ -1,7 +1,7 @@
 # Composite System
 
 A [[quantum-system]] made up of two or more sub quantum systems.
-[[Let]] $H_A$ and $H_B$ be two [[ket-states|state]] spaces. The state space of the composite system is
+Let $H_A$ and $H_B$ be two [[ket-states|state]] spaces. The state space of the composite system is
 
 $$
 H_{AB} = H_A\otimes H_B

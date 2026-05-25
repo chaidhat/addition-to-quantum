@@ -20,6 +20,12 @@ $$
 \end{gather*}
 $$
 
+Note
+$$
+\braket{n|m}=\delta_{nm}
+$$
+Where $\delta_{nm}$ is the [[kronecker-delta]]
+
 Example
 
 let

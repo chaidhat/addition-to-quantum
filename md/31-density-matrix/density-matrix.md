@@ -1,6 +1,6 @@
 # Density Matrix
 
-[[Let]] $\rho$ be a [[matrices|matrix]].
+Let $\rho$ be a [[matrices|matrix]].
 
 $\rho$ is a density matrix if it is:
 
