@@ -8,7 +8,7 @@ In the end, you’ll know how to do quantum mechanics problems.
 
 This text is loosely sorted by complexity. Everything is derived from concepts introduced in previous sections. As we introduce mathematical concepts, we will use them to better understand quantum mechanics. 
 
-This is based on the Electrical and Computer Engineering 128 course taught at the University of California, Los Angeles by Dr. Leo Zhou. 
+This is based on the Electrical and Computer Engineering 128 course taught at the University of California, Los Angeles by Dr. Leo Zhou in 2026. This in turn based on Quantum Processes Systems and Information by Benjamin Schumacher and Michael Westmoreland written 2010.
 
 [[let|Let us begin]].
 

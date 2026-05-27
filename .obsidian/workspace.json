@@ -8,32 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3a3edc432fb67938",
+            "id": "7f49f0fcbcea06c7",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "lecs/Lec14_ECE128.pdf"
+                "file": "lecs/Lec15_ECE128.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Lec14_ECE128"
+              "title": "Lec15_ECE128"
             }
           },
           {
-            "id": "7f49f0fcbcea06c7",
+            "id": "d1fc46419161c176",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/34-time-evolution/time-independent-schrodinger-equation.md",
+                "file": "md/26-application-of-physical-systems/particle-in-box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "time-independent-schrodinger-equation"
+              "title": "particle-in-box"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -65,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "eigenfunc",
+                "query": "trigonom",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,13 +87,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 393.5,
-    "collapsed": true
+    "width": 301.5
   },
   "right": {
     "id": "959bdf0c8c9d5af5",
@@ -194,46 +193,47 @@
       "bases:Create new base": false
     }
   },
-  "active": "3a3edc432fb67938",
+  "active": "d1fc46419161c176",
   "lastOpenFiles": [
-    "md/34-time-evolution/time-independent-schrodinger-equation.md",
-    "md/17-linear-algebra-ii/eigenvectorseigenvalues.md",
-    "lecs/Lec14_ECE128.pdf",
-    "md/29-quantum-dynamics-ii/schrodinger-hamiltonian-ii.md",
-    "md/16-quantum-dynamics-i/schrodinger-hamiltonian-i.md",
-    "md/26-linear-algebra-iii/baker-campbell-hausdorff.md",
-    "md/17-linear-algebra-ii/matrix-exponentials.md",
-    "md/17-linear-algebra-ii/commutators.md",
-    "md/29-quantum-dynamics-ii/uniform-dynamics.md",
-    "md/11-calculus/integration.md",
-    "md/29-quantum-dynamics-ii/unitary-evolution.md",
-    "md/17-linear-algebra-ii/unitary-operator.md",
-    "md/22-degeneracy/degeneracy.md",
-    "md/29-quantum-dynamics-ii/example-of-finding-hamiltonian.md",
-    "md/02-variable/variable.md",
-    "md/01-let/let.md",
+    "md/26-application-of-physical-systems/particle-in-1d.md",
+    "md/26-application-of-physical-systems/particle-in-box.md",
+    "md/23-application-of-composite-systems/quantum-teleportation.md",
+    "md/12-quantum-dynamics-i/schrodinger-hamiltonian-i.md",
+    "md/13-linear-algebra-ii/anti-hermitian-operators.md",
+    "md/13-linear-algebra-ii/hermitian-matrix.md",
+    "md/22-composite-systems/bell-states.md",
+    "md/21-quantum-dynamics-ii/compatibility.md",
+    "md/22-composite-systems/bells-theorem.md",
+    "md/21-quantum-dynamics-ii/observables-in-time-evolution.md",
+    "md/22-composite-systems/einstein-podolsky-rosen.md",
+    "md/21-quantum-dynamics-ii/compatibility-of-observables.md",
+    "md/14-trigonometry/complex-number-trigonometry.md",
+    "md/19-quantum-information/holevo-theorem.md",
+    "md/19-quantum-information/basic-decoding-theory.md",
+    "md/19-quantum-information/basic-distinguishability-theory.md",
     "md/00-intro/intro.md",
-    "md/16-quantum-dynamics-i/quantum-system.md",
-    "md/25-applied-uncertainty/heisenberg-uncertainty-relation.md",
-    "md/24-probability-theory/variance.md",
-    "md/16-quantum-dynamics-i/spin-12-systems.md",
-    "md/16-quantum-dynamics-i/spin-1-systems.md",
-    "md/16-quantum-dynamics-i/quantum-dynamics.md",
-    "md/27-quantum-information-capacity/holevo-theorem.md",
-    "md/29-quantum-dynamics-ii/time-energy-uncertainty.md",
-    "md/39-quantum-dynamics-ii/quantum-dynamics.md",
-    "md/15-early-quantum/planck-einstein-relation.md",
-    "md/34-time-evolution",
-    "packages/scripts/build_aliases.py.tmp.92924.13508c7ab51e",
+    "md/17-application-of-uncertainty/measuring-a-quantum-state.md",
+    "md/17-application-of-uncertainty/heisenberg-uncertainty-relation.md",
+    "md/17-application-of-uncertainty/borns-rule.md",
+    "md/15-qubit/qubit.md",
+    "md/15-qubit/observable-on-a-qubit.md",
+    "md/15-qubit/degeneracy.md",
+    "md/11-early-quantum/observables.md",
+    "md/15-qubit/bloch-sphere.md",
+    "md/14-trigonometry/trigonometry.md",
     "lecs/Lec15_ECE128.pdf",
-    "lecs/Lec13_ECE128.pdf",
+    "lecs/Lec16_ECE128.pdf",
+    "md/11-early-quantum",
+    "md/12-hilbert-spaces",
+    "md/10-linear-algebra-i",
+    "md/09-complex-numbers",
+    "md/08-calculus",
+    "md/14-trigonometry",
+    "md/07-function",
+    "md/06-set-theory",
+    "Pasted image 20260526181548.png",
     "Pasted image 20260524201047.png",
-    "latex/cheatsheetonly.pdf",
-    "md/33-physical-waves",
-    "lecs",
     "Untitled.canvas",
-    "md/32-continuous-vs-discrete",
-    "packages/scripts/alias.txt",
     "Untitled 1.canvas",
     "Pasted image 20260521231146.png"
   ]

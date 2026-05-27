@@ -1,13 +1,8 @@
-# Superposition, Matrix Addition
+# Superposition
 
-A photon can have a [[probability-theory|probability]] of $x\%$ of spinning up [[planck-einstein-relation|(]]+). This
-means it would have $(100-x)\%$ of spinning down (-), since the
-probabilities must add up. The photon actually is both spinning up and
-spinning down until we observe it, where it collapses to either spinning
-up or spinning down. Schröndinger’s cat.
+A photon can have a [[probability-theory|probability]] of $x\%$ of spinning up (+). This means it would have $(100-x)\%$ of spinning down (-), since the probabilities must add up. The photon actually is both spinning up and spinning down until we observe it, where it collapses to either spinning up or spinning down. Schrödinger’s cat.
 
-We call this position of spinning both up and down simultaneously a
-“superposition.”
+We call this position of spinning both up and down simultaneously a “superposition.”
 
 Lets just say the [[ket-state|kets]] $\left\lvert + \right\rangle$ is the state of spinning up and $\left\lvert - \right\rangle$
 is the state of spinning down.
@@ -43,7 +38,7 @@ $$
 \end{gather*}
 $$
 
-If we add $\left\lvert x \right\rangle+3\left\lvert y \right\rangle$ we get
+If we [[matrix-addition|add these matrices]] together $\left\lvert x \right\rangle+3\left\lvert y \right\rangle$ we get
 
 $$
 \begin{gather*}
@@ -62,11 +57,9 @@ $$
 \end{gather*}
 $$
 
-Notice how we’re adding the $n$-th [[element|elements]] of the states together for
-each row?
+Notice how we’re adding the $n$-th [[element|elements]] of the states together for each row?
 
-We can represent these two states coexisting (i.e., a superposition)
-using math now!
+We can represent these two states coexisting (i.e., a superposition) using math now!
 
 $$
 \begin{gather*}
@@ -74,11 +67,9 @@ $$
 \end{gather*}
 $$
 
-where $\alpha,\beta$ are just numbers. See how they are a combination
-of up and down states?
+where $\alpha,\beta$ are just numbers. See how they are a combination of up and down states?
 
-There is $|\alpha|^2$ probabilty that the photon, once observed, spins
-upwards and $|\beta|^2$ probability it spins downwards once observed.
+There is $|\alpha|^2$ probabilty that the photon, once observed, spins upwards and $|\beta|^2$ probability it spins downwards once observed.
 
 $|a|$ is just a way of saying make $a$ positive if it is negative.
 
@@ -99,8 +90,6 @@ $$
 \end{gather*}
 $$
 
-as you can’t have more than 100% or less than 0% probability of
-something existing.
+as you can’t have more than 100% or less than 0% probability of something existing.
 
-I’m going to write a ton of mathematical definitions which will build up
-how to do the physics in the next section!
+I’m going to write a ton of mathematical definitions which will build up how to do the physics in the next section!

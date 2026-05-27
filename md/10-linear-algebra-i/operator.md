@@ -53,7 +53,7 @@ $$
 
 where $\left\lvert m \right\rangle$ is the [[basis-state|basis]] for $\left\lvert \psi \right\rangle$
 
-Operators must be square.
+Operators must be [[square-matrix|square]].
 
 $$
 \begin{gather*}

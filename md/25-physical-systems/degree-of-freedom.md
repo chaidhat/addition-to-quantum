@@ -21,6 +21,7 @@ $$
 \ket{\psi_{spin}}=\sum_{n=0}^{d-1}\psi_n\ket{n}\quad\in\quad \mathbb{C}^d
 $$
 Inner product
+Note the use of [[cases]]
 $$
 \braket{n|m}=\delta_{nm}=\begin{cases}0&n\neq m\\1&n=m\end{cases}
 $$

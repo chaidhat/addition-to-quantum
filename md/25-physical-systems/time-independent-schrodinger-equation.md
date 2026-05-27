@@ -1,5 +1,7 @@
 # Time-Independent Schrödinger Equation
 
+This is aka. Schrödinger equation for [[wave-function|wave functions]].
+
 Depends on [[schrodinger-hamiltonian-ii]].
 
 Let's derive the Schrödinger equation for wave functions.
@@ -44,7 +46,7 @@ This is the reverse of [[schrodinger-hamiltonian-i]]. There, we postulated that 
 Given 
 
 First we must diagonalize $\hat{H}$. We should find the eigenstates of $\hat{H}$
-Note $\phi_n(x)$ is shortened to $\phi_n$ but basically $\phi(x)$ is an [[eigenvectorseigenvalues|eigenfunction]] representing definite energy $E$.
+Note $\phi_n(x)$ is shortened to $\phi_n$ but basically $\phi(x)$ is an [[eigenvectorseigenvalues|eigenfunction]] representing definite energy $E$ -- it is a [[wave-function|wave function]].
 $$
 \hat{H}\ket{\phi_n} = E_n\ket{\phi_n}
 $$
@@ -73,6 +75,7 @@ This is called the Time-Independent Schrödinger Equation (TISE)
 $$
 \boxed{\left[-\frac{\hbar^2}{2m}\frac{d^2}{dx^2} + V(x)\right]\phi(x) = E\,\phi(x)}
 $$
+
 where 
 $$
 (\hat{U}(t)\phi)(x)=e^{-Et/\hbar}\phi(x)
@@ -80,3 +83,13 @@ $$
 Note that $\phi(x)$ are stationary states.
 
 This is sort of similar to separation of variables for PDEs.
+
+### Energy
+if we solve this out then
+$$
+\frac{d^2\phi(x)}{dx^2}=-k^2\phi(x)
+$$
+where
+$$
+k^2 \triangleq \frac{2mE}{\hbar^2}
+$$

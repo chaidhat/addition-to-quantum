@@ -17,7 +17,7 @@ is having $c_i=0$ for all [[planck-einstein-relation|(]]$\forall$) $c_i$.
 
 Example:
 
-Given $c$ is just a regular number,
+Given $c \in \mathbb{R}$ [[standard-number-systems]]
 
 $$
 \begin{gather*}

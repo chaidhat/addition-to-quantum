@@ -38,7 +38,7 @@ The symbol $\varepsilon_{ijk}$ is the Levi-Civita symbol, an
 antisymmetric tensor that encodes signs based on the order of its
 indices.
 
-- in 3D
+- in 3D ([[cases]])
 
 $$
 \begin{gather*}
