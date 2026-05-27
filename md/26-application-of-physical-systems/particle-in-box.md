@@ -7,7 +7,7 @@ Inside the well, [[time-independent-schrodinger-equation|TISE]] reduces to a fre
 $$
 -\frac{\hbar^2}{2m}\frac{d^2\phi}{dx^2} = E\phi \iff \frac{d^2\phi}{dx^2} = -\frac{2mE}{\hbar^2}\phi(x)
 $$
-A general solution to this is (it's a harmonic oscillator)
+A general solution to this is (it's a [[harmonic-oscillator|harmonic oscillator]])
 $$
 \phi(x) = a\,e^{ikx} + b\,e^{-ikx} = A\sin(kx) + B\cos(kx)
 $$
@@ -76,3 +76,16 @@ to get
 $$
 \psi(x, 0) = \frac{1}{\sqrt{L}}\big[\sin(k_1 x) + \sin(k_2 x)\big]
 $$
+it evolves over time to pick up its own phase
+$$
+\psi(x, t) = \frac{1}{\sqrt{L}}\big[e^{-i\omega_1 t}\sin(k_1 x) + e^{-i\omega_2 t}\sin(k_2 x)\big]
+$$
+where
+$$
+\omega_n=E_n/\hbar
+$$
+Note the probability density is
+$$
+|\psi(x, t)|^2 = \frac{1}{L}\big[\sin^2(k_1 x) + \sin^2(k_2 x) + 2\cos[(\omega_1 - \omega_2)t]\sin(k_1 x)\sin(k_2 x)\big]
+$$
+
