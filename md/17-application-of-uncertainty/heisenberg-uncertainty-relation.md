@@ -9,11 +9,11 @@ $$
 $$
 
 Proof
-Consider any scalar $\lambda\in \mathbb{C}$ and any [[vectors]] $\left\lvert u \right\rangle,\left\lvert v \right\rangle\in \mathbb{C}^n$ and we have two [[ket-state|states]] $\left\lvert f \right\rangle$ and $\left\lvert g \right\rangle$.
+Consider any scalar $\lambda\in \mathbb{C}$ and any [[vector]] $\left\lvert u \right\rangle,\left\lvert v \right\rangle\in \mathbb{C}^n$ and we have two [[ket-state|states]] $\left\lvert f \right\rangle$ and $\left\lvert g \right\rangle$.
 
 We subtract it like so $\left\lvert f \right\rangle-\lambda\left\lvert g \right\rangle$ is also a vector
 
-Note that for QM systems, $\left\langle u|u \right\rangle=1$. This is because of [[borns-rule]] where the number it represents is the total [[probability-theory|probability]], which needs to sum to 1.
+Note that for QM systems, $\left\langle u|u \right\rangle=1$. This is because of [[born-rule]] where the number it represents is the total [[probability-theory|probability]], which needs to sum to 1.
 
 $$
 \left\langle f-\lambda g|f-\lambda g \right\rangle\geq 0
@@ -53,7 +53,7 @@ $$
 
 This is [[cauchy-schwarz-inequality|Cauchy-Schwarz]] squared
 
-Consider the [[observables]] that we defined above. This can be written as
+Consider the [[observable]] that we defined above. This can be written as
 
 $$
 \left\lvert f \right\rangle=(\hat{A}-\mathbb{E}[A]I)\left\lvert \psi \right\rangle\quad

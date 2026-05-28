@@ -8,13 +8,11 @@ a [[spin-12-systems|quantum particle]] can be expanded in the energy basis. Let 
 basis be just a [[set]] of [[basis-state]] $E_1,E_2, …, E_k$. This means a
 photon can be at those energies.
 
-A state is a superposition of all those energies. Recall that a super
-position is just a sum [[planck-einstein-relation|]]$\sum$) of those energies. I put $k$ under
-the sum showing we must add all the energies and their corresponding
-$c_k$ values (aka. coefficients) together.
+A state is a superposition of all those energies. Recall that a superposition is just a sum [[planck-einstein-relation|]]$\sum$) of those energies. I put $k$ under the sum showing we must add all the energies and their corresponding $c_k$ values (aka. coefficients) together.
 
 $$
 \begin{gather*}
     \left\lvert \psi(0) \right\rangle=\sum_kc_k\left\lvert E_k \right\rangle
 \end{gather*}
 $$
+Note that $c_k$ are [[probability-amplitude|probability amplitudes]]

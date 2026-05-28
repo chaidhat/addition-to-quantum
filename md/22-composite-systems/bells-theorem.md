@@ -8,7 +8,7 @@ Each measurements returns $\pm 1$
 $$
 A_i,B_j\in\{\pm 1\}
 $$
-[[local-realism|Local realism]] assumes that before every measurement, every [[observables|observable]] has a pre-existing [[definite]] value determined by some hidden [[variable|variable]] $\lambda$. So in any given run, $A_1,A_2,B_1,B_2$ all have predetermined definite values.
+[[local-realism|Local realism]] assumes that before every measurement, every [[observable|observable]] has a pre-existing [[definite]] value determined by some hidden [[variable|variable]] $\lambda$. So in any given run, $A_1,A_2,B_1,B_2$ all have predetermined definite values.
 
 Let $Q$ be a combination observable where
 $$

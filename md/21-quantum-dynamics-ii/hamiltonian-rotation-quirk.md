@@ -1,6 +1,6 @@
 # Hamiltonian Rotation Quirk
 
-Any 2x2 [[hermitian-operators|hermitian]] [[schrodinger-hamiltonian-i|Hamiltonian]] can be decomposed into an identity plus a rotation generator part.
+Any 2x2 [[hermitian-operator|hermitian]] [[schrodinger-hamiltonian-i|Hamiltonian]] can be decomposed into an identity plus a rotation generator part.
 This means that every single-qubit Hamiltonian is a rotation. The [[pauli-matrices|Pauli matrices]] spans all 2x2 [[hermitian-matrix|Hermitian matrices]].
 
 $$
@@ -29,7 +29,7 @@ Remarks
 
 2.  Spin/[[angular-frequency|angular momentum]] generates rotations
 
-3.  Unitary $V$ is a dynamical symmetry of system if it [[commutators|commutes]] with time evolution
+3.  Unitary $V$ is a dynamical symmetry of system if it [[commutator|commutes]] with time evolution
 
 $$
     [V,U(t)]=0 \Rightarrow[V,H(t)]=0

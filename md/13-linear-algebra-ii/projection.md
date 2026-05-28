@@ -1,7 +1,7 @@
 # Projection
 
 The projection of $v$ onto a
-[[vectors|vector]]
+[[vector|vector]]
 $u$ is
 
 $$
@@ -28,4 +28,10 @@ $$
 $$
 
 This is similar to the dot product, but it gives a
-[[vectors|vector]]
+[[vector|vector]]
+
+ALL THESE CAN ALSO PROJECT
+
+See [[inner-product]]
+See [[wave-function]]
+See [[projector]]

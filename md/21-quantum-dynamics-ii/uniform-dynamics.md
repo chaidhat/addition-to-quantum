@@ -28,7 +28,7 @@ $$
 \hat{U}(t) = U(0)e^{-i\hat{H}t/\hbar}
 $$
 
-Recall [[matrix-exponentials|matrix exponential]]
+Recall [[matrix-exponential|matrix exponential]]
 Hence true.
 
 Let's see what $U(t,t_0)$ is.
@@ -44,7 +44,7 @@ $$
 \implies U(t,t_0) = e^{-iHt/\hbar}e^{iHt_0/\hbar}
 $$
 
-via [[baker-campbell-hausdorff]], since $[H,H]=0$ (trivially as any [[operator|operator]] [[commutators|commutes]] with itself)
+via [[baker-campbell-hausdorff]], since $[H,H]=0$ (trivially as any [[operator|operator]] [[commutator|commutes]] with itself)
 
 $$
 U(t,t_0) = e^{-iHt/\hbar}e^{iHt_0/\hbar}

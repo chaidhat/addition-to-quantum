@@ -1,4 +1,4 @@
-# Energy eigenstate derivation
+# Ladder of States
 
 Assume there is an energy eigenstate $\ket{E}$
 $$
@@ -37,13 +37,5 @@ and
 $$
 \braket{E_-|E_-} = \bra{E}\hat{N}\ket{E} = N_E\braket{E|E}
 $$
-Note that 
-$$
-N_E=\frac{E}{\hbar \omega}-\frac{1}{2}
-$$
 
-$N_E$ must be a non-negative integer -- the chain reaches $\ket{0}$ after $N_E$ steps.
 
-If $N_E$ is not a int then subtracting will never get to zero and overshoot to a negative decimal number. 
-$$\braket{E_-|E_-}=-0.3<0$$
-is not possible because norm squared are always $\geq 0$

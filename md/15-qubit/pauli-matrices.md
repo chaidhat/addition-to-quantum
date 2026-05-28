@@ -142,4 +142,4 @@ $$
 \end{gather*}
 $$
 
-If $c_i\in\mathbb{R}$, then $\hat{A}$ is [[hermitian-operators|Hermitian]]
+If $c_i\in\mathbb{R}$, then $\hat{A}$ is [[hermitian-operator|Hermitian]]

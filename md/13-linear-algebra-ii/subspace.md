@@ -4,7 +4,7 @@ A
 [[subsets|subset]]
 $U\subseteq V$ is a subspace if it satisfies:
 
-1.  contains zero [[vectors|vector]]
+1.  contains zero [[vector|vector]]
 
 2.  closed under addition $\left\lvert u \right\rangle,\left\lvert v \right\rangle\in U, \left\lvert u \right\rangle+\left\lvert v \right\rangle\in U$
 

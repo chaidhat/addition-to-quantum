@@ -8,4 +8,4 @@ A [[matrix|matrix]] is a rank-2 tensor (2D).
 
 A rank-$n$ tensor is an $n$-dimensional array with $n$ indices.
 
-A tensor is a [[subsets|subset]] of a [[vectors|vector]].
+A tensor is a [[subsets|subset]] of a [[vector|vector]].

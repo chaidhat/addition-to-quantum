@@ -1,4 +1,4 @@
-# [[hermitian-operators|Hermitian]] Matrix
+# [[hermitian-operator|Hermitian]] Matrix
 
 Let a “Hermitian matrix” be a matrix that equals its own [[conjugate]]
 transpose

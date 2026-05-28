@@ -24,7 +24,7 @@ $$
   $\hat{U}$ as
 
   - as chatgpt puts it: unitary [[matrix]]/operators represent a rotation
-    or change of coordinates in [[hilbert-spaces|Hilbert space]], without changing lengths
+    or change of coordinates in [[hilbert-space|Hilbert space]], without changing lengths
     or angles.
 
 $$

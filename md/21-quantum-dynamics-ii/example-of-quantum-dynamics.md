@@ -55,7 +55,7 @@ $$
 \hat{H}=-\gamma B \frac{\hbar}{2}\begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}=-\gamma B \hat{S}_z
 $$
 
-To do it the [[schrodinger-hamiltonian-i|Schrödinger equation]] way, take the [[eigenvectorseigenvalues|eigenvalues]] and [[eigenstates]] of $H$
+To do it the [[schrodinger-hamiltonian-i|Schrödinger equation]] way, take the [[eigenvectoreigenvalue|eigenvalues]] and [[eigenstate]] of $H$
 
 $$
 H\left\lvert z\pm \right\rangle=\mp\gamma B \frac{\hbar}{2}\left\lvert z\pm \right\rangle

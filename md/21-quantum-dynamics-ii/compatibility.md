@@ -2,7 +2,7 @@
 
 Compatibility is a property of two [[operator]].
 
-If $\left\lvert \phi_n \right\rangle$ is the $n$-th [[eigenstates|eigenstate]] of $\hat{A}$ (i.e., the [[eigenbasis]] of $\hat{A}$),
+If $\left\lvert \phi_n \right\rangle$ is the $n$-th [[eigenstate|eigenstate]] of $\hat{A}$ (i.e., the [[eigenbasis]] of $\hat{A}$),
 
 Let
 

@@ -25,7 +25,7 @@ elementary school math) in a section before it.
 
 Example
 
-[[invariant-subspaces|invariant subspace]] → [[subspaces|subspace]] → [[subsets|subset]] → [[set]]
+[[invariant-subspace|invariant subspace]] → [[subspace|subspace]] → [[subsets|subset]] → [[set]]
 
 # Contact
 

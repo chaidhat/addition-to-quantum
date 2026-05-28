@@ -41,10 +41,10 @@ If you receive a 0 bit, then measure $\sigma^X$ otherwise if you receive a 1 bit
 This turns the GHZ state of all four [[operator|operator]] products 
 $\sigma^X\sigma^X \sigma^X$ and $\sigma^X \sigma^Y\sigma^Y$ and all its cyclic permutations.
 
-These all have the right [[eigenvectorseigenvalues|eigenvalues]] to win every scenario with [[probability-theory|probability]] one.
+These all have the right [[eigenvectoreigenvalue|eigenvalues]] to win every scenario with [[probability-theory|probability]] one.
 
 ## The strategy
-Promote $a_i, b_i, c_i$ to be [[observables]] $\hat{A_i},\hat{B_i},\hat{C_i}$
+Promote $a_i, b_i, c_i$ to be [[observable]] $\hat{A_i},\hat{B_i},\hat{C_i}$
 Let
 $$
 \hat{A}_0=\hat{B}_0=\hat{C}_0=\sigma^X
@@ -52,7 +52,7 @@ $$
 $$
 \hat{A}_1=\hat{B}_1=\hat{C}_1=\sigma^Y
 $$
-These all mutually [[commutators|commutes]]
+These all mutually [[commutator|commutes]]
 $$
 \sigma^X\otimes \sigma^X \otimes \sigma^X=-1
 $$

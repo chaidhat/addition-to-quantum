@@ -8,7 +8,7 @@ independent]] vectors and want to convert them into an
 
 Given $v_1,v_2,…,v_n$ as
 [[linear-independence|LI]]
-[[vectors]],
+[[vector]],
 then $u_1, u_2, …, u_n$ can be built using
 
 $$
@@ -19,14 +19,14 @@ $$
 
 This makes $u$ an
 [[orthogonality|orthogonal]]
-[[vectors|vector]]
+[[vector|vector]]
 
 Then you
 [normalize](https://www.notion.so/Going-from-1-1-2-to-Understanding-Quantum-Mechanics-344d7c8acbf380088bbdfa6e9ac17c16?pvs=21)
 $u$ to get a
 [[orthonormality|orthonormal]]
-[[vectors|vector]].
+[[vector|vector]].
 You do this by multiplying the
 [[magnitude]]
 of the
-[[vectors|vector]].
+[[vector|vector]].

@@ -1,6 +1,6 @@
 # Spin-1 System
 
-This spin is for 3-dimensional [[hilbert-spaces]].
+This spin is for 3-dimensional [[hilbert-space]].
 W/Z bosons, photons and gluons have spin-1.
 For spin-1 systems,
 

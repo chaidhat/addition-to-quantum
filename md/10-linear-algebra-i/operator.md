@@ -10,7 +10,7 @@ $$
 \end{gather*}
 $$
 
-where V are the [[set]] of all possible [[vectors]] in a [[hilbert-spaces|Hilbert space]].
+where V are the [[set]] of all possible [[vector]] in a [[hilbert-space|Hilbert space]].
 
 In quantum mechanics, all observed operators are linear which means
 

@@ -11,7 +11,7 @@ $$
 $$
 
 A projector operator (aka. a projector) is a
-[[projections|projection]]
+[[projection|projection]]
 that
 
 $$

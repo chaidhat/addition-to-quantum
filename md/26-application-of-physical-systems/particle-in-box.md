@@ -7,7 +7,7 @@ Inside the well, [[time-independent-schrodinger-equation|TISE]] reduces to a fre
 $$
 -\frac{\hbar^2}{2m}\frac{d^2\phi}{dx^2} = E\phi \iff \frac{d^2\phi}{dx^2} = -\frac{2mE}{\hbar^2}\phi(x)
 $$
-A general solution to this is (it's a [[harmonic-oscillator|harmonic oscillator]])
+A general solution to this is (it's a [[classic-harmonic-oscillator|harmonic oscillator]])
 $$
 \phi(x) = a\,e^{ikx} + b\,e^{-ikx} = A\sin(kx) + B\cos(kx)
 $$

@@ -21,7 +21,7 @@ $$
 \end{gather*}
 $$
 
-It is a 1x1 matrix which can be simplified to a scalar value.
+It always outputs a 1x1 matrix (i.e., a scalar value).
 
 Note that
 
@@ -35,7 +35,7 @@ $$
 Where $x+,x-$ are [[orthonormality|orthonormal]] to each other. Another way we can say
 this is $\{\left\lvert x+ \right\rangle,\left\lvert x- \right\rangle\}$ forms an [[orthonormality|orthonormal]] [[basis-state|basis]].
 
-a [[set]] of [[vectors]] $\{v_1,v_2,...,v_n\}$ form an [[orthonormality|orthonormal]] [[basis-state|basis]] if
+a [[set]] of [[vector]] $\{v_1,v_2,...,v_n\}$ form an [[orthonormality|orthonormal]] [[basis-state|basis]] if
 and only if
 
 where $\delta_{ij}$ is the [[kronecker-delta]]

@@ -1,9 +1,9 @@
 # Heisenberg Picture (Heisenberg, 1925)
 
-Let [[observables|observable]] $\hat{A}$. The Heisen picture [[operator|operator]] is
+Let [[observable|observable]] $\hat{A}$. The Heisen picture [[operator|operator]] is
 
 $$
-\tilde{A}(t)=U^\dag (t)AU(t)
+\tilde{A}(t)=U^\dagger (t)AU(t)
 $$
 
 |            | Schrödinger Picture |            Heisenberg Picture            |                 |                                                                         |                          |
@@ -14,27 +14,27 @@ $$
 
 For [[uniform-dynamics]], $\tilde{H}(t)=\tilde{H}$. That means $U(t)\triangleq U(t,t_0)= e^{-iHt/\hbar}e^{iHt_0/\hbar}$
 
-We know that something [[commutators|commutes]] with itself, so $[U(t), H]=0$
+We know that something [[commutator|commutes]] with itself, so $[U(t), H]=0$
 
 $$
-\Rightarrow\tilde{H}(t)=U^\dag(t)HU(t)=H
+\Rightarrow\tilde{H}(t)=U^\dagger(t)HU(t)=H
 $$
 
 Heisenberg equation of motion for $\tilde{A}(t)$
 
 $$
-\frac{d}{dt}A(t)=\frac{d}{dt}(U^\dag AU + U^\dag A\frac{dU}{dt})
+\frac{d}{dt}A(t)=\frac{d}{dt}(U^\dagger AU + U^\dagger A\frac{dU}{dt})
 $$
 
 $$
-=-\frac{1}{i\hbar}U^\dag H A U+\frac{1}{i\hbar}U^\dag A H U
+=-\frac{1}{i\hbar}U^\dagger H A U+\frac{1}{i\hbar}U^\dagger A H U
 $$
 
 $$
-=-\frac{i}{\hbar}(U^\dag HU U^\dag A U - U^\dag A U U^\dag H U)
+=-\frac{i}{\hbar}(U^\dagger HU U^\dagger A U - U^\dagger A U U^\dagger H U)
 $$
 
-because [[commutators|commutator]],
+because [[commutator|commutator]],
 
 $$
 \boxed{\frac{d}{dt}\hat{A}(t)=\frac{i}{\hbar}[\hat{H}(t),\hat{A}(t)]}

@@ -6,7 +6,7 @@ $$
 \left\lvert v, w \right\rangle \triangleq \left\lvert v \right\rangle\otimes\left\lvert w \right\rangle
 $$
 
-Given [[vector-space]] $H_A$ and $H_B$, the tensor product $H_A\otimes H_B$ is a new [[vectors|vector]] space
+Given [[vector-space]] $H_A$ and $H_B$, the tensor product $H_A\otimes H_B$ is a new [[vector|vector]] space
 
 Properties
 

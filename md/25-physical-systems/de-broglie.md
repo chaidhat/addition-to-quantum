@@ -7,7 +7,7 @@ i.e.,
 $$
 \Leftrightarrow p=\hbar k
 $$
-We also experimentally found out that a momentum-p [[eigenstates|eigenstate]] has a single, [[definite]] wavelength.
+We also experimentally found out that a momentum-p [[eigenstate|eigenstate]] has a single, [[definite]] wavelength.
 
 Let's write the momentum [[wave-function]] $\psi_p(x)$ in polar form.
 $$

@@ -28,7 +28,7 @@ $$
 \left\lvert 11 \right\rangle\triangleq\left\lvert 1 \right\rangle_A\otimes\left\lvert 1 \right\rangle_B
 $$
 
-Let $\left\lvert 0 \right\rangle, \left\lvert 1 \right\rangle$ be a rank-1 tensor, i.e., a [[vectors|vector]]. Recall from [[ket-state]] and [[quantum-system|quantum systems]] that it is defined as
+Let $\left\lvert 0 \right\rangle, \left\lvert 1 \right\rangle$ be a rank-1 tensor, i.e., a [[vector|vector]]. Recall from [[ket-state]] and [[quantum-system|quantum systems]] that it is defined as
 
 $$
 \left\lvert 0 \right\rangle=\begin{pmatrix}
@@ -56,7 +56,7 @@ $$
 |0\rangle_A \otimes |0\rangle_B = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \otimes \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 1 \cdot \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\ 0 \cdot \begin{pmatrix} 1 \\ 0 \end{pmatrix} \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}
 $$
 
-We can see the full basis of the new [[hilbert-spaces|Hilbert space]] $H_A\otimes H_B$ as
+We can see the full basis of the new [[hilbert-space|Hilbert space]] $H_A\otimes H_B$ as
 
 $$
 |00\rangle = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix},\quad |01\rangle = \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix},\quad |10\rangle = \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix},\quad |11\rangle = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix}

@@ -17,4 +17,4 @@ $$
 \end{gather*}
 $$
 
-Gives $\lambda$ values which are [[eigenvectorseigenvalues|eigenvalues]] of A
+Gives $\lambda$ values which are [[eigenvectoreigenvalue|eigenvalues]] of A

@@ -1,6 +1,6 @@
 # Spin-1/2 System
 
-This spin is for 2-dimensional [[hilbert-spaces]].
+This spin is for 2-dimensional [[hilbert-space]].
 Electrons, protons, neutrons and quarks have [[quantum-system|spin-1/2]].
 For spin-1/2 systems,
 

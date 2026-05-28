@@ -1,9 +1,9 @@
 # Diagonalization
 
-A [[matrix|matrix]] is diagonalizable if it has [[linear-independence|linearly independent]] [[eigenvectorseigenvalues|eigenvectors]]
-which occurs if the geometric multiplicity (dimension of the [[eigenspaces|eigenspace]])
+A [[matrix|matrix]] is diagonalizable if it has [[linear-independence|linearly independent]] [[eigenvectoreigenvalue|eigenvectors]]
+which occurs if the geometric multiplicity (dimension of the [[eigenspace|eigenspace]])
 equals the algebraic multiplicity (root multiplicity in the
-[[characteristic-polynomial|characterstic polynomial]]) for every [[eigenvectorseigenvalues|eigenvalue]].
+[[characteristic-polynomial|characterstic polynomial]]) for every [[eigenvectoreigenvalue|eigenvalue]].
 
 If matrix $A$ is diagonalizable then it can be written as
 

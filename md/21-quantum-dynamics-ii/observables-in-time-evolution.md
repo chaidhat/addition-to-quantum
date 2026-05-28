@@ -1,6 +1,6 @@
 # Ehrenfest Theorem
 
-Given [[observables|observable]] $\hat{A}$, recall the [[expected-value-of-observables|expectation value]] of $\hat{A}$ is
+Given [[observable|observable]] $\hat{A}$, recall the [[expected-value-of-observables|expectation value]] of $\hat{A}$ is
 
 $$
 \mathbb{E}[A(t)]=\left\langle \psi(t) \right\rvert A(t)\left\lvert \psi(t) \right\rangle
@@ -16,7 +16,7 @@ $$
 = -\frac{1}{i\hbar}\left\langle \psi \right\rvert HA\left\lvert \psi \right\rangle+\left\langle \psi \right\rvert A\frac{1}{i\hbar}H\left\lvert \psi \right\rangle
 $$
 
-because [[commutators|commutator]],
+because [[commutator|commutator]],
 
 $$
 =\frac{i}{\hbar}\left\langle \psi \right\rvert[H,A]\left\lvert \psi \right\rangle

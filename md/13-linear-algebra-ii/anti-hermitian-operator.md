@@ -16,10 +16,10 @@ $$
 \end{gather*}
 $$
 
-then $\hat{A}$ is [[hermitian-operators|Hermitian]]
+then $\hat{A}$ is [[hermitian-operator|Hermitian]]
 
 Any operator $\hat{T}$ can be written as linear combination of
-[[hermitian-operators|Hermitian]] and anti-Hermitian operator.
+[[hermitian-operator|Hermitian]] and anti-Hermitian operator.
 
 $$
 \begin{gather*}

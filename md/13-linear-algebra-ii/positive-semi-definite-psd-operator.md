@@ -2,7 +2,7 @@
 
 An operator $\hat{P}$ is PSD if and only if
 
-- $\hat{P}$ is [[hermitian-operators|Hermitian]]
+- $\hat{P}$ is [[hermitian-operator|Hermitian]]
 
 - this holds true for all [[ket-state|states]] $\left\lvert \psi \right\rangle$ :
 
@@ -17,4 +17,4 @@ less than 90 degrees.
 
 Example
 
-- [[projectors]] are PSD
+- [[projector]] are PSD

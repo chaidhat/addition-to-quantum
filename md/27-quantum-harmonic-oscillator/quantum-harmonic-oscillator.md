@@ -1,4 +1,4 @@
-The [[harmonic-oscillator]] applies to quantum physics.
+The [[classic-harmonic-oscillator]] applies to quantum physics.
 
 $$
 \hat{H} = \frac{\hat{p}^2}{2m} + \tfrac{1}{2}m\omega^2\hat{x}^2, \qquad [\hat{x}, \hat{p}] = i\hbar
@@ -96,4 +96,13 @@ where [[number-operator|number operator]]  $\hat{N}$
 $$
 \boxed{\hat{N}=\hat{a}^\dagger\hat{a}}
 $$
+Note from [[ladder-of-states]] that 
+$$
+N_E=\frac{E}{\hbar \omega}-\frac{1}{2}
+$$
 
+$N_E$ must be a non-negative integer -- the chain reaches $\ket{0}$ after $N_E$ steps.
+
+If $N_E$ is not a int then subtracting will never get to zero and overshoot to a negative decimal number. 
+$$\braket{E_-|E_-}=-0.3<0$$
+is not possible because norm squared are always $\geq 0$

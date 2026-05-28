@@ -1,6 +1,6 @@
 # Observables on a Composite System
 
-Don’t forget that [[operator]] can sometimes be [[observables]].
+Don’t forget that [[operator]] can sometimes be [[observable]].
 
 Let $F\in L(H_A), G \in L (H_B)$ be operators.
 
@@ -20,7 +20,7 @@ $$
 G\in L(H_B)\rightarrow G\otimes I \in L(H_A\otimes H_B)
 $$
 
-Where $L$ is the [[set]] of all linear operators on a [[hilbert-spaces|Hilbert space]].
+Where $L$ is the [[set]] of all linear operators on a [[hilbert-space|Hilbert space]].
 This means that any operator acting on a subsystem $H_A$ can be upgraded to an operator that makes it act on a larger dimension $H_A\otimes H_B$.
 
 This is because

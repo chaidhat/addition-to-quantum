@@ -6,7 +6,9 @@ Alice wants to send Bob qubit A in unknown [[ket-state|state]]
 $$
 \ket{\upsilon^{(A)}} = \alpha\ket{0^{(A)}}+\beta\ket{1^{(A)}}
 $$
-Teleportation occurs as we can copy the state of B to C. The state of B is destroyed, so it doesn't violate [[no-cloning-theorem]].
+Teleportation occurs as we can copy the state of B to C. The state of B is destroyed, so it doesn't violate [[no-cloning-theorem]]. 
+
+Note $\alpha$ and $\beta$ are [[probability-amplitude|probability amplitudes]].
 
 Alice and Bob pre-share the [[bell-states|Bell state]]
 $$

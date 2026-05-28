@@ -28,7 +28,7 @@ $$
 
 Properties
 
-1.  $\Lambda(t, t_0)$ is [[anti-hermitian-operators|anti-Hermitian]].
+1.  $\Lambda(t, t_0)$ is [[anti-hermitian-operator|anti-Hermitian]].
 
     Note:
 
@@ -57,16 +57,16 @@ $$
 $$
 
 $$
-    =\frac{\partial U(t, t_0)}{\partial t} U(t_0,t_1)U^\dag(t_0,t_1)
+    =\frac{\partial U(t, t_0)}{\partial t} U(t_0,t_1)U^\dagger(t_0,t_1)
                   U^\dagger(t, t_0)
 $$
 
 $$
-    =\frac{\partial}{\partial t}[U(t,t_0)U(t_0,t_1)][U(t,t_0)U(t_0, t_1)]^\dag
+    =\frac{\partial}{\partial t}[U(t,t_0)U(t_0,t_1)][U(t,t_0)U(t_0, t_1)]^\dagger
 $$
 
 $$
-    =\frac{\partial U(t,t_1)}{\partial t}U^\dag(t,t_1)=\Lambda (t,t_1)
+    =\frac{\partial U(t,t_1)}{\partial t}U^\dagger(t,t_1)=\Lambda (t,t_1)
 $$
 
     For any $t_0,t_1$
@@ -78,7 +78,7 @@ $$
 $$
 
 $$
-\Rightarrow\frac{d}{dt}\left\lvert \psi(t) \right\rangle = \frac{\partial}{\partial t}U(t, t_0)U^\dag(t,t_0) |\psi(t)\rangle
+\Rightarrow\frac{d}{dt}\left\lvert \psi(t) \right\rangle = \frac{\partial}{\partial t}U(t, t_0)U^\dagger(t,t_0) |\psi(t)\rangle
 $$
 
 $$

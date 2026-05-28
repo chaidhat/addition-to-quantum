@@ -8,7 +8,7 @@ $$
 \end{gather*}
 $$
 
-Because we learned this thing called [[particle-phases]], we can say that particle
+Because we learned this thing called [[particle-phases]], we can say that particle.
 oscillate at different phases. This is shown using phases
 
 $$

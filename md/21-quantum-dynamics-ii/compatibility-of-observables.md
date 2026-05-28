@@ -1,9 +1,9 @@
 # Compatibility of Observables
 
-If two [[observables]] are [[compatibility|compatible]], then they can be measured simultaneously with one basic measurement.
+If two [[observable]] are [[compatibility|compatible]], then they can be measured simultaneously with one basic measurement.
 This means that observing one doesn’t affect the other.
 
-Two [[operator]] $\hat{A}$ and $\hat{B}$ are compatible if and only if they [[commutators|commute]], i.e. $[\hat{A},\hat{B}]=0$.
+Two [[operator]] $\hat{A}$ and $\hat{B}$ are compatible if and only if they [[commutator|commute]], i.e. $[\hat{A},\hat{B}]=0$.
 
 $$
 \hat{A},\hat{B}\quad\text{are compatible}\quad\Leftrightarrow\quad[\hat{A},\hat{B}]=0

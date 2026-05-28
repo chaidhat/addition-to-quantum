@@ -38,6 +38,9 @@ $$
     V_x=\{e:X(e)=x\}
 \end{gather*}
 $$
+Some famous probability distributions (that are used in this guide) are
+* [[poisson-distribution]]
+* [[gaussian-distribution]]
 
 Note that the probabilities are always between 0 and 1
 

@@ -32,7 +32,7 @@ If it is $+\hbar/2$, we don’t get any extra information as it could equally be
 
 How reliably can we distinguish between a [[set]] of quantum states that serve as signals?
 
-Consider Alice and Bob. Alice sends [[ket-state|quantum state]] to Bob and this state is living in some [[hilbert-spaces|Hilbert space]] $H$
+Consider Alice and Bob. Alice sends [[ket-state|quantum state]] to Bob and this state is living in some [[hilbert-space|Hilbert space]] $H$
 
 $$
 \left\lvert \psi \right\rangle\in H\quad dim(H)=d
@@ -72,7 +72,7 @@ $$
 P_s=\sum_{\alpha=1}^NP(\alpha)\sum_{k\in C_\alpha}P(outcome~k|\text{message $\alpha$ was sent})\\
 $$
 
-Recall [[borns-rule]] that
+Recall [[born-rule]] that
 
 $$
 =\sum_{\alpha =1}^N\frac{1}{N}\sum_{k\in C_\alpha}|\left\langle k|\alpha \right\rangle|^2
@@ -89,11 +89,11 @@ $$
 And also
 
 $$
-(\Pi\left\lvert \alpha \right\rangle)^\dag=\left\lvert \alpha \right\rangle^\dagger
+(\Pi\left\lvert \alpha \right\rangle)^\dagger=\left\lvert \alpha \right\rangle^\dagger
 $$
 
 $$
-\left\langle \alpha \right\rvert\Pi^\dag=\left\langle \alpha \right\rvert
+\left\langle \alpha \right\rvert\Pi^\dagger=\left\langle \alpha \right\rvert
 $$
 
 $$
@@ -118,7 +118,7 @@ $$
 = \frac{1}{N}\sum_\alpha \sum_{k\in C_\alpha}tr(\left\langle \alpha \right\rvert\Pi\left\lvert k \right\rangle\left\langle k \right\rvert\Pi\left\lvert \alpha \right\rangle)\\
 $$
 
-Using [[traces|trace]] cyclic property
+Using [[trace|trace]] cyclic property
 
 $$
 = \frac{1}{N}\sum_\alpha \sum_{k\in C_\alpha}tr(\left\lvert \alpha \right\rangle\left\langle \alpha \right\rvert\cdot \Pi\left\lvert k \right\rangle\left\langle k \right\rvert\Pi)\\
@@ -144,7 +144,7 @@ $$
 \leq\frac{1}{N}tr(\Pi)\\
 $$
 
-Using [[traces|trace]] cyclic property and the fact that $tr(\left\langle \phi_r|\phi_r \right\rangle)=\left\langle \phi_r|\phi_r \right\rangle$ as it is a $1\times 1$ [[matrix|matrix]].
+Using [[trace|trace]] cyclic property and the fact that $tr(\left\langle \phi_r|\phi_r \right\rangle)=\left\langle \phi_r|\phi_r \right\rangle$ as it is a $1\times 1$ [[matrix|matrix]].
 
 $$
 \leq\frac{1}{N}tr(\sum_{r=1}^d\left\lvert \phi_r \right\rangle\left\langle \phi_r \right\rvert)

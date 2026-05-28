@@ -13,4 +13,4 @@ Note that
 
 2.  lower bound in theorem also holds even if alice sends mixed [[ket-state|states]] $\{\rho_\alpha\}_{\alpha=1}^N$
 
-3.  A quantum system with [[hilbert-spaces|Hilbert space]] dimension $d$ has information capacity of $\log_2(d)$ bits. This is the maximum number of bits that can be stored, communicated, and read reliably. This is the same amount of infromation from classical d-state system.
+3.  A quantum system with [[hilbert-space|Hilbert space]] dimension $d$ has information capacity of $\log_2(d)$ bits. This is the maximum number of bits that can be stored, communicated, and read reliably. This is the same amount of infromation from classical d-state system.

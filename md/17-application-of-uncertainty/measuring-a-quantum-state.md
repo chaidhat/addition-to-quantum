@@ -1,18 +1,18 @@
 # Measuring a Quantum State
 
 Before:
-The system is in a [[ket-state|state]] $\left\lvert \psi \right\rangle$ and you measure the [[observables|observable]] $\hat{A}$.
+The system is in a [[ket-state|state]] $\left\lvert \psi \right\rangle$ and you measure the [[observable|observable]] $\hat{A}$.
 
 Measure: We get an outcome $A_n$ with [[probability-theory|probability]] $P_n=\left\langle \psi \right\rvert\hat{\Pi}_n\left\lvert \psi \right\rangle$
 
-Given [[borns-rule]] for a non-degenerate [[eigenstates|eigenstate]] $\left\lvert \phi_n \right\rangle$,
+Given [[born-rule]] for a non-degenerate [[eigenstate|eigenstate]] $\left\lvert \phi_n \right\rangle$,
 
 $$
 P_n=|\left\langle \phi_n|\psi \right\rangle|^2
 $$
 
-This is because [[borns-rule]].
-Note that $\hat{\Pi}_n$, the [[projectors|projector]] onto the $\lambda_n$-[[eigenspaces|eigenspace]] of $\hat{A}$, is
+This is because [[born-rule]].
+Note that $\hat{\Pi}_n$, the [[projector|projector]] onto the $\lambda_n$-[[eigenspace|eigenspace]] of $\hat{A}$, is
 
 $$
 \hat{\Pi}_n=\left\lvert \phi_n \right\rangle\left\langle \phi_n \right\rvert

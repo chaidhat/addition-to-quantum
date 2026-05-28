@@ -1,4 +1,4 @@
-# Harmonic Oscillator
+# Classic Harmonic Oscillator
 
 Let's say something is an oscillator.
 

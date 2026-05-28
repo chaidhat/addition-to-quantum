@@ -1,6 +1,6 @@
 # Einstein, Podolsky, and Rosen (1935)
 
-In quantum mechanics -> if $z$ and $x$ [[observables]] are [[compatibility|incompatible]], getting a [[definite]] value for $z$ means losing the ability to know $x$.
+In quantum mechanics -> if $z$ and $x$ [[observable]] are [[compatibility|incompatible]], getting a [[definite]] value for $z$ means losing the ability to know $x$.
 
 Einstein-Podolsky-Rosen (1935) argued that quantum mehcanics is incomplete as physics should obey principles of [[local-realism]]
 
@@ -33,7 +33,7 @@ That means, via. Born’s rule, if Alice observed a $0$ outcome, Bob’s qubit i
 
 EPR argues that it breaks local realism as local realism wants Bob’s qubit to have definite values of x and z observables.
 
-Another example would be let there be two qualities of a particle: hardness $\{hard,soft\}$ and color $\{black, white\}$ if there is a particle with $(\hat{z}+, \hat{x}+)$ which just means it’s like $(soft, white)$. This is not an [[eigenstates|eigenstate]] because in quantum mechanics, knowing $\hat{z}=+$ means losing the ability to know $\hat{x}=-$ or $\hat{x}=+$.
+Another example would be let there be two qualities of a particle: hardness $\{hard,soft\}$ and color $\{black, white\}$ if there is a particle with $(\hat{z}+, \hat{x}+)$ which just means it’s like $(soft, white)$. This is not an [[eigenstate|eigenstate]] because in quantum mechanics, knowing $\hat{z}=+$ means losing the ability to know $\hat{x}=-$ or $\hat{x}=+$.
 We’re just constructing a model that obeys EPR.
 
 Let's take a [[singlet]] 

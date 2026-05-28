@@ -33,10 +33,10 @@ $$
 $$
 
 where $P$ is the [[basis-state|basis]] matrix — a matrix whose columns are the
-[[eigenvectorseigenvalues|eigenvectors]] $X$ w.r.t $\hat{A}$.
+[[eigenvectoreigenvalue|eigenvectors]] $X$ w.r.t $\hat{A}$.
 
-Specifically, if $v_1,v_2,…,v_n$ are [[eigenvectorseigenvalues|eigenvectors]] of $X$
-corresponding to [[eigenvectorseigenvalues|eigenvalues]] $\lambda_1,\lambda_2,…,\lambda_n$ then
+Specifically, if $v_1,v_2,…,v_n$ are [[eigenvectoreigenvalue|eigenvectors]] of $X$
+corresponding to [[eigenvectoreigenvalue|eigenvalues]] $\lambda_1,\lambda_2,…,\lambda_n$ then
 
 $$
 \begin{gather*}

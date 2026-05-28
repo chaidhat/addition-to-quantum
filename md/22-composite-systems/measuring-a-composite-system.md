@@ -1,6 +1,6 @@
 # Measuring a Composite System
 
-For a non-composite system, recall that the [[set]] of measurements you can make is the eigenvalues of the [[observables|observable]].
+For a non-composite system, recall that the [[set]] of measurements you can make is the eigenvalues of the [[observable|observable]].
 
 Recall [[measuring-a-quantum-state]].
 
@@ -12,7 +12,7 @@ $$
 \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix} = \frac{1}{2}\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix} \longrightarrow \text{product state}
 $$
 
-Measure $\hat{S}_x^{(\text{tot})}$, get 0 with $\frac{1}{2}$ [[probability-theory|probability]]. Mathematically, we use a [[projectors|projector]] to measure the state. Via the [[projections|projection]] rule we get
+Measure $\hat{S}_x^{(\text{tot})}$, get 0 with $\frac{1}{2}$ [[probability-theory|probability]]. Mathematically, we use a [[projector|projector]] to measure the state. Via the [[projection|projection]] rule we get
 
 $$
 \frac{1}{\sqrt{1/2}} \Pi_{S_x} = 0 \quad \left\lvert \psi \right\rangle = \frac{1}{\sqrt{2}}\left(\left\lvert +,- \right\rangle + \left\lvert -,+ \right\rangle\right)
@@ -25,7 +25,7 @@ $$
 This means that joint measurement can product [[states-on-a-composite-system|entanglement]].
 Equivalent to interacting via third party.
 
-Consider a composite system $H_{\text{Alice}} \otimes H_{\text{Bob}}$ with subsystem observables having eigenvalues $q_a$, $r_b$ and [[eigenvectorseigenvalues|eigenvectors]] $\left\lvert a \right\rangle$, $\left\lvert b \right\rangle$.
+Consider a composite system $H_{\text{Alice}} \otimes H_{\text{Bob}}$ with subsystem observables having eigenvalues $q_a$, $r_b$ and [[eigenvectoreigenvalue|eigenvectors]] $\left\lvert a \right\rangle$, $\left\lvert b \right\rangle$.
 
 Joint probability for outcome $(q_a, r_b)$:
 

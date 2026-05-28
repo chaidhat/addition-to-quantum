@@ -67,7 +67,7 @@ $$
 \end{gather*}
 $$
 
-where $\alpha,\beta$ are just numbers. See how they are a combination of up and down states?
+where $\alpha,\beta$ are [[probability-amplitude|probability amplitudes]]. See how they are a combination of up and down states?
 
 There is $|\alpha|^2$ probabilty that the photon, once observed, spins upwards and $|\beta|^2$ probability it spins downwards once observed.
 

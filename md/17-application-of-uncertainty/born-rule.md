@@ -1,8 +1,8 @@
-# Born’s Rule
+# Born Rule
 
 If a [[quantum-system]] is in [[ket-state|state]] $\left\lvert \psi \right\rangle$ and you measure
-[[observables|observable]] $\hat{A}$ — the [[probability-theory|probability]] of getting [[eigenvectorseigenvalues|eigenvalue]]
-$\lambda_\alpha$ (which corresponds to [[eigenstates|eigenstate]] $\left\lvert \alpha \right\rangle$) is
+[[observable|observable]] $\hat{A}$ — the [[probability-theory|probability]] of getting [[eigenvectoreigenvalue|eigenvalue]]
+$\lambda_\alpha$ (which corresponds to [[eigenstate|eigenstate]] $\left\lvert \alpha \right\rangle$) is
 
 $$
 \begin{gather*}
@@ -14,3 +14,5 @@ This only holds true if eigenstate $\left\lvert \phi_n \right\rangle$ is non-deg
 Usually, the convention is that we pick the representative state $\left\langle \phi_n|\phi_n \right\rangle=1$ (i.e., it is normalized).
 
 Born’s rule is a postulate, meaning that it is based on experimental observations and cannot be derived from first principles.
+
+Note that $|\braket{\alpha|\psi}|^2$ is a [[probability-amplitude|probability amplitude]]

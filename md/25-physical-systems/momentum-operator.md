@@ -11,7 +11,7 @@ $$
 Which is just like [[position-operator]] but acts on a different basis.
 
 ### Proof
-Let's say we have two bases for the same [[hilbert-spaces|Hilbert space]]: position $\{\ket{x}\}$ and momentum $\{\ket{p}\}$. We need to see the transition amplitude (i.e., the overlap $\braket{x|p}$).
+Let's say we have two bases for the same [[hilbert-space|Hilbert space]]: position $\{\ket{x}\}$ and momentum $\{\ket{p}\}$. We need to see the transition amplitude (i.e., the overlap $\braket{x|p}$).
 
 See [[de-broglie]] first
 

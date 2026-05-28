@@ -1,6 +1,6 @@
 # Cauchy-Schwarz Inequality
 
-Given two [[vectors]] $\left\lvert u \right\rangle,\left\lvert v \right\rangle\in \mathbb{C}^n$,
+Given two [[vector]] $\left\lvert u \right\rangle,\left\lvert v \right\rangle\in \mathbb{C}^n$,
 
 $$
 |\left\langle u|v \right\rangle|\leq \|u\|\|v\|

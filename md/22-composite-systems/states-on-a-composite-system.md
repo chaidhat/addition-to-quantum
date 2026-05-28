@@ -22,7 +22,7 @@ $$
 \left\lvert \psi \right\rangle=\left\lvert v^* \right\rangle\otimes\left\lvert w^* \right\rangle\quad \left\lvert v^* \right\rangle\in H_A, \left\lvert w^* \right\rangle\in H_B
 $$
 
-An entangled state is any state $\left\lvert \psi \right\rangle$ which is not a product state. This means it is not always possible to assign state [[vectors]] to individual subsystems.
+An entangled state is any state $\left\lvert \psi \right\rangle$ which is not a product state. This means it is not always possible to assign state [[vector]] to individual subsystems.
 
 Einstein famously called this "Spooky action at a distance."
 

@@ -1,7 +1,7 @@
 # Invariant Subspace
 
 A
-[[subspaces|subspace]]
+[[subspace|subspace]]
 $U\subseteq V$ is called $\hat{T}$-invariant if [[operator|operator]] $\hat{T}$
 keeps everything in U inside U. If it is T-invariant, then this must
 always be true:
@@ -21,8 +21,8 @@ $$
 \end{gather*}
 $$
 
-When $\lambda$ is [[eigenvectorseigenvalues|Eigenvalue]] and $\left\lvert u \right\rangle$ is [[eigenvectorseigenvalues|eigenvector]] and
-$\left\lvert u \right\rangle\neq 0$ and you can define these [[vectors]] by checking
+When $\lambda$ is [[eigenvectoreigenvalue|Eigenvalue]] and $\left\lvert u \right\rangle$ is [[eigenvectoreigenvalue|eigenvector]] and
+$\left\lvert u \right\rangle\neq 0$ and you can define these [[vector]] by checking
 
 $$
 \begin{gather*}
@@ -32,5 +32,5 @@ $$
 \end{gather*}
 $$
 
-In general, this [[determinants|determinant]] has degree $\lambda_i$ are zeroes of
+In general, this [[determinant|determinant]] has degree $\lambda_i$ are zeroes of
 character polynomial $\lambda_i\in C$ can be repeated

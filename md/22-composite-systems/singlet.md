@@ -12,7 +12,7 @@ This is because if we measure on Z
 $$
 \sigma^Z\ket{\uparrow} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \end{pmatrix} = +\ket{\uparrow}
 $$
-+1 is an [[eigenvectorseigenvalues|eigenvalue]] of $\sigma^Z\ket{\uparrow}$ 
++1 is an [[eigenvectoreigenvalue|eigenvalue]] of $\sigma^Z\ket{\uparrow}$ 
 -1 is an eigenvalue of $\sigma^Z\ket{\downarrow}$ 
 acting on 
 $$

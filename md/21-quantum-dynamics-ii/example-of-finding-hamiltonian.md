@@ -33,7 +33,7 @@ $$
 \Rightarrow p=\frac{h}{2\pi/k}=\hbar k
 $$
 
-But we want this as an [[operator|operator]] where the plane wave is an [[eigenstates|eigenstate]] of $\hat{p}$ with [[eigenvectorseigenvalues|eigenvalue]] $\hbar k$ (its momentum).
+But we want this as an [[operator|operator]] where the plane wave is an [[eigenstate|eigenstate]] of $\hat{p}$ with [[eigenvectoreigenvalue|eigenvalue]] $\hbar k$ (its momentum).
 
 $$
 \hat{p}e^{ikx}=\hbar ke^{ikx}

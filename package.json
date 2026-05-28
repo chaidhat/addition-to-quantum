@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "scan": "node --experimental-strip-types packages/referencer/scan.ts",
-    "graph": "node --experimental-strip-types packages/dep-visualizer/graph.ts"
+    "graph": "node --experimental-strip-types packages/dep-visualizer/graph.ts",
+    "clean-md": "node --experimental-strip-types packages/clean-md/clean-md.ts"
   }
 }

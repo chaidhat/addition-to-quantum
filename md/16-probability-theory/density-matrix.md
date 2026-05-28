@@ -6,13 +6,13 @@ $\rho$ is a density matrix if it is:
 
 - [[hermitian-matrix|Hermitian]]
 
-- [[positive-semi-definite-psd-operators|Positive semi-definite]]
+- [[positive-semi-definite-psd-operator|Positive semi-definite]]
 
-- [[traces|Trace]] $Tr(\rho)=1$
+- [[trace|Trace]] $Tr(\rho)=1$
 
 It contains all information needed to predict measurement outcomes.
 It is fundementally the [[probability-theory|probability]] distribution over quantum [[ket-state|states]].
-For the [[observables|observable]] $A$ we see that the [[expected-value-of-observables|expected value]] is
+For the [[observable|observable]] $A$ we see that the [[expected-value-of-observables|expected value]] is
 
 $$
 \mathbb{E}[A]=tr(\rho A)

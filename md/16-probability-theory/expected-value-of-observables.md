@@ -24,4 +24,4 @@ $$
 \end{gather*}
 $$
 
-where $tr$ is [[traces|trace]]
+where $tr$ is [[trace|trace]]

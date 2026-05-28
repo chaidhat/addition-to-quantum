@@ -46,13 +46,13 @@ $$
 $$
 
 $$
-    U(t_1,t_2)=U^{-1}(t_2,t_1)=U^\dag(t_2, t_1)
+    U(t_1,t_2)=U^{-1}(t_2,t_1)=U^\dagger(t_2, t_1)
 $$
 
 4.  [[diagonalization|diagonalizable]]
 
 $$
-    U^\dag U = U U^\dag
+    U^\dagger U = U U^\dagger
 $$
 
     this means [[spectral-decomposition|spectral theorem]] applies.
@@ -63,7 +63,7 @@ $$
 $$
 
 $$
-    I=\left\langle k \right\rvert U^\dag U\left\lvert k \right\rangle
+    I=\left\langle k \right\rvert U^\dagger U\left\lvert k \right\rangle
 $$
 
 $$

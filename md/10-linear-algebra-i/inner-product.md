@@ -4,24 +4,16 @@ Inner product of [[ket-state|states]] $\left\lvert u \right\rangle$ and $\left\l
 
 $$
 \begin{gather*}
-    \left\lvert u \right\rangle\cdot \left\lvert v \right\rangle=u_1^*v_1+u_2^*v_2+...+u_n^*v_n
+    \left\langle u \right\rvert\cdot \left\lvert v \right\rangle=u_1^*v_1+u_2^*v_2+...+u_n^*v_n
 \end{gather*}
 $$
 
 (if the entries are [[standard-number-systems|real]] numbers, the [[conjugate|conjugates]] do nothing and this
 reduces to the usual dot product.)
 
-building on top of what we said about the [[inner-product]],
+It is a [[projection]] of $\ket{\psi}$ onto $\ket{x}$
 
-an inner product is any
-
-$$
-\begin{gather*}
-    \langle u|v\rangle
-\end{gather*}
-$$
-
-which is
+Properties
 
 1.  [[conjugate]] [[symmetric-matrix|symmetric]]
 

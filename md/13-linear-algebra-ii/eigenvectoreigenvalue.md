@@ -19,5 +19,5 @@ by the transform.
 The [[set]] of all vector $\left\lvert v \right\rangle$’s are Eigenvectors of transformation
 $A$.
 
-An [[eigenstates|Eigenstate]] are [[ket-state|states]] instead of [[vectors]], [[operator]] instead of
+An [[eigenstate|Eigenstate]] are [[ket-state|states]] instead of [[vector]], [[operator]] instead of
 [[matrix]] but are the same thing.

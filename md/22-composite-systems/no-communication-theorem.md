@@ -57,7 +57,7 @@ $$
 \boxed{\left\langle a^{(A)}|\Psi^{(AB)} \right\rangle\triangleq(\left\langle a \right\rvert\otimes I)\left\lvert \Psi^{(AB)} \right\rangle}
 $$
 
-Note this yields a [[vectors|vector]] in $H_B$.
+Note this yields a [[vector|vector]] in $H_B$.
 Where $\left\lvert \Psi^{(AB)} \right\rangle$ is in $H_A \otimes H_B$
 
 Example:
@@ -82,7 +82,7 @@ $$
     \end{array}
 $$
 
-We can see that Bob’s qubit is projected onto z [[eigenstates|eigenstate]] opposite to Alice’s outcome.
+We can see that Bob’s qubit is projected onto z [[eigenstate|eigenstate]] opposite to Alice’s outcome.
 
 Let’s say that Alice measures in x basis.
 

@@ -8,7 +8,7 @@ $$
     \alpha\left\lvert \psi \right\rangle+\beta\left\lvert \phi \right\rangle\rightarrow U(t_2,t_1)(\alpha\left\lvert \psi \right\rangle+\beta\left\lvert \phi \right\rangle)=
 $$
 
-2.  must preserve [[probability-theory|probablity]] (must sum to 1) if isolated which means $U$ must be [[unitary-operator|unitary]] if [[hilbert-spaces|Hilbert space]] is finite dimensional.
+2.  must preserve [[probability-theory|probablity]] (must sum to 1) if isolated which means $U$ must be [[unitary-operator|unitary]] if [[hilbert-space|Hilbert space]] is finite dimensional.
 
 3.  assume $U$ is unitary in infinite dimensional Hilbert space.
 
@@ -18,7 +18,7 @@ $$
 \left\langle \psi|\psi \right\rangle=1
 $$
 
-This is because [[borns-rule]] says that, over $\left\lvert k \right\rangle$ [[basis-state|basis]] [[ket-state|states]],
+This is because [[born-rule]] says that, over $\left\lvert k \right\rangle$ [[basis-state|basis]] [[ket-state|states]],
 
 $$
 \sum_k |\left\langle k|\psi \right\rangle|^2=1
@@ -38,7 +38,7 @@ $$
 so if we evolve it over time then
 
 $$
-(U\left\lvert \psi \right\rangle)^\dag U\left\lvert \psi \right\rangle=1\quad\forall\quad\left\lvert \psi \right\rangle
+(U\left\lvert \psi \right\rangle)^\dagger U\left\lvert \psi \right\rangle=1\quad\forall\quad\left\lvert \psi \right\rangle
 $$
 
 $$
@@ -54,5 +54,5 @@ This means that $U$ is [[unitary-operator|unitary]].
 Note that
 
 $$
-U(t_0,t)=U^{-1}(t,t_0)=U^\dag(t,t_0)
+U(t_0,t)=U^{-1}(t,t_0)=U^\dagger(t,t_0)
 $$
