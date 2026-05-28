@@ -57,12 +57,12 @@ $$
 Case $\theta = 2\pi$:
 
 $$
-\left\lvert u, s \right\rangle \;\xrightarrow{B \otimes I}\; \tfrac{1}{\sqrt{2}}\bigl(\left\lvert u \right\rangle + \left\lvert \ell \right\rangle\bigr) \otimes \left\lvert s \right\rangle
+\left\lvert u, s \right\rangle \xrightarrow{B \otimes I} \tfrac{1}{\sqrt{2}}\bigl(\left\lvert u \right\rangle + \left\lvert \ell \right\rangle\bigr) \otimes \left\lvert s \right\rangle
 $$
 
 $$
-\xrightarrow{R_x(2\pi) = -I}\; \tfrac{1}{\sqrt{2}}\bigl(\left\lvert u \right\rangle - \left\lvert \ell \right\rangle\bigr) \otimes \left\lvert s \right\rangle
-    \;\xrightarrow{B \otimes I}\; \left\lvert \ell, s \right\rangle
+\xrightarrow{R_x(2\pi) = -I} \tfrac{1}{\sqrt{2}}\bigl(\left\lvert u \right\rangle - \left\lvert \ell \right\rangle\bigr) \otimes \left\lvert s \right\rangle
+ \xrightarrow{B \otimes I} \left\lvert \ell, s \right\rangle
 $$
 
 $\Rightarrow$ neutron at $D_1$.
@@ -70,7 +70,7 @@ $\Rightarrow$ neutron at $D_1$.
 Case $\theta = 4\pi$:
 
 $$
-\left\lvert u, s \right\rangle \;\longrightarrow\; \left\lvert u, s \right\rangle \quad\Rightarrow\text{ neutron at } D_0.
+\left\lvert u, s \right\rangle \longrightarrow \left\lvert u, s \right\rangle \quad\Rightarrow\text{ neutron at } D_0.
 $$
 
 This is fully deterministic as in general, the [[probability-theory|probability]] $P(D_0) = \cos^2(\theta/4)$ and $P(D_1) = \sin^2(\theta/4)$, so $\theta = 2\pi, 4\pi$ are the special tunings where one probability hits $1$.

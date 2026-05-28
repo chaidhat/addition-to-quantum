@@ -23,7 +23,7 @@ $$
 Let $m=n-1$
 
 $$
-c_{m+1}\sqrt{m+1} = z\, c_m \;\;\Longrightarrow\;\; c_n\sqrt{n} = z\, c_{n-1}
+c_{m+1}\sqrt{m+1} = z\, c_m \Longrightarrow c_n\sqrt{n} = z\, c_{n-1}
 $$
 
 So
@@ -43,7 +43,7 @@ $$
 $$
 
 $$
-\Longrightarrow \;\; \boxed{c_0 = e^{-|z|^2/2}}
+\Longrightarrow \boxed{c_0 = e^{-|z|^2/2}}
 $$
 
 ### Coherent State Observable
@@ -63,54 +63,53 @@ this is a [[poisson-distribution]] with mean $\mathbb{E}[n]=|z|^2$
 Note this is the energy expectation
 
 $$
-\langle E \rangle = \langle \hat{H} \rangle = \hbar\omega\!\left(\langle \hat{N}\rangle + \tfrac{1}{2}\right) = \hbar\omega\!\left(|z|^2 + \tfrac{1}{2}\right)$$
+\langle E \rangle = \langle \hat{H} \rangle = \hbar\omega\!\left(\langle \hat{N}\rangle + \tfrac{1}{2}\right) = \hbar\omega\!\left(|z|^2 + \tfrac{1}{2}\right)
+$$
+
 ### Coherent State Wavefunction
 The [[wave-function]] for a coherent state becomes
-$$
 
+$$
 \hat{a}\ket{z}=z\ket{z}
-
 $$
+
 Let variables from [[quantum-harmonic-oscillator]]
-$$
 
+$$
 \implies\frac{1}{\sqrt{2}}\left(\frac{x}{\alpha} + \alpha\frac{\partial}{\partial x}\right)\phi_z(x) = z\,\phi_z(x)
-
 $$
+
 rearranging gives
-$$
 
+$$
 \frac{\partial \phi_z}{\partial x} = \left(\frac{\sqrt{2}\,z}{\alpha} - \frac{x}{\alpha^2}\right)\phi_z
-
-$$
 $$
 
+$$
 \ln\phi_z = \frac{\sqrt{2}\,z}{\alpha}x - \frac{x^2}{2\alpha^2} + \text{const}
-
-$$
 $$
 
+$$
 \phi_z(x) = N_z\, e^{-(x-b)^2/2\alpha^2}\, e^{ikx}
-
-$$
 $$
 
+$$
 b = \sqrt{2}\,\alpha\,\text{Re}[z], \qquad k = \frac{\sqrt{2}}{\alpha}\text{Im}[z]
-
 $$
+
 Note [[expected-value-of-observables]] are
 
 $$
-
 \braket{z|\hat{x}|z} = b, \qquad \braket{z|\hat{p}|z} = \hbar k
-
 $$
 
 Note Gaussian property
+
+$$
+\Delta x = \frac{\alpha}{\sqrt{2}}, \qquad \Delta p = \frac{\hbar}{\alpha\sqrt{2}} \Longrightarrow \Delta x\,\Delta p = \frac{\hbar}{2}
 $$
 
-\Delta x = \frac{\alpha}{\sqrt{2}}, \qquad \Delta p = \frac{\hbar}{\alpha\sqrt{2}} \;\;\Longrightarrow\;\; \Delta x\,\Delta p = \frac{\hbar}{2}
-$$Note 
+Note
 
 $$
 \boxed{z = \frac{1}{\sqrt{2}}\left(\frac{\braket{\hat{x}}}{\alpha} + i\frac{\alpha}{\hbar}\braket{\hat{p}}\right)}

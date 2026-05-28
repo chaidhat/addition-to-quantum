@@ -6,13 +6,20 @@
  * Obsidian is more permissive and renders them either way, so files authored
  * in Obsidian routinely render broken on GitHub.
  *
- * This script walks `md/`, finds every line whose trimmed content is exactly
- * `$$`, and ensures:
+ * This script walks `md/` and applies two normalisations:
  *
- *   - a blank line immediately BEFORE every opening `$$` (unless it's at the
- *     start of the file or already preceded by a blank line),
- *   - a blank line immediately AFTER every closing `$$` (unless it's at the
- *     end of the file or already followed by a blank line).
+ *   1. Block-math spacing — for every line whose trimmed content is exactly
+ *      `$$`, ensure:
+ *        - a blank line immediately BEFORE every opening `$$` (unless it's at
+ *          the start of the file or already preceded by a blank line),
+ *        - a blank line immediately AFTER every closing `$$` (unless it's at
+ *          the end of the file or already followed by a blank line).
+ *
+ *   2. Thin-space removal — collapse every run of the LaTeX `\;` thick-space
+ *      command (along with any spaces hugging it) down to a single space.
+ *      These are authored in Obsidian for cosmetic kerning but add noise; the
+ *      command is unambiguous (it never occurs in prose) so the replacement is
+ *      safe to apply across the whole file, not just inside math.
  *
  * The transformation is idempotent: running it twice produces the same output
  * as running it once. It does not touch inline math (`$…$`), nor block math
@@ -44,6 +51,20 @@ function walk(dir: string, out: string[] = []): string[] {
     }
   }
   return out;
+}
+
+/**
+ * Collapse every run of the LaTeX `\;` thick-space command — together with any
+ * spaces directly adjacent to it — down to a single space.
+ *
+ *   `a \;\; b`        -> `a b`
+ *   `x \;\leftrightarrow\; y` -> `x \leftrightarrow y`
+ *
+ * `\;` is a control sequence that only appears in math, so a whole-file replace
+ * is safe; prose never contains a literal backslash-semicolon.
+ */
+function stripThinSpaces(input: string): string {
+  return input.replace(/(?: *\\;)+ */g, " ");
 }
 
 function isBlockDelimiter(line: string): boolean {
@@ -133,7 +154,7 @@ function main(): void {
       continue;
     }
 
-    const after = cleanMath(before);
+    const after = cleanMath(stripThinSpaces(before));
     if (before === after) continue;
 
     changedFiles.push(relative(process.cwd(), file));

@@ -26,7 +26,7 @@ $$
 ### Plane wave packet
 
 $$
-\psi(x,0) = e^{ik_0 x} \;\;\longrightarrow\;\; \psi(x,t) = e^{i(k_0 x - \omega_0 t)}, \quad \omega_0 = \frac{\hbar k_0^2}{2m}
+\psi(x,0) = e^{ik_0 x} \longrightarrow \psi(x,t) = e^{i(k_0 x - \omega_0 t)}, \quad \omega_0 = \frac{\hbar k_0^2}{2m}
 $$
 
 ### Gaussian wave packet

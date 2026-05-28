@@ -43,11 +43,11 @@ $$
 $$
 
 $$
-    \Rightarrow \;\; \Lambda(t, t_0) + \Lambda^\dagger(t, t_0) = 0
+    \Rightarrow \Lambda(t, t_0) + \Lambda^\dagger(t, t_0) = 0
 $$
 
 $$
-    \Rightarrow \;\; \Lambda = -\Lambda^\dagger \;\;\text{is anti-Hermitian.}
+    \Rightarrow \Lambda = -\Lambda^\dagger \text{is anti-Hermitian.}
 $$
 
 2.  $\Lambda(t, t_0)$ is independent of $t_0$

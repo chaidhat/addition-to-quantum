@@ -78,7 +78,7 @@ The $\sqrt{2}$ in the denominator keeps $[\hat{a},\hat{a}^\dagger]=1$
  which is clean
 
 $$
-[\hat{a}, \hat{a}^\dagger] = \tfrac{1}{2}\left[\frac{\hat{x}}{\alpha} + i\frac{\alpha}{\hbar}\hat{p},\;\; \frac{\hat{x}}{\alpha} - i\frac{\alpha}{\hbar}\hat{p}\right]
+[\hat{a}, \hat{a}^\dagger] = \tfrac{1}{2}\left[\frac{\hat{x}}{\alpha} + i\frac{\alpha}{\hbar}\hat{p}, \frac{\hat{x}}{\alpha} - i\frac{\alpha}{\hbar}\hat{p}\right]
 $$
 
 $$

@@ -83,7 +83,7 @@ $$
 take [[adjoint|Hermitian adjoint]] of both sides. Because $\hat{p}$ is [[hermitian-matrix|Hermitian]] and [[standard-number-systems|real]], 
 
 $$
-\bra{p}\hat{p}^\dagger = p^* \bra{p} \;\Longrightarrow\; \bra{p}\hat{p} = p\bra{p}
+\bra{p}\hat{p}^\dagger = p^* \bra{p} \Longrightarrow \bra{p}\hat{p} = p\bra{p}
 $$
 
 Because we want to evaluate $\hat{p}\ket{\psi}$ in p-basis, we take $\bra{p}\hat{p}\ket{\psi}$ 
