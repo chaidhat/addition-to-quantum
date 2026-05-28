@@ -38,6 +38,7 @@ $$
     V_x=\{e:X(e)=x\}
 \end{gather*}
 $$
+
 Some famous probability distributions (that are used in this guide) are
 * [[poisson-distribution]]
 * [[gaussian-distribution]]

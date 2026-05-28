@@ -15,4 +15,5 @@ $$
     \left\lvert \psi(0) \right\rangle=\sum_kc_k\left\lvert E_k \right\rangle
 \end{gather*}
 $$
+
 Note that $c_k$ are [[probability-amplitude|probability amplitudes]]

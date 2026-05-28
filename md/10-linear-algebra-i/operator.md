@@ -31,9 +31,11 @@ $$
 $$
 
 where
+
 $$
 \psi_{m}'=\sum_nT_{nm}\psi_n
 $$
+
 $$
 \begin{gather*}
     \begin{bmatrix}
@@ -60,4 +62,5 @@ $$
     a\left\lvert v \right\rangle\in V\quad ;\quad a\in \mathbb{F},\left\lvert v \right\rangle\in V
 \end{gather*}
 $$
+
 See also: [[continuous-operator]]

@@ -126,9 +126,12 @@ Hence
 $$
 \text{product state} \Leftrightarrow \det\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}=0
 $$
+
 ### Notation
 Note that
+
 $$
 \ket{0^{(A)}}\ket{1^{(B)}}=\ket{0,1}=\ket{01}
 $$
+
 The first bit is implicitly in the [[basis-state|basis]] of the first [[qubit]], the second bit is implicitly in the basis of the second qubit

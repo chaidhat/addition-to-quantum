@@ -11,4 +11,5 @@ $$
     \mathbb{E}[X]=\left\langle X \right\rangle=\sum_X X\cdot P(x)
 \end{gather*}
 $$
+
 It is the [[probability-theory|probability]] of x occurring multiplied by the value of x.

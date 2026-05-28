@@ -22,6 +22,7 @@ $$
 $$
 
 From [[reduced-planck-constant]], we can also say
+
 $$
 \begin{gather*}
     E=\hbar \omega

@@ -7,4 +7,5 @@ $$
     \hbar=\frac{h}{2\pi}
 \end{gather*}
 $$
+
 where $h$ is the Planck constant

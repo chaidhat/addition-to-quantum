@@ -13,6 +13,7 @@ If $[\hat{A},\hat{B}]=0$ then that means you can commute via [[matrix-multiplica
 If "$\hat{A}$ commutes with $\hat{B}$", then that means $\hat{A}\hat{B}=\hat{B}\hat{A}$ which also means $[\hat{A},\hat{B}]=0$.
 
 ### Leibniz Rule
+
 $$
 [\hat{A}\hat{B}, \hat{C}] = \hat{A}[\hat{B}, \hat{C}] + [\hat{A}, \hat{C}]\hat{B}
 $$

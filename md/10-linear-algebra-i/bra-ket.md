@@ -39,6 +39,7 @@ a [[set]] of [[vector]] $\{v_1,v_2,...,v_n\}$ form an [[orthonormality|orthonorm
 and only if
 
 where $\delta_{ij}$ is the [[kronecker-delta]]
+
 $$
 \begin{gather*}
     \left\langle v_i|v_j \right\rangle=\delta_{ij}=\begin{cases}1\quad i=j\\0\quad i\neq j\end{cases}

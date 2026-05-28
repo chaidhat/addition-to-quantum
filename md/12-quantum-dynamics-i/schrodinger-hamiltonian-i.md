@@ -35,6 +35,7 @@ $$
     H\left\lvert E_k \right\rangle=E_k\left\lvert E_k \right\rangle
 \end{gather*}
 $$
+
 so
 
 $$

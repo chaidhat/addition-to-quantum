@@ -38,13 +38,17 @@ We’re just constructing a model that obeys EPR.
 
 Let's take a [[singlet]] 
 We know that the EV of a singlet is -1:
+
 $$
 \mathbb{E}[\sigma_A^Z\sigma_B^Z]=-1\quad\mathbb{E}[\sigma_A^X\sigma_B^X]=-1
 $$
+
 so if 
+
 $$
 \sigma_A^Z=1\Rightarrow\sigma_B^Z=-1
 $$
+
 $$
 \sigma_A^X=1\Rightarrow \sigma_B^X=-1
 $$
