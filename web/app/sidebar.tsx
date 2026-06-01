@@ -1,0 +1,73 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+export interface NavPage {
+  slug: string;
+  title: string;
+}
+export interface NavChapter {
+  id: string;
+  title: string;
+  pages: NavPage[];
+}
+
+export function Sidebar({ chapters }: { chapters: NavChapter[] }) {
+  const pathname = usePathname();
+  // The active page (and the chapter it auto-expands) depends on the URL, which
+  // isn't known during static prerender. Defer it to after mount so the server
+  // HTML and the first client render are identical — no hydration mismatch.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const activeSlug = mounted
+    ? decodeURIComponent((pathname || "/").replace(/^\//, ""))
+    : "";
+
+  return (
+    <nav className="sidebar">
+      <div className="sidebar-header">
+        <Link href="/" className="site-title">
+          Addition to Quantum
+        </Link>
+        <div className="site-sub">by Chaidhat Chaimongkol</div>
+      </div>
+      {chapters.map((c) => (
+        <ChapterGroup key={c.id} chapter={c} activeSlug={activeSlug} />
+      ))}
+    </nav>
+  );
+}
+
+function ChapterGroup({ chapter, activeSlug }: { chapter: NavChapter; activeSlug: string }) {
+  const containsActive = chapter.pages.some((p) => p.slug === activeSlug);
+  const [open, setOpen] = useState(containsActive);
+
+  return (
+    <div className="chapter">
+      <button
+        className="chapter-title"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open || containsActive}
+      >
+        <span className="chapter-caret">{open || containsActive ? "▾" : "▸"}</span>
+        {chapter.title}
+      </button>
+      {(open || containsActive) && (
+        <ul className="page-list">
+          {chapter.pages.map((p) => (
+            <li key={p.slug}>
+              <Link
+                href={`/${encodeURIComponent(p.slug)}`}
+                className={p.slug === activeSlug ? "page-link active" : "page-link"}
+              >
+                {p.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}

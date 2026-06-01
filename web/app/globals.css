@@ -1,0 +1,281 @@
+:root {
+  --bg: #ffffff;
+  --bg-side: #f7f7f5;
+  --border: #e4e4e0;
+  --text: #1f2328;
+  --muted: #6b7280;
+  --link: #2563eb;
+  --link-broken: #dc2626;
+  --accent-bg: #eef2ff;
+  --code-bg: #f3f4f6;
+  --sidebar-w: 300px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1b1e;
+    --bg-side: #161719;
+    --border: #2c2e33;
+    --text: #e6e6e6;
+    --muted: #9aa0a6;
+    --link: #7aa2ff;
+    --link-broken: #ff6b6b;
+    --accent-bg: #23252b;
+    --code-bg: #242629;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* divider between sidebar and reader, inset 0.5rem (py-2) top and bottom */
+.layout::after {
+  content: "";
+  position: fixed;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: var(--sidebar-w);
+  width: 1px;
+  background: var(--border);
+  pointer-events: none;
+}
+
+/* ---- sidebar ---- */
+.sidebar {
+  width: var(--sidebar-w);
+  flex: 0 0 var(--sidebar-w);
+  background: var(--bg);
+  padding: 1.25rem 0.75rem 3rem;
+  overflow-y: auto;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  /* hide scrollbar but keep scrolling (Firefox / IE) */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* hide scrollbar (WebKit: Chrome, Safari) */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-header {
+  padding: 0 0.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-sub {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.chapter {
+  margin-bottom: 0.15rem;
+}
+
+.chapter-title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.86rem;
+  color: var(--text);
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+}
+
+.chapter-title:hover {
+  background: #80808020;
+}
+
+.chapter-caret {
+  font-size: 0.7rem;
+  color: var(--muted);
+  width: 0.8rem;
+}
+
+.page-list {
+  list-style: none;
+  margin: 0.1rem 0 0.4rem;
+  padding-left: 1.2rem;
+}
+
+.page-link {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.page-link:hover {
+  background: #80808020;
+}
+
+.page-link.active {
+  background: #80808020;
+}
+
+/* ---- content ---- */
+.content {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 2rem 6rem;
+  min-width: 0;
+}
+
+.prose {
+  width: 100%;
+  max-width: 760px;
+  min-width: 0;
+}
+
+.prose h1 {
+  font-size: 2rem;
+  margin: 0 0 1.2rem;
+  line-height: 1.2;
+}
+
+.prose h2 {
+  font-size: 1.45rem;
+  margin: 2rem 0 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.prose h3 {
+  font-size: 1.18rem;
+  margin: 1.6rem 0 0.6rem;
+}
+
+.prose p {
+  margin: 0.8rem 0;
+}
+
+.prose a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+.wikilink.broken {
+  color: var(--link-broken);
+  border-bottom: 1px dotted var(--link-broken);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin: 0.3rem 0;
+}
+
+.prose code {
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.prose pre {
+  background: var(--code-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose blockquote {
+  margin: 1rem 0;
+  padding: 0.2rem 1rem;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
+}
+
+.prose table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.7rem;
+  text-align: left;
+}
+
+.prose img {
+  max-width: 100%;
+}
+
+/* KaTeX display math: allow horizontal scroll on small screens */
+.prose .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 800px) {
+  .layout {
+    flex-direction: column;
+  }
+  .layout::after {
+    display: none;
+  }
+  .sidebar {
+    width: 100%;
+    flex-basis: auto;
+    height: auto;
+    position: static;
+    border-bottom: 1px solid var(--border);
+  }
+  .content {
+    padding: 1.5rem 1.1rem 4rem;
+  }
+}
