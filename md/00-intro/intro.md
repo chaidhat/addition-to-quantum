@@ -1,3 +1,7 @@
+# Going from 1+1=2 to Quantum Mechanics
+
+![Mono Lake basin at sunset](/monolake.png "*Mono Lake,* by Chaidhat, 2026")
+
 Hi, my name is Chai and I’m taking an undergraduate quantum mechanics course at UCLA. 
 
 It’s known as one of the [hardest classes](https://www.reddit.com/r/ucla/comments/1lhbq9z/ece_128_hardest_class_at_ucla/) at UCLA. 

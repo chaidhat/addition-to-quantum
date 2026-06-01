@@ -1,3 +1,5 @@
+# QHO Quantum Dynamics
+
 The [[quantum-dynamics]] of a [[quantum-harmonic-oscillator]]. Let all the variable from there
 
 We know that from [[heisenberg-picture]]

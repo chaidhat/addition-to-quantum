@@ -1,3 +1,4 @@
+# Quantum Harmonic Oscillator
 The [[classic-harmonic-oscillator]] applies to quantum physics.
 
 $$

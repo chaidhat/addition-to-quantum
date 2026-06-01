@@ -127,6 +127,15 @@ export function getPage(slug: string): Page | undefined {
   return buildIndex().bySlug.get(slug);
 }
 
+// The page after `slug` in the global reading order (chapters in order, pages
+// in their per-chapter order). Returns null if `slug` is the last page.
+export function getNextPage(slug: string): Page | null {
+  const all = getAllPages();
+  const i = all.findIndex((p) => p.slug === slug);
+  if (i === -1 || i === all.length - 1) return null;
+  return all[i + 1];
+}
+
 export function getPageContent(slug: string): { page: Page; markdown: string } | null {
   const page = getPage(slug);
   if (!page) return null;

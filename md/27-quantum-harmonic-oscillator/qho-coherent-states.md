@@ -1,3 +1,4 @@
+# QHO Coherent States
 Let all the variables in [[quantum-harmonic-oscillator]]
 
 From definition, define $z$ to be the [[eigenvectoreigenvalue|eigenvalue]] of annihilation operator $\hat{a}$  and they are the most classical QHO states. They have the least uncertainty and follow classical trajectories under time evolution

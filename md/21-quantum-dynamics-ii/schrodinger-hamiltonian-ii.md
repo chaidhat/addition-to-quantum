@@ -30,13 +30,13 @@ Properties
 
 1.  $\Lambda(t, t_0)$ is [[anti-hermitian-operator|anti-Hermitian]].
 
-    Note:
+Note:
 
 $$
     \Lambda^\dagger(t, t_0) = U(t, t_0) \, \frac{\partial U^\dagger(t, t_0)}{\partial t}
 $$
 
-    Differentiate $U(t, t_0) U^\dagger(t, t_0) = I$:
+Differentiate $U(t, t_0) U^\dagger(t, t_0) = I$:
 
 $$
     \frac{\partial}{\partial t}\!\left[U(t, t_0) U^\dagger(t, t_0)\right] = \frac{\partial U(t, t_0)}{\partial t} U^\dagger(t, t_0) + U(t, t_0) \frac{\partial U^\dagger(t, t_0)}{\partial t} = 0
@@ -69,7 +69,7 @@ $$
     =\frac{\partial U(t,t_1)}{\partial t}U^\dagger(t,t_1)=\Lambda (t,t_1)
 $$
 
-    For any $t_0,t_1$
+For any $t_0,t_1$
 
 Let
 

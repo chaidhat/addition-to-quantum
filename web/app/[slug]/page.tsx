@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import type { Metadata } from "next";
-import { getAllPages, getPageContent, getPage } from "@/lib/content";
+import { ArrowRightIcon } from "@heroicons/react/16/solid";
+import { getAllPages, getPageContent, getPage, getNextPage } from "@/lib/content";
 import { Markdown } from "../markdown";
 
 export const dynamicParams = false;
@@ -21,7 +23,23 @@ export async function generateMetadata({
 
 export default async function WikiPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const result = getPageContent(decodeURIComponent(slug));
+  const decoded = decodeURIComponent(slug);
+  const result = getPageContent(decoded);
   if (!result) notFound();
-  return <Markdown>{result.markdown}</Markdown>;
+  const next = getNextPage(decoded);
+  return (
+    <>
+      <Markdown>{result.markdown}</Markdown>
+      <nav className="page-next">
+        {next ? (
+          <Link href={`/${encodeURIComponent(next.slug)}`} className="page-next-link">
+            {next.title}
+            <ArrowRightIcon className="page-next-icon" aria-hidden="true" />
+          </Link>
+        ) : (
+          <span className="page-next-done">Congrats — you&apos;re done!</span>
+        )}
+      </nav>
+    </>
+  );
 }

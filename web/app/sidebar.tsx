@@ -25,36 +25,53 @@ export function Sidebar({ chapters }: { chapters: NavChapter[] }) {
     ? decodeURIComponent((pathname || "/").replace(/^\//, ""))
     : "";
 
+  // Mobile drawer: hidden by default, toggled open to dominate the screen.
+  // Collapse it again whenever the route changes (i.e. after a link tap).
+  const [open, setOpen] = useState(false);
+  useEffect(() => setOpen(false), [pathname]);
+
   return (
-    <nav className="sidebar">
-      <div className="sidebar-header">
-        <Link href="/" className="site-title">
-          Addition to Quantum
-        </Link>
-        <div className="site-sub">by Chaidhat Chaimongkol</div>
-      </div>
-      {chapters.map((c) => (
-        <ChapterGroup key={c.id} chapter={c} activeSlug={activeSlug} />
-      ))}
-    </nav>
+    <>
+      <button
+        type="button"
+        className="sidebar-toggle"
+        aria-label={open ? "Close navigation" : "Open navigation"}
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
+      >
+        {open ? "✕" : "☰"}
+      </button>
+      <nav className={open ? "sidebar sidebar--open" : "sidebar"}>
+        {chapters.map((c) => (
+          <ChapterGroup key={c.id} chapter={c} activeSlug={activeSlug} />
+        ))}
+      </nav>
+    </>
   );
 }
 
 function ChapterGroup({ chapter, activeSlug }: { chapter: NavChapter; activeSlug: string }) {
   const containsActive = chapter.pages.some((p) => p.slug === activeSlug);
   const [open, setOpen] = useState(containsActive);
+  // Auto-expand when navigating into this chapter, but don't force it open —
+  // so the user can still collapse the chapter they're currently in.
+  useEffect(() => {
+    if (containsActive) setOpen(true);
+  }, [containsActive]);
+  const expanded = open;
 
   return (
     <div className="chapter">
       <button
         className="chapter-title"
         onClick={() => setOpen((o) => !o)}
-        aria-expanded={open || containsActive}
+        aria-expanded={expanded}
       >
-        <span className="chapter-caret">{open || containsActive ? "▾" : "▸"}</span>
+        <span className="chapter-caret">{expanded ? "▾" : "▸"}</span>
         {chapter.title}
       </button>
-      {(open || containsActive) && (
+      {/* always rendered; the wrapper animates between 0fr and 1fr */}
+      <div className={expanded ? "page-list-wrap open" : "page-list-wrap"}>
         <ul className="page-list">
           {chapter.pages.map((p) => (
             <li key={p.slug}>
@@ -67,7 +84,7 @@ function ChapterGroup({ chapter, activeSlug }: { chapter: NavChapter; activeSlug
             </li>
           ))}
         </ul>
-      )}
+      </div>
     </div>
   );
 }

@@ -11,10 +11,14 @@
             "id": "f4c40d3aa263669e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "md/06-set-theory/partitions.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "partitions"
             }
           }
         ]
@@ -70,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -179,11 +182,30 @@
   },
   "active": "f4c40d3aa263669e",
   "lastOpenFiles": [
-    "md/26-application-of-physical-systems/particle-in-1d.md",
+    "web/node_modules/@heroicons/react/16/solid/XMarkIcon.d.ts",
+    "web/node_modules/@heroicons/react/16/solid/XCircleIcon.d.ts",
+    "web/node_modules/@heroicons/react/16/solid/WrenchScrewdriverIcon.d.ts",
+    "web/node_modules/@heroicons/react/16/solid/WrenchIcon.d.ts",
+    "web/node_modules/@heroicons/react/16/solid/WindowIcon.d.ts",
+    "web/node_modules/@heroicons/react/16/solid/WifiIcon.d.ts",
+    "web/node_modules/@heroicons/react/16/solid/WalletIcon.d.ts",
+    "web/node_modules/@heroicons/react/16/solid/ViewfinderCircleIcon.d.ts",
+    "web/node_modules/@heroicons/react/16/solid/ViewColumnsIcon.d.ts",
+    "web/node_modules/@heroicons/react/16/solid/VideoCameraSlashIcon.d.ts",
+    "web/node_modules/@heroicons/react/16/solid/VideoCameraIcon.d.ts",
+    "web/node_modules/@heroicons/react/README.md",
+    "md/05-photons/wave-particle-duality.md",
+    "md/00-intro/intro.md",
     "md/27-quantum-harmonic-oscillator/qho-coherent-states.md",
-    "lecs/Lec16_ECE128.pdf",
+    "md/27-quantum-harmonic-oscillator/quantum-harmonic-oscillator.md",
     "md/27-quantum-harmonic-oscillator/qho-quantum-dynamics.md",
+    "md/27-quantum-harmonic-oscillator/qho-states-killed.md",
+    "md/27-quantum-harmonic-oscillator/qho-wave-function.md",
+    "md/27-quantum-harmonic-oscillator/ladder-of-states.md",
+    "md/25-physical-systems/position-operator.md",
+    "md/21-quantum-dynamics-ii/schrodinger-hamiltonian-ii.md",
     "md/25-physical-systems/time-independent-schrodinger-equation.md",
+    "md/26-application-of-physical-systems/particle-in-1d.md",
     "md/25-physical-systems/momentum-operator.md",
     "md/26-application-of-physical-systems/tunnelling.md",
     "md/13-linear-algebra-ii/projection.md",
@@ -192,30 +214,11 @@
     "md/13-linear-algebra-ii/projector.md",
     "md/25-physical-systems/wave-function.md",
     "md/22-composite-systems/measuring-a-composite-system.md",
-    "md/27-quantum-harmonic-oscillator/qho-states-killed.md",
     "md/27-quantum-harmonic-oscillator/qho-observables.md",
-    "md/27-quantum-harmonic-oscillator/quantum-harmonic-oscillator.md",
     "md/27-quantum-harmonic-oscillator/classic-harmonic-oscillator.md",
-    "md/27-quantum-harmonic-oscillator/qho-wave-function.md",
-    "md/27-quantum-harmonic-oscillator/ladder-of-states.md",
     "md/27-quantum-harmonic-oscillator/number-operator.md",
     "md/11-early-quantum/observable.md",
-    "md/16-probability-theory/poisson-distribution.md",
-    "md/16-probability-theory/probability-theory.md",
-    "md/16-probability-theory/joint-random-variables.md",
-    "md/16-probability-theory/gaussian-distribution.md",
-    "md/11-early-quantum/hilbert-space.md",
-    "md/21-quantum-dynamics-ii/example-of-quantum-dynamics.md",
-    "lecs/Lec15_ECE128.pdf",
-    "md/27-quantum-harmonic-oscillator",
-    "md/26-application-of-physical-systems/Untitled",
     "Pasted image 20260526192525.png",
-    "md/11-early-quantum",
-    "md/12-hilbert-spaces",
-    "md/10-linear-algebra-i",
-    "md/09-complex-numbers",
-    "md/08-calculus",
-    "md/14-trigonometry",
     "Pasted image 20260526181548.png",
     "Pasted image 20260524201047.png",
     "Untitled.canvas",
