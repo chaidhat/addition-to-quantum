@@ -56,6 +56,19 @@ export function Markdown({ children }: { children: string }) {
           );
         },
         a({ href, children, title, ...props }) {
+          // A link tagged with the "pause-banner" title renders as the small
+          // sponsor banner (rounded accent background, no border); the link
+          // text becomes the label and the Pause logo is appended.
+          if (title === "pause-banner") {
+            return (
+              <a href={href} className="pause-banner" target="_blank" rel="noreferrer">
+                <span>{children}</span>
+                <img className="pause-banner-logo" src="/pause-logo-light.png" alt="Pause logo" />
+                <img className="pause-banner-logo pause-banner-logo--dark" src="/pause-logo-dark.png" alt="Pause logo" />
+                <span className="pause-banner-note">— built by the author</span>
+              </a>
+            );
+          }
           const isInternal = href && href.startsWith("/");
           const broken = typeof title === "string" && title.startsWith("missing:");
           if (isInternal) {

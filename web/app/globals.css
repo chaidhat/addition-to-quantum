@@ -326,6 +326,59 @@ body {
   max-width: 100%;
 }
 
+/* ---- pause sponsor banner ---- */
+/* scoped under .prose so its color/text-decoration outrank the generic
+   `.prose a` (orange link) and `.prose a:hover` (underline) rules */
+.prose .pause-banner {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  /* accent color (#ff8345) at 10% alpha, no border — matches page-next-link */
+  background: rgba(255, 131, 69, 0.1);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+/* hover: deepen the orange fill slightly. Animate background-color (not the
+   element's opacity) so the translucent pill never composites against the page
+   and "snaps". */
+.prose .pause-banner:hover {
+  background: rgba(255, 131, 69, 0.2);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.prose .pause-banner-note {
+  color: var(--muted);
+}
+
+.pause-banner-logo {
+  height: 1.1em;
+  width: auto;
+  display: block;
+}
+
+/* show the light (black) logo by default; swap to the dark (white) one when the
+   user prefers a dark color scheme */
+.pause-banner-logo--dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pause-banner-logo {
+    display: none;
+  }
+  .pause-banner-logo--dark {
+    display: block;
+  }
+}
+
 /* ---- next-page button ---- */
 .page-next {
   display: flex;

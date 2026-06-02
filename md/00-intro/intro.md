@@ -1,6 +1,8 @@
 # Going from 1+1=2 to Quantum Mechanics
 
-![Mono Lake basin at sunset](/monolake.png "*Mono Lake,* by Chaidhat, 2026")
+![Mono Lake basin at sunset](/monolake.png '"*Mono Lake*," taken by Chaimongkol, 2026')
+
+[Automate your inbox with Pause](https://www.pause.build "pause-banner")
 
 Hi, my name is Chai and I’m taking an undergraduate quantum mechanics course at UCLA. 
 
