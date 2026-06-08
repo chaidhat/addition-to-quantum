@@ -1,66 +1,41 @@
 {
   "main": {
-    "id": "599b4512b5e675af",
+    "id": "b7a48fcf0aa67527",
     "type": "split",
     "children": [
       {
-        "id": "545e8fa0591992dc",
+        "id": "c02c90ecf59aa1e6",
         "type": "tabs",
         "children": [
           {
-            "id": "04f76b0888c3ab6f",
+            "id": "15ccf0e176f30859",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "md/29-probability-current-problems/probability-current-problem-3.md",
+                "file": "29-probability-current-problems/probability-current-problem-3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "probability-current-problem-3"
             }
-          },
-          {
-            "id": "5e9a0910d4917f16",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "md/28-probability-current/stationary-states-1d.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "stationary-states-1d"
-            }
-          },
-          {
-            "id": "6ebfd3bfbf32d298",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "2ee465a4b79d40f5",
+    "id": "ad87ed9d56974eeb",
     "type": "split",
     "children": [
       {
-        "id": "bdaf9676743c97f6",
+        "id": "acd62abcc2b1298a",
         "type": "tabs",
         "children": [
           {
-            "id": "9e5a0fe9a134c8ec",
+            "id": "23d0176dcf1ba307",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -73,12 +48,12 @@
             }
           },
           {
-            "id": "0584e99726099c89",
+            "id": "3a327223b8decc69",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "eigenbasis",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +65,7 @@
             }
           },
           {
-            "id": "4da351d694d76817",
+            "id": "761724acee302e19",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -103,22 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 300
   },
   "right": {
-    "id": "959bdf0c8c9d5af5",
+    "id": "ed3cd26a1080541d",
     "type": "split",
     "children": [
       {
-        "id": "c086a1ef942b5a32",
+        "id": "08e7c9fc2b467d1c",
         "type": "tabs",
         "children": [
           {
-            "id": "ba51c12d87a94161",
+            "id": "1ebf66f568496e38",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "29-probability-current-problems/probability-current-problem-3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,24 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for probability-current-problem-3"
             }
           },
           {
-            "id": "6d221abc8e39da3f",
+            "id": "f5d4647265b3d298",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "29-probability-current-problems/probability-current-problem-3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from probability-current-problem-3"
             }
           },
           {
-            "id": "b8dc6d01a77faaea",
+            "id": "b0b5fc2b62448ffe",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -160,7 +137,7 @@
             }
           },
           {
-            "id": "710f75bfccc7e1bb",
+            "id": "2a7b81b88ba94e0c",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -174,17 +151,18 @@
             }
           },
           {
-            "id": "33e0746958e776b8",
+            "id": "d112cadb04486706",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "29-probability-current-problems/probability-current-problem-3.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of probability-current-problem-3"
             }
           }
         ]
@@ -205,48 +183,8 @@
       "bases:Create new base": false
     }
   },
-  "active": "6ebfd3bfbf32d298",
+  "active": "15ccf0e176f30859",
   "lastOpenFiles": [
-    "lecs/Lec17_ECE128.pdf",
-    "md/29-probability-current-problems/probability-current-problem-3.md",
-    "md/13-linear-algebra-ii/eigenbasis.md",
-    "md/13-linear-algebra-ii/eigenvectoreigenvalue.md",
-    "md/28-probability-current/even-odd-functions.md",
-    "md/28-probability-current/stationary-states-1d.md",
-    "md/29-probability-current-problems/probability-current-problem-2.md",
-    "md/24-continuous-vs-discrete/continuous-time-fourier-transform.md",
-    "md/28-probability-current/transmission-reflection-coefficients.md",
-    "md/29-probability-current-problems/probability-current-problem-1.md",
-    "md/24-continuous-vs-discrete/convolution.md",
-    "md/24-continuous-vs-discrete/continuous-orthonormality.md",
-    "md/24-continuous-vs-discrete/continuous-operator.md",
-    "md/24-continuous-vs-discrete/continuous-identity.md",
-    "md/28-probability-current/stationary-states.md",
-    "md/28-probability-current/quantum-tunneling.md",
-    "md/25-physical-systems/probability-density.md",
-    "md/13-linear-algebra-ii/hermitian-operator.md",
-    "md/13-linear-algebra-ii/anti-hermitian-operator.md",
-    "md/29-probability-current-problems",
-    "lecs/Lec18_ECE128.pdf",
-    "main.pdf",
-    "md/28-probability-current/probability-current.md",
-    "md/28-probability-current/scattering-state.md",
-    "md/28-probability-current/evanescent.md",
-    "md/28-probability-current/continuity-equation.md",
-    "md/28-probability-current/flow-of-probability.md",
-    "lecs/Lec19_ECE128.pdf",
-    "md/02-variable/variable.md",
-    "md/01-let/let.md",
-    "md/28-probability-current",
-    "lecs/Lec16_ECE128.pdf",
-    "web/node_modules/@heroicons/react/16/solid/XMarkIcon.d.ts",
-    "web/node_modules/@heroicons/react/16/solid/XCircleIcon.d.ts",
-    "web/node_modules/@heroicons/react/16/solid/WrenchScrewdriverIcon.d.ts",
-    "Pasted image 20260526192525.png",
-    "Pasted image 20260526181548.png",
-    "Pasted image 20260524201047.png",
-    "Untitled.canvas",
-    "Untitled 1.canvas",
-    "Pasted image 20260521231146.png"
+    "29-probability-current-problems/probability-current-problem-3.md"
   ]
 }

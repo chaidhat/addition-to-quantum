@@ -10,22 +10,24 @@ Let
 
 $$
 \begin{gather*}
-    x=1
+    x\triangleq1
 \end{gather*}
 $$
 
-Now if I add something to that variable, I’m going to write a double
-arrow “$\Rightarrow$” on the left of it to show that “Therefore this is
-true”
+Note that the equals sign with a triangle on top means that we "let" it be that. This is to avoid confusion. If I write something like this, we know it is derivable from $x\triangleq 1$ (which cannot be derived from something earlier)
+
+$$
+x+3=4
+$$
+
+Now if I add something to that variable, I’m going to write a double arrow “$\Rightarrow$” on the left of it to show that “Therefore this is true”
 
 Example:
 
 $$
 \begin{gather*}
-    x=1\\
+    x\triangleq 1\\
     \Rightarrow x+1=1+1\\
     \Rightarrow x+1=2
 \end{gather*}
 $$
-
-$\Rightarrow x+5=6$, as $x=1$, we’d just put 1 in place of the $x$
