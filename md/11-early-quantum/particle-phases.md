@@ -35,6 +35,6 @@ $$
 
 Where $\delta$ can be any phase angle from 0 to $2\pi$.
 
-This is the same phase as which destructively interfere in the double
+This is the same phase as which destructively [[interference|interfere]] in the double
 slit experiment. That’s why phases exist. Because light is a wave with a
 frequency (and also a particle!)

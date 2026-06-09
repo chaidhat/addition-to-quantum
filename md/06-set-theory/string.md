@@ -1,4 +1,4 @@
-# Strings
+# String
 
 A string is an ordered sequence of symbols from a finite alphabet. The alphabet is denoted with the [[set]] notation (a set of possible symbols to use as an alphabet). Length is specified as the superscript, but if it is unlimited, then it is denoted with an asterisk $*$.
 

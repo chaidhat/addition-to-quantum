@@ -27,7 +27,7 @@ BB84 defines the following mapping:
 
 Example
 
-To generate a shared key, Alice chooses a [[strings|string]] of random bases $\in\{X,Z\}^n$ and parents $\in\{0,1\}^n$ to create a string of qubit $\left\lvert \psi_{b,p} \right\rangle$ to send to Bob. Where $n$ is the number of bits to send.
+To generate a shared key, Alice chooses a [[string|string]] of random bases $\in\{X,Z\}^n$ and parents $\in\{0,1\}^n$ to create a string of qubit $\left\lvert \psi_{b,p} \right\rangle$ to send to Bob. Where $n$ is the number of bits to send.
 
 |  |  |  |  |  |  |  |  |  |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|

@@ -30,7 +30,7 @@ $$
 \psi(x,t) = \sum_n c_n\, e^{-iE_n t/\hbar}\phi_n(x)
 $$
 
-A superposition therefore is not stationary. The differing phases produces interference which is where time-dependence (EVs that oscillate) come from.
+A superposition therefore is not stationary. The differing phases produces [[interference]] which is where time-dependence (EVs that oscillate) come from.
 
 Note that
 In a single starionary state, EV are constant

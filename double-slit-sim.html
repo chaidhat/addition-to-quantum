@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Double-Slit Simulation</title>
+<style>
+  :root { --bg:#1a1a1a; --panel:#242424; --ink:#e8e8e8; --muted:#9a9a9a; --accent:#7fc7ff; }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    display:flex; flex-direction:column; align-items:center; padding:24px;
+  }
+  h1 { font-weight:600; font-size:22px; margin:0 0 4px; }
+  .sub { color:var(--muted); font-size:13px; margin-bottom:18px; font-family:ui-sans-serif,system-ui,sans-serif; }
+  .stage { display:flex; gap:10px; align-items:stretch; }
+  canvas { background:#000; border-radius:6px; display:block; }
+  #profile { background:#0d0d0d; }
+  .panel {
+    background:var(--panel); border-radius:8px; padding:16px 18px; margin-top:18px;
+    width:660px; font-family:ui-sans-serif,system-ui,sans-serif;
+  }
+  .row { display:flex; align-items:center; gap:12px; margin:10px 0; }
+  .row label { width:150px; font-size:13px; color:var(--muted); }
+  .row input[type=range] { flex:1; accent-color:var(--accent); }
+  .val { width:74px; text-align:right; font-variant-numeric:tabular-nums; font-size:13px; color:var(--accent); }
+  .opts { display:flex; gap:20px; flex-wrap:wrap; margin-top:14px; padding-top:14px; border-top:1px solid #333; font-size:13px; }
+  .opts label { color:var(--ink); display:flex; align-items:center; gap:6px; cursor:pointer; }
+  .note { color:var(--muted); font-size:12px; margin-top:12px; line-height:1.5; font-family:ui-sans-serif,system-ui,sans-serif; }
+  button { background:#333; color:var(--ink); border:1px solid #444; border-radius:5px; padding:6px 14px; cursor:pointer; font-size:13px; }
+  button:hover { background:#3d3d3d; }
+  .tags { font-family:ui-sans-serif,system-ui,sans-serif; }
+</style>
+</head>
+<body>
+  <h1>Double-slit experiment</h1>
+  <div class="sub">Top-down view of the probability field |ψ|². Slits on the left, detection screen on the right.</div>
+
+  <div class="stage">
+    <canvas id="field" width="640" height="380"></canvas>
+    <canvas id="profile" width="120" height="380"></canvas>
+  </div>
+
+  <div class="panel">
+    <div class="row">
+      <label>Wavelength λ</label>
+      <input id="lam" type="range" min="3" max="40" value="11" step="0.5">
+      <span class="val" id="lamV"></span>
+    </div>
+    <div class="row">
+      <label>Slit separation d</label>
+      <input id="dee" type="range" min="8" max="180" value="60" step="1">
+      <span class="val" id="deeV"></span>
+    </div>
+    <div class="row">
+      <label>Screen distance L</label>
+      <input id="ell" type="range" min="160" max="600" value="560" step="1">
+      <span class="val" id="ellV"></span>
+    </div>
+
+    <div class="opts tags">
+      <label><input type="checkbox" id="whichpath"> Measure which-path (collapse superposition)</label>
+      <label><input type="checkbox" id="animate"> Show wave motion</label>
+      <label><input type="checkbox" id="falloff"> 1/√r spreading</label>
+      <button id="reset">Reset</button>
+    </div>
+
+    <div class="note tags" id="readout"></div>
+  </div>
+
+<script>
+const field = document.getElementById('field');
+const fctx = field.getContext('2d');
+const prof = document.getElementById('profile');
+const pctx = prof.getContext('2d');
+const W = field.width, H = field.height;
+
+const SX = 64;            // x of the slit barrier (pixels)
+const CY = H / 2;         // transverse centre
+const img = fctx.createImageData(W, H);
+
+const ui = {
+  lam: document.getElementById('lam'),
+  dee: document.getElementById('dee'),
+  ell: document.getElementById('ell'),
+  whichpath: document.getElementById('whichpath'),
+  animate: document.getElementById('animate'),
+  falloff: document.getElementById('falloff'),
+};
+
+// inferno-ish colour ramp for intensity 0..1
+const STOPS = [
+  [0.00,   8,   8,  30],
+  [0.30,  40,  20,  90],
+  [0.55, 140,  30,  90],
+  [0.75, 230,  90,  40],
+  [0.90, 250, 180,  40],
+  [1.00, 255, 255, 210],
+];
+function ramp(t){
+  t = t<0?0:t>1?1:t;
+  for(let i=1;i<STOPS.length;i++){
+    if(t<=STOPS[i][0]){
+      const a=STOPS[i-1], b=STOPS[i];
+      const f=(t-a[0])/(b[0]-a[0]);
+      return [a[1]+(b[1]-a[1])*f, a[2]+(b[2]-a[2])*f, a[3]+(b[3]-a[3])*f];
+    }
+  }
+  return [255,255,210];
+}
+
+let phase = 0; // animation phase (ωt)
+let animHandle = null;
+
+function params(){
+  const lam = +ui.lam.value;
+  const d   = +ui.dee.value;
+  const L   = +ui.ell.value;
+  return { lam, d, L, k: 2*Math.PI/lam,
+           screenX: Math.min(SX + L, W - 2),
+           aY: CY - d/2, bY: CY + d/2,
+           which: ui.whichpath.checked,
+           anim: ui.animate.checked,
+           fall: ui.falloff.checked };
+}
+
+function render(){
+  const p = params();
+  const data = img.data;
+  // animating the real wave is heavier -> coarser step
+  const step = p.anim ? 2 : 1;
+
+  for(let py=0; py<H; py+=step){
+    for(let px=0; px<W; px+=step){
+      let r=0,g=0,b=0;
+      if(px < SX){
+        // region before the slits: leave dark (barrier side)
+        r=g=b=0;
+      } else {
+        const dxA = px - SX, dyA = py - p.aY;
+        const dxB = px - SX, dyB = py - p.bY;
+        let rA = Math.hypot(dxA, dyA);
+        let rB = Math.hypot(dxB, dyB);
+        if(rA<1) rA=1; if(rB<1) rB=1;
+        const ampA = p.fall ? 1/Math.sqrt(rA) : 1;
+        const ampB = p.fall ? 1/Math.sqrt(rB) : 1;
+
+        let val; // 0..1 brightness
+        if(p.anim){
+          // real part of the (possibly collapsed) wave, signed -> blue/red
+          let re;
+          if(p.which){
+            // incoherent: show the brighter single path, no interference
+            re = Math.max(ampA*Math.cos(p.k*rA - phase), ampB*Math.cos(p.k*rB - phase));
+          } else {
+            re = ampA*Math.cos(p.k*rA - phase) + ampB*Math.cos(p.k*rB - phase);
+          }
+          const norm = p.fall ? 0.9 : 2.0;
+          const s = re / norm; // ~ -1..1
+          if(s>=0){ r=255*Math.min(1,s); g=60*s; b=60*s; }
+          else    { const m=Math.min(1,-s); b=255*m; r=60*m; g=120*m; }
+          fctx; // (drawn below)
+          putpx(data, px, py, step, r, g, b);
+          continue;
+        } else {
+          let I;
+          if(p.which){
+            I = ampA*ampA + ampB*ampB;              // probabilities add: no fringes
+          } else {
+            const re = ampA*Math.cos(p.k*rA) + ampB*Math.cos(p.k*rB);
+            const imv= ampA*Math.sin(p.k*rA) + ampB*Math.sin(p.k*rB);
+            I = re*re + imv*imv;                     // amplitudes add: interference
+          }
+          const norm = p.fall ? (2/rA) : 4;          // rough scale so peaks ~1
+          val = Math.pow(Math.min(1, I/norm), 0.8);
+          const c = ramp(val);
+          r=c[0]; g=c[1]; b=c[2];
+        }
+      }
+      putpx(data, px, py, step, r, g, b);
+    }
+  }
+  fctx.putImageData(img, 0, 0);
+  drawOverlay(p);
+  drawProfile(p);
+}
+
+function putpx(data, px, py, step, r, g, b){
+  for(let yy=0; yy<step && py+yy<H; yy++){
+    for(let xx=0; xx<step && px+xx<W; xx++){
+      const idx = ((py+yy)*W + (px+xx))*4;
+      data[idx]=r; data[idx+1]=g; data[idx+2]=b; data[idx+3]=255;
+    }
+  }
+}
+
+function drawOverlay(p){
+  // slit barrier with two gaps
+  fctx.fillStyle = '#cfcfcf';
+  const gap = 7;
+  fctx.fillRect(SX-2, 0, 4, p.aY-gap);
+  fctx.fillRect(SX-2, p.aY+gap, 4, (p.bY-gap)-(p.aY+gap));
+  fctx.fillRect(SX-2, p.bY+gap, 4, H-(p.bY+gap));
+  // screen line
+  fctx.fillStyle = 'rgba(180,220,255,0.55)';
+  fctx.fillRect(p.screenX-1, 0, 2, H);
+  // labels
+  fctx.fillStyle = '#9ad';
+  fctx.font = '12px ui-sans-serif, system-ui, sans-serif';
+  fctx.fillText('slits', SX+6, 16);
+  fctx.fillText('screen', p.screenX-52, 16);
+}
+
+function drawProfile(p){
+  pctx.clearRect(0,0,prof.width,prof.height);
+  pctx.fillStyle = '#0d0d0d';
+  pctx.fillRect(0,0,prof.width,prof.height);
+  // compute intensity along the screen column
+  const xs = p.screenX;
+  const Iarr = new Float64Array(H);
+  let maxI = 1e-9;
+  for(let py=0; py<H; py++){
+    let rA = Math.hypot(xs-SX, py-p.aY);
+    let rB = Math.hypot(xs-SX, py-p.bY);
+    if(rA<1)rA=1; if(rB<1)rB=1;
+    const ampA = p.fall ? 1/Math.sqrt(rA):1;
+    const ampB = p.fall ? 1/Math.sqrt(rB):1;
+    let I;
+    if(p.which){ I = ampA*ampA+ampB*ampB; }
+    else {
+      const re=ampA*Math.cos(p.k*rA)+ampB*Math.cos(p.k*rB);
+      const im=ampA*Math.sin(p.k*rA)+ampB*Math.sin(p.k*rB);
+      I = re*re+im*im;
+    }
+    Iarr[py]=I; if(I>maxI)maxI=I;
+  }
+  // draw filled curve: intensity grows to the right
+  pctx.beginPath();
+  pctx.moveTo(0, 0);
+  for(let py=0; py<H; py++){
+    const x = (Iarr[py]/maxI)*(prof.width-6)+2;
+    pctx.lineTo(x, py);
+  }
+  pctx.lineTo(0, H-1);
+  pctx.closePath();
+  pctx.fillStyle = 'rgba(127,199,255,0.30)';
+  pctx.fill();
+  pctx.beginPath();
+  for(let py=0; py<H; py++){
+    const x = (Iarr[py]/maxI)*(prof.width-6)+2;
+    if(py===0) pctx.moveTo(x,py); else pctx.lineTo(x,py);
+  }
+  pctx.strokeStyle = '#7fc7ff';
+  pctx.lineWidth = 1.5;
+  pctx.stroke();
+  pctx.fillStyle='#9a9a9a';
+  pctx.font='11px ui-sans-serif, system-ui, sans-serif';
+  pctx.fillText('P on screen', 6, 14);
+}
+
+function updateReadout(){
+  const p = params();
+  document.getElementById('lamV').textContent = (+ui.lam.value).toFixed(1) + ' px';
+  document.getElementById('deeV').textContent = (+ui.dee.value).toFixed(0) + ' px';
+  document.getElementById('ellV').textContent = (+ui.ell.value).toFixed(0) + ' px';
+  const spacing = p.lam * p.L / p.d;
+  document.getElementById('readout').innerHTML =
+    'Fringe spacing  Δx = λL/d ≈ <b>' + spacing.toFixed(1) + ' px</b>. ' +
+    'Smaller λ or larger d &rarr; tighter stripes; bigger L &rarr; wider. ' +
+    (p.which ? '<br><b>Which-path on:</b> the superposition is collapsed, so probabilities just add — the fringes vanish.' : '');
+}
+
+function loop(){
+  phase += 0.25;
+  render();
+  animHandle = requestAnimationFrame(loop);
+}
+
+function refresh(){
+  updateReadout();
+  if(ui.animate.checked){
+    if(!animHandle) loop();
+  } else {
+    if(animHandle){ cancelAnimationFrame(animHandle); animHandle=null; }
+    render();
+  }
+}
+
+[ui.lam, ui.dee, ui.ell].forEach(el=> el.addEventListener('input', refresh));
+[ui.whichpath, ui.animate, ui.falloff].forEach(el=> el.addEventListener('change', refresh));
+document.getElementById('reset').addEventListener('click', ()=>{
+  ui.lam.value=11; ui.dee.value=60; ui.ell.value=560;
+  ui.whichpath.checked=false; ui.animate.checked=false; ui.falloff.checked=false;
+  refresh();
+});
+
+refresh();
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 It is a complex number.
 
-For example, as we seen earlier in [[superpositions]]
+For example, as we seen earlier in [[superposition]]
 
 $$
 \ket{\psi}=\psi_0\ket{\psi_0}+\psi_1\ket{\psi_1}

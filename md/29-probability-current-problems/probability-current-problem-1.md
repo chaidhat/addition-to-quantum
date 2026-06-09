@@ -322,7 +322,7 @@ E \in \{E_0, E_1, E_2, \dots\}
 $$
 
 this is because, as counterpoint if $E$ is continuous, a wavefunction DNE in between the energies.
-this is because if the left tail $Ae^{b_Lx}$ decays to 0. Integrate the middle. You'd need a right tail that also decays so 
+this is because the left tail $Ae^{b_Lx}$ decays to 0 (is [[evanescent]]). Integrate the middle. You'd need a right tail that also decays so 
 $$
 \frac{\frac{d \phi}{dx}(x_R)}{\phi(x_R)}=-b_R
 $$

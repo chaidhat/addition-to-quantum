@@ -3,7 +3,7 @@
 Hidden Matching Problem
 Application of quantum communication
 
-Alice and Bob holds different inputs. Alice holds a bit [[strings|string]] with $n$ bits of data
+Alice and Bob holds different inputs. Alice holds a bit [[string|string]] with $n$ bits of data
 
 $$
 x \in \{0,1\}^n
