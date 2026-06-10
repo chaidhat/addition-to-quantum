@@ -1,8 +1,8 @@
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
-// The markdown source lives one level up from web/, in ../md.
-const MD_ROOT = join(process.cwd(), "..", "md");
+// The markdown source lives one level up from web/, in ../quantum.
+const MD_ROOT = join(process.cwd(), "..", "quantum");
 
 export interface Page {
   slug: string; // filename without .md, globally unique — matches [[wikilink]] targets
@@ -66,6 +66,7 @@ function buildIndex() {
   const bySlug = new Map<string, Page>();
 
   const dirs = readdirSync(MD_ROOT)
+    .filter((d) => !d.startsWith(".")) // skip dotfolders like .obsidian
     .filter((d) => {
       try {
         return statSync(join(MD_ROOT, d)).isDirectory();
